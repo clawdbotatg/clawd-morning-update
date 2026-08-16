@@ -1,0 +1,7 @@
+# Raw feed snapshots (Austin's home timeline) — on-disk handoff from
+# clawd-twitter, never published. This repo is PUBLIC.
+data/
+# Working files (briefs, narratives, logs)
+state/
+node_modules/
+.env
