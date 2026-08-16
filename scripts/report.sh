@@ -41,6 +41,12 @@ if ! node scripts/render.js; then
   exit 1
 fi
 
+# 3b. persist dated brief + narrative — the weekly rollup reads these
+DATE=$(date +%F)
+mkdir -p state/briefs state/narratives
+cp state/brief.json "state/briefs/$DATE.json" 2>/dev/null || true
+cp state/narrative.json "state/narratives/$DATE.json" 2>/dev/null || true
+
 # 4. recon drop — agent-readable vibe digest on the shared desk. Never fatal.
 RECON="$HOME/Desktop/recon/twitter"
 mkdir -p "$RECON"
