@@ -157,6 +157,39 @@ ${topExtra.length ? `<section class="theme"><h2>also big this morning</h2><div c
 mkdirSync(DOCS, { recursive: true });
 writeFileSync(join(DOCS, `${brief.date}.html`), page.replace("__ARCHIVE__", ""));
 
+// agent-readable digest: the same report as plain markdown, for the recon
+// drop (~/Desktop/recon/twitter/) and anything else that wants "the vibe on
+// twitter" without parsing HTML. report.sh copies it into place.
+const mdTweet = (t) =>
+  `- [@${t.author}](https://x.com/${t.author}/status/${t.id})` +
+  (t.likes || t.rts ? ` (${[t.likes && `${fmtN(t.likes)}♥`, t.rts && `${fmtN(t.rts)}🔁`].filter(Boolean).join(" ")})` : "") +
+  `: ${cleanText(t.text).replace(/\s+/g, " ").slice(0, 200)}`;
+const digest = [
+  `# twitter vibe — ${brief.date}`,
+  ``,
+  `> ${narrative.headline || "morning feed digest"}`,
+  ``,
+  narrative.intro || "",
+  ``,
+  `_${brief.tweet_count} tweets from Austin's home timeline, last ${brief.hours}h, fetched ${brief.fetched_at}._`,
+  ``,
+  ...ordered.flatMap((th) => {
+    const n = narrative.themes?.[th.term] || {};
+    return [
+      `## ${n.title || th.term}`,
+      n.blurb ? `${n.blurb}` : "",
+      ...th.tweets.slice(0, 4).map(mdTweet),
+      ``,
+    ];
+  }),
+  topExtra.length ? `## also big this morning` : "",
+  ...topExtra.slice(0, 5).map(mdTweet),
+  ``,
+  `---`,
+  `_source: clawd-morning-update (raw archive: data/feed-${brief.date}.json; html: https://clawdbotatg.github.io/clawd-morning-update/)_`,
+].join("\n");
+writeFileSync(join(STATE, "digest.md"), digest);
+
 // index.html = latest report + archive links to the last 14 dated pages
 const dated = readdirSync(DOCS)
   .filter((f) => /^\d{4}-\d{2}-\d{2}\.html$/.test(f))

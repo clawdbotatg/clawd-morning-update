@@ -41,7 +41,13 @@ if ! node scripts/render.js; then
   exit 1
 fi
 
-# 4. publish: commit docs/ and push (GitHub Pages serves docs/ on master)
+# 4. recon drop — agent-readable vibe digest on the shared desk. Never fatal.
+RECON="$HOME/Desktop/recon/twitter"
+mkdir -p "$RECON"
+cp state/digest.md "$RECON/latest.md" 2>/dev/null || true
+cp state/brief.json "$RECON/latest.json" 2>/dev/null || true
+
+# 5. publish: commit docs/ and push (GitHub Pages serves docs/ on master)
 git add docs
 if git diff --cached --quiet; then
   echo "nothing new to publish"

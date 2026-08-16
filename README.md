@@ -21,8 +21,14 @@ report.sh (launchd com.clawd.morning-report, 8:20am Denver)
                           state/narrative.json. Failure degrades, never blocks.
   3. scripts/render.js  — static HTML: docs/<date>.html + docs/index.html
                           (latest + 14-day archive). Every card links to x.com.
-  4. git push           — GitHub Pages serves docs/.
+                          Also state/digest.md — the same report as markdown.
+  4. recon drop         — digest.md + brief.json → ~/Desktop/recon/twitter/
+                          (latest.md / latest.json) so any agent on the machine
+                          can read the timeline vibe without touching the API.
+  5. git push           — GitHub Pages serves docs/.
 ```
+
+`data/feed-*.json` is the permanent raw archive (one file per day, local-only).
 
 No extra X API cost: the report only ever reads the snapshot already on disk.
 
