@@ -14,7 +14,7 @@
 import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
-import { esc, cleanText, fmtTime, tweetCard, mdTweet, CSS } from "../lib/html.js";
+import { esc, cleanText, fmtTime, cardsBlock, mdTweet, CSS } from "../lib/html.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE = join(ROOT, "state");
@@ -44,7 +44,7 @@ const themeSections = ordered
     return `<section class="theme">
   <h2>${esc(n.title || th.term)}</h2>
   ${n.blurb ? `<p class="blurb">${esc(n.blurb)}</p>` : ""}
-  <div class="cards">${th.tweets.map((t) => tweetCard(t)).join("\n")}</div>
+  ${cardsBlock(th.tweets)}
 </section>`;
   })
   .join("\n");
@@ -76,7 +76,7 @@ const page = `<!doctype html>
   <div class="stats">${brief.tweet_count} tweets · last ${esc(String(brief.hours))}h · fetched ${esc(fmtTime(brief.fetched_at))} MT</div>
 </header>
 ${themeSections}
-${topExtra.length ? `<section class="theme"><h2>also big this morning</h2><div class="cards">${topExtra.map((t) => tweetCard(t)).join("\n")}</div></section>` : ""}
+${topExtra.length ? `<section class="theme"><h2>also big this morning</h2>${cardsBlock(topExtra)}</section>` : ""}
 <footer>
   <div class="archive">__ARCHIVE__</div>
   <p>built by clawd 🦞 from the morning feed pull · links open on x.com</p>

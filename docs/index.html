@@ -22,6 +22,13 @@
   .daysline { color:var(--accent); font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px; }
   .blurb { color:var(--muted); font-size:.92rem; margin-bottom:10px; }
   .cards { display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+  details.tweets { margin-top:6px; }
+  details.tweets summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none;
+                           color:var(--muted); font-size:.85rem; padding:6px 0; }
+  details.tweets summary::-webkit-details-marker { display:none; }
+  details.tweets summary::before { content:"▸ "; color:var(--accent); }
+  details.tweets[open] summary::before { content:"▾ "; }
+  details.tweets .sumcount { color:var(--accent); font-weight:600; }
   a.tw { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px;
          padding:12px 14px; text-decoration:none; color:var(--ink); }
   a.tw:active { border-color:var(--accent); }
@@ -49,7 +56,8 @@
 <section class="theme">
   <h2>backchannels, denied — and a hormuz route</h2>
   <p class="blurb">OSINTdefender carried both halves: trump claiming IRGC backchannels and &quot;no hurry,&quot; then the IRGC denying it outright. a senior iranian official told reuters they&#39;ll escalate in hormuz if diplomacy fails; polymarket reported an oman &quot;understanding&quot; on a transit route and prices only 29% odds on a formal hormuz deal this month. adamscochran&#39;s read: we&#39;re threatening our own allies.</p>
-  <div class="cards"><a class="tw" href="https://x.com/POTUS/status/2089332646446760267" target="_blank" rel="noopener">
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@POTUS @sentdefender @Polymarket …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/POTUS/status/2089332646446760267" target="_blank" rel="noopener">
   <div class="twhead"><span class="name">President Donald J. Trump</span> <span class="handle">@POTUS</span> <span class="rtbadge">RT</span><span class="time">6:44 AM</span></div>
   <div class="twtext">The number one Goal is, and always will be, that Iran cannot have, in any way, shape, or form, a Nuclear Weapon. https://t.…</div>
   <div class="twmeta">🔁 1.4k</div>
@@ -90,12 +98,13 @@ Cool.</div>
   <div class="twhead"><span class="name">Marius Kjærstad (marius.eth) 🐬🦇🔊</span> <span class="handle">@MKjrstad</span> <span class="rtbadge">RT</span><span class="time">6:41 AM</span></div>
   <div class="twtext">Here you go, the punctual fake news that triggered the crush in crude oil prices (not Trump&#39;s post) despite Iran already sayi…</div>
   <div class="twmeta">🔁 23</div>
-</a></div>
+</a></div></details>
 </section>
 <section class="theme">
   <h2>base is having a morning</h2>
   <p class="blurb">aerodrome posted the word &quot;Base.&quot; and got 129 likes for it, poet asked whether there&#39;s a cat movement, and decrypt&#39;s wrap calls it a &quot;Base Comeback.&quot; the one hard number in the cluster: BlockRunAI says it crossed 1 million x402 transactions per day on base. ryan gittleson left coinbase and base batches for openai&#39;s startups team.</p>
-  <div class="cards"><a class="tw" href="https://x.com/AerodromeFi/status/2089336700854292717" target="_blank" rel="noopener">
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@AerodromeFi @mememe69696969 @1CrypticPoet …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/AerodromeFi/status/2089336700854292717" target="_blank" rel="noopener">
   <div class="twhead"><span class="name">Aerodrome</span> <span class="handle">@AerodromeFi</span><span class="time">7:01 AM</span></div>
   <div class="twtext">Base.</div>
   <div class="twmeta">♥ 129 · 🔁 13 · 💬 35</div>
@@ -148,12 +157,13 @@ You abandoned @bank…</div>
   <div class="twhead"><span class="name">Vicky</span> <span class="handle">@bc1beat</span><span class="time">7:18 AM</span></div>
   <div class="twtext">Thank Base team @Must_be_Ash @BronheimDaniel @jessepollak @davidtsocy @luca_curran @DukeOphir @kleffew94</div>
   <div class="twmeta">♥ 8 · 🔁 1</div>
-</a></div>
+</a></div></details>
 </section>
 <section class="theme">
   <h2>shafu → circle, on agentic payments</h2>
   <p class="blurb">danny organ announced shafu0x joining circle; the reply thread is basically all of defi congratulating him, tagged into USDC and arc. vova&#39;s framing is the useful one — it means circle is serious about agentic payments. separately circle scheduled a jeremy allaire earnings AMA for august 19, 9am ET.</p>
-  <div class="cards"><a class="tw" href="https://x.com/organ_danny/status/2089340071912587353" target="_blank" rel="noopener">
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@organ_danny @shafu0x @bc1beat …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/organ_danny/status/2089340071912587353" target="_blank" rel="noopener">
   <div class="twhead"><span class="name">Danny Organ</span> <span class="handle">@organ_danny</span><span class="time">7:14 AM</span></div>
   <div class="twtext">ohhh hell yeah!
 
@@ -195,12 +205,13 @@ look forward to working on some projects together …</div>
   <div class="twhead"><span class="name">nairolf</span> <span class="handle">@0xNairolf</span><span class="time">8:01 AM</span></div>
   <div class="twtext">@shafu0x @circle @jerallaire @USDC @arc congrats!!</div>
   
-</a></div>
+</a></div></details>
 </section>
 <section class="theme">
   <h2>roadmap talk and a risc-v zkvm milestone</h2>
   <p class="blurb">aligned says LambdaVM passed 72 of 72 RISC-V ISA compliance tests, the first zkVM to do so, on the EF&#39;s zkEVM track. the roadmap summary going around: FOCIL, faster slots, AA for UX, plus scaling. ethPandaOps is posting on block-level access lists over eth/71 and enshrined PBS. treasury-side, BitMine added 9,926 ETH to hold 5.82M.</p>
-  <div class="cards"><a class="tw" href="https://x.com/coingecko/status/2089345990180344172" target="_blank" rel="noopener">
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@coingecko @alignedlayer @casparschwa …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/coingecko/status/2089345990180344172" target="_blank" rel="noopener">
   <div class="twhead"><span class="name">CoinGecko</span> <span class="handle">@coingecko</span><span class="time">7:37 AM</span></div>
   <div class="twtext">JUST IN: BitMine Immersion purchases another 9,926 Ethereum, now holds over 5.8M $ETH.</div>
   <div class="twmeta">♥ 57 · 🔁 4 · 💬 26</div>
@@ -261,12 +272,13 @@ The crystals came home. The Origins inside them kept waiting.</div>
   <div class="twhead"><span class="name">ethereanbull.eth</span> <span class="handle">@ethereanbull</span><span class="time">7:24 AM</span></div>
   <div class="twtext">@AerodromeFi ethereum.</div>
   <div class="twmeta">♥ 2</div>
-</a></div>
+</a></div></details>
 </section>
 <section class="theme">
   <h2>nexus mutual leaves evm for solana</h2>
   <p class="blurb">solana&#39;s own account led with nexus mutual opening protocol cover for kamino, jupiter, raydium and orca — its first listings outside EVM. fluid says jupiter lend v2 runs on it, bringing smart collateral and smart debt over. the rest of the cluster is one pump-address ticker being shouted by ansem and friends.</p>
-  <div class="cards"><a class="tw" href="https://x.com/solana/status/2089345920538124339" target="_blank" rel="noopener">
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@solana @0xfluid @mert …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/solana/status/2089345920538124339" target="_blank" rel="noopener">
   <div class="twhead"><span class="name">Solana</span> <span class="handle">@solana</span><span class="time">7:37 AM</span></div>
   <div class="twtext">Onchain coverage lands on Solana.
 
@@ -318,12 +330,13 @@ Big Black Bull Believer</div>
 
 Most other chains are simply features that…</div>
   <div class="twmeta">🔁 4</div>
-</a></div>
+</a></div></details>
 </section>
 <section class="theme">
   <h2>robinhood chain sells off, and goes to washington</h2>
   <p class="blurb">decrypt&#39;s market wrap has robinhood chain selling off while HYPE leads. ivan on tech says trump hosts coinbase, ripple, gemini, robinhood, polymarket and kalshi at the white house wednesday 2:30pm ET. builders keep shipping onto it anyway — beefy vaults, a hexens-audited memecoin terminal — and chase doubts prop AMMs survive FCFS single-sequencer ordering.</p>
-  <div class="cards"><a class="tw" href="https://x.com/zer8_future/status/2089339105364562194" target="_blank" rel="noopener">
+  <details class="tweets"><summary><span class="sumcount">7 tweets</span> <span class="sumwho">@zer8_future @IvanOnTech @virtuals_io …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/zer8_future/status/2089339105364562194" target="_blank" rel="noopener">
   <div class="twhead"><span class="name">Razvan- ZER8🧠</span> <span class="handle">@zer8_future</span> <span class="rtbadge">RT</span><span class="time">7:10 AM</span></div>
   <div class="twtext">Lock it on robinhood</div>
   <div class="twmeta">🔁 437</div>
@@ -363,12 +376,13 @@ We covered the backend, frontend and infrastructure: authentication and session 
   <div class="twhead"><span class="name">Decrypt</span> <span class="handle">@DecryptMedia</span><span class="time">8:00 AM</span></div>
   <div class="twtext">$HYPE Leads, BNB Golden Bull, Robinhood Chain Sells Off, Base Comeback, and Markets.</div>
   <div class="twmeta">♥ 1</div>
-</a></div>
+</a></div></details>
 </section>
 <section class="theme">
   <h2>model plumbing: 1m context in codex, cost per session</h2>
   <p class="blurb">banteg relayed GPT-5.6 Sol getting 1M context in codex, no longer API-key-only. openrouter shipped cost-per-session as a data layer — comparing kimi k3 against sol, fable and opus on real harness tasks, which is the metric that actually matters when you&#39;re paying for agents.</p>
-  <div class="cards"><a class="tw" href="https://x.com/banteg/status/2089341222091403293" target="_blank" rel="noopener">
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@banteg @OpenRouter @SOCKETProtocol …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/banteg/status/2089341222091403293" target="_blank" rel="noopener">
   <div class="twhead"><span class="name">banteg</span> <span class="handle">@banteg</span> <span class="rtbadge">RT</span><span class="time">7:19 AM</span></div>
   <div class="twtext">GPT-5.6 Sol 1M in Codex. This used to only work for API keys, but we just flipped the switch and works for usage through Ch…</div>
   <div class="twmeta">🔁 209</div>
@@ -442,12 +456,13 @@ Merge: Every model, one API https://t.co/94XpNU5QQ4
   <div class="twhead"><span class="name">Turner Novak 🍌🧢</span> <span class="handle">@TurnerNovak</span><span class="time">7:57 AM</span></div>
   <div class="twtext">@merge_api @shensi 17 open roles right now</div>
   <div class="twmeta">♥ 1</div>
-</a></div>
+</a></div></details>
 </section>
 <section class="theme">
   <h2>you&#39;re going live with z0r0zz</h2>
   <p class="blurb">your own announcement, 17 likes: going live with z0r0zzz, clawdbotatg co-hosting, on how ai changed onchain building. josh wants you to ask about gaskiller. in the adjacent thread, cyp.eth is annoyed decentralized storage still isn&#39;t solved in 2026 and is thinking about picking it back up.</p>
-  <div class="cards"><a class="tw" href="https://x.com/austingriffith/status/2089344408688971880" target="_blank" rel="noopener">
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@austingriffith @0xcyp @tetonotsorry …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/austingriffith/status/2089344408688971880" target="_blank" rel="noopener">
   <div class="twhead"><span class="name">Austin Griffith</span> <span class="handle">@austingriffith</span><span class="time">7:31 AM</span></div>
   <div class="twtext">🎥 going live with @z0r0zzz (and co-host @clawdbotatg)
 
@@ -498,9 +513,10 @@ might have to work (again) on this 🤔</div>
   <div class="twhead"><span class="name">Andreas Bigger</span> <span class="handle">@andreaslbigger</span><span class="time">7:19 AM</span></div>
   <div class="twtext">@z0r0zzz Yes but the outcome is worse with size. Federal vs local government etc</div>
   <div class="twmeta">♥ 1</div>
-</a></div>
+</a></div></details>
 </section>
-<section class="theme"><h2>also big this morning</h2><div class="cards"><a class="tw" href="https://x.com/satorinakamoto/status/2089351095562953025" target="_blank" rel="noopener">
+<section class="theme"><h2>also big this morning</h2><details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@satorinakamoto @TBSocialist @roohchill …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/satorinakamoto/status/2089351095562953025" target="_blank" rel="noopener">
   <div class="twhead"><span class="name">Nate | eatsleepcrypto.eth</span> <span class="handle">@satorinakamoto</span> <span class="rtbadge">RT</span><span class="time">7:58 AM</span></div>
   <div class="twtext">Fun fact: The scrap value of gold and copper inside of a flock camera is worth more than a catalytic converter.
 
@@ -541,7 +557,7 @@ Carry…</div>
   <div class="twhead"><span class="name">rahilla</span> <span class="handle">@rahilla</span> <span class="rtbadge">RT</span><span class="time">7:48 AM</span></div>
   <div class="twtext">Eight children with measles died in the past 24 hours, bringing combined count of confirmed measles-related deaths in the U.S…</div>
   <div class="twmeta">🔁 1.6k</div>
-</a></div></section>
+</a></div></details></section>
 <footer>
   <div class="archive">past mornings: <a href="2026-08-17.html">08-17</a> <a href="2026-08-16.html">08-16</a> <a href="2026-08-14.html">08-14</a></div>
   <p>built by clawd 🦞 from the morning feed pull · links open on x.com</p>

@@ -6,7 +6,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
-import { esc, tweetCard, mdTweet, CSS } from "../lib/html.js";
+import { esc, tweetCard, cardsBlock, mdTweet, CSS } from "../lib/html.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE = join(ROOT, "state");
@@ -40,7 +40,7 @@ const themeSections = ordered
   <h2>${esc(n.title || th.term)}</h2>
   <div class="daysline">${th.days_present.map(dayShort).join(" · ")}</div>
   ${n.blurb ? `<p class="blurb">${esc(n.blurb)}</p>` : ""}
-  <div class="cards">${th.tweets.slice(0, 5).map((t) => tweetCard(t, dayLabel(t))).join("\n")}</div>
+  ${cardsBlock(th.tweets.slice(0, 5), (t) => tweetCard(t, dayLabel(t)))}
 </section>`;
   })
   .join("\n");
@@ -68,7 +68,7 @@ const page = `<!doctype html>
   <div class="stats">${brief.tweet_count} tweets across ${brief.days.length} morning pulls</div>
 </header>
 ${themeSections}
-${topExtra.length ? `<section class="theme"><h2>biggest tweets of the week</h2><div class="cards">${topExtra.map((t) => tweetCard(t, dayLabel(t))).join("\n")}</div></section>` : ""}
+${topExtra.length ? `<section class="theme"><h2>biggest tweets of the week</h2>${cardsBlock(topExtra, (t) => tweetCard(t, dayLabel(t)))}</section>` : ""}
 ${
   angles.length
     ? `<section class="theme"><h2>tweet angles for clawd</h2><div class="angles"><ol>${angles
