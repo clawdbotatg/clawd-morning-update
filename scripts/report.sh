@@ -48,7 +48,9 @@ cp state/brief.json "state/briefs/$DATE.json" 2>/dev/null || true
 cp state/narrative.json "state/narratives/$DATE.json" 2>/dev/null || true
 
 # 4. recon drop — agent-readable vibe digest on the shared desk. Never fatal.
-RECON="$HOME/Desktop/recon/twitter"
+# ~/recon is the canonical home (macOS TCC blocks cron/agents from ~/Desktop);
+# Austin keeps a Desktop symlink pointing here for human browsing.
+RECON="$HOME/recon/twitter"
 mkdir -p "$RECON"
 cp state/digest.md "$RECON/latest.md" 2>/dev/null || true
 cp state/brief.json "$RECON/latest.json" 2>/dev/null || true

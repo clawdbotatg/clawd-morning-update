@@ -37,7 +37,9 @@ fi
 node scripts/render.js || true
 
 # 4. recon drop
-RECON="$HOME/Desktop/recon/twitter"
+# ~/recon is the canonical home (macOS TCC blocks cron/agents from ~/Desktop);
+# Austin keeps a Desktop symlink pointing here for human browsing.
+RECON="$HOME/recon/twitter"
 mkdir -p "$RECON"
 cp state/weekly-digest.md "$RECON/weekly.md" 2>/dev/null || true
 
