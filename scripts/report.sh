@@ -56,13 +56,25 @@ cp state/digest.md "$RECON/latest.md" 2>/dev/null || true
 cp state/brief.json "$RECON/latest.json" 2>/dev/null || true
 
 # 5. publish: commit docs/ and push (GitHub Pages serves docs/ on master)
+PUBLISHED=0
 git add docs
 if git diff --cached --quiet; then
   echo "nothing new to publish"
 else
-  git commit -m "report $(date +%F)" --quiet && git push --quiet \
-    && echo "published $(date +%F)" \
-    || echo "git push failed — report built locally but not published"
+  if git commit -m "report $(date +%F)" --quiet && git push --quiet; then
+    echo "published $(date +%F)"
+    PUBLISHED=1
+  else
+    echo "git push failed — report built locally but not published"
+  fi
+fi
+
+# 6. link Austin to it on Telegram (only when a fresh page actually shipped;
+# a failed push would send a link to yesterday's page). Never fatal.
+if [ "$PUBLISHED" = 1 ]; then
+  node ../clawd-twitter/scripts/tg-send.js \
+    "morning update: https://clawdbotatg.github.io/clawd-morning-update/$(date +%F).html 🦞" \
+    || echo "tg-send failed — report published, link not sent"
 fi
 
 echo "=== report run done $(date) ==="
