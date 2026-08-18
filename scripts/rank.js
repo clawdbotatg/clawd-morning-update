@@ -134,6 +134,7 @@ const slim = (t) => ({
   rts: t.rts || 0,
   replies: t.replies || 0,
   is_rt: !!t.is_rt,
+  media: t.media || [],
 });
 const themes = ranked
   .map(([term, e]) => {

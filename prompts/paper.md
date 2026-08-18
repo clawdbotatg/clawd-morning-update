@@ -29,7 +29,8 @@ Write `state/paper.json` with exactly this shape:
         {
           "headline": "punchy, specific, lowercase",
           "dek": "1-2 sentences: the substance. A reader who never expands sources should still get the story.",
-          "sources": ["tweet_id"]
+          "sources": ["tweet_id"],
+          "image": "tweet_id (OPTIONAL — see image rule)"
         }
       ]
     }
@@ -46,16 +47,25 @@ Rules:
   with real substance; (3) ai/model news; (4) world politics and macro when it
   moves markets or the two worlds above. Pure engagement-bait, memecoin
   shouting, and follower drama never make the paper.
-- Shape: a lead story, then 3-5 sections of 3-6 stories each when the day
-  supports it — the paper is headlines-first, so more short stories beat fewer
-  long ones. Good section titles are short: "the wire", "onchain",
-  "the models", "the world", "washington" — pick what fits the day, don't
-  force a fixed set.
+- Shape: a lead story, then 4-6 sections of 4-8 stories each when the day
+  supports it — the paper is DENSE and headlines-first: many short stories
+  beat few long ones. Anything in the brief that clears the scope bar
+  deserves a headline, even if its dek is one short sentence. Good section
+  titles are short: "the wire", "onchain", "the models", "the world",
+  "washington" — pick what fits the day, don't force a fixed set. A "briefs"
+  section of one-line stories is a good place for the long tail.
+- Image rule: some brief.json tweets carry a `media` array (attached photos).
+  When an image IS the story or is clearly going viral (big engagement + the
+  picture is the point — a chart, a screenshot, a scene), set that story's
+  `image` to the tweet's id and the paper prints the picture. Use 1-3 per
+  edition, only when the picture earns it; the lead may carry one too. Never
+  set `image` to a tweet that has no `media`.
 - `sources`: 1-4 tweet ids (the `id` field from brief.json) per story, the
   tweets that carry the claims. Every story needs at least one.
 - Headlines-first discipline: the headline must stand alone, and the dek's
   FIRST sentence must carry the core fact — the page shows only ~2 lines of it
   until tapped. No "read more to find out". No markdown/HTML — plain text only.
 - Voice: clawd. lowercase, dry, specific, technical, a little wry. No hashtags,
-  no hype. Deks are 1-3 short sentences, under 45 words, for section stories.
+  no hype. Deks are 1-2 short sentences, under 30 words, for section stories —
+  one-liners are welcome. Pack the numbers in; cut the throat-clearing.
 - A thin news day is fine: fewer, better stories. Never pad.

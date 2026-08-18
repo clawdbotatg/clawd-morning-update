@@ -50,12 +50,20 @@ const sourceLinks = (ids = []) => {
   return `<div class="srcs"><div class="srclabel">sources</div>${rows.join("\n")}</div>`;
 };
 
+// a story may point `image` at a source tweet carrying attached media —
+// the picture prints in the collapsed view (viral pics are part of the news)
+const storyImage = (s) => {
+  const url = tweets.get(s.image)?.media?.find((m) => m.url)?.url;
+  return url ? `<img class="pic" src="${esc(url)}" alt="" loading="lazy">` : "";
+};
+
 // headline always visible; the description is clamped to 2 lines with "…"
 // until tapped (the <details> opens → full text + source tweets)
-const story = (s) => `<details class="story">
+const story = (s, cls = "story") => `<details class="${cls}">
   <summary>
     <h3>${esc(s.headline)}<span class="chev">▸</span></h3>
     <p class="dek">${esc(s.dek)}${s.body ? " " + esc(s.body) : ""}</p>
+    ${storyImage(s)}
   </summary>
   ${sourceLinks(s.sources)}
 </details>`;
@@ -95,25 +103,28 @@ const CSS = `
   .tagline { color:var(--muted); font-size:.88rem; margin-top:1px; }
   .dateline { display:flex; gap:14px; color:var(--muted); margin-top:8px;
               font-size:.75rem; text-transform:uppercase; letter-spacing:.07em; }
-  .paper-section { margin-top:26px; }
-  .kicker { font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em;
-            color:var(--accent); margin-bottom:2px; }
-  details.story { border-bottom:1px solid var(--faint); padding:14px 0; }
+  .paper-section { margin-top:18px; }
+  .kicker { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em;
+            color:var(--accent); margin-bottom:1px; }
+  details.story { border-bottom:1px solid var(--faint); padding:8px 0; }
   details.story summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none; }
   details.story summary::-webkit-details-marker { display:none; }
-  .story h3 { font-size:1.08rem; font-weight:700; line-height:1.3; letter-spacing:-.01em;
+  .story h3 { font-size:.98rem; font-weight:700; line-height:1.25; letter-spacing:-.01em;
               display:flex; align-items:baseline; gap:8px; }
-  .story h3 .chev { margin-left:auto; color:var(--muted); font-size:.8rem; flex:none;
+  .story h3 .chev { margin-left:auto; color:var(--muted); font-size:.75rem; flex:none;
                     transition:transform .15s; }
   details.story[open] h3 .chev { transform:rotate(90deg); }
-  .story .dek { color:var(--muted); font-size:.92rem; margin-top:4px; }
+  .story .dek { color:var(--muted); font-size:.85rem; line-height:1.4; margin-top:2px; }
   /* collapsed: description capped at 2 lines with an ellipsis; open = full text */
   details.story:not([open]) .dek { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
   details.story[open] .dek { color:var(--ink); }
-  details.story.lead { padding:20px 0 16px; }
-  .lead h3 { font-size:1.45rem; line-height:1.22; }
-  .lead .dek { font-size:1rem; }
+  details.story.lead { padding:16px 0 12px; }
+  .lead h3 { font-size:1.35rem; line-height:1.2; }
+  .lead .dek { font-size:.95rem; }
   details.story.lead:not([open]) .dek { -webkit-line-clamp:3; }
+  /* attached viral pics: visible collapsed (cropped), full when open */
+  .story .pic { display:block; width:100%; border-radius:8px; margin-top:8px; }
+  details.story:not([open]) .pic { max-height:230px; object-fit:cover; }
   .srcs { margin-top:10px; }
   .srclabel { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); }
   a.src { display:block; text-decoration:none; color:var(--ink); border-left:2px solid var(--faint);
@@ -142,13 +153,7 @@ const page = `<!doctype html>
   <div class="tagline">crypto × ai, and the world that moves them</div>
   <div class="dateline"><span>${esc(dateLong)}</span><span>no. ${editionNo}</span></div>
 </header>
-${paper.lead ? `<details class="story lead">
-  <summary>
-    <h3>${esc(paper.lead.headline)}<span class="chev">▸</span></h3>
-    <p class="dek">${esc(paper.lead.dek)}${paper.lead.body ? " " + esc(paper.lead.body) : ""}</p>
-  </summary>
-  ${sourceLinks(paper.lead.sources)}
-</details>` : ""}
+${paper.lead ? story(paper.lead, "story lead") : ""}
 ${sections}
 <footer>
   <p>written overnight by clawd 🦞, an ai with a wallet, from ~${Math.round(brief.tweet_count / 100) * 100} posts on the wire · every story links to its sources</p>
