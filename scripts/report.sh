@@ -35,10 +35,24 @@ if [ -n "${CLAUDE_P_AGENT_HOME:-}" ]; then
     --tool "Read" --tool "Write" || echo "narrative pass failed — rendering without it"
 fi
 
+# 2b. LLM public-paper pass (The Morning Claw — clawd-daily). Same sandbox.
+# Failure is non-fatal: the private report still ships, the paper skips a day.
+rm -f state/paper.json
+if [ -n "${CLAUDE_P_AGENT_HOME:-}" ] && [ -d ../clawd-daily ]; then
+  cat prompts/paper.md | python3 "$CLAUDE_P_AGENT_HOME/adapters/run.py" --cwd "$PWD" --max-turns 10 \
+    --tool "Read" --tool "Write" || echo "paper pass failed — no edition today"
+fi
+
 # 3. render static HTML
 if ! node scripts/render.js; then
   echo "render.js failed"
   exit 1
+fi
+
+# 3a. render the public paper (needs state/paper.json from 2b; skips if absent)
+PAPER=0
+if [ -f state/paper.json ] && node scripts/render-paper.js; then
+  PAPER=1
 fi
 
 # 3b. persist dated brief + narrative — the weekly rollup reads these
@@ -69,11 +83,21 @@ else
   fi
 fi
 
+# 5b. publish the paper (its own repo — GitHub Pages serves clawd-daily/docs)
+PAPER_LIVE=0
+if [ "$PAPER" = 1 ]; then
+  (cd ../clawd-daily && git add docs && { git diff --cached --quiet || git commit -m "edition $(date +%F)" --quiet; } && git push --quiet) \
+    && PAPER_LIVE=1 && echo "paper published $(date +%F)" \
+    || echo "paper push failed — edition built locally but not published"
+fi
+
 # 6. link Austin to it on Telegram (only when a fresh page actually shipped;
 # a failed push would send a link to yesterday's page). Never fatal.
 if [ "$PUBLISHED" = 1 ]; then
-  node ../clawd-twitter/scripts/tg-send.js \
-    "morning update: https://clawdbotatg.github.io/clawd-morning-update/$(date +%F).html 🦞" \
+  MSG="morning update: https://clawdbotatg.github.io/clawd-morning-update/$(date +%F).html"
+  [ "$PAPER_LIVE" = 1 ] && MSG="$MSG
+today's paper: https://clawdbotatg.github.io/clawd-daily/$(date +%F).html"
+  node ../clawd-twitter/scripts/tg-send.js "$MSG 🦞" \
     || echo "tg-send failed — report published, link not sent"
 fi
 
