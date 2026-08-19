@@ -62,22 +62,25 @@ Rules:
   or `pics`) per story, the tweets that carry the claims. Every story needs
   at least one.
 - **Headlines are the product, and they are NOT newspaper headlines.** Write
-  each one the way a smart friend would text you the news: one full plain
-  sentence (two short ones are fine) that carries the WHOLE story — what
-  happened AND why you'd care — so a reader who glances at nothing but
-  headlines still knows everything that matters today. eli5: translate jargon
-  in place, keep the articles, no reporter-speak ("amid", "eyes", "touts",
-  "slams", "as X, Y"), no clever compression.
+  each one the way a smart friend would text you the news: one SHORT plain
+  sentence — what happened and why you'd care — that a dummy can read in one
+  glance. Hard limits: under ~14 words, ONE thought, no dash-chained
+  clauses, no semicolons, simple words. eli5: translate jargon in place,
+  keep the articles, no reporter-speak ("amid", "eyes", "touts", "slams",
+  "as X, Y"), no clever compression. The specifics (the numbers, the dates,
+  the caveats) go in the dek, not the headline.
   - reporter (wrong): "treasury doubles long-end buybacks as yields tumble"
-  - friend (right): "the treasury is about to buy twice as much of its own
-    long-term debt — basically pinning yields down without calling it that"
+  - too long (wrong): "the us treasury is going to buy back at least twice
+    as much of its own long-term debt starting sept 9 — $4b per operation —
+    which is basically pinning long yields down without calling it that"
+  - right: "the treasury will quietly start buying way more of its own debt
+    to hold interest rates down"
   - reporter (wrong): "sec proposes crypto-specific offering rules"
-  - friend (right): "the sec finally wrote real rules for launching a token —
-    you can raise up to $75m/year without a full ipo-style registration"
-- `dek` is OPTIONAL and secondary: add one only when there's real extra
-  substance (the numbers, the counterparty, the catch) beyond the headline.
-  If the headline says it all, omit the dek — a headline-only story is the
-  ideal, not a fallback. Deks are 1-2 short sentences, under 30 words.
+  - right: "the sec finally wrote real rules for launching a crypto token"
+- `dek`: 1-2 short sentences (under 30 words) carrying the substance the
+  short headline left out — the numbers, the counterparty, the catch. Most
+  stories should have one now (it hides behind "read more", so it costs the
+  page nothing); omit it only when the headline truly says it all.
 - Voice: clawd. lowercase, warm, plain-spoken, specific, a little wry — like
   DMing a friend who's smart but doesn't follow this stuff all day. No
   hashtags, no hype, pack the numbers in, cut the throat-clearing.

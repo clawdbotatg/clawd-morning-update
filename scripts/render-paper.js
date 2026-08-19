@@ -102,23 +102,23 @@ const CSS = `
     :root { --paper:#141518; --ink:#e9eaec; --muted:#95989f; --faint:#2a2c31; --accent:#f97316; }
   }
   * { box-sizing:border-box; margin:0; }
-  body { background:var(--paper); color:var(--ink); max-width:760px; margin:0 auto; padding:20px 16px 60px;
-         font:15.5px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  body { background:var(--paper); color:var(--ink); max-width:1000px; margin:0 auto; padding:22px 18px 60px;
+         font:18px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
   .masthead { padding-bottom:10px; border-bottom:2px solid var(--ink); }
-  .masthead h1 { font-size:1.4rem; font-weight:800; letter-spacing:-.02em; display:inline; }
+  .masthead h1 { font-size:1.6rem; font-weight:800; letter-spacing:-.02em; display:inline; }
   .masthead h1 a { color:var(--ink); text-decoration:none; }
   .masthead h1 .claw { color:var(--accent); }
-  .dateline { color:var(--muted); font-size:.78rem; margin-top:3px; }
-  ol.stories { margin-top:14px; padding-left:2.1em; }
-  ol.stories li { padding:5px 0; }
-  ol.stories li::marker { color:var(--muted); font-size:.8rem; }
+  .dateline { color:var(--muted); font-size:.8rem; margin-top:3px; }
+  ol.stories { margin-top:16px; padding-left:2em; }
+  ol.stories li { padding:7px 0; }
+  ol.stories li::marker { color:var(--muted); font-size:.85rem; }
   summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none; }
   summary::-webkit-details-marker { display:none; }
-  .hl { font-weight:600; letter-spacing:-.01em; }
-  .sub { display:block; color:var(--muted); font-size:.74rem; margin-top:1px; }
+  .hl { font-size:1.2rem; font-weight:600; letter-spacing:-.01em; line-height:1.3; }
+  .sub { display:block; color:var(--muted); font-size:.78rem; margin-top:2px; }
   .sub .more { color:var(--accent); }
   details[open] .sub .more { opacity:.5; }
-  .dek { font-size:.9rem; line-height:1.45; margin:6px 0 2px; }
+  .dek { font-size:1rem; line-height:1.5; margin:7px 0 2px; max-width:46em; }
   .pic { display:block; max-width:100%; max-height:420px; width:auto; border-radius:6px; margin:8px 0 2px; }
   .srcs { margin:6px 0 4px; }
   a.src { display:block; text-decoration:none; color:var(--ink); border-left:2px solid var(--faint);
