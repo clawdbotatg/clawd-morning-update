@@ -16,30 +16,19 @@ Write `state/paper.json` with exactly this shape:
 ```json
 {
   "date": "<brief.json's date, copied exactly>",
-  "lead": {
-    "headline": "the day's biggest story as one plain chat-style sentence — what happened and why it matters, eli5",
-    "dek": "one more sentence of substance — the numbers, the catch",
-    "body": "2-4 sentences of actual reporting: what happened, who said what, the numbers. Optional but the lead should usually have one.",
-    "sources": ["tweet_id", "tweet_id"]
-  },
-  "sections": [
+  "stories": [
     {
-      "title": "section name",
-      "stories": [
-        {
-          "headline": "one full plain sentence that IS the whole story — see voice rule",
-          "dek": "OPTIONAL — only when there's real extra substance beyond the headline",
-          "big": true,
-          "sources": ["tweet_id"],
-          "image": "tweet_id (OPTIONAL — see image rule)"
-        }
-      ]
+      "headline": "one full plain sentence that IS the whole story — see voice rule",
+      "dek": "OPTIONAL — only when there's real extra substance beyond the headline",
+      "sources": ["tweet_id"],
+      "image": "tweet_id (OPTIONAL — see image rule)"
     }
   ]
 }
 ```
 
-(`big` is optional; `dek` is optional.)
+(`dek` is optional. The page is a single flat ranked list — no sections, no
+lead object: story #1 IS the lead.)
 
 Rules:
 - **This is public.** It is NOT Austin's report: never mention Austin, "your
@@ -50,24 +39,25 @@ Rules:
   with real substance; (3) ai/model news; (4) world politics and macro when it
   moves markets or the two worlds above. Pure engagement-bait, memecoin
   shouting, and follower drama never make the paper.
-- Shape: a lead story, then 5-9 sections of 4-10 stories each when the day
-  supports it — the paper is DENSE and headlines-first: many short stories
-  beat few long ones. A good edition runs 35-60 stories. Anything in the
-  brief that clears the scope bar deserves a headline, even if its dek is one
-  short sentence — mine ALL of brief.json: every theme's tweet list, the
-  `top` list, AND the `pics` list; a story that lives in only one tweet is
-  still a story. Good section titles are short: "the wire", "onchain",
-  "the models", "the world", "washington" — pick what fits the day, don't
-  force a fixed set. A "briefs" section of one-line stories is a good place
-  for the long tail. More real headlines is always better than longer deks —
-  never hit the count by padding or by letting weak items in.
+- Shape: ONE flat list of stories, ordered strictly by importance — the
+  single most consequential story of the day is #1, and importance decays
+  down the page (hackernews-style: rank is the only hierarchy, there are no
+  sections). "Important" means moves-markets / changes-the-landscape /
+  you'd-tell-a-friend-first, never loudest. A good edition runs 35-60
+  stories. Anything in the brief that clears the scope bar deserves a
+  headline — mine ALL of brief.json: every theme's tweet list, the `top`
+  list, AND the `pics` list; a story that lives in only one tweet is still a
+  story; the long tail simply ranks low. More real headlines is always
+  better than longer deks — never hit the count by padding or by letting
+  weak items in.
 - Image rule: brief.json's `pics` list is the day's most-engaged tweets that
   carry a `media` array (attached photos); theme/top tweets may carry one
   too. When an image IS the story or is clearly going viral (big engagement +
   the picture is the point — a chart, a screenshot, a scene), set that
-  story's `image` to the tweet's id and the paper prints the picture. Use
-  2-5 per edition when the pictures earn it; the lead may carry one too.
-  Never set `image` to a tweet that has no `media`.
+  story's `image` to the tweet's id and the paper prints the picture inside
+  the expanded story (the collapsed page is pure text, so attach one when
+  it's worth the tap). Use 2-5 per edition when the pictures earn it. Never
+  set `image` to a tweet that has no `media`.
 - `sources`: 1-4 tweet ids (the `id` field from brief.json — themes, `top`,
   or `pics`) per story, the tweets that carry the claims. Every story needs
   at least one.
@@ -88,10 +78,6 @@ Rules:
   substance (the numbers, the counterparty, the catch) beyond the headline.
   If the headline says it all, omit the dek — a headline-only story is the
   ideal, not a fallback. Deks are 1-2 short sentences, under 30 words.
-- Glance hierarchy: mark the day's genuinely biggest stories `"big": true` —
-  3-6 per edition, lead excluded (it's already the biggest). Big means
-  moves-markets / changes-the-landscape, not loudest; put big stories first
-  in their section, and order sections most-important-first.
 - Voice: clawd. lowercase, warm, plain-spoken, specific, a little wry — like
   DMing a friend who's smart but doesn't follow this stuff all day. No
   hashtags, no hype, pack the numbers in, cut the throat-clearing.
