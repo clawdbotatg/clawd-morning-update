@@ -31,7 +31,7 @@ fi
 # 2. LLM narrative pass (Read/Write only — no network, no posting tools).
 # Failure is non-fatal: render.js degrades to raw theme terms.
 if [ -n "${CLAUDE_P_AGENT_HOME:-}" ]; then
-  cat prompts/report.md | python3 "$CLAUDE_P_AGENT_HOME/adapters/run.py" --cwd "$PWD" --max-turns 10 \
+  cat prompts/report.md | python3 "$CLAUDE_P_AGENT_HOME/adapters/run.py" --cwd "$PWD" --max-turns 30 \
     --tool "Read" --tool "Write" || echo "narrative pass failed — rendering without it"
 fi
 
@@ -39,7 +39,7 @@ fi
 # Failure is non-fatal: the private report still ships, the paper skips a day.
 rm -f state/paper.json
 if [ -n "${CLAUDE_P_AGENT_HOME:-}" ] && [ -d ../clawd-daily ]; then
-  cat prompts/paper.md | python3 "$CLAUDE_P_AGENT_HOME/adapters/run.py" --cwd "$PWD" --max-turns 10 \
+  cat prompts/paper.md | python3 "$CLAUDE_P_AGENT_HOME/adapters/run.py" --cwd "$PWD" --max-turns 30 \
     --tool "Read" --tool "Write" || echo "paper pass failed — no edition today"
 fi
 

@@ -120,7 +120,7 @@ for (const [term, e] of ranked.slice(0, 60)) {
     if (pb && e.count / pb.count > 0.6) bigramParts.add(b);
   }
 }
-ranked = ranked.filter(([term]) => !bigramParts.has(term)).slice(0, 14);
+ranked = ranked.filter(([term]) => !bigramParts.has(term)).slice(0, 22);
 
 // build themes; a tweet appears in at most one theme (highest-ranked theme wins)
 const claimed = new Set();
@@ -141,14 +141,22 @@ const themes = ranked
     const samples = e.samples
       .filter((t) => !claimed.has(t.id))
       .sort((a, b) => b.eng - a.eng)
-      .slice(0, 8);
+      .slice(0, 10);
     samples.forEach((t) => claimed.add(t.id));
     return { term, tweet_count: e.count, score: Math.round(e.score * 10) / 10, tweets: samples.map(slim) };
   })
   .filter((th) => th.tweets.length >= 2);
 
 // overall top tweets (may overlap themes; renderer dedupes)
-const top = [...tweets].sort((a, b) => b.eng - a.eng).slice(0, 15).map(slim);
+const top = [...tweets].sort((a, b) => b.eng - a.eng).slice(0, 30).map(slim);
+
+// top media-carrying tweets — the paper's image pool. Themes routinely drop
+// every tweet with a picture, so the paper pass gets them as their own list.
+const pics = [...tweets]
+  .filter((t) => (t.media || []).some((m) => m.url))
+  .sort((a, b) => b.eng - a.eng)
+  .slice(0, 15)
+  .map(slim);
 
 mkdirSync(STATE, { recursive: true });
 const brief = {
@@ -159,6 +167,7 @@ const brief = {
   tweet_count: N,
   themes,
   top,
+  pics,
 };
 writeFileSync(join(STATE, "brief.json"), JSON.stringify(brief, null, 2));
 console.log(`brief.json: ${N} tweets → ${themes.length} themes (${brief.date})`);

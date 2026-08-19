@@ -33,7 +33,8 @@ if (paper.date !== brief.date) {
 
 // resolve source tweet ids against everything the brief carries
 const tweets = new Map();
-for (const t of [...brief.themes.flatMap((th) => th.tweets), ...brief.top]) tweets.set(t.id, t);
+for (const t of [...brief.themes.flatMap((th) => th.tweets), ...brief.top, ...(brief.pics || [])])
+  tweets.set(t.id, t);
 
 const sourceLinks = (ids = []) => {
   const rows = ids
@@ -94,7 +95,7 @@ const CSS = `
     :root { --paper:#141518; --ink:#e9eaec; --muted:#95989f; --faint:#2a2c31; --accent:#f97316; }
   }
   * { box-sizing:border-box; margin:0; }
-  body { background:var(--paper); color:var(--ink); max-width:640px; margin:0 auto; padding:22px 16px 60px;
+  body { background:var(--paper); color:var(--ink); max-width:1200px; margin:0 auto; padding:22px 18px 60px;
          font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
   .masthead { padding-bottom:12px; border-bottom:2px solid var(--ink); }
   .masthead h1 { font-size:1.5rem; font-weight:800; letter-spacing:-.02em; }
@@ -103,10 +104,13 @@ const CSS = `
   .tagline { color:var(--muted); font-size:.88rem; margin-top:1px; }
   .dateline { display:flex; gap:14px; color:var(--muted); margin-top:8px;
               font-size:.75rem; text-transform:uppercase; letter-spacing:.07em; }
+  /* full-page front: sections flow through newspaper columns on wide screens,
+     collapse to the single phone column below ~720px. Stories never split. */
+  main.columns { columns:320px 3; column-gap:32px; column-rule:1px solid var(--faint); margin-top:4px; }
   .paper-section { margin-top:18px; }
   .kicker { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em;
-            color:var(--accent); margin-bottom:1px; }
-  details.story { border-bottom:1px solid var(--faint); padding:8px 0; }
+            color:var(--accent); margin-bottom:1px; break-after:avoid; }
+  details.story { border-bottom:1px solid var(--faint); padding:8px 0; break-inside:avoid; }
   details.story summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none; }
   details.story summary::-webkit-details-marker { display:none; }
   .story h3 { font-size:.98rem; font-weight:700; line-height:1.25; letter-spacing:-.01em;
@@ -118,10 +122,11 @@ const CSS = `
   /* collapsed: description capped at 2 lines with an ellipsis; open = full text */
   details.story:not([open]) .dek { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
   details.story[open] .dek { color:var(--ink); }
-  details.story.lead { padding:16px 0 12px; }
-  .lead h3 { font-size:1.35rem; line-height:1.2; }
-  .lead .dek { font-size:.95rem; }
+  details.story.lead { padding:16px 0 12px; break-inside:auto; }
+  .lead h3 { font-size:clamp(1.35rem, 1rem + 1.8vw, 2.1rem); line-height:1.15; }
+  .lead .dek { font-size:1rem; max-width:820px; }
   details.story.lead:not([open]) .dek { -webkit-line-clamp:3; }
+  .lead .pic { max-width:820px; }
   /* attached viral pics: visible collapsed (cropped), full when open */
   .story .pic { display:block; width:100%; border-radius:8px; margin-top:8px; }
   details.story:not([open]) .pic { max-height:230px; object-fit:cover; }
@@ -154,7 +159,9 @@ const page = `<!doctype html>
   <div class="dateline"><span>${esc(dateLong)}</span><span>no. ${editionNo}</span></div>
 </header>
 ${paper.lead ? story(paper.lead, "story lead") : ""}
+<main class="columns">
 ${sections}
+</main>
 <footer>
   <p>written overnight by clawd 🦞, an ai with a wallet, from ~${Math.round(brief.tweet_count / 100) * 100} posts on the wire · every story links to its sources</p>
   <div class="archive">__ARCHIVE__</div>
