@@ -97,17 +97,17 @@ const priorEditions = readdirSync(DOCS).filter((f) => /^\d{4}-\d{2}-\d{2}\.html$
 const editionNo = priorEditions.includes(`${paper.date}.html`) ? priorEditions.length : priorEditions.length + 1;
 
 const CSS = `
-  :root { --paper:#fcfcfa; --ink:#17181a; --muted:#6b6f76; --faint:#e6e6e2; --accent:#c2410c; }
-  @media (prefers-color-scheme: dark) {
-    :root { --paper:#141518; --ink:#e9eaec; --muted:#95989f; --faint:#2a2c31; --accent:#f97316; }
-  }
+  /* gmsers is dark, always: black page, white text, lobster-red links */
+  :root { --paper:#000; --ink:#f4f4f2; --muted:#9a9ea6; --faint:#242629; --accent:#ff4b33; }
   * { box-sizing:border-box; margin:0; }
   body { background:var(--paper); color:var(--ink); max-width:1000px; margin:0 auto; padding:22px 18px 60px;
          font:18px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
   .masthead { padding-bottom:10px; border-bottom:2px solid var(--ink); }
-  .masthead h1 { font-size:1.6rem; font-weight:800; letter-spacing:-.02em; display:inline; }
+  .mrow { display:flex; align-items:center; justify-content:space-between; gap:14px; }
+  .masthead h1 { font-size:1.7rem; font-weight:800; letter-spacing:-.02em; }
   .masthead h1 a { color:var(--ink); text-decoration:none; }
-  .masthead h1 .claw { color:var(--accent); }
+  .masthead h1 .gm { color:var(--accent); }
+  .pfp { width:56px; height:56px; border-radius:10px; flex:none; }
   .dateline { color:var(--muted); font-size:.8rem; margin-top:3px; }
   ol.stories { margin-top:16px; padding-left:2em; }
   ol.stories li { padding:7px 0; }
@@ -124,10 +124,10 @@ const CSS = `
   a.src { display:block; text-decoration:none; color:var(--ink); border-left:2px solid var(--faint);
           padding:5px 10px; margin-top:6px; font-size:.84rem; }
   a.src:hover { border-left-color:var(--accent); }
-  .srchead { display:block; font-size:.74rem; font-weight:600; color:var(--muted); margin-bottom:1px; }
+  .srchead { display:block; font-size:.74rem; font-weight:600; color:var(--accent); margin-bottom:1px; }
   .srctext { color:var(--ink); opacity:.85; }
   footer { margin-top:32px; color:var(--muted); font-size:.78rem; }
-  footer a { color:var(--muted); }
+  footer a { color:var(--accent); }
   .archive { margin-top:6px; line-height:1.9; }
   .archive a { margin-right:10px; }
 `;
@@ -137,14 +137,18 @@ const page = `<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>the morning claw · ${esc(paper.date)}</title>
-<meta name="description" content="${esc(stories[0]?.headline || "daily brief at the intersection of crypto and ai")}">
+<title>gmsers · ${esc(paper.date)}</title>
+<meta name="description" content="${esc(stories[0]?.headline || "gm, sers — the daily brief at the intersection of crypto and ai")}">
+<meta name="theme-color" content="#000000">
 <style>${CSS}</style>
 </head>
 <body>
 <header class="masthead">
-  <h1><a href="index.html">the morning claw <span class="claw">🦞</span></a></h1>
-  <div class="dateline">crypto × ai, and the world that moves them · ${esc(dateLong)} · no. ${editionNo}</div>
+  <div class="mrow">
+    <h1><a href="index.html"><span class="gm">gm</span>sers.com</a></h1>
+    <img class="pfp" src="gmsers.jpg" alt="gmsers" width="56" height="56">
+  </div>
+  <div class="dateline">gm, sers · crypto × ai, and the world that moves them · ${esc(dateLong)} · no. ${editionNo}</div>
 </header>
 <ol class="stories">
 ${stories.map(story).join("\n")}
