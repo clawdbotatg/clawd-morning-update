@@ -103,13 +103,13 @@ const CSS = `
   body { background:var(--paper); color:var(--ink); max-width:1000px; margin:0 auto; padding:22px 18px 60px;
          font:18px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
   .masthead { padding-bottom:10px; border-bottom:2px solid var(--ink); }
-  .mrow { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
-  .masthead h1 { font-size:2.4rem; font-weight:800; letter-spacing:-.02em; }
+  .mrow { display:flex; align-items:flex-end; gap:16px; flex-wrap:wrap; }
+  .masthead h1 { font-size:2.4rem; font-weight:800; letter-spacing:-.02em; line-height:1; }
   .masthead h1 a { color:var(--ink); text-decoration:none; }
   .masthead h1 .gm { color:var(--accent); }
   .masthead h1 .dotcom { color:var(--muted); }
   .pfp { width:64px; height:64px; border-radius:12px; flex:none; }
-  .dateline { color:var(--muted); font-size:.8rem; margin-left:auto; text-align:right; }
+  .dateline { color:var(--muted); font-size:.8rem; margin-left:auto; text-align:right; padding-bottom:3px; }
   ol.stories { margin-top:16px; padding-left:2em; }
   ol.stories li { padding:7px 0; }
   ol.stories li::marker { color:var(--muted); font-size:.85rem; }

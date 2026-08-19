@@ -50,7 +50,9 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>
   body { width:1200px; height:630px; background:#000; color:#f4f4f2; overflow:hidden;
          font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
          padding:52px 64px; display:flex; flex-direction:column; }
-  header { display:flex; align-items:center; gap:24px; padding-bottom:26px; border-bottom:4px solid #f4f4f2; }
+  header { display:flex; align-items:flex-end; gap:24px; padding-bottom:26px; border-bottom:4px solid #f4f4f2; }
+  header h1 { line-height:1; }
+  header .date { padding-bottom:6px; }
   header img { width:96px; height:96px; border-radius:18px; }
   header h1 { font-size:64px; font-weight:800; letter-spacing:-.02em; }
   header .gm { color:#ff4b33; }
