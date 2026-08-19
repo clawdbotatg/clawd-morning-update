@@ -55,6 +55,14 @@ fi
 PAPER=0
 if [ -f state/paper.json ]; then
   node scripts/og-image.js || echo "og card failed — unfurl degrades"
+  # refresh the onedollaraudit footer banner (their og image); on any failure
+  # keep the last good copy rather than shipping a broken image
+  BANNER=../clawd-daily/docs/onedollaraudit.png
+  if curl -sfL --max-time 20 https://onedollaraudit.com/og.png -o "$BANNER.tmp"; then
+    sips -z 630 1200 "$BANNER.tmp" >/dev/null 2>&1 && mv "$BANNER.tmp" "$BANNER" || rm -f "$BANNER.tmp"
+  else
+    rm -f "$BANNER.tmp"
+  fi
   if node scripts/render-paper.js; then
     PAPER=1
   fi
