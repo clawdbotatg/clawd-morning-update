@@ -103,11 +103,12 @@ const CSS = `
   body { background:var(--paper); color:var(--ink); max-width:1000px; margin:0 auto; padding:22px 18px 60px;
          font:18px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
   .masthead { padding-bottom:10px; border-bottom:2px solid var(--ink); }
-  .mrow { display:flex; align-items:center; justify-content:space-between; gap:14px; }
-  .masthead h1 { font-size:1.7rem; font-weight:800; letter-spacing:-.02em; }
+  .mrow { display:flex; align-items:center; gap:16px; }
+  .masthead h1 { font-size:2.4rem; font-weight:800; letter-spacing:-.02em; }
   .masthead h1 a { color:var(--ink); text-decoration:none; }
   .masthead h1 .gm { color:var(--accent); }
-  .pfp { width:56px; height:56px; border-radius:10px; flex:none; }
+  .masthead h1 .dotcom { color:var(--muted); }
+  .pfp { width:64px; height:64px; border-radius:12px; flex:none; }
   .dateline { color:var(--muted); font-size:.8rem; margin-top:3px; }
   ol.stories { margin-top:16px; padding-left:2em; }
   ol.stories li { padding:7px 0; }
@@ -145,8 +146,8 @@ const page = `<!doctype html>
 <body>
 <header class="masthead">
   <div class="mrow">
-    <h1><a href="index.html"><span class="gm">gm</span>sers.com</a></h1>
-    <img class="pfp" src="gmsers.jpg" alt="gmsers" width="56" height="56">
+    <img class="pfp" src="gmsers.jpg" alt="gmsers" width="64" height="64">
+    <h1><a href="index.html"><span class="gm">gm</span>sers<span class="dotcom">.com</span></a></h1>
   </div>
   <div class="dateline">gm, sers · crypto × ai, and the world that moves them · ${esc(dateLong)} · no. ${editionNo}</div>
 </header>
