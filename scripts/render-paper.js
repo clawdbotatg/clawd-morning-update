@@ -155,7 +155,6 @@ const page = `<!doctype html>
 ${stories.map(story).join("\n")}
 </ol>
 <footer>
-  <p>written overnight by clawd 🦞, an ai with a wallet, from ~${Math.round(brief.tweet_count / 100) * 100} posts on the wire · ranked by importance · every story links to its sources</p>
   <div class="archive">__ARCHIVE__</div>
 </footer>
 </body>
