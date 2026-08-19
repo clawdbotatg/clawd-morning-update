@@ -6,8 +6,10 @@
 // numbered list of headlines ordered by importance (rank is the only
 // hierarchy). Each row is a <details>: collapsed = headline + a tiny
 // "read more" line, open = dek + picture + source tweets. A right rail lists
-// every past edition as date + ~8-word tldr (docs/days.json, maintained here).
-// No sections, no JS. All LLM/tweet text is escaped — words, never markup.
+// every past edition as date + ~8-word tldr (docs/days.json, maintained here);
+// promo cards (friends-of-the-paper og banners) interlace the list every 10
+// stories. No sections, no JS. All LLM/tweet text is escaped — words, never
+// markup.
 //
 // paper.json shape (written by prompts/paper.md):
 //   { "date": "YYYY-MM-DD",
@@ -85,6 +87,32 @@ const story = (s) => {
   ${sourceLinks(s.sources)}
 </details></li>`;
 };
+
+// promo cards — each site's og card (fetched/refreshed daily by report.sh,
+// last good copy kept on failure), interlaced into the list: one card after
+// every full ${AD_EVERY} stories, cycling the deck. w/h are layout hints only
+// (CSS does width:100%/height:auto), so drift after a site redesign is fine.
+const ADS = [
+  { href: "https://www.onedollaraudit.com/", img: "onedollaraudit.png", alt: "one dollar audit — a serious security audit, one dollar", w: 1200, h: 630 },
+  { href: "https://larv.ai/", img: "larv.jpg", alt: "larv.ai", w: 1200, h: 628 },
+  { href: "https://ethskills.com/", img: "ethskills.png", alt: "ethskills — ethereum knowledge for ai agents", w: 1200, h: 628 },
+  { href: "https://slop.computer/", img: "slopcomputer.jpg", alt: "slop.computer — onchain podcast", w: 1200, h: 800 },
+];
+const AD_EVERY = 10;
+const adCard = (a) =>
+  `<p class="ad"><a href="${a.href}" target="_blank" rel="noopener"><img class="banner" src="${a.img}" alt="${esc(a.alt)}" loading="lazy" width="${a.w}" height="${a.h}"></a></p>`;
+
+// the feed: stories in chunks of AD_EVERY (each its own <ol start=…> so the
+// ranked numbering runs straight through), a card after every full chunk;
+// a short edition that never earns a slot still gets one card at the end.
+let adI = 0;
+let feed = "";
+for (let i = 0; i < stories.length; i += AD_EVERY) {
+  const chunk = stories.slice(i, i + AD_EVERY);
+  feed += `<ol class="stories" start="${i + 1}">\n${chunk.map(story).join("\n")}\n</ol>\n`;
+  if (chunk.length === AD_EVERY) feed += adCard(ADS[adI++ % ADS.length]) + "\n";
+}
+if (!adI) feed += adCard(ADS[0]) + "\n";
 
 const dateLong = new Date(paper.date + "T12:00:00").toLocaleDateString("en-US", {
   weekday: "long",
@@ -177,7 +205,7 @@ const CSS = `
   footer a { color:var(--accent); }
   .powered { margin-top:14px; }
   .powered a { color:var(--accent); text-decoration:none; }
-  .ad { margin:32px 0 14px; }
+  .ad { margin:26px 0; }
   .ad .banner { display:block; width:100%; height:auto; border-radius:12px; }
 `;
 
@@ -216,11 +244,7 @@ ${
 </header>
 <div class="wrap">
 <main>
-<ol class="stories">
-${stories.map(story).join("\n")}
-</ol>
-<footer>
-  <p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><img class="banner" src="onedollaraudit.png" alt="one dollar audit — a serious security audit, one dollar" loading="lazy" width="1200" height="630"></a></p>
+${feed}<footer>
   <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a></p>
 </footer>
 </main>
