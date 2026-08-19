@@ -149,7 +149,7 @@ const page = `<!doctype html>
     <img class="pfp" src="gmsers.jpg" alt="gmsers" width="64" height="64">
     <h1><a href="index.html"><span class="gm">gm</span>sers<span class="dotcom">.com</span></a></h1>
   </div>
-  <div class="dateline">gm, sers · crypto × ai, and the world that moves them · ${esc(dateLong)} · no. ${editionNo}</div>
+  <div class="dateline">${esc(dateLong)} · no. ${editionNo}</div>
 </header>
 <ol class="stories">
 ${stories.map(story).join("\n")}
