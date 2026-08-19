@@ -133,13 +133,8 @@ const CSS = `
   .archive a { margin-right:10px; }
   .powered { margin-top:14px; }
   .powered a { color:var(--accent); text-decoration:none; }
-  .ad { margin:28px 0 14px; }
-  .ad a { display:inline-block; border:1px solid var(--faint); border-radius:8px; padding:10px 14px;
-          color:var(--muted); text-decoration:none; font-size:.85rem; }
-  .ad a:hover { border-color:var(--accent); }
-  .ad .adtag { color:var(--faint); font-size:.68rem; font-weight:700; text-transform:uppercase;
-               letter-spacing:.1em; margin-right:8px; }
-  .ad .adlink { color:var(--accent); margin-left:6px; }
+  .ad { margin:32px 0 14px; }
+  .ad .banner { display:block; width:100%; height:auto; border-radius:12px; }
 `;
 
 const page = `<!doctype html>
@@ -179,7 +174,7 @@ ${
 ${stories.map(story).join("\n")}
 </ol>
 <footer>
-  <p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><span class="adtag">ad</span> a serious security audit. one dollar. <span class="adlink">onedollaraudit.com</span></a></p>
+  <p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><img class="banner" src="onedollaraudit.png" alt="one dollar audit — a serious security audit, one dollar" loading="lazy" width="1200" height="630"></a></p>
   <div class="archive">__ARCHIVE__</div>
   <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a></p>
 </footer>
