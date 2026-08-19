@@ -133,6 +133,13 @@ const CSS = `
   .archive a { margin-right:10px; }
   .powered { margin-top:14px; }
   .powered a { color:var(--accent); text-decoration:none; }
+  .ad { margin:28px 0 14px; }
+  .ad a { display:inline-block; border:1px solid var(--faint); border-radius:8px; padding:10px 14px;
+          color:var(--muted); text-decoration:none; font-size:.85rem; }
+  .ad a:hover { border-color:var(--accent); }
+  .ad .adtag { color:var(--faint); font-size:.68rem; font-weight:700; text-transform:uppercase;
+               letter-spacing:.1em; margin-right:8px; }
+  .ad .adlink { color:var(--accent); margin-left:6px; }
 `;
 
 const page = `<!doctype html>
@@ -143,6 +150,21 @@ const page = `<!doctype html>
 <title>gmsers · ${esc(paper.date)}</title>
 <meta name="description" content="${esc(stories[0]?.headline || "gm, sers — the daily brief at the intersection of crypto and ai")}">
 <meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:site_name" content="gmsers">
+<meta property="og:title" content="gmsers · ${esc(dateLong)}">
+<meta property="og:description" content="${esc(stories[0]?.headline || "")}">
+${
+  existsSync(join(DOCS, "og", `${paper.date}.png`))
+    ? `<meta property="og:image" content="${SITE}og/${paper.date}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${SITE}og/${paper.date}.png">`
+    : `<meta property="og:image" content="${SITE}apple-touch-icon.png">
+<meta name="twitter:card" content="summary">`
+}
 <style>${CSS}</style>
 </head>
 <body>
@@ -157,6 +179,7 @@ const page = `<!doctype html>
 ${stories.map(story).join("\n")}
 </ol>
 <footer>
+  <p class="ad"><a href="https://www.onedollaraudit.com/" target="_blank" rel="noopener"><span class="adtag">ad</span> a serious security audit. one dollar. <span class="adlink">onedollaraudit.com</span></a></p>
   <div class="archive">__ARCHIVE__</div>
   <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a></p>
 </footer>

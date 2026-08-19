@@ -49,10 +49,15 @@ if ! node scripts/render.js; then
   exit 1
 fi
 
-# 3a. render the public paper (needs state/paper.json from 2b; skips if absent)
+# 3a. render the public paper (needs state/paper.json from 2b; skips if absent).
+# The unfurl card renders first so render-paper can point og:image at it;
+# card failure is non-fatal — the unfurl just degrades to a plain summary.
 PAPER=0
-if [ -f state/paper.json ] && node scripts/render-paper.js; then
-  PAPER=1
+if [ -f state/paper.json ]; then
+  node scripts/og-image.js || echo "og card failed — unfurl degrades"
+  if node scripts/render-paper.js; then
+    PAPER=1
+  fi
 fi
 
 # 3b. persist dated brief + narrative — the weekly rollup reads these

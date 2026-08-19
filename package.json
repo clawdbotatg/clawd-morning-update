@@ -1,0 +1,9 @@
+{
+  "name": "clawd-morning-update",
+  "private": true,
+  "type": "module",
+  "description": "morning report + gmsers paper pipeline (see README.md)",
+  "dependencies": {
+    "playwright-core": "^1.49.0"
+  }
+}
