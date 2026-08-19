@@ -8,7 +8,9 @@
 // paper.json shape (written by prompts/paper.md):
 //   { "date": "YYYY-MM-DD",
 //     "lead": { "headline", "dek", "body"?, "sources": ["tweet_id"] },
-//     "sections": [ { "title", "stories": [ { "headline", "dek", "sources": [] } ] } ] }
+//     "sections": [ { "title", "stories": [ { "headline", "dek"?, "big"?, "sources": [] } ] } ] }
+// Headlines are chat-style full sentences that carry the whole story; dek is
+// optional extra substance; big:true = the day's few biggest, rendered louder.
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
@@ -60,14 +62,17 @@ const storyImage = (s) => {
 
 // headline always visible; the description is clamped to 2 lines with "…"
 // until tapped (the <details> opens → full text + source tweets)
-const story = (s, cls = "story") => `<details class="${cls}">
+const story = (s, cls = "story") => {
+  const dek = [s.dek, s.body].filter(Boolean).map(esc).join(" ");
+  return `<details class="${cls}${s.big ? " big" : ""}">
   <summary>
     <h3>${esc(s.headline)}<span class="chev">▸</span></h3>
-    <p class="dek">${esc(s.dek)}${s.body ? " " + esc(s.body) : ""}</p>
+    ${dek ? `<p class="dek">${dek}</p>` : ""}
     ${storyImage(s)}
   </summary>
   ${sourceLinks(s.sources)}
 </details>`;
+};
 
 const sections = (paper.sections || [])
   .map(
@@ -113,8 +118,10 @@ const CSS = `
   details.story { border-bottom:1px solid var(--faint); padding:8px 0; break-inside:avoid; }
   details.story summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none; }
   details.story summary::-webkit-details-marker { display:none; }
-  .story h3 { font-size:.98rem; font-weight:700; line-height:1.25; letter-spacing:-.01em;
+  .story h3 { font-size:.98rem; font-weight:700; line-height:1.3; letter-spacing:-.01em;
               display:flex; align-items:baseline; gap:8px; }
+  /* the day's few biggest stories read louder at a glance */
+  .story.big h3 { font-size:1.22rem; line-height:1.22; }
   .story h3 .chev { margin-left:auto; color:var(--muted); font-size:.75rem; flex:none;
                     transition:transform .15s; }
   details.story[open] h3 .chev { transform:rotate(90deg); }

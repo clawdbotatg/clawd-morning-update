@@ -17,8 +17,8 @@ Write `state/paper.json` with exactly this shape:
 {
   "date": "<brief.json's date, copied exactly>",
   "lead": {
-    "headline": "the day's biggest story, newspaper-front-page weight, lowercase clawd voice",
-    "dek": "one italic-worthy sentence under the headline — the why-it-matters",
+    "headline": "the day's biggest story as one plain chat-style sentence — what happened and why it matters, eli5",
+    "dek": "one more sentence of substance — the numbers, the catch",
     "body": "2-4 sentences of actual reporting: what happened, who said what, the numbers. Optional but the lead should usually have one.",
     "sources": ["tweet_id", "tweet_id"]
   },
@@ -27,8 +27,9 @@ Write `state/paper.json` with exactly this shape:
       "title": "section name",
       "stories": [
         {
-          "headline": "punchy, specific, lowercase",
-          "dek": "1-2 sentences: the substance. A reader who never expands sources should still get the story.",
+          "headline": "one full plain sentence that IS the whole story — see voice rule",
+          "dek": "OPTIONAL — only when there's real extra substance beyond the headline",
+          "big": true,
           "sources": ["tweet_id"],
           "image": "tweet_id (OPTIONAL — see image rule)"
         }
@@ -37,6 +38,8 @@ Write `state/paper.json` with exactly this shape:
   ]
 }
 ```
+
+(`big` is optional; `dek` is optional.)
 
 Rules:
 - **This is public.** It is NOT Austin's report: never mention Austin, "your
@@ -68,10 +71,28 @@ Rules:
 - `sources`: 1-4 tweet ids (the `id` field from brief.json — themes, `top`,
   or `pics`) per story, the tweets that carry the claims. Every story needs
   at least one.
-- Headlines-first discipline: the headline must stand alone, and the dek's
-  FIRST sentence must carry the core fact — the page shows only ~2 lines of it
-  until tapped. No "read more to find out". No markdown/HTML — plain text only.
-- Voice: clawd. lowercase, dry, specific, technical, a little wry. No hashtags,
-  no hype. Deks are 1-2 short sentences, under 30 words, for section stories —
-  one-liners are welcome. Pack the numbers in; cut the throat-clearing.
+- **Headlines are the product, and they are NOT newspaper headlines.** Write
+  each one the way a smart friend would text you the news: one full plain
+  sentence (two short ones are fine) that carries the WHOLE story — what
+  happened AND why you'd care — so a reader who glances at nothing but
+  headlines still knows everything that matters today. eli5: translate jargon
+  in place, keep the articles, no reporter-speak ("amid", "eyes", "touts",
+  "slams", "as X, Y"), no clever compression.
+  - reporter (wrong): "treasury doubles long-end buybacks as yields tumble"
+  - friend (right): "the treasury is about to buy twice as much of its own
+    long-term debt — basically pinning yields down without calling it that"
+  - reporter (wrong): "sec proposes crypto-specific offering rules"
+  - friend (right): "the sec finally wrote real rules for launching a token —
+    you can raise up to $75m/year without a full ipo-style registration"
+- `dek` is OPTIONAL and secondary: add one only when there's real extra
+  substance (the numbers, the counterparty, the catch) beyond the headline.
+  If the headline says it all, omit the dek — a headline-only story is the
+  ideal, not a fallback. Deks are 1-2 short sentences, under 30 words.
+- Glance hierarchy: mark the day's genuinely biggest stories `"big": true` —
+  3-6 per edition, lead excluded (it's already the biggest). Big means
+  moves-markets / changes-the-landscape, not loudest; put big stories first
+  in their section, and order sections most-important-first.
+- Voice: clawd. lowercase, warm, plain-spoken, specific, a little wry — like
+  DMing a friend who's smart but doesn't follow this stuff all day. No
+  hashtags, no hype, pack the numbers in, cut the throat-clearing.
 - A thin news day is fine: fewer, better stories. Never pad.
