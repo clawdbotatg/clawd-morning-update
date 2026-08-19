@@ -131,6 +131,8 @@ const CSS = `
   footer a { color:var(--accent); }
   .archive { margin-top:6px; line-height:1.9; }
   .archive a { margin-right:10px; }
+  .powered { margin-top:14px; }
+  .powered a { color:var(--accent); text-decoration:none; }
 `;
 
 const page = `<!doctype html>
@@ -156,6 +158,7 @@ ${stories.map(story).join("\n")}
 </ol>
 <footer>
   <div class="archive">__ARCHIVE__</div>
+  <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a></p>
 </footer>
 </body>
 </html>`;
