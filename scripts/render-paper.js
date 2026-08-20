@@ -97,20 +97,23 @@ const ADS = [
   { href: "https://larv.ai/", img: "larv.jpg", alt: "larv.ai", w: 1200, h: 628 },
   { href: "https://ethskills.com/", img: "ethskills.png", alt: "ethskills — ethereum knowledge for ai agents", w: 1200, h: 628 },
   { href: "https://slop.computer/", img: "slopcomputer.jpg", alt: "slop.computer — onchain podcast", w: 1200, h: 800 },
+  { href: "https://leftclaw.services/", img: "leftclaw.jpg", alt: "leftclaw services", w: 1200, h: 630 },
 ];
 const AD_EVERY = 10;
 const adCard = (a) =>
   `<p class="ad"><a href="${a.href}" target="_blank" rel="noopener"><img class="banner" src="${a.img}" alt="${esc(a.alt)}" loading="lazy" width="${a.w}" height="${a.h}"></a></p>`;
 
 // the feed: stories in chunks of AD_EVERY (each its own <ol start=…> so the
-// ranked numbering runs straight through), a card after every full chunk;
-// a short edition that never earns a slot still gets one card at the end.
+// ranked numbering runs straight through), a card after every full chunk —
+// each card at most once (a monster edition just runs bannerless after the
+// deck is spent; repeats read as spam). A short edition that never earns a
+// slot still gets one card at the end.
 let adI = 0;
 let feed = "";
 for (let i = 0; i < stories.length; i += AD_EVERY) {
   const chunk = stories.slice(i, i + AD_EVERY);
   feed += `<ol class="stories" start="${i + 1}">\n${chunk.map(story).join("\n")}\n</ol>\n`;
-  if (chunk.length === AD_EVERY) feed += adCard(ADS[adI++ % ADS.length]) + "\n";
+  if (chunk.length === AD_EVERY && adI < ADS.length) feed += adCard(ADS[adI++]) + "\n";
 }
 if (!adI) feed += adCard(ADS[0]) + "\n";
 

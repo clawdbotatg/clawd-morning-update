@@ -63,7 +63,8 @@ if [ -f state/paper.json ]; then
     "onedollaraudit.png https://onedollaraudit.com/og.png" \
     "larv.jpg https://larv.ai/og-card.jpg" \
     "ethskills.png https://ethskills.com/og-image.png" \
-    "slopcomputer.jpg https://slop.computer/og.jpg"; do
+    "slopcomputer.jpg https://slop.computer/og.jpg" \
+    "leftclaw.jpg https://leftclaw.services/og-card.jpg"; do
     BANNER=../clawd-daily/docs/${SPEC%% *}
     if curl -sfL --max-time 20 "${SPEC#* }" -o "$BANNER.tmp"; then
       sips --resampleWidth 1200 "$BANNER.tmp" >/dev/null 2>&1 && mv "$BANNER.tmp" "$BANNER" || rm -f "$BANNER.tmp"
