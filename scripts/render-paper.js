@@ -24,7 +24,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE = join(ROOT, "state");
 const DAILY = join(ROOT, "..", "clawd-daily");
 const DOCS = join(DAILY, "docs");
-const SITE = "https://clawdbotatg.github.io/clawd-daily/";
+const SITE = "https://gmsers.com/";
 
 if (!existsSync(DAILY)) {
   console.error("clawd-daily repo not found beside clawd-morning-update — skipping paper");
@@ -223,6 +223,7 @@ const page = `<!doctype html>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:site_name" content="gmsers">
+<meta property="og:url" content="${SITE}${esc(paper.date)}">
 <meta property="og:title" content="gmsers · ${esc(dateLong)}">
 <meta property="og:description" content="${esc(stories[0]?.headline || "")}">
 ${

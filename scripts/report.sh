@@ -118,7 +118,7 @@ fi
 if [ "$PUBLISHED" = 1 ]; then
   MSG="morning update: https://clawdbotatg.github.io/clawd-morning-update/$(date +%F).html"
   [ "$PAPER_LIVE" = 1 ] && MSG="$MSG
-today's paper: https://clawdbotatg.github.io/clawd-daily/$(date +%F).html"
+today's paper: https://gmsers.com/$(date +%F)"
   node ../clawd-twitter/scripts/tg-send.js "$MSG 🦞" \
     || echo "tg-send failed — report published, link not sent"
 fi
