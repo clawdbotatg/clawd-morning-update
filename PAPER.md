@@ -44,6 +44,22 @@ report.sh runs BEFORE clawd-twitter's 8:02 gm run and owns the morning feed
 pull (if today's `data/feed-*.json` is missing it pulls via clawd-twitter's
 `read-feed.js`), so the paper is live when the gm tweet goes out.
 
+Know this about the raw material: the timeline runs ~800 posts/hour, so a
+1000-post pull reaches back only ~80 minutes — each pull is a snapshot, not
+"the last 14 hours". Two snapshots feed each edition: the 7:30am pull plus
+the previous evening's `scripts/evening-pull.sh` (launchd
+com.clawd.evening-pull, 10pm, 500 posts — `EVENING_PAGES` is the budget
+knob), which rank.js merges in automatically when `data/feed-eve-<D-1>.json`
+exists. Budget: X bills ~$0.005/post against a $250/mo account spend limit;
+the guard is `X_POSTS_MONTHLY_CAP` in clawd-twitter/.env (47000 ≈ $235 —
+raise the X dashboard limit before raising it).
+
+rank.js also collapses author bursts: tweets by one author within 15 minutes
+are one thread — scored once (a 40-tweet thread once manufactured four fake
+themes), and tagged `thread`/`thread_len` in brief.json so the paper pass
+can enforce its at-most-two-stories-per-thread rule. Editions cap at 60
+stories (5 full ad chunks + a clean final 10), never padded to get there.
+
 1. Step 2b: LLM paper pass — `prompts/paper.md` reads `state/brief.json`,
    writes `state/paper.json` (date, ~8-word `tldr`, ranked `stories`). Failure
    is non-fatal: the paper just skips a day. Check `state/report.log` — LLM

@@ -45,12 +45,20 @@ Rules:
   down the page (hackernews-style: rank is the only hierarchy, there are no
   sections). "Important" means moves-markets / changes-the-landscape /
   you'd-tell-a-friend-first, never loudest. A good edition runs 35-60
-  stories. Anything in the brief that clears the scope bar deserves a
-  headline — mine ALL of brief.json: every theme's tweet list, the `top`
-  list, AND the `pics` list; a story that lives in only one tweet is still a
-  story; the long tail simply ranks low. More real headlines is always
-  better than longer deks — never hit the count by padding or by letting
-  weak items in.
+  stories; **60 is a hard cap** (the page composes best at exactly 60) —
+  never exceed it, and NEVER pad to reach it. Anything in the brief that
+  clears the scope bar deserves a headline — mine ALL of brief.json: every
+  theme's tweet list, the `top` list, AND the `pics` list; a story that
+  lives in only one tweet is still a story; the long tail simply ranks low.
+  More real headlines is always better than longer deks — never hit the
+  count by padding or by letting weak items in.
+- **Thread rule**: tweets sharing a `thread` id in brief.json are one
+  author's burst — a thread, posted within minutes. A thread is ONE unit of
+  news: it yields AT MOST TWO stories, and usually just one — headline the
+  thesis, put the thread's best 2-4 tweets in `sources`. Take a second story
+  only when the thread contains a genuinely separate banger that stands on
+  its own. Never one story per thread tweet — a 40-tweet thread once became
+  12 stories and a third of the edition was one guy.
 - Image rule: brief.json's `pics` list is the day's most-engaged tweets that
   carry a `media` array (attached photos); theme/top tweets may carry one
   too. When an image IS the story or is clearly going viral (big engagement +
