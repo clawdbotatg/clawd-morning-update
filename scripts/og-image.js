@@ -1,9 +1,15 @@
 #!/usr/bin/env node
-// Generate the day's twitter/og unfurl card: a 1200x630 dark frame — logo,
-// gmsers.com, date, the top headlines — screenshotted from a throwaway HTML
-// page by headless chromium (playwright-core + the machine's playwright
-// browser cache). Writes ../clawd-daily/docs/og/<date>.png, which
-// render-paper.js points og:image / twitter:image at when it exists.
+// Generate the twitter/og unfurl cards: 1200x630 dark frames screenshotted
+// from throwaway HTML pages by headless chromium (playwright-core + the
+// machine's playwright browser cache). Two cards:
+//   og/<date>.png — the DAY card (logo, date, top headlines), what a dated
+//     edition link unfurls as.
+//   og/home.png — the static BRAND card (big title + clawd + tagline), what
+//     the root https://gmsers.com/ link unfurls as. Deliberately carries NO
+//     day content — the root link is evergreen and unfurl caches are
+//     per-URL, so day content there would go stale. Re-rendered every run
+//     (idempotent) so design tweaks here ship on the next morning build.
+// render-paper.js points og:image / twitter:image at whichever exists.
 // Non-fatal in report.sh: no card just means the unfurl degrades to a
 // plain summary.
 import { readFileSync, readdirSync, mkdirSync, existsSync } from "fs";
@@ -45,7 +51,7 @@ const rows = stories
   )
   .join("\n");
 
-const html = `<!doctype html><html><head><meta charset="utf-8"><style>
+const dayHtml = `<!doctype html><html><head><meta charset="utf-8"><style>
   * { box-sizing:border-box; margin:0; }
   body { width:1200px; height:630px; background:#000; color:#f4f4f2; overflow:hidden;
          font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -74,10 +80,33 @@ ${rows}
 </ol>
 </body></html>`;
 
+// the brand card: what the root gmsers.com link unfurls as — big title,
+// clawd, tagline. No date, no headlines, ever (see header comment).
+const homeHtml = `<!doctype html><html><head><meta charset="utf-8"><style>
+  * { box-sizing:border-box; margin:0; }
+  body { width:1200px; height:630px; background:#000; color:#f4f4f2; overflow:hidden;
+         font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+         display:flex; flex-direction:column; align-items:center; justify-content:center; gap:36px; }
+  img { width:224px; height:224px; border-radius:44px; }
+  h1 { font-size:132px; font-weight:800; letter-spacing:-.03em; line-height:1; }
+  h1 .gm { color:#ff4b33; }
+  h1 .dotcom { color:#9a9ea6; }
+  p { color:#9a9ea6; font-size:33px; letter-spacing:-.01em; }
+</style></head><body>
+<img src="${logo}">
+<h1><span class="gm">gm</span>sers<span class="dotcom">.com</span></h1>
+<p>gm, sers — the daily brief at the intersection of crypto and ai</p>
+</body></html>`;
+
+mkdirSync(join(DOCS, "og"), { recursive: true });
 const browser = await chromium.launch({ executablePath: shell });
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
-await page.setContent(html, { waitUntil: "load" });
-mkdirSync(join(DOCS, "og"), { recursive: true });
-await page.screenshot({ path: join(DOCS, "og", `${paper.date}.png`) });
+for (const [html, name] of [
+  [dayHtml, `${paper.date}.png`],
+  [homeHtml, "home.png"],
+]) {
+  await page.setContent(html, { waitUntil: "load" });
+  await page.screenshot({ path: join(DOCS, "og", name) });
+  console.log(`og card → clawd-daily/docs/og/${name}`);
+}
 await browser.close();
-console.log(`og card → clawd-daily/docs/og/${paper.date}.png`);

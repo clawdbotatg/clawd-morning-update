@@ -137,26 +137,32 @@ const CSS = `
   .ad .banner { display:block; width:100%; height:auto; border-radius:12px; }
 `;
 
-const page = `<!doctype html>
+// Two unfurls, on purpose: the dated page unfurls as that day's card, but
+// index.html — the root https://gmsers.com/ link — gets STATIC brand meta
+// (og/home.png: big title + clawd + tagline, rendered by og-image.js).
+// Never point the root at the day's content: the root link is evergreen and
+// x.com etc. cache unfurls per-URL, so a dated card there is stale by noon.
+const TAGLINE = "gm, sers — the daily brief at the intersection of crypto and ai";
+const page = ({ title, ogTitle, desc, card }) => `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>gmsers · ${esc(paper.date)}</title>
-<meta name="description" content="${esc(stories[0]?.headline || "gm, sers — the daily brief at the intersection of crypto and ai")}">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(desc)}">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:site_name" content="gmsers">
-<meta property="og:title" content="gmsers · ${esc(dateLong)}">
-<meta property="og:description" content="${esc(stories[0]?.headline || "")}">
+<meta property="og:title" content="${esc(ogTitle)}">
+<meta property="og:description" content="${esc(desc)}">
 ${
-  existsSync(join(DOCS, "og", `${paper.date}.png`))
-    ? `<meta property="og:image" content="${SITE}og/${paper.date}.png">
+  existsSync(join(DOCS, "og", card))
+    ? `<meta property="og:image" content="${SITE}og/${card}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="${SITE}og/${paper.date}.png">`
+<meta name="twitter:image" content="${SITE}og/${card}">`
     : `<meta property="og:image" content="${SITE}apple-touch-icon.png">
 <meta name="twitter:card" content="summary">`
 }
@@ -181,7 +187,13 @@ ${stories.map(story).join("\n")}
 </body>
 </html>`;
 
-writeFileSync(join(DOCS, `${paper.date}.html`), page.replace("__ARCHIVE__", ""));
+const dayPage = page({
+  title: `gmsers · ${paper.date}`,
+  ogTitle: `gmsers · ${dateLong}`,
+  desc: stories[0]?.headline || TAGLINE,
+  card: `${paper.date}.png`,
+});
+writeFileSync(join(DOCS, `${paper.date}.html`), dayPage.replace("__ARCHIVE__", ""));
 
 const dated = readdirSync(DOCS)
   .filter((f) => /^\d{4}-\d{2}-\d{2}\.html$/.test(f))
@@ -190,7 +202,8 @@ const dated = readdirSync(DOCS)
   .slice(0, 21);
 const archive =
   "past editions: " + dated.map((f) => `<a href="${f}">${f.replace(".html", "").slice(5)}</a>`).join(" ");
-writeFileSync(join(DOCS, "index.html"), page.replace("__ARCHIVE__", archive));
+const homePage = page({ title: "gmsers.com", ogTitle: "gmsers.com", desc: TAGLINE, card: "home.png" });
+writeFileSync(join(DOCS, "index.html"), homePage.replace("__ARCHIVE__", archive));
 console.log(
   `rendered clawd-daily/docs/${paper.date}.html + index.html (edition ${editionNo}, ${stories.length} stories, flat) → ${SITE}`
 );
