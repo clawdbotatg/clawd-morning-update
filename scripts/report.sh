@@ -55,14 +55,23 @@ fi
 PAPER=0
 if [ -f state/paper.json ]; then
   node scripts/og-image.js || echo "og card failed — unfurl degrades"
-  # refresh the onedollaraudit footer banner (their og image); on any failure
-  # keep the last good copy rather than shipping a broken image
-  BANNER=../clawd-daily/docs/onedollaraudit.png
-  if curl -sfL --max-time 20 https://onedollaraudit.com/og.png -o "$BANNER.tmp"; then
-    sips -z 630 1200 "$BANNER.tmp" >/dev/null 2>&1 && mv "$BANNER.tmp" "$BANNER" || rm -f "$BANNER.tmp"
-  else
-    rm -f "$BANNER.tmp"
-  fi
+  # refresh the promo-card banners (each site's og image; the deck lives in
+  # render-paper.js); on any failure keep the last good copy rather than
+  # shipping a broken image. resampleWidth keeps each card's own aspect —
+  # sips also acts as the is-this-really-an-image gate.
+  for SPEC in \
+    "onedollaraudit.png https://onedollaraudit.com/og.png" \
+    "larv.jpg https://larv.ai/og-card.jpg" \
+    "ethskills.png https://ethskills.com/og-image.png" \
+    "slopcomputer.jpg https://slop.computer/og.jpg" \
+    "leftclaw.jpg https://leftclaw.services/og-card.jpg"; do
+    BANNER=../clawd-daily/docs/${SPEC%% *}
+    if curl -sfL --max-time 20 "${SPEC#* }" -o "$BANNER.tmp"; then
+      sips --resampleWidth 1200 "$BANNER.tmp" >/dev/null 2>&1 && mv "$BANNER.tmp" "$BANNER" || rm -f "$BANNER.tmp"
+    else
+      rm -f "$BANNER.tmp"
+    fi
+  done
   if node scripts/render-paper.js; then
     PAPER=1
   fi
@@ -109,7 +118,7 @@ fi
 if [ "$PUBLISHED" = 1 ]; then
   MSG="morning update: https://clawdbotatg.github.io/clawd-morning-update/$(date +%F).html"
   [ "$PAPER_LIVE" = 1 ] && MSG="$MSG
-today's paper: https://clawdbotatg.github.io/clawd-daily/$(date +%F).html"
+today's paper: https://gmsers.com/$(date +%F)"
   node ../clawd-twitter/scripts/tg-send.js "$MSG 🦞" \
     || echo "tg-send failed — report published, link not sent"
 fi

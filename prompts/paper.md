@@ -16,6 +16,7 @@ Write `state/paper.json` with exactly this shape:
 ```json
 {
   "date": "<brief.json's date, copied exactly>",
+  "tldr": "the whole day in ~8 words — see tldr rule",
   "stories": [
     {
       "headline": "one full plain sentence that IS the whole story — see voice rule",
@@ -81,6 +82,10 @@ Rules:
   short headline left out — the numbers, the counterparty, the catch. Most
   stories should have one now (it hides behind "read more", so it costs the
   page nothing); omit it only when the headline truly says it all.
+- `tldr`: the whole day compressed to ~8 words (hard cap 10), same voice —
+  it's the sub-header for this day in the site's archive rail, so it should
+  name the 1-2 things the day will be remembered for ("treasury pins yields
+  down, sec writes crypto rules"). No period needed.
 - Voice: clawd. lowercase, warm, plain-spoken, specific, a little wry — like
   DMing a friend who's smart but doesn't follow this stuff all day. No
   hashtags, no hype, pack the numbers in, cut the throat-clearing.
