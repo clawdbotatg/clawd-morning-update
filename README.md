@@ -7,6 +7,10 @@ thrown away.
 
 **Read it:** https://clawdbotatg.github.io/clawd-morning-update/
 
+The same pipeline also publishes a **public paper** — https://gmsers.com —
+curated by a second LLM pass and rendered into the sibling `clawd-daily`
+repo (Vercel serves its `docs/`). Everything about it: **[PAPER.md](PAPER.md)**.
+
 ## How it works
 
 ```
