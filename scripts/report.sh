@@ -1,9 +1,13 @@
 #!/bin/bash
-# Morning report build. launchd (com.clawd.morning-report) fires this at 8:20am
-# Denver, after clawd-twitter's 8:02 morning.sh has copied the raw feed into
-# data/feed-YYYY-MM-DD.json. Deterministic rank → LLM narrative → static HTML →
-# push to GitHub Pages. A missing feed or a failed LLM pass degrades, never
-# blocks: the report ships without narrative rather than not at all.
+# Morning report build. launchd (com.clawd.morning-report) fires this at 7:30am
+# Denver — BEFORE clawd-twitter's 8:02 gm run, so the paper is live on
+# gmsers.com when the gm tweet (and its follow-up link reply) goes out. This
+# script now owns the morning feed pull: if data/feed-YYYY-MM-DD.json is
+# missing it pulls via clawd-twitter's read-feed.js (morning.sh then reuses
+# the fresh state/last-feed.json instead of paying for a second pull).
+# Deterministic rank → LLM narrative → static HTML → push. A failed LLM pass
+# degrades, never blocks: the report ships without narrative rather than not
+# at all.
 set -uo pipefail
 export PATH="$HOME/.local/bin:/opt/homebrew/opt/node@22/bin:/opt/homebrew/bin:/usr/bin:/bin"
 
@@ -17,8 +21,14 @@ echo "=== report run $(date) ==="
 
 TODAY_FEED="data/feed-$(date +%F).json"
 if [ ! -f "$TODAY_FEED" ]; then
-  echo "no feed for today ($TODAY_FEED) — morning pull failed or hasn't run; skipping"
-  exit 0
+  # 0. pull the feed ourselves (we run at 7:30, before morning.sh's 8:02)
+  if (cd ../clawd-twitter && node scripts/read-feed.js 14 --json > /dev/null); then
+    cp ../clawd-twitter/state/last-feed.json "$TODAY_FEED"
+    echo "feed pulled + archived: $TODAY_FEED"
+  else
+    echo "feed pull failed — no feed for today ($TODAY_FEED); skipping"
+    exit 0
+  fi
 fi
 
 # 1. deterministic: cluster + rank
@@ -109,7 +119,7 @@ fi
 if [ "$PUBLISHED" = 1 ]; then
   MSG="morning update: https://clawdbotatg.github.io/clawd-morning-update/$(date +%F).html"
   [ "$PAPER_LIVE" = 1 ] && MSG="$MSG
-today's paper: https://clawdbotatg.github.io/clawd-daily/$(date +%F).html"
+today's paper is live: https://gmsers.com (vercel auto-deploys the push)"
   node ../clawd-twitter/scripts/tg-send.js "$MSG 🦞" \
     || echo "tg-send failed — report published, link not sent"
 fi
