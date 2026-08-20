@@ -179,14 +179,14 @@ const CSS = `
     aside.days { width:auto; position:static; max-height:none; margin-top:30px;
                  border-top:2px solid var(--ink); padding-top:8px; }
   }
-  .masthead { padding-bottom:10px; border-bottom:2px solid var(--ink); }
+  .masthead { position:relative; padding-bottom:10px; border-bottom:2px solid var(--ink); }
   .mrow { display:flex; align-items:flex-end; gap:16px; flex-wrap:wrap; }
   .masthead h1 { font-size:2.4rem; font-weight:800; letter-spacing:-.02em; line-height:1; }
   .masthead h1 a { color:var(--ink); text-decoration:none; }
   .masthead h1 .gm { color:var(--accent); }
   .masthead h1 .dotcom { color:var(--muted); }
   .pfp { width:64px; height:64px; border-radius:12px; flex:none; }
-  .dateline { color:var(--muted); font-size:.8rem; margin-left:auto; text-align:right; padding-bottom:3px; }
+  .dateline { position:absolute; top:0; right:0; color:var(--muted); font-size:.8rem; text-align:right; }
   ol.stories { margin-top:16px; padding-left:2em; }
   ol.stories li { padding:7px 0; }
   ol.stories li::marker { color:var(--muted); font-size:.85rem; }
