@@ -21,7 +21,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const STATE = join(ROOT, "state");
 const DAILY = join(ROOT, "..", "clawd-daily");
 const DOCS = join(DAILY, "docs");
-const SITE = "https://clawdbotatg.github.io/clawd-daily/";
+const SITE = "https://gmsers.com/"; // vercel serves clawd-daily/docs here (cleanUrls)
 
 if (!existsSync(DAILY)) {
   console.error("clawd-daily repo not found beside clawd-morning-update — skipping paper");
@@ -143,7 +143,7 @@ const CSS = `
 // Never point the root at the day's content: the root link is evergreen and
 // x.com etc. cache unfurls per-URL, so a dated card there is stale by noon.
 const TAGLINE = "gm, sers — the daily brief at the intersection of crypto and ai";
-const page = ({ title, ogTitle, desc, card }) => `<!doctype html>
+const page = ({ title, ogTitle, desc, card, url }) => `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -154,6 +154,7 @@ const page = ({ title, ogTitle, desc, card }) => `<!doctype html>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:site_name" content="gmsers">
+<meta property="og:url" content="${url}">
 <meta property="og:title" content="${esc(ogTitle)}">
 <meta property="og:description" content="${esc(desc)}">
 ${
@@ -192,6 +193,7 @@ const dayPage = page({
   ogTitle: `gmsers · ${dateLong}`,
   desc: stories[0]?.headline || TAGLINE,
   card: `${paper.date}.png`,
+  url: `${SITE}${paper.date}`,
 });
 writeFileSync(join(DOCS, `${paper.date}.html`), dayPage.replace("__ARCHIVE__", ""));
 
@@ -202,7 +204,7 @@ const dated = readdirSync(DOCS)
   .slice(0, 21);
 const archive =
   "past editions: " + dated.map((f) => `<a href="${f}">${f.replace(".html", "").slice(5)}</a>`).join(" ");
-const homePage = page({ title: "gmsers.com", ogTitle: "gmsers.com", desc: TAGLINE, card: "home.png" });
+const homePage = page({ title: "gmsers.com", ogTitle: "gmsers.com", desc: TAGLINE, card: "home.png", url: SITE });
 writeFileSync(join(DOCS, "index.html"), homePage.replace("__ARCHIVE__", archive));
 console.log(
   `rendered clawd-daily/docs/${paper.date}.html + index.html (edition ${editionNo}, ${stories.length} stories, flat) → ${SITE}`
