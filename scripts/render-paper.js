@@ -249,7 +249,7 @@ ${
 <div class="wrap">
 <main>
 ${feed}<footer>
-  <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a></p>
+  <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a> — daily updates from <a href="https://x.com/clawdbotatg" target="_blank" rel="noopener">@clawdbotatg</a>'s morning tweets</p>
 </footer>
 </main>
 <aside class="days">
