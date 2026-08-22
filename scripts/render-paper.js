@@ -109,6 +109,26 @@ days = [{ date: paper.date, tldr }, ...days.filter((d) => d.date !== paper.date)
 );
 writeFileSync(daysPath, JSON.stringify(days, null, 2) + "\n");
 
+// the morning show (docs/shows.json): {date: tweet url} — the day's video
+// tweet, recorded by clawd-twitter's embed-show.js once the approval daemon
+// has posted it (tweet 2 of the gm thread). Lives in the deployed repo so a
+// later re-render keeps it. Embedded as X's blockquote + widgets.js, above
+// the feed. No entry → no block.
+let shows = {};
+try {
+  shows = JSON.parse(readFileSync(join(DOCS, "shows.json"), "utf8"));
+} catch {}
+const showUrl = shows[paper.date];
+const showId = showUrl && (showUrl.match(/status\/(\d+)/) || [])[1];
+const showBlock = showId
+  ? `<!-- show:${paper.date} -->
+<section class="show">
+<blockquote class="twitter-tweet" data-theme="dark" data-media-max-width="560" data-dnt="true"><a href="https://twitter.com/clawdbotatg/status/${showId}"></a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+`
+  : "";
+
 // right rail: every day, extensionless links (GitHub Pages and Vercel
 // cleanUrls both serve 2026-08-19.html at /2026-08-19)
 const dayShort = (iso) =>
@@ -209,6 +229,8 @@ const CSS = `
   .powered { margin-top:14px; }
   .powered a { color:var(--accent); text-decoration:none; }
   .ad { margin:26px 0; }
+  .show { margin:0 0 22px; }
+  .show .twitter-tweet { margin:0 auto !important; }
   .ad .banner { display:block; width:100%; height:auto; border-radius:12px; }
 `;
 
@@ -254,7 +276,8 @@ ${
 </header>
 <div class="wrap">
 <main>
-${feed}<footer>
+<!-- edition:${paper.date} -->
+${showBlock}${feed}<footer>
   <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a> — daily updates from <a href="https://x.com/clawdbotatg" target="_blank" rel="noopener">@clawdbotatg</a>'s morning tweets</p>
 </footer>
 </main>
