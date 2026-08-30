@@ -105,7 +105,12 @@ stories (5 full ad chunks + a clean final 10), never padded to get there.
   after meta changes.
 - **Footer**: onedollaraudit is *not* here anymore (it's in the card
   rotation); just the credit line — powered by $CLAWD (→ clawdbotatg.eth.limo)
-  — daily updates from @clawdbotatg (→ x.com/clawdbotatg)'s morning tweets.
+  — daily updates from @clawdbotatg (→ x.com/clawdbotatg)'s morning tweets —
+  and an "rss" link to `/feed.xml`.
+- **RSS** (`docs/feed.xml`): regenerated whole on every render from
+  days.json — one item per edition (tldr = title/description, dated page =
+  link/guid, pubDate 13:30 UTC), capped at 50, advertised via
+  `<link rel="alternate">` in every page's head.
 
 ## Rendering by hand
 
