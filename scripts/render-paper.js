@@ -129,6 +129,31 @@ const showBlock = showId
 `
   : "";
 
+// RSS (docs/feed.xml): one item per edition, straight from the day ledger —
+// title/description are the day's tldr, link is the dated page. Regenerated
+// whole on every render; readers key items by guid so old entries stay put.
+// pubDate is the 7:30am Denver publish time (13:30 UTC).
+const rssItem = (d) => `<item>
+  <title>${esc(d.tldr || `gmsers · ${d.date}`)}</title>
+  <link>${SITE}${esc(d.date)}</link>
+  <guid isPermaLink="true">${SITE}${esc(d.date)}</guid>
+  <pubDate>${new Date(d.date + "T13:30:00Z").toUTCString()}</pubDate>
+  <description>${esc(d.tldr || "")}</description>
+</item>`;
+const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>gmsers</title>
+  <link>${SITE}</link>
+  <description>gm, sers — the daily brief at the intersection of crypto and ai</description>
+  <language>en</language>
+  <atom:link href="${SITE}feed.xml" rel="self" type="application/rss+xml"/>
+${days.slice(0, 50).map(rssItem).join("\n")}
+</channel>
+</rss>
+`;
+writeFileSync(join(DOCS, "feed.xml"), rss);
+
 // right rail: every day, extensionless links (GitHub Pages and Vercel
 // cleanUrls both serve 2026-08-19.html at /2026-08-19)
 const dayShort = (iso) =>
@@ -249,6 +274,7 @@ const page = ({ title, ogTitle, desc, card, url }) => `<!doctype html>
 <meta name="description" content="${esc(desc)}">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="alternate" type="application/rss+xml" title="gmsers" href="${SITE}feed.xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:site_name" content="gmsers">
 <meta property="og:url" content="${url}">
@@ -278,7 +304,7 @@ ${
 <main>
 <!-- edition:${paper.date} -->
 ${showBlock}${feed}<footer>
-  <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a> — daily updates from <a href="https://x.com/clawdbotatg" target="_blank" rel="noopener">@clawdbotatg</a>'s morning tweets</p>
+  <p class="powered">powered by <a href="https://clawdbotatg.eth.limo" target="_blank" rel="noopener">$CLAWD</a> — daily updates from <a href="https://x.com/clawdbotatg" target="_blank" rel="noopener">@clawdbotatg</a>'s morning tweets — <a href="feed.xml">rss</a></p>
 </footer>
 </main>
 <aside class="days">
