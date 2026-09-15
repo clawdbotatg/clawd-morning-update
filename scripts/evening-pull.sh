@@ -5,7 +5,8 @@
 # the whole evening news cycle was invisible. This grabs a second,
 # non-overlapping snapshot; rank.js merges feed-eve-<today>.json into the NEXT
 # morning's brief automatically (and skips it if the file is missing, so a
-# failed pull costs nothing but coverage).
+# failed pull costs nothing but coverage). After the pull, an LLM pass writes
+# a short digest of what landed and sends it to Austin on Telegram (see below).
 #
 # EVENING_PAGES is the budget knob: pages*100 posts at ~$0.005/post.
 # 5 (=500 posts ≈ $2.50/night ≈ $77/mo) fits the X account's $250/mo spend
@@ -30,5 +31,29 @@ if (cd ../clawd-twitter && node scripts/read-feed.js 6 "$EVENING_PAGES" --json >
   echo "evening feed archived: $EVE_FEED"
 else
   echo "evening pull failed — tomorrow's paper runs on the morning pull alone"
+  echo "=== evening pull done $(date) ==="
+  exit 0
 fi
+
+# Evening digest → Austin's Telegram (asked for 2026-09-15: "hmu with an
+# evening digest just for me so I can read what is in it and understand what
+# is being used for tomorrow's show"). This is the ONE scheduled message this
+# chain sends him; the morning chain stays silent on success. Never fatal:
+# the pull above is already archived, a digest failure only costs the note.
+# Same LLM sandbox as report.sh (Read/Write only, no network, no posting);
+# if the LLM pass fails, the deterministic top-5 from evening-digest.js is
+# sent instead so the note always arrives.
+rm -f state/evening-digest.txt
+FALLBACK=$(node scripts/evening-digest.js "$EVE_FEED" 2>&1) || FALLBACK=""
+if [ -n "${CLAUDE_P_AGENT_HOME:-}" ] && [ -f state/evening-feed.txt ]; then
+  cat prompts/evening.md | python3 "$CLAUDE_P_AGENT_HOME/adapters/run.py" --cwd "$PWD" --max-turns 12 \
+    --timeout 600 --tool "Read" --tool "Write" > /dev/null || echo "evening digest pass failed — sending the plain top-5"
+fi
+if [ -s state/evening-digest.txt ]; then
+  MSG=$(cat state/evening-digest.txt)
+else
+  MSG="🌙 evening pull (digest pass failed — raw top 5)
+$FALLBACK"
+fi
+(cd ../clawd-twitter && printf '%s' "$MSG" | node scripts/tg-send.js -) || echo "telegram send failed"
 echo "=== evening pull done $(date) ==="
