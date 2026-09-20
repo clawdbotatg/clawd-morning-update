@@ -103,6 +103,7 @@ cp state/brief.json "$RECON/latest.json" 2>/dev/null || true
 
 # 5. publish: commit docs/ and push (GitHub Pages serves docs/ on master)
 PUBLISHED=0
+PUSH_FAIL=""
 git add docs
 if git diff --cached --quiet; then
   echo "nothing new to publish"
@@ -114,6 +115,7 @@ else
     PUBLISHED=1
   else
     echo "git push failed — report built locally but not published"
+    PUSH_FAIL="$PUSH_FAIL report"
   fi
 fi
 
@@ -122,7 +124,14 @@ PAPER_LIVE=0
 if [ "$PAPER" = 1 ]; then
   (cd ../clawd-daily && git add docs && { git diff --cached --quiet || git commit -m "edition $(date +%F)" --quiet; } && git pull --rebase --quiet && git push --quiet) \
     && PAPER_LIVE=1 && echo "paper published $(date +%F)" \
-    || echo "paper push failed — edition built locally but not published"
+    || { echo "paper push failed — edition built locally but not published"; PUSH_FAIL="$PUSH_FAIL paper"; }
+fi
+
+# a silent push failure kept gmsers.com on 09-16 for four days (only this log
+# knew). Page Austin so a stuck paper is a same-morning fix, not a "wtf".
+if [ -n "${PUSH_FAIL:-}" ]; then
+  node ../clawd-twitter/scripts/tg-send.js "⚠️ morning push FAILED ($PUSH_FAIL) — built locally, not published. check state/report.log" \
+    || echo "tg-send failed — push failure not reported"
 fi
 
 # 6. link Austin to it on Telegram (only when a fresh page actually shipped;
