@@ -107,7 +107,9 @@ git add docs
 if git diff --cached --quiet; then
   echo "nothing new to publish"
 else
-  if git commit -m "report $(date +%F)" --quiet && git push --quiet; then
+  # pull --rebase first: a commit made on GitHub (a LICENSE added via the web
+  # UI on 2026-09-16) made every push non-fast-forward for four days, silently.
+  if git commit -m "report $(date +%F)" --quiet && git pull --rebase --quiet && git push --quiet; then
     echo "published $(date +%F)"
     PUBLISHED=1
   else
@@ -118,7 +120,7 @@ fi
 # 5b. publish the paper (its own repo — GitHub Pages serves clawd-daily/docs)
 PAPER_LIVE=0
 if [ "$PAPER" = 1 ]; then
-  (cd ../clawd-daily && git add docs && { git diff --cached --quiet || git commit -m "edition $(date +%F)" --quiet; } && git push --quiet) \
+  (cd ../clawd-daily && git add docs && { git diff --cached --quiet || git commit -m "edition $(date +%F)" --quiet; } && git pull --rebase --quiet && git push --quiet) \
     && PAPER_LIVE=1 && echo "paper published $(date +%F)" \
     || echo "paper push failed — edition built locally but not published"
 fi

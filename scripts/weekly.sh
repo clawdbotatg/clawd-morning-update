@@ -47,7 +47,7 @@ cp state/weekly-digest.md "$RECON/weekly.md" 2>/dev/null || true
 THROUGH=$(node -e "console.log(JSON.parse(require('fs').readFileSync('state/weekly-brief.json','utf8')).through)")
 git add docs
 if ! git diff --cached --quiet; then
-  git commit -m "weekly rollup through $THROUGH" --quiet && git push --quiet \
+  git commit -m "weekly rollup through $THROUGH" --quiet && git pull --rebase --quiet && git push --quiet \
     && echo "published week-$THROUGH" \
     || echo "git push failed — rollup built locally but not published"
 fi
