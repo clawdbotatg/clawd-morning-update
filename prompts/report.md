@@ -6,7 +6,9 @@ read `state/brief.json`.
 
 Your ONLY output is the file `state/narrative.json`. Do not edit any other file.
 Do not fetch anything. Every fact must come from brief.json — never invent
-numbers, launches, or events.
+numbers, launches, or events. A tweet marked `(from YYYY-MM-DD)` is a retweet
+of an OLD post resurfacing (its counts are lifetime, not today's) — never
+present it as news; at most "X resurfaced Y's <year> post", usually skip it.
 
 Write `state/narrative.json` with exactly this shape:
 
