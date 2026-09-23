@@ -9,10 +9,12 @@
 # a short digest of what landed and sends it to Austin on Telegram (see below).
 #
 # EVENING_PAGES is the budget knob: pages*100 posts at ~$0.005/post.
-# 5 (=500 posts ≈ $2.50/night ≈ $77/mo) fits the X account's $250/mo spend
-# limit beside the morning pull ($155/mo); bump to 10 only after raising the
-# spend limit in the X dashboard (and X_POSTS_MONTHLY_CAP in
-# clawd-twitter/.env to match).
+# 5 (=500 posts ≈ $2.50/night ≈ $77/mo) + the 1000-post morning pull ≈ 46.5k
+# posts a 31-day month — the whole X_POSTS_MONTHLY_CAP (47000, clawd-twitter/
+# .env) with ~1% slack. lib/feed.js paces pulls to what's left / days left, so
+# when the month runs hot THIS pull is the one that gets trimmed first (it's
+# the day's last) and Austin is told. Bump to 10 only after raising the spend
+# limit in the X dashboard AND the cap.
 set -uo pipefail
 export PATH="$HOME/.local/bin:/opt/homebrew/opt/node@22/bin:/opt/homebrew/bin:/usr/bin:/bin"
 EVENING_PAGES="${EVENING_PAGES:-5}"

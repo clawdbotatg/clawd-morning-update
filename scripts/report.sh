@@ -20,20 +20,40 @@ exec >> state/report.log 2>&1
 echo "=== report run $(date) ==="
 
 TODAY_FEED="data/feed-$(date +%F).json"
+FEED_FILE="$TODAY_FEED"
+FEED_NOTE=""
 if [ ! -f "$TODAY_FEED" ]; then
   # 0. pull the feed ourselves (we run at 7:30, before morning.sh's 8:02)
-  if (cd ../clawd-twitter && node scripts/read-feed.js 14 --json > /dev/null); then
+  if (cd ../clawd-twitter && node scripts/read-feed.js 14 --json > /dev/null 2> ../clawd-morning-update/state/.feed-err); then
+    cat state/.feed-err
     cp ../clawd-twitter/state/last-feed.json "$TODAY_FEED"
     echo "feed pulled + archived: $TODAY_FEED"
   else
-    echo "feed pull failed — no feed for today ($TODAY_FEED); skipping"
-    exit 0
+    cat state/.feed-err
+    ERR=$(grep -m1 '^Error:' state/.feed-err | sed 's/^Error: //')
+    ERR=${ERR:-see state/report.log}
+    # FALLBACK: build today from last night's 10pm pull. 2026-09-23 the X post
+    # budget was exhausted, the pull threw, and this script exited silently —
+    # no report, no paper, no show — while a fresh 500-post evening snapshot
+    # sat in data/. A labelled overnight edition beats a dark morning; rank.js
+    # dedupes its own evening merge so the file isn't counted twice.
+    EVE_FEED="data/feed-eve-$(date -v-1d +%F).json"
+    if [ -f "$EVE_FEED" ]; then
+      FEED_FILE="$EVE_FEED"
+      FEED_NOTE="⚠️ overnight edition: built from last night's 10pm pull only — this morning's X pull failed: $ERR"
+      echo "morning feed pull FAILED ($ERR) — FALLBACK: building $(date +%F) from $EVE_FEED"
+    else
+      echo "feed pull failed ($ERR) — no feed for today and no evening feed to fall back on; skipping"
+      node ../clawd-twitter/scripts/tg-send.js "⚠️ no morning report today: X feed pull failed ($ERR) and there's no evening feed to fall back on 🦞" \
+        || echo "tg-send failed"
+      exit 0
+    fi
   fi
 fi
 
 # 1. deterministic: cluster + rank
 rm -f state/narrative.json
-if ! node scripts/rank.js "$TODAY_FEED"; then
+if ! node scripts/rank.js "$FEED_FILE" --date "$(date +%F)"; then
   echo "rank.js failed"
   exit 1
 fi
@@ -140,6 +160,8 @@ if [ "$PUBLISHED" = 1 ]; then
   MSG="morning update: https://clawdbotatg.github.io/clawd-morning-update/$(date +%F).html"
   [ "$PAPER_LIVE" = 1 ] && MSG="$MSG
 today's paper is live: https://gmsers.com (vercel auto-deploys the push)"
+  [ -n "$FEED_NOTE" ] && MSG="$MSG
+$FEED_NOTE"
   node ../clawd-twitter/scripts/tg-send.js "$MSG 🦞" \
     || echo "tg-send failed — report published, link not sent"
 fi

@@ -52,7 +52,14 @@ com.clawd.evening-pull, 10pm, 500 posts — `EVENING_PAGES` is the budget
 knob), which rank.js merges in automatically when `data/feed-eve-<D-1>.json`
 exists. Budget: X bills ~$0.005/post against a $250/mo account spend limit;
 the guard is `X_POSTS_MONTHLY_CAP` in clawd-twitter/.env (47000 ≈ $235 —
-raise the X dashboard limit before raising it).
+raise the X dashboard limit before raising it). 1000 + 500 a day is ≈46.5k a
+31-day month, so the cap is the cadence with ~1% slack: clawd-twitter's
+`lib/feed.js` paces every pull to (cap − spent) / days left and telegrams
+Austin the first day the month is off pace (`node scripts/feed-budget.js`
+there prints the status). If the morning pull still fails, report.sh builds
+the day from last night's `feed-eve-<D-1>.json` instead of going dark
+(`rank.js --date` labels it today; the Telegram link says "overnight
+edition") — 2026-09-23 the budget ran out and nothing shipped.
 
 rank.js also collapses author bursts: tweets by one author within 15 minutes
 are one thread — scored once (a 40-tweet thread once manufactured four fake

@@ -10,7 +10,7 @@
 // common English at full-feed size; entities are what stories are made of.
 // The LLM narrative pass gets ~14 candidates and keeps/skips/titles them.
 //
-// Usage: node scripts/rank.js [data/feed-2026-08-16.json]  (default: newest)
+// Usage: node scripts/rank.js [data/feed-2026-08-16.json] [--date YYYY-MM-DD]  (default: newest)
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
@@ -23,8 +23,13 @@ function abort(msg) {
   console.error(msg);
   process.exit(1);
 }
+// --date YYYY-MM-DD labels the brief (report.sh's fallback ranks last night's
+// feed-eve-<D-1>.json as today's edition; the filename would say yesterday)
+const dateArg = (process.argv.find((a) => a.startsWith("--date=")) || "").slice(7) ||
+  (process.argv.includes("--date") ? process.argv[process.argv.indexOf("--date") + 1] : "");
+const argv = process.argv.filter((a, i, all) => !a.startsWith("--date") && all[i - 1] !== "--date");
 const file =
-  process.argv[2] ||
+  argv[2] ||
   join(
     DATA,
     readdirSync(DATA)
@@ -34,7 +39,7 @@ const file =
   );
 
 const feed = JSON.parse(readFileSync(file, "utf8"));
-const date = (file.match(/feed-(\d{4}-\d{2}-\d{2})/) || [])[1] || feed.fetched_at?.slice(0, 10);
+const date = dateArg || (file.match(/feed-(\d{4}-\d{2}-\d{2})/) || [])[1] || feed.fetched_at?.slice(0, 10);
 
 // merge the previous evening's pull (evening-pull.sh, ~10pm) if it exists —
 // the 1000-post morning pull only reaches back ~80 minutes into a timeline
