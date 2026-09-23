@@ -10,8 +10,8 @@
 #
 # EVENING_PAGES is the budget knob: pages*100 posts at ~$0.005/post.
 # 5 (=500 posts ≈ $2.50/night ≈ $77/mo) + the 1000-post morning pull ≈ 46.5k
-# posts a 31-day month — the whole X_POSTS_MONTHLY_CAP (47000, clawd-twitter/
-# .env) with ~1% slack. lib/feed.js paces pulls to what's left / days left, so
+# posts a 31-day month against X_POSTS_MONTHLY_CAP (60000 since 2026-09-23,
+# clawd-twitter/.env; it was 47000 = the cadence with 1% slack, and ran dry). lib/feed.js paces pulls to what's left / days left, so
 # when the month runs hot THIS pull is the one that gets trimmed first (it's
 # the day's last) and Austin is told. Bump to 10 only after raising the spend
 # limit in the X dashboard AND the cap.

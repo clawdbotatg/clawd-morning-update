@@ -51,9 +51,10 @@ the previous evening's `scripts/evening-pull.sh` (launchd
 com.clawd.evening-pull, 10pm, 500 posts — `EVENING_PAGES` is the budget
 knob), which rank.js merges in automatically when `data/feed-eve-<D-1>.json`
 exists. Budget: X bills ~$0.005/post against a $250/mo account spend limit;
-the guard is `X_POSTS_MONTHLY_CAP` in clawd-twitter/.env (47000 ≈ $235 —
-raise the X dashboard limit before raising it). 1000 + 500 a day is ≈46.5k a
-31-day month, so the cap is the cadence with ~1% slack: clawd-twitter's
+the guard is `X_POSTS_MONTHLY_CAP` in clawd-twitter/.env (60000 ≈ $300 since
+2026-09-23; the X dashboard limit is $500 — raise it before raising the cap).
+1000 + 500 a day is ≈46.5k a 31-day month; the old 47000 cap was that
+cadence with ~1% slack and ran dry on the 22nd: clawd-twitter's
 `lib/feed.js` paces every pull to (cap − spent) / days left and telegrams
 Austin the first day the month is off pace (`node scripts/feed-budget.js`
 there prints the status). If the morning pull still fails, report.sh builds
