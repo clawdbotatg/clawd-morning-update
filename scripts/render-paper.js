@@ -109,7 +109,7 @@ days = [{ date: paper.date, tldr }, ...days.filter((d) => d.date !== paper.date)
 );
 writeFileSync(daysPath, JSON.stringify(days, null, 2) + "\n");
 
-// the morning show (docs/shows.json): {date: tweet url} — the day's video
+// the morning show (docs/shows.json): {date: tweet url | shows/<date>.mp4} — the day's video
 // tweet, recorded by clawd-twitter's embed-show.js once the approval daemon
 // has posted it (tweet 2 of the gm thread). Lives in the deployed repo so a
 // later re-render keeps it. Embedded as X's blockquote + widgets.js, above
@@ -120,11 +120,20 @@ try {
 } catch {}
 const showUrl = shows[paper.date];
 const showId = showUrl && (showUrl.match(/status\/(\d+)/) || [])[1];
+// a show that was never tweeted is hosted here instead: the ledger value is
+// a docs-relative mp4 path (shows/<date>.mp4), played by a plain <video>
+const showMp4 = showUrl && !showId && /^shows\/[\w.-]+\.mp4$/.test(showUrl) && showUrl;
 const showBlock = showId
   ? `<!-- show:${paper.date} -->
 <section class="show">
 <blockquote class="twitter-tweet" data-theme="dark" data-media-max-width="560" data-dnt="true"><a href="https://twitter.com/clawdbotatg/status/${showId}"></a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+`
+  : showMp4
+  ? `<!-- show:${paper.date} -->
+<section class="show">
+<video src="/${showMp4}" controls playsinline preload="metadata"></video>
 </section>
 `
   : "";
@@ -256,6 +265,7 @@ const CSS = `
   .ad { margin:26px 0; }
   .show { margin:0 0 22px; }
   .show .twitter-tweet { margin:0 auto !important; }
+  .show video { display:block; width:100%; max-width:560px; margin:0 auto; border-radius:12px; background:#000; }
   .ad .banner { display:block; width:100%; height:auto; border-radius:12px; }
 `;
 
