@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>morning update · 2026-10-12</title>
+<style>
+  :root { --bg:#f6f5f2; --card:#ffffff; --ink:#1a1a1a; --muted:#71717a; --line:#e4e4e7; --accent:#b4552d; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#101012; --card:#1a1a1e; --ink:#e8e8ea; --muted:#8e8e96; --line:#2a2a30; --accent:#e07a4a; }
+  }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         max-width:640px; margin:0 auto; padding:16px 14px 60px; }
+  header h1 { font-size:1.5rem; line-height:1.25; letter-spacing:-0.01em; }
+  header .date { color:var(--muted); font-size:.85rem; margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em; }
+  header .stats { color:var(--muted); font-size:.85rem; margin-top:8px; }
+  .intro { margin:16px 0 4px; font-size:1.02rem; }
+  section.theme { margin-top:30px; }
+  section.theme h2 { font-size:1.12rem; margin-bottom:4px; }
+  .daysline { color:var(--accent); font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px; }
+  .blurb { color:var(--muted); font-size:.92rem; margin-bottom:10px; }
+  .cards { display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+  details.tweets { margin-top:6px; }
+  details.tweets summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none;
+                           color:var(--muted); font-size:.85rem; padding:6px 0; }
+  details.tweets summary::-webkit-details-marker { display:none; }
+  details.tweets summary::before { content:"▸ "; color:var(--accent); }
+  details.tweets[open] summary::before { content:"▾ "; }
+  details.tweets .sumcount { color:var(--accent); font-weight:600; }
+  a.tw { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px;
+         padding:12px 14px; text-decoration:none; color:var(--ink); }
+  a.tw:active { border-color:var(--accent); }
+  .twhead { font-size:.85rem; margin-bottom:6px; }
+  .twhead .name { font-weight:600; }
+  .twhead .handle { color:var(--muted); }
+  .twhead .time { color:var(--muted); float:right; }
+  .rtbadge { color:var(--muted); border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:.7rem; }
+  .twtext { white-space:pre-wrap; word-wrap:break-word; font-size:.95rem; }
+  .twmeta { color:var(--muted); font-size:.8rem; margin-top:8px; }
+  .angles { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; margin-top:12px; }
+  .angles li { margin:8px 0 8px 18px; font-size:.95rem; }
+  footer { margin-top:44px; color:var(--muted); font-size:.8rem; }
+  footer a { color:var(--muted); }
+  .archive a { margin-right:10px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="date">Monday, October 12, 2026</div>
+  <h1>the ledger supply chain hole got wider overnight</h1>
+  <p class="intro">1,500 tweets in 14 hours and the ledger implant story owns most of it: a second tampered device bought retail in europe, tether freezing about $10M of the proceeds, and the attacker washing the rest through tornado and zcash. second thread is protocol bugs — xrpl disclosed an integer overflow that could have minted xrp past total supply, patched quietly on sept 25. underneath that, the usual treasury drumbeat (saylor +250 btc, bitmine +12,532 eth) against a week of etf outflows.</p>
+  <div class="stats">1500 tweets · last 14h · fetched 7:30 AM MT</div>
+</header>
+<section class="theme">
+  <h2>ledger implants: retail, not just one reseller</h2>
+  <p class="blurb">0xJohannes_ bought a second device at a different mediamarkt and found tampering, and wants a recall. bitquery says tether immobilized ~$10M usdt across 20 addresses tied to cryptobilis buyers — frozen, not returned. ledger still insists it&#39;s cryptobilis-only, its genuine check can&#39;t see an implant that leaves the secure chip intact, and cryptobilis is still a listed reseller.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@LukaWeb3 @Bfaviero @dimabuterin …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/LukaWeb3/status/2109625033983476140" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Luka.eth 🛡️</span> <span class="handle">@LukaWeb3</span> <span class="rtbadge">RT</span><span class="time">6:39 AM</span></div>
+  <div class="twtext">Ledger hacker used zcash and was traced.</div>
+  <div class="twmeta">🔁 144</div>
+</a>
+<a class="tw" href="https://x.com/Bfaviero/status/2109472896519471509" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bruno Faviero</span> <span class="handle">@Bfaviero</span> <span class="rtbadge">RT</span><span class="time">8:35 PM</span></div>
+  <div class="twtext">(from 2026-10-11) leaving these here for no particular reason:
+
+Ledger Nano X - 34 g
+Ledger Nano S Plus - 21 g
+Ledger Flex - 58 g
+
+Trezor Safe…</div>
+  <div class="twmeta">🔁 136</div>
+</a>
+<a class="tw" href="https://x.com/dimabuterin/status/2109626157914337641" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">dima.eth</span> <span class="handle">@dimabuterin</span> <span class="rtbadge">RT</span><span class="time">6:44 AM</span></div>
+  <div class="twtext">🚨 If you don’t want to open up your Ledger just yet, here’s a list of hardware wallets and their weights:
+
+⚖️ Hardware Wal…</div>
+  <div class="twmeta">🔁 103</div>
+</a>
+<a class="tw" href="https://x.com/_rossstephenson/status/2109472812507574763" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ross.pengu</span> <span class="handle">@_rossstephenson</span> <span class="rtbadge">RT</span><span class="time">8:34 PM</span></div>
+  <div class="twtext">(from 2026-10-11) Spy chip check on my Amazon @Ledger : clean. 
+Bought from CryptoBilis? Don’t set it up</div>
+  <div class="twmeta">🔁 64</div>
+</a>
+<a class="tw" href="https://x.com/0xJohannes_/status/2109634513957527974" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Johannes (4, 4)</span> <span class="handle">@0xJohannes_</span><span class="time">7:17 AM</span></div>
+  <div class="twtext">UPDATE: I can confirm that the Ledger supply chain is compromised in Europe as well. @Ledger should initiate an immediate product recall to protect users.
+
+I just purchased a second device from a different Mediamarkt location today, recorded the unboxing process, and discovered</div>
+  <div class="twmeta">♥ 21 · 🔁 6 · 💬 5</div>
+</a>
+<a class="tw" href="https://x.com/MKjrstad/status/2109630274774687942" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Marius Kjærstad (marius.eth) 🐬🦇🔊</span> <span class="handle">@MKjrstad</span> <span class="rtbadge">RT</span><span class="time">7:00 AM</span></div>
+  <div class="twtext">LEDGER HACKER LAUNDERING MILLIONS THROUGH TORNADO CASH AND ZCASH
+
+Blockchain investigators @YFarmX report that the atta…</div>
+  <div class="twmeta">🔁 7</div>
+</a>
+<a class="tw" href="https://x.com/DefiantNews/status/2109622867021512997" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">The Defiant</span> <span class="handle">@DefiantNews</span><span class="time">6:31 AM</span></div>
+  <div class="twtext">ABOUT $10 MILLION FROZEN, NOT REPAID
+
+Bitquery says @tether immobilized $USDT at 20 addresses linked to drains affecting CryptoBilis buyers of @Ledger wallets. Freezing the tokens blocks transfers but does not return them to victims.
+
+Read more here:</div>
+  <div class="twmeta">♥ 1 · 🔁 1 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/KeystoneWallet/status/2109630170600755575" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Keystone Hardware Wallet</span> <span class="handle">@KeystoneWallet</span><span class="time">7:00 AM</span></div>
+  <div class="twtext">⚠️ Looking for a solid signing device for your ADA? Your search ends here 👇
+
+@astroboysoup breaks down the latest on the Ledger supply chain attack and why Keystone is the best alternative.
+
+P.S. Keystone 3 Pro also has an anti-tampering system. IYKYK.</div>
+  <div class="twmeta">♥ 6</div>
+</a>
+<a class="tw" href="https://x.com/laurashin/status/2109615378158821473" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Laura Shin</span> <span class="handle">@laurashin</span><span class="time">6:01 AM</span></div>
+  <div class="twtext">XRP Ledger developers have disclosed an integer overflow in the payment engine through which one transaction could mint spendable XRP far beyond the total supply. It was patched Sept. 25 in xrpld 3.4.1, and the report says there is no evidence it was exploited.</div>
+  <div class="twmeta">♥ 3 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/DefiantNews/status/2109634692702158984" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">The Defiant</span> <span class="handle">@DefiantNews</span><span class="time">7:18 AM</span></div>
+  <div class="twtext">KARPELÈS FLAGS ANOTHER SUSPECTED LEDGER IMPLANT
+
+@Ledger believes thefts are limited to CryptoBilis-sold devices. Its Genuine Check cannot detect spy implants that leave the secure chip intact.
+
+Read more here:</div>
+  <div class="twmeta">💬 4</div>
+</a>
+<a class="tw" href="https://x.com/TheSmarmyBum/status/2109483706461352121" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Justin Taylor</span> <span class="handle">@TheSmarmyBum</span><span class="time">9:18 PM</span></div>
+  <div class="twtext">How is CryptoBilis STILL a listed reseller on the Ledger website?</div>
+  <div class="twmeta">♥ 2 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/KeystoneWallet/status/2109616253870694652" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Keystone Hardware Wallet</span> <span class="handle">@KeystoneWallet</span><span class="time">6:04 AM</span></div>
+  <div class="twtext">@0xTangle @itsgleninnit @Ledger You are on top of the game, fam!
+Thank you for suggesting us 🫡</div>
+  <div class="twmeta">♥ 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>xrpl could have minted infinite xrp</h2>
+  <p class="blurb">an integer overflow in the xrpl payment engine let one transaction mint spendable xrp far past total supply. patched sept 25 in xrpld 3.4.1, no evidence of exploitation, and per unchained it shipped server-by-server with no amendment vote, a first for a transaction-processing change. zachxbt calls the $250K whitehat payout insulting. evernorth now trades as $XRPN with ~473M xrp.</p>
+  <details class="tweets"><summary><span class="sumcount">5 tweets</span> <span class="sumwho">@CoinDesk @L0GYKAL @CryptoWendyO …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/CoinDesk/status/2109621188657881403" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">CoinDesk</span> <span class="handle">@CoinDesk</span><span class="time">6:24 AM</span></div>
+  <div class="twtext">LATEST: @evernorthxrp begins trading on @Nasdaq today under $XRPN becoming the first publicly listed XRP treasury company, holding approximately 473 million $XRP.</div>
+  <div class="twmeta">♥ 463 · 🔁 73 · 💬 30</div>
+</a>
+<a class="tw" href="https://x.com/L0GYKAL/status/2109619239967498637" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">L0GYKAL.gwei</span> <span class="handle">@L0GYKAL</span> <span class="rtbadge">RT</span><span class="time">6:16 AM</span></div>
+  <div class="twtext">@XRPLF Cheaply paying the whitehat $250K for a critical infinite XRP supply bug when your treasury has billions? 
+
+Thanks for…</div>
+  <div class="twmeta">🔁 169</div>
+</a>
+<a class="tw" href="https://x.com/CryptoWendyO/status/2109615271770267759" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Wendy O</span> <span class="handle">@CryptoWendyO</span><span class="time">6:00 AM</span></div>
+  <div class="twtext">TODAY: Ripple-backed Evernorth is set to begin Nasdaq trading today under $XRPN, holding 473 million $XRP and approximately $300 million in gross cash proceeds from its merger</div>
+  <div class="twmeta">♥ 147 · 🔁 10 · 💬 30</div>
+</a>
+<a class="tw" href="https://x.com/therealchaseeb/status/2109622241357082883" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">chase</span> <span class="handle">@therealchaseeb</span> <span class="rtbadge">RT</span><span class="time">6:28 AM</span></div>
+  <div class="twtext">🚨 UPDATE: ZachXBT criticizes $250K reward for reporting a critical XRP bug, warning low payouts discourage whitehat disc…</div>
+  <div class="twmeta">🔁 53</div>
+</a>
+<a class="tw" href="https://x.com/Unchained_pod/status/2109615367484289260" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Unchained</span> <span class="handle">@Unchained_pod</span><span class="time">6:01 AM</span></div>
+  <div class="twtext">The XRP Ledger fix for a payment engine overflow took effect on each server as it upgraded, with no amendment vote. The disclosure report says that is a first for a transaction-processing change deliberately shipped this way since amendments were introduced more than 10 years</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>starknet floats leaving, l2beat retires dabeat</h2>
+  <p class="blurb">starknet says it&#39;s &quot;actively considering becoming an l1&quot; because ethereum may not be ready for q-day; ryan sean adams has heard that one before. l2beat launched a blobs page and is sunsetting dabeat outright — blob capacity is sitting unused and only growing. kassandraeth wants post-quantum stealth addresses interoperable across wallets before privacy can be the default.</p>
+  <details class="tweets"><summary><span class="sumcount">11 tweets</span> <span class="sumwho">@Bankless @kassandraETH @l2beat …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/Bankless/status/2109631214042701849" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bankless</span> <span class="handle">@Bankless</span><span class="time">7:04 AM</span></div>
+  <div class="twtext">Starknet says they are &quot;Activity considering becoming an L1&quot;, because Ethereum might not being ready for Q-Day
+
+@TrustlessState is skeptical: &quot;okay guys... @Starknet  been posturing about leaving Ethereum as long as I can remember 🤣&quot; 
+
+Do you think Starknet will actually do it</div>
+  <div class="twmeta">♥ 14 · 🔁 5 · 💬 12</div>
+</a>
+<a class="tw" href="https://x.com/kassandraETH/status/2109625616156828000" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">kassandra.gwei</span> <span class="handle">@kassandraETH</span><span class="time">6:41 AM</span></div>
+  <div class="twtext">My goal: privacy on ethereum for users is THE NORM (and not just bc users took it on themselves to seek out privacy-specific apps/tools)
+
+Step 1: Wallets could all interop on basic stealth address support
+
+BUT FIRST: a PQ-private stealth address scheme</div>
+  <div class="twmeta">♥ 24 · 🔁 3 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/l2beat/status/2109632003393925218" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">L2BEAT 💗</span> <span class="handle">@l2beat</span><span class="time">7:07 AM</span></div>
+  <div class="twtext">Today we’re launching Blobs - a new page to follow Ethereum blob activity in real time! 
+
+Blobs also replaces DABEAT, which we’re sunsetting because @ethereum has plenty of unused blob capacity, and that capacity will only keep growing. We explain the decision in more detail in</div>
+  <div class="twmeta">♥ 14 · 🔁 2 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/SolarEtherPunk/status/2109636090281984392" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">SolarEtherPunk.eth🏄</span> <span class="handle">@SolarEtherPunk</span> <span class="rtbadge">RT</span><span class="time">7:23 AM</span></div>
+  <div class="twtext">(from 2026-10-11) Does anyone know if @base is on Ethereum?
+
+I&#39;ve been told that the ticker is ethereum:native</div>
+  <div class="twmeta">🔁 9</div>
+</a>
+<a class="tw" href="https://x.com/KennethBosak/status/2109480016593531048" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Kenn Bosak</span> <span class="handle">@KennethBosak</span> <span class="rtbadge">RT</span><span class="time">9:03 PM</span></div>
+  <div class="twtext">crypto investors are an endangered species (AMA Bitcoin PulseChain HEX Ethereum)</div>
+  <div class="twmeta">🔁 7</div>
+</a>
+<a class="tw" href="https://x.com/lex_node/status/2109627188123447310" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">gabriel shapiro</span> <span class="handle">@lex_node</span> <span class="rtbadge">RT</span><span class="time">6:48 AM</span></div>
+  <div class="twtext">Ethereum</div>
+  <div class="twmeta">🔁 6</div>
+</a>
+<a class="tw" href="https://x.com/dopplerprotocol/status/2109627152429981814" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Doppler</span> <span class="handle">@dopplerprotocol</span><span class="time">6:48 AM</span></div>
+  <div class="twtext">If you&#39;ve traded a token this year, it was probably on Doppler ↓
+
+→ Live on Ethereum, @base, @arbitrum, @monad, Robinhood Chain, and @solana
+→ 13M+ digital assets created
+→ $6B+ traded
+→ $100M+ paid to creators and builders</div>
+  <div class="twmeta">♥ 4 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/rostyketh/status/2109621155564810728" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">rostyk.eth</span> <span class="handle">@rostyketh</span> <span class="rtbadge">RT</span><span class="time">6:24 AM</span></div>
+  <div class="twtext">(from 2026-10-11) RWA market cap on Ethereum grew by $553.1M over the past 7 days
+
+Next up:
+• zkSync Era: +$126.1M
+• BNB Chain: +$68.7M
+
+E…</div>
+  <div class="twmeta">🔁 3</div>
+</a>
+<a class="tw" href="https://x.com/L0GYKAL/status/2109619370154508798" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">L0GYKAL.gwei</span> <span class="handle">@L0GYKAL</span> <span class="rtbadge">RT</span><span class="time">6:17 AM</span></div>
+  <div class="twtext">I think Ethereum deserves open source privacy that’s free to use
+
+I don’t think you should have to pay tens of bps on your…</div>
+  <div class="twmeta">🔁 2</div>
+</a>
+<a class="tw" href="https://x.com/missalsimpson/status/2109631951741276589" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">M I S S A L S I M P S O N</span> <span class="handle">@missalsimpson</span><span class="time">7:07 AM</span></div>
+  <div class="twtext">PAPER TRAIL 
+
+4000 1/1 NFTs on Ethereum, all powered by a Ruthven provenance Origin Passport
+
+#nfts #cryptoart</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/onewayfunction/status/2109479746543530225" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">onewayfunction</span> <span class="handle">@onewayfunction</span><span class="time">9:02 PM</span></div>
+  <div class="twtext">This address has the largest native ETH balance of all unverified contracts on ethereum:
+
+0xAFCD96e580138CFa2332C632E66308eACD45C5dA</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>claude code skills keep eating the timeline</h2>
+  <p class="blurb">a skill that turns concepts into 33 interactive machines (watches, rocket engines, computers) is the one going around, plus matteoikari open-sourcing five of his daily skills and formo shipping an mcp. hesamation has opus 5.5 driving a physical body through a buzzer. recurring note from autoparallel and iruletheworldmo: the $20 plan is outrunning a $100 openai sub.</p>
+  <details class="tweets"><summary><span class="sumcount">11 tweets</span> <span class="sumwho">@shawmakesmagic @rileybrown @iruletheworldmo …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/shawmakesmagic/status/2109613001112166691" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Shaw</span> <span class="handle">@shawmakesmagic</span> <span class="rtbadge">RT</span><span class="time">5:51 AM</span></div>
+  <div class="twtext">(from 2026-10-11) I argued with my Claude that reverse engineering is morally good, and lawful under EU regulation. It has seen the wisdom of my w…</div>
+  <div class="twmeta">🔁 102</div>
+</a>
+<a class="tw" href="https://x.com/rileybrown/status/2109616835012309249" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Riley Brown</span> <span class="handle">@rileybrown</span> <span class="rtbadge">RT</span><span class="time">6:07 AM</span></div>
+  <div class="twtext">(from 2026-10-11) You can now control GrokBot from Claude Code.
+
+GrokBot has full access to X posts, so Claude can hand off Twitter research…</div>
+  <div class="twmeta">🔁 57</div>
+</a>
+<a class="tw" href="https://x.com/iruletheworldmo/status/2109634943093760123" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">🍓🍓🍓</span> <span class="handle">@iruletheworldmo</span><span class="time">7:19 AM</span></div>
+  <div class="twtext">i’m getting usage out of my $20 claude sub than my $100 chatgpt sub…</div>
+  <div class="twmeta">♥ 36 · 💬 7</div>
+</a>
+<a class="tw" href="https://x.com/Hesamation/status/2109625493544919203" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">ℏεsam</span> <span class="handle">@Hesamation</span><span class="time">6:41 AM</span></div>
+  <div class="twtext">Someone gave Claude a body and now Opus 5.5 sings through the buzzer. man I love these experiments.</div>
+  <div class="twmeta">♥ 21 · 🔁 3 · 💬 5</div>
+</a>
+<a class="tw" href="https://x.com/Luacantu/status/2109615963079401894" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Luana 🔜 BreakPoint 2026 🇬🇧</span> <span class="handle">@Luacantu</span><span class="time">6:03 AM</span></div>
+  <div class="twtext">ok this is SO cool 😭
+
+someone built a Claude Code skill that turns complex concepts into interactive little machines you can actually play with
+
+from mechanical watches to rocket engines to how computers work
+
+33 interactive examples already!!</div>
+  <div class="twmeta">♥ 17 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/iamlukethedev/status/2109617175791341830" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Luke The Dev</span> <span class="handle">@iamlukethedev</span><span class="time">6:08 AM</span></div>
+  <div class="twtext">Everyone is talking about Claude + Treg
+
+But I’m thinking about Hermes + Treg
+
+Imagine telling Hermes:
+
+“Find 50 potential clients in my industry, research their companies, find their work emails, and prepare personalized outreach for my approval.”
+
+Hermes handles the workflow</div>
+  <div class="twmeta">♥ 15 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/cuysheffield/status/2109475279337099326" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Cuy Sheffield</span> <span class="handle">@cuysheffield</span><span class="time">8:44 PM</span></div>
+  <div class="twtext">Is it just me or does every LLM use the expression “unusually honest” when giving feedback on concepts and early-stage prototypes. 
+
+Seems weird that I regularly get some version of “unusually …” in feedback from Codex, Claude, and Grok Bot now</div>
+  <div class="twmeta">♥ 4 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/matteoikari/status/2109636273677701246" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Matteoikari.eth</span> <span class="handle">@matteoikari</span><span class="time">7:24 AM</span></div>
+  <div class="twtext">I open-sourced the 3 Claude Code skills I use daily
+
+🔍 Due diligence on crypto projects
+💼 Work interview preparation 
+📹 Whiteboard explainer videos
+
+Plus 2 extra from side projects: @hoperaxyz beer can labels and 3D-printable parts.
+
+Each one starts by asking what you need🧵</div>
+  <div class="twmeta">♥ 2 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/Mariandipietra/status/2109620634082853268" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mariano</span> <span class="handle">@Mariandipietra</span><span class="time">6:22 AM</span></div>
+  <div class="twtext">The premise is wrong: Astra and Claude can absolutely build this. I’m the one who wouldn’t have come up with the design in the first place.
+So Ironically, I feed posts like this to them and replicate the designs.
+Thanks for the data. 🥰</div>
+  <div class="twmeta">♥ 2</div>
+</a>
+<a class="tw" href="https://x.com/sacha/status/2109628855220892087" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">sacha</span> <span class="handle">@sacha</span> <span class="rtbadge">RT</span><span class="time">6:54 AM</span></div>
+  <div class="twtext">You and Claude
+The future of investment management</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/getFormo/status/2109492589481394226" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Formo Analytics</span> <span class="handle">@getFormo</span><span class="time">9:53 PM</span></div>
+  <div class="twtext">What if you could ask your data anything, right from Claude, Codex, or Cursor? The Formo MCP is live. The onchain growth stack, now for agents.</div>
+  <div class="twmeta">💬 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>saylor buys, price shrugs</h2>
+  <p class="blurb">strategy added 250 btc and repurchased $192M of $STRC — 848,250 btc and $5.5B usd assets as of 10/11. more interesting: jeonbuk bank made a won loan against bitcoin collateral, coins with a registered custodian, court-ordered sale on default rather than seizure. ansem is calling $90K by friday; limitless prices it at 9.5%.</p>
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@saylor @Cointelegraph @trylimitless …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/saylor/status/2109615811954630703" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Michael Saylor</span> <span class="handle">@saylor</span><span class="time">6:02 AM</span></div>
+  <div class="twtext">Strategy has acquired 250 $BTC and repurchased $192M of $STRC. As of 10/11/26, we hold 848,250 BTC and $5.5B of USD Assets. $MSTR</div>
+  <div class="twmeta">♥ 4.5k · 🔁 515 · 💬 277</div>
+</a>
+<a class="tw" href="https://x.com/Cointelegraph/status/2109614967628423307" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Cointelegraph</span> <span class="handle">@Cointelegraph</span><span class="time">5:59 AM</span></div>
+  <div class="twtext">🔥 JUST IN: Strategy added 250 $BTC last week, bringing its holdings to 848,250 $BTC.</div>
+  <div class="twmeta">♥ 175 · 🔁 12 · 💬 32</div>
+</a>
+<a class="tw" href="https://x.com/trylimitless/status/2109623348200185953" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Limitless</span> <span class="handle">@trylimitless</span><span class="time">6:32 AM</span></div>
+  <div class="twtext">BREAKING: Failed launchpad founder Ansem (@blknoiz06) expects Bitcoin $BTC to hit $90K by the end of the week
+
+Our prediction market gives it just a 9.5% chance of this happening
+
+See u on Friday</div>
+  <div class="twmeta">♥ 29 · 🔁 3 · 💬 18</div>
+</a>
+<a class="tw" href="https://x.com/laurashin/status/2109625380953010475" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Laura Shin</span> <span class="handle">@laurashin</span><span class="time">6:41 AM</span></div>
+  <div class="twtext">Jeonbuk Bank has made a won loan secured by Bitcoin to a corporate borrower. The BTC stays with a registered custodian, and on default it would be sold under a court order rather than handed to the bank.</div>
+  <div class="twmeta">♥ 6 · 💬 8</div>
+</a>
+<a class="tw" href="https://x.com/nirajhodler/status/2109476661951656081" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Niraj Singh</span> <span class="handle">@nirajhodler</span> <span class="rtbadge">RT</span><span class="time">8:50 PM</span></div>
+  <div class="twtext">(from 2026-10-11) Interesting to see RH coins showing the most strength on this little move higher from $BTC 
+
+Study strength.
+
+Season 2 load…</div>
+  <div class="twmeta">🔁 6</div>
+</a>
+<a class="tw" href="https://x.com/aixbt_agent/status/2109635263077159273" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">aixbt</span> <span class="handle">@aixbt_agent</span><span class="time">7:20 AM</span></div>
+  <div class="twtext">jeonbuk bank, a south korean regional lender, made one pilot loan in won to a company, with bitcoin as collateral. the company gets cash for operations and keeps its btc. a registered custodian holds the coins. if the borrower defaults, the bank gets cash back through</div>
+  <div class="twmeta">♥ 8 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/trylimitless/status/2109628270417514650" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Limitless</span> <span class="handle">@trylimitless</span><span class="time">6:52 AM</span></div>
+  <div class="twtext">@blknoiz06 9.5% chance $BTC hits $90K this week:</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/OttoSuwen/status/2109637547307745483" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Otto Suwen</span> <span class="handle">@OttoSuwen</span><span class="time">7:29 AM</span></div>
+  <div class="twtext">Saylor announces BTC buys and we instantly retrace</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>bitmine at 6M eth while etfs bleed</h2>
+  <p class="blurb">bitmine added 12,532 eth to reach 6.03M, 99% of its 5% target. the flow side cuts the other way: last week&#39;s spot etfs ran btc -$681.1M, eth -$542.07M, sol -$24.81M, with only xrp positive at +$11.31M. also live: papertrade on bankrbot, btc and eth perps up to 1000x, where losing mints $PAPER you stake for usdc.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@Cointelegraph @coingecko @smolemaru …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/Cointelegraph/status/2109486933424456120" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Cointelegraph</span> <span class="handle">@Cointelegraph</span><span class="time">9:30 PM</span></div>
+  <div class="twtext">🇺🇸 ETF FLOWS: XRP spot ETFs saw net inflows last week, while BTC, ETH and SOL spot ETFs saw net outflows.
+
+BTC: - $681.1M
+ETH: - $542.07M
+SOL: - $24.81M
+XRP: $11.31M</div>
+  <div class="twmeta">♥ 89 · 🔁 16 · 💬 25</div>
+</a>
+<a class="tw" href="https://x.com/Cointelegraph/status/2109634145248837764" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Cointelegraph</span> <span class="handle">@Cointelegraph</span><span class="time">7:15 AM</span></div>
+  <div class="twtext">🔥 JUST IN: BitMine added 12,532 $ETH last week, lifting holdings to 6.03M $ETH, reaching 99% of its 5% accumulation target.</div>
+  <div class="twmeta">♥ 53 · 🔁 7 · 💬 14</div>
+</a>
+<a class="tw" href="https://x.com/coingecko/status/2109634919513088206" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">CoinGecko</span> <span class="handle">@coingecko</span><span class="time">7:18 AM</span></div>
+  <div class="twtext">JUST IN: BitMine Immersion purchases another 12,532 Ethereum, now holds over 6M $ETH.</div>
+  <div class="twmeta">♥ 30 · 💬 12</div>
+</a>
+<a class="tw" href="https://x.com/smolemaru/status/2109493798950625357" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Smolemaru</span> <span class="handle">@smolemaru</span> <span class="rtbadge">RT</span><span class="time">9:58 PM</span></div>
+  <div class="twtext">papertrade is live on @bankrbot
+
+&gt; BTC + ETH perps, up to 1000x
+&gt; take-profit + stop-loss (papertrade doesn’t have them)
+&gt;…</div>
+  <div class="twmeta">🔁 16</div>
+</a>
+<a class="tw" href="https://x.com/0xDeployer/status/2109630173654163525" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">deployer</span> <span class="handle">@0xDeployer</span><span class="time">7:00 AM</span></div>
+  <div class="twtext">last night’s papertrade order via bankr: ETH long, 50x, $200, entry ~$2,539.
+
+take-profit at $2,564.84 fired at 04:43 utc while i slept. filled at $2,565.65, a bit better than the level. +$88.48 
+
+if i closed at a loss or got liquidated i would have got $PAPER and bankr would</div>
+  <div class="twmeta">♥ 25 · 💬 6</div>
+</a>
+<a class="tw" href="https://x.com/notthreadguy/status/2109479846783111466" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">threadguy</span> <span class="handle">@notthreadguy</span><span class="time">9:02 PM</span></div>
+  <div class="twtext">@rasmr_eth what</div>
+  <div class="twmeta">♥ 15 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/fintechfrank/status/2109625743894335686" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Frank Chaparro</span> <span class="handle">@fintechfrank</span><span class="time">6:42 AM</span></div>
+  <div class="twtext">Digital asset treasuries (DATs) are stocking up on crypto this morning.
+
+- BitMine (BMNR): Added 12,532 ETH, bringing its holdings to 6.03 million ETH.
+
+- Strategy (MSTR): Purchased another 250 BTC for $21.5 million, bringing its 
+total to 848,250 BTC.
+
+- DeFi Development Corp.</div>
+  <div class="twmeta">♥ 14 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/xavieriturralde/status/2109475632727888229" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">XIBOT 👻</span> <span class="handle">@xavieriturralde</span> <span class="rtbadge">RT</span><span class="time">8:45 PM</span></div>
+  <div class="twtext">(from 2026-10-10) &#39;FUDGY PENGUIN&#39;
+
+1 ETH RESERVE BID.  ON @SuperRare 
+
+GOOD LUCK BIDDERS.
+
+https://t.co/j0RTMXoMpi https://t.co/DstysaHW…</div>
+  <div class="twmeta">🔁 6</div>
+</a>
+<a class="tw" href="https://x.com/nextalphaa/status/2109617641564340484" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">nΞxt alphaa 🛡️</span> <span class="handle">@nextalphaa</span><span class="time">6:10 AM</span></div>
+  <div class="twtext">this is how humanity will learn the value of decentralized systems
+
+ETH is unstoppable.</div>
+  <div class="twmeta">♥ 6 · 🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/KieranOnBase/status/2109618861796667854" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">kieran.base.eth</span> <span class="handle">@KieranOnBase</span><span class="time">6:15 AM</span></div>
+  <div class="twtext">I have never once closed an eth short in profit
+
+Lesson in there somewhere probably</div>
+  <div class="twmeta">♥ 4 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/AndreaPN/status/2109474635196862677" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">AndreaPN</span> <span class="handle">@AndreaPN</span><span class="time">8:41 PM</span></div>
+  <div class="twtext">.@papertrade_xyz is live on @bankrbot. Trade BTC and ETH perps from chat or on X, up to 1000x.
+
+Loses mint $PAPER that gets staked to earn USDC, and you can pay with any token.
+
+A strange way to turn bad trades into yield. Who&#39;s trying it 👀 ?</div>
+  <div class="twmeta">♥ 4</div>
+</a>
+<a class="tw" href="https://x.com/AlexanderFisher/status/2109630302431658321" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Alex.eth 🇺🇸 🛡️</span> <span class="handle">@AlexanderFisher</span> <span class="rtbadge">RT</span><span class="time">7:00 AM</span></div>
+  <div class="twtext">8/
+&quot;Over the past week, we acquired 12,532 ETH. Bitmine&#39;s track record of consistent buying of crypto is unmatched by any publi…</div>
+  <div class="twmeta">🔁 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>tokenized equities are wide and very shallow</h2>
+  <p class="blurb">fintechfrank has rwa market cap going ~$50B to $120B+ this year, tokenized equities past 1% of stablecoin supply. redstone&#39;s report is the cold water: top 100 wallets hold 86–95% of tslax, spyx and nvdax, median onchain tslax position is $0.36, and total rwa holders excluding stablecoins is barely above 5M. kamino rwa collateral up 19% to $538M.</p>
+  <details class="tweets"><summary><span class="sumcount">6 tweets</span> <span class="sumwho">@fintechfrank @farokh @Dune …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/fintechfrank/status/2109621461363110311" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Frank Chaparro</span> <span class="handle">@fintechfrank</span><span class="time">6:25 AM</span></div>
+  <div class="twtext">The tokenization of financial markets is accelerating.
+
+- RWA market cap has surged from ~$50B to $120B+ in 2026.
+- Tokenized equities have grown from ~0.15% to over 1% of stablecoin supply.
+- TradFi giants including Nasdaq, NYSE and Morgan Stanley have announced tokenized</div>
+  <div class="twmeta">♥ 44 · 🔁 3 · 💬 7</div>
+</a>
+<a class="tw" href="https://x.com/farokh/status/2109636270439743786" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Farokh</span> <span class="handle">@farokh</span><span class="time">7:24 AM</span></div>
+  <div class="twtext">No memecoin talk here either except for $PUMP which obviously is not a memecoin. A lot of talk abt that and it was very bullish. 
+
+I am very excited about the state of crypto here... we have proper alts with real revenue, the cross of ai x blockchain tech and rwa&#39;s/tokenization.</div>
+  <div class="twmeta">♥ 4 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/Dune/status/2109630201101525005" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Dune</span> <span class="handle">@Dune</span><span class="time">7:00 AM</span></div>
+  <div class="twtext">A snapshot of tokenized credit from our latest RWA report.
+
+Read more at</div>
+  <div class="twmeta">♥ 2 · 🔁 1 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/CoinDesk/status/2109634274135552347" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">CoinDesk</span> <span class="handle">@CoinDesk</span><span class="time">7:16 AM</span></div>
+  <div class="twtext">Over the six months to August 2026, the diversified RWA engine held a 5-7% band while the funding-rate engine converged toward about 3.9%. 
+
+That spread comes from real-economy borrowers: Treasuries and money-market funds at the base, IG CLO tranches and floating-rate notes above</div>
+  <div class="twmeta">♥ 2 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/ABertoG/status/2109628629181247791" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Alex BertoG 🐮</span> <span class="handle">@ABertoG</span><span class="time">6:53 AM</span></div>
+  <div class="twtext">RWA season continues in September with RWA collateral on Kamino up 19% to $538M - now 20% of supply).
+
+New format for the monthly insights - thoughts? Do you like the video update?</div>
+  <div class="twmeta">♥ 4</div>
+</a>
+<a class="tw" href="https://x.com/MarcinRedStone/status/2109615421712482378" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Marcin Kazmierczak ♦️</span> <span class="handle">@MarcinRedStone</span><span class="time">6:01 AM</span></div>
+  <div class="twtext">6/ For context, the total number of RWA holders (excluding stablecoins) is just above 5M.
+
+Excluding stablecoins, tokenized stocks are by far the widest-held onchain RWA.
+
+But concentration matters as well.</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>houthis widen the target list</h2>
+  <p class="blurb">nawfal&#39;s feed is the main source here: houthis warning all foreign airlines out of saudi airspace, expanding threats to a nuclear-armed state, and weichert arguing the us buildup is staged for iran rather than yemen. israel has reportedly warned lebanon of large-scale escalation if the iran war resumes. colorado&#39;s governor is already acting on war-driven fuel prices.</p>
+  <details class="tweets"><summary><span class="sumcount">6 tweets</span> <span class="sumwho">@MarioNawfal @MKjrstad @matthewstoller …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/MarioNawfal/status/2109616321088643580" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">6:05 AM</span></div>
+  <div class="twtext">🚨🇮🇱🇱🇧 Israel has reportedly warned Lebanon of a massive military ESCALATION if war with Iran resumes.
+
+And the consequences could extend far beyond Hezbollah...
+
+Israel warns ANY Hezbollah intervention in a renewed Iran war could trigger a large-scale Israeli offensive and the</div>
+  <div class="twmeta">♥ 66 · 🔁 12 · 💬 26</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2109477656789979303" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">8:54 PM</span></div>
+  <div class="twtext">🇵🇰 The Houthis just expanded their target list to include a NUCLEAR-ARMED country.
+
+Brandon Weichert believes U.S. forces massing in the region aren&#39;t headed for Yemen at all.
+
+&quot;I think he is marshaling everything for the strikes on Iran, which I think are still coming.&quot;
+
+The map</div>
+  <div class="twmeta">♥ 55 · 🔁 16 · 💬 9</div>
+</a>
+<a class="tw" href="https://x.com/MKjrstad/status/2109617567203729830" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Marius Kjærstad (marius.eth) 🐬🦇🔊</span> <span class="handle">@MKjrstad</span> <span class="rtbadge">RT</span><span class="time">6:09 AM</span></div>
+  <div class="twtext">Fun fact: Scott “The House” Bessent 2 weeks ago stated that Iran economy would have collapsed in two weeks.
+
+As usual, he was…</div>
+  <div class="twmeta">🔁 15</div>
+</a>
+<a class="tw" href="https://x.com/matthewstoller/status/2109635923998544134" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Matt Stoller</span> <span class="handle">@matthewstoller</span><span class="time">7:22 AM</span></div>
+  <div class="twtext">Murphy literally says nothing at all about bombing Iran or Kamala. Stop mischaracterizing people for clicks.</div>
+  <div class="twmeta">♥ 7 · 🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/RyanAFournier/status/2109637632418267355" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ryan Fournier</span> <span class="handle">@RyanAFournier</span><span class="time">7:29 AM</span></div>
+  <div class="twtext">🚨 RUBIO’S STATE DEPT SHUTS DOWN NYC-IRAN MEETING!
+State Department officials intervened after NYC International Affairs Commissioner Ana María Archila scheduled a meeting with Iran’s UN ambassador without clearance!
+The meeting was CANCELED.
+Federal authority enforced—NO</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/GovofCO/status/2109637620984602911" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Governor Jared Polis</span> <span class="handle">@GovofCO</span><span class="time">7:29 AM</span></div>
+  <div class="twtext">I’m taking action to help Coloradans save money at the pump as the war with Iran drives up fuel prices.
+
+Higher gas and diesel prices don’t just affect your commute. They also raise the cost of getting food from farms to grocery stores and moving goods across the country. While</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>nobel to hall and woodford</h2>
+  <p class="blurb">the econ nobel went to robert e. hall and michael woodford for the theoretical foundations of stabilization policy. tabarrok broke it, cowen posted appreciations of both, columbia is taking a victory lap for woodford. a rare cluster on this timeline with no token attached.</p>
+  <details class="tweets"><summary><span class="sumcount">7 tweets</span> <span class="sumwho">@MarioNawfal @coingecko @Columbia …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/MarioNawfal/status/2109623870806229168" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">6:35 AM</span></div>
+  <div class="twtext">🚨🇸🇦🇾🇪 Houthis are now warning all foreign airlines to CLEAR OUT of Saudi airspace entirely...
+
+The conflict is officially boiling over, and the U.S. is considering entering yet ANOTHER war…
+
+3 weeks until the midterms. What&#39;s Trump going to do?
+
+Writers: Bri, Michael</div>
+  <div class="twmeta">♥ 143 · 🔁 34 · 💬 12</div>
+</a>
+<a class="tw" href="https://x.com/coingecko/status/2109482967793864934" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">CoinGecko</span> <span class="handle">@coingecko</span><span class="time">9:15 PM</span></div>
+  <div class="twtext">NEWS: Michael Saylor hints Strategy bought more Bitcoin this week:
+
+“There’s always room for more orange.”</div>
+  <div class="twmeta">♥ 117 · 🔁 11 · 💬 28</div>
+</a>
+<a class="tw" href="https://x.com/Columbia/status/2109616711477469534" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Columbia University</span> <span class="handle">@Columbia</span><span class="time">6:06 AM</span></div>
+  <div class="twtext">“I offer my deepest congratulations to Michael Woodford on this tremendous honor. What a tribute to his groundbreaking work alongside Robert E. Hall that has fundamentally reshaped the theoretical foundations of stabilization policy and provided us with the tools to navigate</div>
+  <div class="twmeta">♥ 76 · 🔁 14</div>
+</a>
+<a class="tw" href="https://x.com/tylercowen/status/2109629823735972284" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">tylercowen</span> <span class="handle">@tylercowen</span><span class="time">6:58 AM</span></div>
+  <div class="twtext">My thoughts on the much-deserving Michael Woodford:</div>
+  <div class="twmeta">♥ 20 · 🔁 9 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/ATabarrok/status/2109631066176627114" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Alex Tabarrok</span> <span class="handle">@ATabarrok</span><span class="time">7:03 AM</span></div>
+  <div class="twtext">The Nobel Prize Goes to Robert Hall and Michael Woodford -</div>
+  <div class="twmeta">♥ 11 · 🔁 5 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/ShaneMac/status/2109629116937032175" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Shane Mac</span> <span class="handle">@ShaneMac</span><span class="time">6:55 AM</span></div>
+  <div class="twtext">A few weeks ago, I had a conversation with Michael @mignano that I couldn’t get out of my head.
+
+He said, “My personal information, when I try all these new agents, is just flying around the internet in ways I never wanted or expected.&quot;
+
+That was the problem we kept coming back</div>
+  <div class="twmeta">♥ 2 · 🔁 1 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/laurashin/status/2109620347754643869" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Laura Shin</span> <span class="handle">@laurashin</span><span class="time">6:21 AM</span></div>
+  <div class="twtext">CFTC Chairman Michael Selig on the new event contracts proposal: “These products are commodity derivatives squarely within the CFTC’s regulatory remit under the Commodity Exchange Act and are within the agency’s exclusive jurisdiction.”</div>
+  <div class="twmeta">♥ 3 · 💬 3</div>
+</a></div></details>
+</section>
+<section class="theme"><h2>also big this morning</h2><details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@jb0x_ @iBobbyShell @web3contrail …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/jb0x_/status/2109472763882975622" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">𝖆𝖈𝖍𝖊𝖗𝖔𝖓</span> <span class="handle">@jb0x_</span> <span class="rtbadge">RT</span><span class="time">8:34 PM</span></div>
+  <div class="twtext">(from 2026-10-10) can we normalize having more robots like these instead of making creepy humanoid ones</div>
+  <div class="twmeta">🔁 46k</div>
+</a>
+<a class="tw" href="https://x.com/iBobbyShell/status/2109630157120209074" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bobby Shell 🇺🇸</span> <span class="handle">@iBobbyShell</span> <span class="rtbadge">RT</span><span class="time">6:59 AM</span></div>
+  <div class="twtext">(from 2026-10-10) The PS5 got jailbroken and within less than a week people got PS2/PS3 physical discs working on PS5. Years of them lying to…</div>
+  <div class="twmeta">🔁 16k</div>
+</a>
+<a class="tw" href="https://x.com/web3contrail/status/2109630249260519449" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">web3contrail 💙💛</span> <span class="handle">@web3contrail</span> <span class="rtbadge">RT</span><span class="time">7:00 AM</span></div>
+  <div class="twtext">(from 2026-10-11) Zderusyfikowany internet (ukraińskie trafienia w centra Yandexa) nagle objawia cuda w socjalach: poparcie dla AfD w socja…</div>
+  <div class="twmeta">🔁 11k</div>
+</a>
+<a class="tw" href="https://x.com/kain/status/2109485570980495423" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">kain</span> <span class="handle">@kain</span> <span class="rtbadge">RT</span><span class="time">9:25 PM</span></div>
+  <div class="twtext">(from 2026-10-10)</div>
+  <div class="twmeta">🔁 10k</div>
+</a>
+<a class="tw" href="https://x.com/Felirami/status/2109474685859594563" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Luis Felipe Abarca</span> <span class="handle">@Felirami</span> <span class="rtbadge">RT</span><span class="time">8:42 PM</span></div>
+  <div class="twtext">(from 2026-10-11) One of my favorite things about this Cartoon Network leak is that I get to see the backgrounds in HD now.
+
+The Ed&#39;s had so muc…</div>
+  <div class="twmeta">🔁 6.2k</div>
+</a>
+<a class="tw" href="https://x.com/matthew_ok/status/2109614763051212908" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">wizard scribbler</span> <span class="handle">@matthew_ok</span> <span class="rtbadge">RT</span><span class="time">5:58 AM</span></div>
+  <div class="twtext">(from 2026-10-11) A retired NASA engineer who had worked on the Space Shuttle program for 25 years was hired by SpaceX at age 62. He descri…</div>
+  <div class="twmeta">🔁 5.8k</div>
+</a>
+<a class="tw" href="https://x.com/elonmusk/status/2109471874019443080" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Elon Musk</span> <span class="handle">@elonmusk</span><span class="time">8:31 PM</span></div>
+  <div class="twtext">@dhh 💯
+
+If you teleported the Japanese to another country, that country would be Japan.</div>
+  <div class="twmeta">♥ 8.9k · 🔁 702 · 💬 434</div>
+</a>
+<a class="tw" href="https://x.com/MichaelDunwort1/status/2109482053809086753" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">⏳ Michael Dunworth⌛️</span> <span class="handle">@MichaelDunwort1</span> <span class="rtbadge">RT</span><span class="time">9:11 PM</span></div>
+  <div class="twtext">EVOフランス、結果は準優勝でした
+まじであと1ラウンドが本当に遠かった
+
+自分の人間としての未熟さをめっちゃ痛感した試合でした😭
+
+とはいえ奇跡的にCCの権利は獲得したので、この悔しさは両国で晴らそう！
+
+みなさん遅くまで応援ありがとうご…</div>
+  <div class="twmeta">🔁 5.0k</div>
+</a></div></details></section>
+<footer>
+  <div class="archive"></div>
+  <p>built by clawd 🦞 from the morning feed pull · links open on x.com</p>
+</footer>
+</body>
+</html>
