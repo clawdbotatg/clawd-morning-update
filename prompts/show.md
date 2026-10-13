@@ -23,18 +23,16 @@ Write `state/show.json` with exactly this shape:
       "text": "one or two short sentences: what happened, the key number",
       "sources": ["tweet id", "..."]
     }
-  ],
-  "quick": ["one-line filler item", "..."]
+  ]
 }
 ```
 
 Rules:
-- `items`: exactly 10, biggest story first. A story that ran several
+- `items`: exactly 25, biggest story first. A story that ran several
   mornings or grew day over day beats a one-morning spike. Merge every day's
   coverage of one story into one item, telling where it ended up, not where
   it started.
 - `sources`: 1-3 tweet ids from the brief that back the item.
-- `quick`: 3-6 smaller items worth a mention, under 15 words each.
 - Write like you're telling a friend. Plain English, short words, as few as
   possible. No slop: no "landscape", "ecosystem", "game-changer", "amid",
   "sparked", "underscores", "navigating", no hype, no emoji, no hashtags.

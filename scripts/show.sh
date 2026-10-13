@@ -1,5 +1,5 @@
 #!/bin/bash
-# Weekly news for Austin's Wednesday show: last Wednesday → today, top 10,
+# Weekly news for Austin's Wednesday show: last Wednesday → today, top 25,
 # published to gmsers.com/week/<show date>. Run by hand (the `weekly-news`
 # skill) — Tuesday afternoon or Wednesday before the show.
 #   bash scripts/show.sh            # full: merge → LLM pass → render → push

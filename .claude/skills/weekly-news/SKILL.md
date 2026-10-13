@@ -1,6 +1,6 @@
 ---
 name: weekly-news
-description: Austin's Wednesday-show prep — top 10 news from last Wednesday to now, published to gmsers.com/week/<show date>. Use when he says "weekly news", "show prep", or asks what happened this week.
+description: Austin's Wednesday-show prep — top 25 news from last Wednesday to now, published to gmsers.com/week/<show date>. Use when he says "weekly news", "show prep", or asks what happened this week.
 ---
 
 # Weekly news (show prep)
@@ -16,7 +16,7 @@ Austin goes live Wednesday afternoon. Window: last Wednesday → today.
    `python3 -c "import json;d=json.load(open('state/show-brief.json'));[print(x['date'],th['title'],[(t['id'],t['author']) for t in th['tweets']]) for x in d['days'] for th in x['themes']]"`
 3. `bash scripts/show.sh --render` — renders and pushes clawd-daily; push =
    Vercel deploy (~1 min). Prints the URL.
-4. Reply in chat: the link, then the 10 items as a numbered list, one short
+4. Reply in chat: the link, then the 25 items as a numbered list, one short
    line each. Plain English, as few words as possible, no slop.
 
 Re-running the same week overwrites that week's page.
