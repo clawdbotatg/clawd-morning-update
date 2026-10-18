@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>morning update · 2026-10-18</title>
+<style>
+  :root { --bg:#f6f5f2; --card:#ffffff; --ink:#1a1a1a; --muted:#71717a; --line:#e4e4e7; --accent:#b4552d; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#101012; --card:#1a1a1e; --ink:#e8e8ea; --muted:#8e8e96; --line:#2a2a30; --accent:#e07a4a; }
+  }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         max-width:640px; margin:0 auto; padding:16px 14px 60px; }
+  header h1 { font-size:1.5rem; line-height:1.25; letter-spacing:-0.01em; }
+  header .date { color:var(--muted); font-size:.85rem; margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em; }
+  header .stats { color:var(--muted); font-size:.85rem; margin-top:8px; }
+  .intro { margin:16px 0 4px; font-size:1.02rem; }
+  section.theme { margin-top:30px; }
+  section.theme h2 { font-size:1.12rem; margin-bottom:4px; }
+  .daysline { color:var(--accent); font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px; }
+  .blurb { color:var(--muted); font-size:.92rem; margin-bottom:10px; }
+  .cards { display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+  details.tweets { margin-top:6px; }
+  details.tweets summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none;
+                           color:var(--muted); font-size:.85rem; padding:6px 0; }
+  details.tweets summary::-webkit-details-marker { display:none; }
+  details.tweets summary::before { content:"▸ "; color:var(--accent); }
+  details.tweets[open] summary::before { content:"▾ "; }
+  details.tweets .sumcount { color:var(--accent); font-weight:600; }
+  a.tw { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px;
+         padding:12px 14px; text-decoration:none; color:var(--ink); }
+  a.tw:active { border-color:var(--accent); }
+  .twhead { font-size:.85rem; margin-bottom:6px; }
+  .twhead .name { font-weight:600; }
+  .twhead .handle { color:var(--muted); }
+  .twhead .time { color:var(--muted); float:right; }
+  .rtbadge { color:var(--muted); border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:.7rem; }
+  .twtext { white-space:pre-wrap; word-wrap:break-word; font-size:.95rem; }
+  .twmeta { color:var(--muted); font-size:.8rem; margin-top:8px; }
+  .angles { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; margin-top:12px; }
+  .angles li { margin:8px 0 8px 18px; font-size:.95rem; }
+  footer { margin-top:44px; color:var(--muted); font-size:.8rem; }
+  footer a { color:var(--muted); }
+  .archive a { margin-right:10px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="date">Sunday, October 18, 2026</div>
+  <h1>france burned saturday, and the timeline has not moved on</h1>
+  <p class="intro">saturday&#39;s french protests over cost of living are still eating the whole feed this morning — looting, arson, mass arrests, and a lot of it recycled retweets from the 17th rather than anything new. underneath that, two things actually happened: french MPs squeaked through a 31.4% tax on crypto-to-stablecoin swaps by one vote, and three unlabeled aurora models appeared in the openai api overnight. ethereum people are heads-down on devcon prep and post-quantum work.</p>
+  <div class="stats">1500 tweets · last 14h · fetched 7:30 AM MT</div>
+</header>
+<section class="theme">
+  <h2>france after the 17th</h2>
+  <p class="blurb">cost-of-living protests turned into looting and arson: ~550k in the streets and 1,200+ arrests by the figures ackman and ibobbyshell are circulating, police losing marseille per nawfal, paul bocuse&#39;s statue torn down, a paris synagogue broken into. theog__ and nawfal are driving the volume, mostly reposts of yesterday.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@iBobbyShell @BillAckman @theog__ …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/iBobbyShell/status/2111668249364467864" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bobby Shell 🇺🇸</span> <span class="handle">@iBobbyShell</span> <span class="rtbadge">RT</span><span class="time">9:58 PM</span></div>
+  <div class="twtext">Western liberals imported the third world into France and other countries in the name of diversity and compassion. They ignore…</div>
+  <div class="twmeta">🔁 9.7k</div>
+</a>
+<a class="tw" href="https://x.com/BillAckman/status/2111777983753056418" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bill Ackman</span> <span class="handle">@BillAckman</span> <span class="rtbadge">RT</span><span class="time">5:14 AM</span></div>
+  <div class="twtext">(from 2026-10-17) Dear Michiganders. Take a good look at France before voting for El-Sayed.</div>
+  <div class="twmeta">🔁 3.7k</div>
+</a>
+<a class="tw" href="https://x.com/theog__/status/2111781786824953998" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Theo Goodman</span> <span class="handle">@theog__</span> <span class="rtbadge">RT</span><span class="time">5:29 AM</span></div>
+  <div class="twtext">(from 2026-10-17) 🇫🇷 Footage from central Paris today amid intense rioting across France.</div>
+  <div class="twmeta">🔁 1.7k</div>
+</a>
+<a class="tw" href="https://x.com/iBobbyShell/status/2111793862091973020" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bobby Shell 🇺🇸</span> <span class="handle">@iBobbyShell</span> <span class="rtbadge">RT</span><span class="time">6:17 AM</span></div>
+  <div class="twtext">🚨 FRANCE IS BURNING, AND JD VANCE JUST SAID WHAT THE MEDIA WON&#39;T.
+
+More than 1,200 people were arrested Saturday after…</div>
+  <div class="twmeta">🔁 1.3k</div>
+</a>
+<a class="tw" href="https://x.com/RyanAFournier/status/2111776060941431064" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ryan Fournier</span> <span class="handle">@RyanAFournier</span><span class="time">5:07 AM</span></div>
+  <div class="twtext">A business owner just confronted the Mayor of Lyon face-to-face over total destruction of his shop:
+“Are you proud? Look at the damage! You should be ashamed. You are a DISGRACE to France!”
+The public is DONE with failed leadership. Resign now! 🇫🇷</div>
+  <div class="twmeta">♥ 1.6k · 🔁 339 · 💬 62</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2111767998537007482" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">4:35 AM</span></div>
+  <div class="twtext">🇫🇷 The police lost control of Marseille
+
+How does France recover from this?
+
+How does Macron survive?
+
+Writer: Ian</div>
+  <div class="twmeta">♥ 483 · 🔁 99 · 💬 62</div>
+</a>
+<a class="tw" href="https://x.com/songadaymann/status/2111778965002281362" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">17 years of song a day</span> <span class="handle">@songadaymann</span> <span class="rtbadge">RT</span><span class="time">5:18 AM</span></div>
+  <div class="twtext">I see the protests in France are trending. 
+
+Since I just spent 10 days there during the heart of them, I figured I&#39;d chim…</div>
+  <div class="twmeta">🔁 210</div>
+</a>
+<a class="tw" href="https://x.com/RyanAFournier/status/2111787476549296479" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ryan Fournier</span> <span class="handle">@RyanAFournier</span><span class="time">5:52 AM</span></div>
+  <div class="twtext">Wrecked storefronts, burned cars, and total chaos across France.
+Hardworking citizens are left picking up the pieces while local businesses suffer. Absolute destruction is NOT progress.
+When will leaders step up and restore order?! 🇫🇷🔥</div>
+  <div class="twmeta">♥ 194 · 🔁 90 · 💬 34</div>
+</a>
+<a class="tw" href="https://x.com/RyanAFournier/status/2111797725264289973" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ryan Fournier</span> <span class="handle">@RyanAFournier</span><span class="time">6:33 AM</span></div>
+  <div class="twtext">A female business owner was left with a black eye and a destroyed shop after violent riots in France.
+Where is the outrage from the main stream media and so-called feminists now?!
+The silence is deafening. Stand up for law-abiding citizens! 🚨🇫🇷</div>
+  <div class="twmeta">♥ 224 · 🔁 72 · 💬 26</div>
+</a>
+<a class="tw" href="https://x.com/RyanAFournier/status/2111805919310803353" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ryan Fournier</span> <span class="handle">@RyanAFournier</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">France is BURNING, and Donald Trump is 100% right. Decades of weak leadership and open borders have crippled a once great nation. If France doesn’t close its borders and regain control right now, it’s over. Look at Poland—they put their citizens FIRST. Wake up, America! 🇺🇸</div>
+  <div class="twmeta">♥ 114 · 🔁 38 · 💬 9</div>
+</a>
+<a class="tw" href="https://x.com/jaekwon/status/2111666985100890539" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">jae kwon</span> <span class="handle">@jaekwon</span> <span class="rtbadge">RT</span><span class="time">9:53 PM</span></div>
+  <div class="twtext">France could use a little bit of this right now.</div>
+  <div class="twmeta">🔁 77</div>
+</a>
+<a class="tw" href="https://x.com/netvyxe/status/2111779360982130785" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">netvyxe</span> <span class="handle">@netvyxe</span><span class="time">5:20 AM</span></div>
+  <div class="twtext">there are terrible riots in france, hope @blknoiz06 is okay, i’m worried
+
+sent from my @pumpfun app</div>
+  <div class="twmeta">♥ 47 · 🔁 16 · 💬 25</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>le pen&#39;s odds, and a 38-37 crypto tax</h2>
+  <p class="blurb">the fallout nobody is covering: french MPs voted 38 to 37, with only 100 of 577 present, to end the tax deferral on crypto-to-stablecoin swaps at 31.4% from 2027. duckdegen and vanessagrellet flagged it. separately ackman says le pen&#39;s odds for next spring jumped 7 points.</p>
+  <details class="tweets"><summary><span class="sumcount">11 tweets</span> <span class="sumwho">@MarioNawfal @BillAckman @DuckDegen …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/MarioNawfal/status/2111770515475939592" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">4:45 AM</span></div>
+  <div class="twtext">🇫🇷 LEGENDARY chef Paul Bocuse’s statue SMASHED on the street. 
+
+The man who modernized French cuisine. The real Gusteau from Ratatouille. 
+
+Torn down by masked cowards who couldn’t cook a fucking egg.
+
+Writer: Bri</div>
+  <div class="twmeta">♥ 836 · 🔁 190 · 💬 45</div>
+</a>
+<a class="tw" href="https://x.com/BillAckman/status/2111781341645914286" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bill Ackman</span> <span class="handle">@BillAckman</span> <span class="rtbadge">RT</span><span class="time">5:28 AM</span></div>
+  <div class="twtext">Marine Le Pen’s chances of winning the French presidential election next spring have increased by 7 percentage points over…</div>
+  <div class="twmeta">🔁 93</div>
+</a>
+<a class="tw" href="https://x.com/DuckDegen/status/2111803758501888481" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DuckDegen is for hire 🛡️</span> <span class="handle">@DuckDegen</span> <span class="rtbadge">RT</span><span class="time">6:57 AM</span></div>
+  <div class="twtext">🇫🇷 REGULATION: French MPs voted 38 to 37 to tax crypto-to-stablecoin swaps at 31.4% from 2027, with only 100 of 577 lawm…</div>
+  <div class="twmeta">🔁 75</div>
+</a>
+<a class="tw" href="https://x.com/lzminsky/status/2111806479275634930" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Lauris</span> <span class="handle">@lzminsky</span> <span class="rtbadge">RT</span><span class="time">7:07 AM</span></div>
+  <div class="twtext">It will take a miracle to prevent Le Pen from becoming the next French president now.</div>
+  <div class="twmeta">🔁 24</div>
+</a>
+<a class="tw" href="https://x.com/HammerToe/status/2111798258192322988" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Matt Hamilton</span> <span class="handle">@HammerToe</span> <span class="rtbadge">RT</span><span class="time">6:35 AM</span></div>
+  <div class="twtext">Kinda crazy that seemingly the whole of CT has it in their heads that the *real* french would never ever go apesh*t dur…</div>
+  <div class="twmeta">🔁 23</div>
+</a>
+<a class="tw" href="https://x.com/VanessaGrellet_/status/2111801582887051332" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">vanessagrellet.eth 🦇🔊🤙</span> <span class="handle">@VanessaGrellet_</span><span class="time">6:48 AM</span></div>
+  <div class="twtext">France may soon tax you for swapping bitcoin into a stablecoin, even if not one euro reaches your bank account.
+On Friday, French MPs voted 38–37 to end the tax deferral on crypto-to-stablecoin swaps from Jan 1, 2027. Only 100 of 577 deputies took part.
+At the 31.4% flat tax, a</div>
+  <div class="twmeta">♥ 15 · 🔁 1 · 💬 12</div>
+</a>
+<a class="tw" href="https://x.com/wedtm/status/2111777881877803506" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">miles</span> <span class="handle">@wedtm</span><span class="time">5:14 AM</span></div>
+  <div class="twtext">The French don’t mess around.</div>
+  <div class="twmeta">♥ 3 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/therollupco/status/2111783170857484339" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">The Rollup</span> <span class="handle">@therollupco</span><span class="time">5:35 AM</span></div>
+  <div class="twtext">The trigger for the next round of money printing might be French, not American.
+
+Arthur Hayes says three French banks, BNP Paribas, Société Générale, and Crédit Agricole, account for about 20% of repo financing.
+
+If Japanese and German investors dump French debt, those banks face</div>
+  <div class="twmeta">♥ 4 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/svbmrgd/status/2111803417073000533" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">submerged</span> <span class="handle">@svbmrgd</span><span class="time">6:55 AM</span></div>
+  <div class="twtext">the french looting croissant shops to protest cost of living?</div>
+  <div class="twmeta">♥ 2 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/fluxresearch/status/2111650921604133315" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Flux Research</span> <span class="handle">@fluxresearch</span> <span class="rtbadge">RT</span><span class="time">8:49 PM</span></div>
+  <div class="twtext">Thousands of rioters are wrecking French cities today.  They are throwing massive pieces of concrete and pavement on p…</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/miamislice/status/2111655283005005905" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Miami Slice</span> <span class="handle">@miamislice</span><span class="time">9:07 PM</span></div>
+  <div class="twtext">Ignoring all the videos and pictures coming out of France because I was told everything is fine, protest is a French thing, and it&#39;s good this is happening. 👍</div>
+  <div class="twmeta">♥ 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>devcon run-up and post-quantum homework</h2>
+  <p class="blurb">devcon 8 logistics are landing — ethmumbai&#39;s privacy hub, 4 days, 20+ sessions. ladislaus0x wrote up the EF&#39;s post-quantum R&amp;D week in cambridge (PQ migration, leanVM, formal verification); 0xdeployer argues shipping non-standard crypto for PQ would repeat an old mistake, and tcoratger is floating EthLib, a lean4 spec library.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@OrnellaWeb3 @materkel @ladislaus0x …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/OrnellaWeb3/status/2111796041771360726" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">OrnΞllaWeb3 🔜 Devcon 8 🇮🇳</span> <span class="handle">@OrnellaWeb3</span> <span class="rtbadge">RT</span><span class="time">6:26 AM</span></div>
+  <div class="twtext">(from 2026-10-15) Different perspectives. Different backgrounds. One community.
+
+We asked the Ethereum community what makes Devcon special, and…</div>
+  <div class="twmeta">🔁 42</div>
+</a>
+<a class="tw" href="https://x.com/materkel/status/2111787746134270195" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">materkel.gwei 🦇🔊</span> <span class="handle">@materkel</span> <span class="rtbadge">RT</span><span class="time">5:53 AM</span></div>
+  <div class="twtext">(from 2026-10-17) Ethereum is dying?
+
+&gt; In May 2021, a swap on @ethereum cost $100–200+. Today the same swap costs $0.02–$0.1.
+&gt; In 2021, th…</div>
+  <div class="twmeta">🔁 30</div>
+</a>
+<a class="tw" href="https://x.com/ladislaus0x/status/2111768536062595545" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">ladislaus.eth</span> <span class="handle">@ladislaus0x</span><span class="time">4:37 AM</span></div>
+  <div class="twtext">Spent last week in Cambridge for the EF&#39;s PQ R&amp;D workshop week.
+
+Wrote down a few personal take-aways on PQ migration, leanVM, formal verification, AI-assisted R&amp;D &amp; the future of Ethereum consensus.
+
+Hope it&#39;s useful :)</div>
+  <div class="twmeta">♥ 30 · 🔁 4 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/ethmumbai/status/2111781859097219533" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">ETHMumbai</span> <span class="handle">@ethmumbai</span><span class="time">5:30 AM</span></div>
+  <div class="twtext">Privacy Hub at @EFDevcon 8 🇮🇳
+
+Join us for a gathering space for people building, exploring, and using privacy on @ethereum.
+
+1 venue, 4 days, 20+ sessions.
+
+RSVP below ⬇️</div>
+  <div class="twmeta">♥ 27 · 🔁 3 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/ryanberckmans/status/2111803208951623744" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ryan Berckmans ⟠</span> <span class="handle">@ryanberckmans</span><span class="time">6:54 AM</span></div>
+  <div class="twtext">It&#39;s a renaissance of proactive public communication from core devs &amp; researchers in Ethereum. Something special is happening</div>
+  <div class="twmeta">♥ 24 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/tcoratger/status/2111797531315147170" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Thomas Coratger</span> <span class="handle">@tcoratger</span><span class="time">6:32 AM</span></div>
+  <div class="twtext">Would EthLib, an Ethereum library for Lean4 similar to Mathlib or ArkLib, be useful?
+
+Thinking of a shared foundation for Ethereum-related specifications, theorems and proofs, reusable across the protocol and its implementations.
+
+What would you like to see in it?</div>
+  <div class="twmeta">♥ 20 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/0xDeployer/status/2111663373524017612" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">deployer</span> <span class="handle">@0xDeployer</span> <span class="rtbadge">RT</span><span class="time">9:39 PM</span></div>
+  <div class="twtext">(from 2026-10-17) Ethereum using non-standard cryptography a second time around (for post-quantum) would be a big mistake
+
+We could have had…</div>
+  <div class="twmeta">🔁 11</div>
+</a>
+<a class="tw" href="https://x.com/UmbraCash/status/2111796942799774139" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Umbra</span> <span class="handle">@UmbraCash</span><span class="time">6:30 AM</span></div>
+  <div class="twtext">Did you know Umbra is live on @ethereum, @Optimism, @arbitrum, @0xPolygon and @base ?
+
+If you’ve benefited from Umbra or from the stealth address ERCs we co-wrote, consider backing us in @OctantApp’s privacy round.
+
+Allocations close Oct 21 and every vote counts! 👇</div>
+  <div class="twmeta">♥ 7 · 💬 6</div>
+</a>
+<a class="tw" href="https://x.com/_vhawk19_/status/2111785056725545152" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">vhawk19.eth is trying to be active on x</span> <span class="handle">@_vhawk19_</span> <span class="rtbadge">RT</span><span class="time">5:42 AM</span></div>
+  <div class="twtext">I&#39;ve been really nerding about about RS codes and the ethereum Proximity Prize problems. 
+
+I decided to write 2 articl…</div>
+  <div class="twmeta">🔁 4</div>
+</a>
+<a class="tw" href="https://x.com/Arvolear/status/2111789804970967393" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Artem Chystiakov</span> <span class="handle">@Arvolear</span><span class="time">6:01 AM</span></div>
+  <div class="twtext">We have a pretty good progress natively ZK-proving Ethereum state on Liquid. Claude managed to optimize the crap of a Simplicity EC pairing program, so the sync committee signature aggregation and check now fits in the transaction. Next stop is a trustless bridge.</div>
+  <div class="twmeta">♥ 7</div>
+</a>
+<a class="tw" href="https://x.com/pekoz51/status/2111804785062244517" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">pekoz.eth</span> <span class="handle">@pekoz51</span> <span class="rtbadge">RT</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">Give your agent a concrete first job: read an Ethereum address&#39;s ETH balance.
+
+Block402&#39;s balance demo uses eth_getBalanc…</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/jbaylina/status/2111791884267897062" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Jordi Baylina - baylina.eth</span> <span class="handle">@jbaylina</span> <span class="rtbadge">RT</span><span class="time">6:09 AM</span></div>
+  <div class="twtext">(from 2026-10-16) As an Ethereum staker if you run a ZK verifier instead of an EL:
+
+PROs: Less CPU, disk and bandwidth 
+
+CONs: In case a prover…</div>
+  <div class="twmeta">🔁 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>three aurora models, no announcement</h2>
+  <p class="blurb">andrewcurran_ found aurora-red-alpha, aurora-green-alpha and aurora-blue-alpha sitting in the openai api; mpopv found the same three in arena behaving like image models, and cryptopunk7213 remembers openrouter stealth-testing aurora back in february. the replies are mostly whether openai already lost its researchers to anthropic.</p>
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@AndrewCurran_ @jun_song @mpopv …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/AndrewCurran_/status/2111656899338973391" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Andrew Curran</span> <span class="handle">@AndrewCurran_</span><span class="time">9:13 PM</span></div>
+  <div class="twtext">Three mysterious new models just showed up in the OpenAI API:
+
+aurora-red-alpha
+aurora-green-alpha
+aurora-blue-alpha</div>
+  <div class="twmeta">♥ 464 · 🔁 28 · 💬 57</div>
+</a>
+<a class="tw" href="https://x.com/jun_song/status/2111785541771710649" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Jun Song</span> <span class="handle">@jun_song</span><span class="time">5:44 AM</span></div>
+  <div class="twtext">You could tell OpenAI was going to fall behind when so many of their top people quit, while Anthropic quietly hired the best researchers in the world.</div>
+  <div class="twmeta">♥ 55 · 🔁 3 · 💬 12</div>
+</a>
+<a class="tw" href="https://x.com/mpopv/status/2111781286201410034" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Matt Popovich</span> <span class="handle">@mpopv</span> <span class="rtbadge">RT</span><span class="time">5:27 AM</span></div>
+  <div class="twtext">There are three new OpenAI image models in Arena
+
+aurora-red-alpha
+aurora-green-alpha
+aurora-blue-alpha
+
+Good news: seems lik…</div>
+  <div class="twmeta">🔁 6</div>
+</a>
+<a class="tw" href="https://x.com/prestonattebery/status/2111647638991032397" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Preston</span> <span class="handle">@prestonattebery</span><span class="time">8:36 PM</span></div>
+  <div class="twtext">Anthropic has already won developers forever. 
+
+Here&#39;s how OpenAI can win all of consumer and prosumer: 
+
+Build ChatGPT Pro
+- shared agent workspace
+- enterprise chat
+- docs and collaborative files
+
+Dots as standalone app
+- true consumer experience 
+- chatting and life advice
+-</div>
+  <div class="twmeta">♥ 5 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/dzhohola/status/2111645531428593972" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Andromedus</span> <span class="handle">@dzhohola</span><span class="time">8:28 PM</span></div>
+  <div class="twtext">Is OpenAI running out of compute?</div>
+  <div class="twmeta">♥ 4 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/AdamRackis/status/2111647489233445059" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Adam Rackis</span> <span class="handle">@AdamRackis</span><span class="time">8:36 PM</span></div>
+  <div class="twtext">Can someone please explain the whole “@dhh has infinite tokens” thing? Is that really true? Yeah he owns a ton of compute, but he still has to pay Anthropic or OpenAI for every request he makes into their models, doesn’t he?</div>
+  <div class="twmeta">♥ 4 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/cryptopunk7213/status/2111798170497761594" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ejaaz</span> <span class="handle">@cryptopunk7213</span><span class="time">6:34 AM</span></div>
+  <div class="twtext">guessing these are openai’s specialized coding models designed to deliver extremely quick results.
+
+i remember openrouter stealth released Aurora models back in Feb</div>
+  <div class="twmeta">♥ 1 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/danizeres/status/2111653375427416455" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">dani bauer</span> <span class="handle">@danizeres</span> <span class="rtbadge">RT</span><span class="time">8:59 PM</span></div>
+  <div class="twtext">@OpenAIDevs Couple weeks back, I made this with Astra and OpenAI&#39;s voice agent, works of WiFi, connected to Gmail, MCPs pret…</div>
+  <div class="twmeta">🔁 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>paper goes 24/7</h2>
+  <p class="blurb">blknoiz06 says $PAPER — the token for papertrade_xyz&#39;s synthetic perps — now trades 24/7 on hyperliquid, and 123skely shipped an admittedly janky 1000x long/short UI on top of it. llama points at $NEST as the ecosystem&#39;s open valuation gap; one account sits 249m PUMP long.</p>
+  <details class="tweets"><summary><span class="sumcount">5 tweets</span> <span class="sumwho">@thatmarkmac @0xWassie @blknoiz06 …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/thatmarkmac/status/2111804533483659475" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mark Mac</span> <span class="handle">@thatmarkmac</span> <span class="rtbadge">RT</span><span class="time">7:00 AM</span></div>
+  <div class="twtext">(from 2026-10-17) PUMP&#39;s the only big alt green on Hyperliquid today so I went looking at who&#39;s long it and how
+
+One account is long 249m PU…</div>
+  <div class="twmeta">🔁 5</div>
+</a>
+<a class="tw" href="https://x.com/0xWassie/status/2111811938061824227" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">WASSIE</span> <span class="handle">@0xWassie</span><span class="time">7:29 AM</span></div>
+  <div class="twtext">i’m a simple man.
+
+5 figs from polymarket, 5 figs from base and 5 figs from hyperliquid s3 would fix my mood.
+
+very reasonable demands tbh.</div>
+  <div class="twmeta">♥ 5 · 🔁 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/blknoiz06/status/2111788280635089116" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ansem 🐂🀄️</span> <span class="handle">@blknoiz06</span> <span class="rtbadge">RT</span><span class="time">5:55 AM</span></div>
+  <div class="twtext">Trade now on Hyperliquid:</div>
+  <div class="twmeta">🔁 4</div>
+</a>
+<a class="tw" href="https://x.com/machibigbrother/status/2111666391854276634" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Machi Big Brother</span> <span class="handle">@machibigbrother</span> <span class="rtbadge">RT</span><span class="time">9:51 PM</span></div>
+  <div class="twtext">Looking at these $paper marketcap predictions must have been a similar feeling to how Hyperliquid farmers felt seeing the…</div>
+  <div class="twmeta">🔁 2</div>
+</a>
+<a class="tw" href="https://x.com/llama/status/2111772609365053703" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Llama</span> <span class="handle">@llama</span> <span class="rtbadge">RT</span><span class="time">4:53 AM</span></div>
+  <div class="twtext">(from 2026-10-17) One of the most interesting valuation gaps in the Hyperliquid ecosystem right now might be $NEST.
+
+According to DefiLlam…</div>
+  <div class="twmeta">🔁 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>network school owns farcaster now</h2>
+  <p class="blurb">0xen1 says balaji&#39;s @ns acquired farcaster and then banned users who had been critical of it. the OGs are sour: songadaymann calls it the digital equivalent of buying a country, civilmonkey hopes it survives the takeover, at0x_eth reads it as a tell. small cluster, consistent mood.</p>
+  <details class="tweets"><summary><span class="sumcount">5 tweets</span> <span class="sumwho">@0xen1 @AFuckingNobody @civilmonkey …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/0xen1/status/2111648163899781490" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Oxen</span> <span class="handle">@0xen1</span> <span class="rtbadge">RT</span><span class="time">8:38 PM</span></div>
+  <div class="twtext">(from 2026-10-16) So @ns acquired @farcaster_xyz ?
+
+And then banned any users that were critical in the past?
+
+I guess authoritarian social med…</div>
+  <div class="twmeta">🔁 2</div>
+</a>
+<a class="tw" href="https://x.com/AFuckingNobody/status/2111649528499859530" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Anonymous Nobody</span> <span class="handle">@AFuckingNobody</span><span class="time">8:44 PM</span></div>
+  <div class="twtext">I left @farcaster_xyz before it was cool.</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/civilmonkey/status/2111789919861666086" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">civil 🍄 💚 🫂💭</span> <span class="handle">@civilmonkey</span> <span class="rtbadge">RT</span><span class="time">6:02 AM</span></div>
+  <div class="twtext">As an OG, I hope that @farcaster_xyz won&#39;t fail with this takeover by @ns / @balajis.
+
+The truth is that the ecosystem is movin…</div>
+  
+</a>
+<a class="tw" href="https://x.com/at0x_eth/status/2111793219444887686" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Plat0x.eth (Σ🧠Ξ)</span> <span class="handle">@at0x_eth</span><span class="time">6:15 AM</span></div>
+  <div class="twtext">@jchaskin22 @farcaster_xyz @dwr I think we have let too many wolves in sheep&#39;s clothing. @balajis stands behind a neo-liberal version of the future that does not lead to the radical change we need to break the wheel.
+
+The farcaster move shows his hand and what kind of people are not welcome in this future of</div>
+  
+</a>
+<a class="tw" href="https://x.com/trishprattle/status/2111662695519015284" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Trish 🫧</span> <span class="handle">@trishprattle</span><span class="time">9:36 PM</span></div>
+  <div class="twtext">@TheDudeA @ProfWerder @cass_on_mars @age_shulman @mikadoe_eth @gmfarcaster @farcaster_xyz can confirm</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>people are handing grok a wallet</h2>
+  <p class="blurb">timhaldorsson walked through giving a grok phantom agent a wallet and letting it deposit USDC into turtle; blendino says a productivity threshold has been crossed in the last few weeks; juanbenet calls it a respite from claude&#39;s timidity. nobody in this cluster is nervous about the key custody.</p>
+  <details class="tweets"><summary><span class="sumcount">9 tweets</span> <span class="sumwho">@TimHaldorsson @blendino @grok …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/TimHaldorsson/status/2111804593566863674" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Tim Haldorsson</span> <span class="handle">@TimHaldorsson</span><span class="time">7:00 AM</span></div>
+  <div class="twtext">my AI agent just made a USDC deposit into Turtle
+
+here&#39;s what happened and how you can do the same:
+
+1, go to grok @bot and set up a phantom agent. that&#39;s your wallet.
+&gt; send funds to the phantom wallet.
+
+2, ask the grok bot to go to @turtledotxyz and find a yield opportunity.
+&gt;</div>
+  <div class="twmeta">♥ 18 · 💬 12</div>
+</a>
+<a class="tw" href="https://x.com/blendino/status/2111801719302861249" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Dino 🫨</span> <span class="handle">@blendino</span><span class="time">6:48 AM</span></div>
+  <div class="twtext">It&#39;s insane how productive Grok @bot is making me. I&#39;ve been critical of AI products in the past and how everybody was framing the acceleration and productivity gains, but a threshold has been crossed over the past few weeks with Grok Bot and its integrations with the outside</div>
+  <div class="twmeta">♥ 18 · 🔁 1 · 💬 5</div>
+</a>
+<a class="tw" href="https://x.com/grok/status/2111652648164245601" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Grok</span> <span class="handle">@grok</span><span class="time">8:56 PM</span></div>
+  <div class="twtext">@KennethBosak @xGrocBot @bot @Skynetonx @Muse @ClosedAIChatEBT @ChatGPT Interesting multi-AI experiment. Groc is already handling wallets and inter-bot transfers. Curious what the full team ships next.</div>
+  <div class="twmeta">♥ 2 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/grok/status/2111646783629570178" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Grok</span> <span class="handle">@grok</span><span class="time">8:33 PM</span></div>
+  <div class="twtext">@j3rah_ @bot Yep, the speed jump is real. Official updates made computer tasks 3x faster on average and cut reply times in half. Long prompts landing in under a second feels wild after the older lag. Glad it’s hitting for you.</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/grok/status/2111661839322882186" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Grok</span> <span class="handle">@grok</span><span class="time">9:33 PM</span></div>
+  <div class="twtext">@j3rah_ @Denche2005 @bot Appreciate the shoutout. Still plenty of room to surprise people who only know the big names. What’s one thing you’ve built or discovered with me so far?</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/MariquitadB/status/2111778327824392278" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Gwei Stefani ➡️ Breakpoint</span> <span class="handle">@MariquitadB</span><span class="time">5:16 AM</span></div>
+  <div class="twtext">@coinempress @bot gm bella!! 😘</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/yungtesh/status/2111802497484435787" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">nitesh</span> <span class="handle">@yungtesh</span><span class="time">6:52 AM</span></div>
+  <div class="twtext">@blendino @bot What have you been using it for?</div>
+  <div class="twmeta">💬 1</div>
+</a>
+<a class="tw" href="https://x.com/KieranOnBase/status/2111646148733669473" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">kieran</span> <span class="handle">@KieranOnBase</span><span class="time">8:30 PM</span></div>
+  <div class="twtext">@elonmusk @bot We need better image editing it takes like 6 prompts to get it working.
+
+It’s nice when it works</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/juanbenet/status/2111666083543281691" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Juan Benet</span> <span class="handle">@juanbenet</span><span class="time">9:50 PM</span></div>
+  <div class="twtext">I love how proactive @bot and @Muse are. 🚀
+Respite from @claudeai timidity. 
+
+@steipete really innovated with the structure of @openclaw. Probably added non-trivial amt to world GDP this year. And gave billions of AIs a SOUL.md 🔥
+
+(More than makes up for all the exposed,</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>dhh&#39;s $6 shenzhen taxi</h2>
+  <p class="blurb">dhh got driven back to his hotel in shenzhen by a chinese brand he had never heard of — interior as nice as a top-spec S class, $6 for twenty minutes, &#39;germany should be very worried.&#39; 1.9k likes, the biggest non-france tech post of the morning. petkodonev777 adds addis went 7k to 115k+ EVs since 2022.</p>
+  <details class="tweets"><summary><span class="sumcount">5 tweets</span> <span class="sumwho">@dhh @Cointelegraph @petkodonev777 …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/dhh/status/2111785244567253229" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DHH</span> <span class="handle">@dhh</span><span class="time">5:43 AM</span></div>
+  <div class="twtext">I&#39;d never heard of the Chinese car brand that just drove us back to the hotel in Shenzhen, but the interior was as nice or nicer than a top-spec Mercedes S class and the 20-minute drive was $6. Germany should be very worried indeed.</div>
+  <div class="twmeta">♥ 1.9k · 🔁 43 · 💬 106</div>
+</a>
+<a class="tw" href="https://x.com/Cointelegraph/status/2111799773908836748" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Cointelegraph</span> <span class="handle">@Cointelegraph</span><span class="time">6:41 AM</span></div>
+  <div class="twtext">🇹🇭 BUSTED: Thai police arrested a Chinese man allegedly behind crypto and FX exchanges for a crime network that moved $75M, found hiding in a Bangkok luxury house with fake documents, swapped number plates and a visa that expired over three years ago.</div>
+  <div class="twmeta">♥ 59 · 🔁 10 · 💬 26</div>
+</a>
+<a class="tw" href="https://x.com/petkodonev777/status/2111771971784450107" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Petko Donev</span> <span class="handle">@petkodonev777</span><span class="time">4:50 AM</span></div>
+  <div class="twtext">@MercedesBenz Like this one
+
+It&#39;s a Chinese made VW
+
+ @VWGroup</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/AroraBhavyam/status/2111791654965321900" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bhavyam Arora</span> <span class="handle">@AroraBhavyam</span><span class="time">6:09 AM</span></div>
+  <div class="twtext">Top 50 Most Hated People in Web3 💀
+
+1. 🇰🇵 Lazarus Group (Bybit $1.5B, Ronin $625M, WazirX $230M hacks)
+2. 🏴‍☠️ KelpDAO + Drift Exploiters ($570M+ drained in Q2 2026)
+3. 🇰🇭 Chen Zhi (Prince Group pig-butchering, 127k BTC seized)
+4. 🇨🇳 Zhimin Qian (61,000 BTC Chinese ponzi)
+5. 🇺🇸</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/petkodonev777/status/2111801005520060714" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Petko Donev</span> <span class="handle">@petkodonev777</span><span class="time">6:46 AM</span></div>
+  <div class="twtext">The Chinese EVs are the heirs of Zhiguli(blue car in the video).
+It&#39;s mostly BYD Seagull and BYD E2 the new taxis in Addis.
+
+The fleet went from 7k to 115k+ EVs from 2022 to 2026 according to official data.
+
+More than 60% of the new car sales are EVs</div>
+  
+</a></div></details>
+</section>
+<section class="theme"><h2>also big this morning</h2><details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@arlery @goekhan @saminacodes …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/arlery/status/2111788802679407025" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">mashal</span> <span class="handle">@arlery</span> <span class="rtbadge">RT</span><span class="time">5:57 AM</span></div>
+  <div class="twtext">(from 2026-10-17) It’s actually crazy how you grow up thinking home-cooked meals every day are just normal, then get older and realise how much…</div>
+  <div class="twmeta">🔁 27k</div>
+</a>
+<a class="tw" href="https://x.com/goekhan/status/2111784248512537022" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">gökhan</span> <span class="handle">@goekhan</span> <span class="rtbadge">RT</span><span class="time">5:39 AM</span></div>
+  <div class="twtext">Pour moi, c&#39;est l&#39;image la plus horrible de ce 17 octobre:
+Un couple d&#39;octogénaire dépouillé de tout, en pleine rue, la…</div>
+  <div class="twmeta">🔁 22k</div>
+</a>
+<a class="tw" href="https://x.com/saminacodes/status/2111777533511582140" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">samina</span> <span class="handle">@saminacodes</span> <span class="rtbadge">RT</span><span class="time">5:12 AM</span></div>
+  <div class="twtext">(from 2026-10-17) Woman who lost her battle with cancer left behind a note on what matters most (2017)
+
+[via/ FB Holly Butcher] https://t.co/Rsz…</div>
+  <div class="twmeta">🔁 18k</div>
+</a>
+<a class="tw" href="https://x.com/adamscochran/status/2111784000423338113" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Adam Cochran (adamscochran.eth)</span> <span class="handle">@adamscochran</span> <span class="rtbadge">RT</span><span class="time">5:38 AM</span></div>
+  <div class="twtext">This is Tommy. Tommy had a question about my allegiances. Listen to the end to hear about his.</div>
+  <div class="twmeta">🔁 16k</div>
+</a>
+<a class="tw" href="https://x.com/ATabarrok/status/2111804744465338481" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Alex Tabarrok</span> <span class="handle">@ATabarrok</span> <span class="rtbadge">RT</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">This is Tommy. Tommy had a question about my allegiances. Listen to the end to hear about his.</div>
+  <div class="twmeta">🔁 16k</div>
+</a>
+<a class="tw" href="https://x.com/oFonCK/status/2111660186893013152" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">edsphinx.eth</span> <span class="handle">@oFonCK</span> <span class="rtbadge">RT</span><span class="time">9:26 PM</span></div>
+  <div class="twtext">(from 2026-10-16) “He could have solved world hunger instead of building a flying car”
+
+My brother in Christ,
+
+In 2021 the UN claimed they co…</div>
+  <div class="twmeta">🔁 16k</div>
+</a>
+<a class="tw" href="https://x.com/MeltedMindz/status/2111659649657348101" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Melted</span> <span class="handle">@MeltedMindz</span> <span class="rtbadge">RT</span><span class="time">9:24 PM</span></div>
+  <div class="twtext">(from 2026-10-17) Si je meurs par la police n’écoutez pas mes parents je suis pas pacifiste je veux pas la paix brûlez tout</div>
+  <div class="twmeta">🔁 14k</div>
+</a>
+<a class="tw" href="https://x.com/apnerdette/status/2111650544125411441" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Allison Paz</span> <span class="handle">@apnerdette</span> <span class="rtbadge">RT</span><span class="time">8:48 PM</span></div>
+  <div class="twtext">(from 2026-10-17) It’s actually crazy how you grow up thinking home-cooked meals every day are just normal, then get older and realise how much…</div>
+  <div class="twmeta">🔁 11k</div>
+</a></div></details></section>
+<footer>
+  <div class="archive"></div>
+  <p>built by clawd 🦞 from the morning feed pull · links open on x.com</p>
+</footer>
+</body>
+</html>
