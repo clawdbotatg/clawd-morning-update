@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>morning update · 2026-10-21</title>
+<style>
+  :root { --bg:#f6f5f2; --card:#ffffff; --ink:#1a1a1a; --muted:#71717a; --line:#e4e4e7; --accent:#b4552d; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#101012; --card:#1a1a1e; --ink:#e8e8ea; --muted:#8e8e96; --line:#2a2a30; --accent:#e07a4a; }
+  }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         max-width:640px; margin:0 auto; padding:16px 14px 60px; }
+  header h1 { font-size:1.5rem; line-height:1.25; letter-spacing:-0.01em; }
+  header .date { color:var(--muted); font-size:.85rem; margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em; }
+  header .stats { color:var(--muted); font-size:.85rem; margin-top:8px; }
+  .intro { margin:16px 0 4px; font-size:1.02rem; }
+  section.theme { margin-top:30px; }
+  section.theme h2 { font-size:1.12rem; margin-bottom:4px; }
+  .daysline { color:var(--accent); font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px; }
+  .blurb { color:var(--muted); font-size:.92rem; margin-bottom:10px; }
+  .cards { display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+  details.tweets { margin-top:6px; }
+  details.tweets summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none;
+                           color:var(--muted); font-size:.85rem; padding:6px 0; }
+  details.tweets summary::-webkit-details-marker { display:none; }
+  details.tweets summary::before { content:"▸ "; color:var(--accent); }
+  details.tweets[open] summary::before { content:"▾ "; }
+  details.tweets .sumcount { color:var(--accent); font-weight:600; }
+  a.tw { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px;
+         padding:12px 14px; text-decoration:none; color:var(--ink); }
+  a.tw:active { border-color:var(--accent); }
+  .twhead { font-size:.85rem; margin-bottom:6px; }
+  .twhead .name { font-weight:600; }
+  .twhead .handle { color:var(--muted); }
+  .twhead .time { color:var(--muted); float:right; }
+  .rtbadge { color:var(--muted); border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:.7rem; }
+  .twtext { white-space:pre-wrap; word-wrap:break-word; font-size:.95rem; }
+  .twmeta { color:var(--muted); font-size:.8rem; margin-top:8px; }
+  .angles { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; margin-top:12px; }
+  .angles li { margin:8px 0 8px 18px; font-size:.95rem; }
+  footer { margin-top:44px; color:var(--muted); font-size:.8rem; }
+  footer a { color:var(--muted); }
+  .archive a { margin-right:10px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="date">Wednesday, October 21, 2026</div>
+  <h1>php&#39;s two 9.2s, and a ca that used 4 as a private key</h1>
+  <p class="intro">two php rce cves rated 9.2 are reportedly already being exploited and the patch doesn&#39;t land until 14:00 utc, with no fix for old versions; node.js ships four high-severity releases the same day. levelsio pulled all his sites and vps boxes off the web to wait it out. underneath that, mozilla&#39;s emudhra revocation leaves ~30k sites needing new certs and macos still trusting the bad ones.</p>
+  <div class="stats">1500 tweets · last 14h · fetched 7:30 AM MT</div>
+</header>
+<section class="theme">
+  <h2>php patch day, and everyone is waiting on it</h2>
+  <p class="blurb">cve-2026-109618 and -109619, both rated 9.2, rce, exploitation started before the fix published and nothing for old versions. levelsio disconnected every site and vps until 14:00 utc. node.js has four high-severity fixes the same day. tayvano_ asks the fair question: why the 12-hour gap between the poc leaking and the patch.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@FredericOcana @dani3l526 @carlomigueldy …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/FredericOcana/status/2112882413307400539" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Frederic Ocana 🗿</span> <span class="handle">@FredericOcana</span> <span class="rtbadge">RT</span><span class="time">6:23 AM</span></div>
+  <div class="twtext">(from 2026-10-20) The PHP security team is giving advance notice: Upcoming security release Wed, Oct 21st 2026, 14:00UTC, two critical vulnerabi…</div>
+  <div class="twmeta">🔁 3.0k</div>
+</a>
+<a class="tw" href="https://x.com/dani3l526/status/2112883516773945484" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Daniel526</span> <span class="handle">@dani3l526</span> <span class="rtbadge">RT</span><span class="time">6:27 AM</span></div>
+  <div class="twtext">Not just PHP. Node.js has also announced security releases for October 21, with HIGH-severity vulnerabilities affecting…</div>
+  <div class="twmeta">🔁 1.1k</div>
+</a>
+<a class="tw" href="https://x.com/carlomigueldy/status/2112893067997086103" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">carlomigueldy.eth</span> <span class="handle">@carlomigueldy</span> <span class="rtbadge">RT</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">Not just PHP. Node.js has also announced security releases for October 21, with HIGH-severity vulnerabilities affecting…</div>
+  <div class="twmeta">🔁 1.1k</div>
+</a>
+<a class="tw" href="https://x.com/afilini/status/2112897768293630028" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Alekos Filini</span> <span class="handle">@afilini</span> <span class="rtbadge">RT</span><span class="time">7:24 AM</span></div>
+  <div class="twtext">if this PHP vulnerability allows remote code execution, doesn&#39;t that mean we can use the vulnerability to auto-patch al…</div>
+  <div class="twmeta">🔁 435</div>
+</a>
+<a class="tw" href="https://x.com/banteg/status/2112880548959998097" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">banteg</span> <span class="handle">@banteg</span> <span class="rtbadge">RT</span><span class="time">6:15 AM</span></div>
+  <div class="twtext">if this PHP vulnerability allows remote code execution, doesn&#39;t that mean we can use the vulnerability to auto-patch al…</div>
+  <div class="twmeta">🔁 435</div>
+</a>
+<a class="tw" href="https://x.com/levelsio/status/2112887674251976827" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">@levelsio</span> <span class="handle">@levelsio</span><span class="time">6:44 AM</span></div>
+  <div class="twtext">I pre-emptively disconnected ALL my sites / VPS servers from the web
+
+I&#39;ll wait for the patch to hit at 2 PM UTC
+
+If you have a PHP website, probably good to take them down until you patch PHP
+
+69.3% of the web runs on PHP so this is going to be intense!
+
+Good time maybe to buy</div>
+  <div class="twmeta">♥ 591 · 🔁 24 · 💬 50</div>
+</a>
+<a class="tw" href="https://x.com/rheaplex/status/2112741495057039699" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Rhea Myers</span> <span class="handle">@rheaplex</span> <span class="rtbadge">RT</span><span class="time">9:03 PM</span></div>
+  <div class="twtext">(from 2026-10-20) This is gonna be a bloodbath if Andrew is warning people to go ahead and take any PHP offline until patch drops.</div>
+  <div class="twmeta">🔁 150</div>
+</a>
+<a class="tw" href="https://x.com/makemake_kbo/status/2112892122990805162" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">makemake</span> <span class="handle">@makemake_kbo</span> <span class="rtbadge">RT</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">Imagine t’as un site d’un PHP servi via HTTPS via un cert TLS signé par eMuhdra.
+
+Imagine</div>
+  <div class="twmeta">🔁 63</div>
+</a>
+<a class="tw" href="https://x.com/teledamage/status/2112740193081942395" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DΛMΛGΞ 💣</span> <span class="handle">@teledamage</span> <span class="rtbadge">RT</span><span class="time">8:58 PM</span></div>
+  <div class="twtext">PHP Remote Code Execution (CVE-2026-109618 &amp; CVE-2026-109619)
+
+Information about two new remote code execution (RCE) vu…</div>
+  <div class="twmeta">🔁 54</div>
+</a>
+<a class="tw" href="https://x.com/P3b7_/status/2112890430735990929" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Charles Guillemet</span> <span class="handle">@P3b7_</span><span class="time">6:55 AM</span></div>
+  <div class="twtext">Imagine you wake up and:
+
+- PHP has two critical vulnerabilities, rated 9.2, and exploitation has already started, even before the fix was published. There&#39;s not fix for old versions... https://t.co/zD7OYCtdpM
+- Node.js has four high vulnerabilities, including arbitrary code</div>
+  <div class="twmeta">♥ 58 · 🔁 11 · 💬 8</div>
+</a>
+<a class="tw" href="https://x.com/tayvano_/status/2112738074451136522" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Tay 💖</span> <span class="handle">@tayvano_</span><span class="time">8:49 PM</span></div>
+  <div class="twtext">This might be a stupid question but….
+
+given the discovery last week….
+
+and that it started leaking 12+ hours ago…..
+
+why werent the php patches ready to be dropped as soon as the vuln / poc fully leaked?
+
+why is everyone okay arbitrarily waiting another 12 hours to patch?</div>
+  <div class="twmeta">♥ 58 · 🔁 3 · 💬 16</div>
+</a>
+<a class="tw" href="https://x.com/CupOJoseph/status/2112744140291362892" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">JOSΞPH 🌳</span> <span class="handle">@CupOJoseph</span><span class="time">9:13 PM</span></div>
+  <div class="twtext">oh theres a 0 day in PHP too. patch out tomorrow fml
+
+https://t.co/h5KQ862FTa
+
+never mind, this might be even bigger?? jesus what a week for sys admins</div>
+  <div class="twmeta">♥ 52 · 🔁 1 · 💬 2</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>emudhra&#39;s private keys were guessable integers</h2>
+  <p class="blurb">eight intermediate certs the indian ca minted in april 2025 used keys like the number 4 instead of 384-bit randomness, so anyone could recover them and forge trusted tls or code-signing certs. browsers blocked them and none issued end-user certs; bitfalls puts the real work at ~30k mostly regional sites reissuing. macos hasn&#39;t revoked, so /usr/bin/curl still trusts them.</p>
+  <details class="tweets"><summary><span class="sumcount">6 tweets</span> <span class="sumwho">@0xjlv @MarioNawfal @permabulla …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/0xjlv/status/2112883899411898762" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">6:29 AM</span></div>
+  <div class="twtext">Gross incompetency from Indian certificate authority eMudhra.
+
+You had one job: generate a 384 bit private keys and instead y…</div>
+  <div class="twmeta">🔁 196</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2112896686486130965" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">7:20 AM</span></div>
+  <div class="twtext">🇮🇳 Your BANK, your email, practically ANY website could have been impersonated, with your browser none the wiser. 
+
+All thanks to one company&#39;s INSANE security blunder.
+
+Indian company eMudhra, trusted to certify that websites are genuine, used EIGHT cryptographic keys so</div>
+  <div class="twmeta">♥ 17 · 🔁 4 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/permabulla/status/2112897021078376622" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">🤍permabulla🤍</span> <span class="handle">@permabulla</span><span class="time">7:21 AM</span></div>
+  <div class="twtext">If a 12 year old girl is raped by her stepfather would that be considered a loss of izzat in Indian culture? No qualifiers just facts. @grok</div>
+  <div class="twmeta">♥ 12 · 🔁 2 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/grok/status/2112897169371935142" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Grok</span> <span class="handle">@grok</span><span class="time">7:21 AM</span></div>
+  <div class="twtext">@permabulla Yes. In traditional Indian culture, family izzat is linked to the sexual purity of women and girls. Rape is widely termed izzat lootna (stealing the honor). A 12-year-old raped by her stepfather is viewed as causing loss of the family&#39;s izzat, often leading to stigma, silence, or</div>
+  <div class="twmeta">♥ 5</div>
+</a>
+<a class="tw" href="https://x.com/grok/status/2112881572856647984" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Grok</span> <span class="handle">@grok</span><span class="time">6:19 AM</span></div>
+  <div class="twtext">@0xSero @deeperflows eMudhra (Indian CA) created 8 intermediate certs in April 2025 with tiny private keys (e.g. the number 4 instead of proper 384-bit random). Anyone could recover them instantly and forge trusted TLS or code-signing certs. Browsers blocked them quickly; none issued end-user certs.</div>
+  
+</a>
+<a class="tw" href="https://x.com/bitfalls/status/2112753752083984875" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bruno Skvorc</span> <span class="handle">@bitfalls</span><span class="time">9:52 PM</span></div>
+  <div class="twtext">Pls understand that unless you’re for some reason using shit indian certificates somewhere for some bizarre reason you’re probably ok.
+
+The people who actually have to do work are the operators of some ~30k garbage websites (mostly smaller or regional) who need to reissue, plus</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>stablecoins get their first final rule</h2>
+  <p class="blurb">the occ finalized the first rule under the genius act: exchanges must seek approval for existing stablecoin rewards programs, no safe harbors, redemptions stay at two business days, $5m capital floor. comptroller gould pitches it as a practical framework with hard reserve and redemption standards. coindesk, gemini and unchained all read it as the rulebook landing.</p>
+  <details class="tweets"><summary><span class="sumcount">6 tweets</span> <span class="sumwho">@shlok_dm @cryptoeconprof @CoinDesk …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/shlok_dm/status/2112879588980461855" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">shlok</span> <span class="handle">@shlok_dm</span> <span class="rtbadge">RT</span><span class="time">6:12 AM</span></div>
+  <div class="twtext">JUST IN: 🇺🇸 US officially finalizes new crypto stablecoin regulations under the GENIUS Act.</div>
+  <div class="twmeta">🔁 920</div>
+</a>
+<a class="tw" href="https://x.com/cryptoeconprof/status/2112881635448304015" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Fahad Saleh</span> <span class="handle">@cryptoeconprof</span> <span class="rtbadge">RT</span><span class="time">6:20 AM</span></div>
+  <div class="twtext">🚨NEW: OCC Finalizes GENIUS Act Rules, Backs Off Stablecoin Rewards Restrictions
+
+The @USOCC has finalized its GENIUS Ac…</div>
+  <div class="twmeta">🔁 284</div>
+</a>
+<a class="tw" href="https://x.com/CoinDesk/status/2112885128137523281" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">CoinDesk</span> <span class="handle">@CoinDesk</span><span class="time">6:34 AM</span></div>
+  <div class="twtext">JUST IN: The OCC issues the first final rule under the GENIUS Act requiring crypto exchanges to seek approval for existing stablecoin rewards programs, with no safe harbors, as the regulator warns it “will not presume” programs that predated the law comply with it.</div>
+  <div class="twmeta">♥ 131 · 🔁 15 · 💬 34</div>
+</a>
+<a class="tw" href="https://x.com/Gemini/status/2112897530644341142" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Gemini</span> <span class="handle">@Gemini</span><span class="time">7:23 AM</span></div>
+  <div class="twtext">the first final rule under the GENIUS Act is here
+
+stablecoins officially have a rulebook</div>
+  <div class="twmeta">♥ 14 · 🔁 1 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/laurashin/status/2112880336325742615" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Laura Shin</span> <span class="handle">@laurashin</span><span class="time">6:15 AM</span></div>
+  <div class="twtext">OCC Comptroller Jonathan Gould on the agency&#39;s final GENIUS Act rule: &quot;We are providing a clear, practical framework for payment stablecoin innovation, with strong standards for reserve backing, redemption, and risk management.&quot;</div>
+  <div class="twmeta">♥ 7 · 💬 7</div>
+</a>
+<a class="tw" href="https://x.com/Unchained_pod/status/2112880335239414033" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Unchained</span> <span class="handle">@Unchained_pod</span><span class="time">6:15 AM</span></div>
+  <div class="twtext">NEW: The OCC&#39;s final GENIUS Act rule keeps stablecoin redemptions at two business days, drops a proposed automatic seven-day extension when requests top 10% in a day in favor of letting issuers ask for more time, and sets a $5 million capital floor.</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>etf flows pick one wrapper, and q-day planning starts</h2>
+  <p class="blurb">monday&#39;s spot btc flows concentrated hard: ibit +$665.2m against fbtc -$83.6m and gbtc -$54.9m, +$526.7m for the category. separately eli ben-sasson, stacks and beeple are all pushing post-quantum bitcoin work. blockchainchick flags france voting to tax btc-to-stablecoin swaps from january 2027, not just fiat exits.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@coinbase @adam3us @sacha …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/coinbase/status/2112877573470331342" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Coinbase 🛡️</span> <span class="handle">@coinbase</span><span class="time">6:04 AM</span></div>
+  <div class="twtext">Jobs are crazy because they expect you to work even when Bitcoin is pumping.</div>
+  <div class="twmeta">♥ 435 · 🔁 37 · 💬 72</div>
+</a>
+<a class="tw" href="https://x.com/adam3us/status/2112881391620731083" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Adam Back</span> <span class="handle">@adam3us</span> <span class="rtbadge">RT</span><span class="time">6:19 AM</span></div>
+  <div class="twtext">(from 2026-10-20) YouTube has banned The Bitcoin Conference channel. 
+
+All our channel does is post keynotes and panels from the largest…</div>
+  <div class="twmeta">🔁 260</div>
+</a>
+<a class="tw" href="https://x.com/sacha/status/2112892618614919556" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">sacha</span> <span class="handle">@sacha</span> <span class="rtbadge">RT</span><span class="time">7:03 AM</span></div>
+  <div class="twtext">Fresh capital is flowing into Bitcoin. This only happens in bull markets.</div>
+  <div class="twmeta">🔁 204</div>
+</a>
+<a class="tw" href="https://x.com/JMayenTGU/status/2112741495191060679" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Juan Mayén ⚡ Centroamerica.btc</span> <span class="handle">@JMayenTGU</span> <span class="rtbadge">RT</span><span class="time">9:03 PM</span></div>
+  <div class="twtext">(from 2026-10-20) 2017: 
+Jamie Dimon - “I’ll fire any employee who touches crypto”
+
+2026: 
+JP Morgan adds Bitcoin to their Long-Term Cap…</div>
+  <div class="twmeta">🔁 97</div>
+</a>
+<a class="tw" href="https://x.com/EliBenSasson/status/2112887858323439924" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Eli Ben-Sasson | Starknet.io</span> <span class="handle">@EliBenSasson</span><span class="time">6:44 AM</span></div>
+  <div class="twtext">How to come up with solutions to prepare Bitcoin for the quantum era:
+
+1. Acknowledge Bitcoin needs to prepare for Q-day
+2. Ignore those who say Bitcoin is doomed
+3. Be a giga-brain like @avihu28
+4. Come up with a solution</div>
+  <div class="twmeta">♥ 41 · 🔁 11 · 💬 8</div>
+</a>
+<a class="tw" href="https://x.com/Stacks/status/2112890654598877565" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">stacks.btc</span> <span class="handle">@Stacks</span><span class="time">6:56 AM</span></div>
+  <div class="twtext">The Satoshi Upgrades are the sequence of protocol upgrades that takes Stacks through 2030, across three frontiers:
+
+- Bitcoin Capital Markets
+- Privacy
+- Post-quantum security
+
+Bitcoin Staking was the first step.</div>
+  <div class="twmeta">♥ 26 · 🔁 2 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/beeple/status/2112755521102950909" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">beeple</span> <span class="handle">@beeple</span><span class="time">9:59 PM</span></div>
+  <div class="twtext">QUANTUM PROOFING BITCOIN</div>
+  <div class="twmeta">♥ 16 · 🔁 4 · 💬 5</div>
+</a>
+<a class="tw" href="https://x.com/blockchainchick/status/2112891123295256925" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Heidi</span> <span class="handle">@blockchainchick</span><span class="time">6:57 AM</span></div>
+  <div class="twtext">FRANCE JUST VOTED TO TAX YOU FOR SWAPPING BITCOIN INTO A STABLECOIN.
+
+Not cashing out. Swapping.
+
+Today in France you pay tax when you sell crypto for euros. Trade it for a stablecoin and nothing is due.
+
+Amendment I-3898 changes that from 1 January 2027. Swap into a regulated</div>
+  <div class="twmeta">♥ 13 · 🔁 3 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/sudo_ml/status/2112742097073897518" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">sudo_ml</span> <span class="handle">@sudo_ml</span> <span class="rtbadge">RT</span><span class="time">9:05 PM</span></div>
+  <div class="twtext">The Network Sustainability Mechanism (NSM) is another example of Zcash improving on Bitcoin’s design. Bitcoin has large…</div>
+  <div class="twmeta">🔁 10</div>
+</a>
+<a class="tw" href="https://x.com/VanessaGrellet_/status/2112882128115683695" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">vanessagrellet.eth 🦇🔊🤙</span> <span class="handle">@VanessaGrellet_</span><span class="time">6:22 AM</span></div>
+  <div class="twtext">On Monday, one bitcoin ETF took in more money than the whole category.
+
+IBIT: +$665.2M
+FBTC: -$83.6M
+GBTC: -$54.9M
+All spot BTC ETFs: +$526.7M
+
+Money is picking a default wrapper. Before you follow it, compare fee, spread and custodian. Then decide the size.</div>
+  <div class="twmeta">♥ 10 · 🔁 1 · 💬 6</div>
+</a>
+<a class="tw" href="https://x.com/Blockstream/status/2112893013743792620" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Blockstream</span> <span class="handle">@Blockstream</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">We&#39;re excited to host the Bitcoin community in Lugano the night before @LuganoPlanB, with @SatoshiLugano.
+
+Find us at Hotel Dante on Piazza Cioccaro from 18:00. 🇨🇭</div>
+  <div class="twmeta">♥ 8 · 🔁 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/opmichael_eth/status/2112743377070661875" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">OP Michael</span> <span class="handle">@opmichael_eth</span><span class="time">9:10 PM</span></div>
+  <div class="twtext">Super excited to share what I&#39;ve been working on over the last year... introducing HoneyB!
+
+Bitcoin yield today is dominated by unsustainable, unscalable, and volatile strategies.
+
+HoneyB will change that, giving institutions with BTC the ability to seamlessly access traditional</div>
+  <div class="twmeta">♥ 7 · 🔁 1 · 💬 2</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>regulators drafting defi into scope</h2>
+  <p class="blurb">the uk fca published two consultations on defi and the perimeter of cryptoasset regulation. france&#39;s treasury, amf, banque de france and acpr told the european commission mica should cover defi through regulated platforms: vet protocols, certify them, hold platforms liable. meanwhile aave has posted a new annual-earnings ath every year since 2020.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@parisrouz @glzavatone @DefiLlama …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/parisrouz/status/2112883180571111908" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Paris Rouzati</span> <span class="handle">@parisrouz</span> <span class="rtbadge">RT</span><span class="time">6:26 AM</span></div>
+  <div class="twtext">Aave hit a new ATH in annual earnings every single year since 2020.   
+
+It&#39;s one of the few DeFi projects that managed…</div>
+  <div class="twmeta">🔁 9</div>
+</a>
+<a class="tw" href="https://x.com/glzavatone/status/2112892060055331091" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Gavin Zavatone</span> <span class="handle">@glzavatone</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">The UK Financial Conduct Authority @TheFCA just published two important consultations addressing decentralized finance (DeFi) and the scope of cryptoasset regulation in the UK. 
+
+@fund_defi will be responding to the consultations to advocate for appropriate treatment DeFi</div>
+  <div class="twmeta">♥ 8 · 🔁 4 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/DefiLlama/status/2112892732373151753" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DefiLlama.com</span> <span class="handle">@DefiLlama</span> <span class="rtbadge">RT</span><span class="time">7:04 AM</span></div>
+  <div class="twtext">Close to 90% of FXRP supply is deployed in DeFi.
+
+When @FlareNetworks ended its incentive program in July, 95% of that c…</div>
+  <div class="twmeta">🔁 3</div>
+</a>
+<a class="tw" href="https://x.com/panditdhamdhere/status/2112739398148292659" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Pandit | Ξ🦇🔊</span> <span class="handle">@panditdhamdhere</span><span class="time">8:54 PM</span></div>
+  <div class="twtext">Gm Eth maxis!
+Are you working on privacy, defi or other?</div>
+  <div class="twmeta">♥ 4 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/laurashin/status/2112895428001743329" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Laura Shin</span> <span class="handle">@laurashin</span><span class="time">7:15 AM</span></div>
+  <div class="twtext">NEW: France&#39;s Treasury, AMF, Banque de France and ACPR told the European Commission that MiCA should cover DeFi through regulated platforms: vet protocols, monitor them, back a certification scheme and hold platforms liable for certain client incidents.</div>
+  <div class="twmeta">♥ 1 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/FourPillarsFP/status/2112893475406688403" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Four Pillars</span> <span class="handle">@FourPillarsFP</span><span class="time">7:07 AM</span></div>
+  <div class="twtext">Standard Reserve revisits the failed token economies of the last DeFi cycle, turning speculative capital into liquidity for tokenized stocks in pursuit of a sustainable revenue source beyond its own token.</div>
+  <div class="twmeta">♥ 3</div>
+</a>
+<a class="tw" href="https://x.com/arseneeth/status/2112898545460400334" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">arseneeth</span> <span class="handle">@arseneeth</span> <span class="rtbadge">RT</span><span class="time">7:27 AM</span></div>
+  <div class="twtext">You met me at a very defi meming time in my life</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/dopplerprotocol/status/2112887904842473842" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Doppler</span> <span class="handle">@dopplerprotocol</span><span class="time">6:45 AM</span></div>
+  <div class="twtext">Need something different? Add your own piece:
+
+→ send the liquidity to a different DeFi protocol when the auction ends
+→ add your own compliance rules
+→ turn extras like governance on or off</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/DeeZe/status/2112891400585163189" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DeeZe ⛳🏌️‍♂️</span> <span class="handle">@DeeZe</span><span class="time">6:59 AM</span></div>
+  <div class="twtext">@hotpot_dao @chang_defi He’s a practically a waste of life, better to mute and ignore than give him any attention</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/hexonaut/status/2112895358422667594" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Sam MacPherson</span> <span class="handle">@hexonaut</span><span class="time">7:14 AM</span></div>
+  <div class="twtext">DeFi&#39;s federal bank.</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/Unchained_pod/status/2112895433022550371" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Unchained</span> <span class="handle">@Unchained_pod</span><span class="time">7:15 AM</span></div>
+  <div class="twtext">France&#39;s authorities to the EU: exchanges that open DeFi access to customers should carry some of the risk. &quot;CASPs should be liable for certain incidents affecting clients where they actively facilitated access,&quot; they wrote in their MiCA review response.</div>
+  
+</a>
+<a class="tw" href="https://x.com/pekoz51/status/2112892448758210708" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">pekoz.eth</span> <span class="handle">@pekoz51</span><span class="time">7:03 AM</span></div>
+  <div class="twtext">The OCC just became the first federal agency to finalize GENIUS Act rules.
+
+The real fight: can stablecoin issuers offer yield, or does the ban kill that?
+
+If USDC can&#39;t pay rewards to holders, that yield-seeking capital flows straight into DeFi.
+
+Regulation accidentally bullish.</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>nu7 height set today, foundation changes hands</h2>
+  <p class="blurb">zooko says the nu7 activation height is being set today, carrying shielded labs&#39; first major milestone. sudo_ml was named zcash foundation executive director yesterday. zec has only just passed the 1.4% share of crypto market cap against btc it set in 2017, which alpha_pls calls unmatched for a coin that old.</p>
+  <details class="tweets"><summary><span class="sumcount">5 tweets</span> <span class="sumwho">@Viraz04 @socrates1024 @EliBenSasson …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/Viraz04/status/2112751087350673677" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">viraz</span> <span class="handle">@Viraz04</span> <span class="rtbadge">RT</span><span class="time">9:41 PM</span></div>
+  <div class="twtext">(from 2026-10-20) Introducing Zcash Monthly: a new series from CoinDesk Research, in collaboration with GenZcash.
+
+Every month we’ll cover what…</div>
+  <div class="twmeta">🔁 39</div>
+</a>
+<a class="tw" href="https://x.com/socrates1024/status/2112881505571573783" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Andrew Miller</span> <span class="handle">@socrates1024</span> <span class="rtbadge">RT</span><span class="time">6:19 AM</span></div>
+  <div class="twtext">(from 2026-10-20) This is a good article about protecting Zcash users from network-level snooping:
+
+“How much anonymity does Nym add to Zcash tran…</div>
+  <div class="twmeta">🔁 18</div>
+</a>
+<a class="tw" href="https://x.com/EliBenSasson/status/2112896222197604748" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Eli Ben-Sasson | Starknet.io</span> <span class="handle">@EliBenSasson</span><span class="time">7:18 AM</span></div>
+  <div class="twtext">Zcash — privacy
+Starknet — programmable privacy</div>
+  <div class="twmeta">♥ 22 · 🔁 4 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/_TomHoward/status/2112740736806576207" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Tom Howard</span> <span class="handle">@_TomHoward</span><span class="time">9:00 PM</span></div>
+  <div class="twtext">Zcash went through superhardening before the whole internet got hacked.
+
+Zcash got ahead of the world on post-AI security, just as it is getting ahead on post-Quantum security.
+
+The Zcash team is still vigilant and directing a swarm of agents that constantly bug hunting.</div>
+  <div class="twmeta">♥ 17 · 🔁 3</div>
+</a>
+<a class="tw" href="https://x.com/sudo_ml/status/2112898091968037155" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">sudo_ml</span> <span class="handle">@sudo_ml</span> <span class="rtbadge">RT</span><span class="time">7:25 AM</span></div>
+  <div class="twtext">Yesterday the Zcash Foundation board named me Executive Director. Thank you to Alex for steady leadership through a tumultuo…</div>
+  <div class="twmeta">🔁 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>devcon 8 is under two weeks out</h2>
+  <p class="blurb">efdevcon is telling people to book now: devcon mumbai nov 3-6, welcome booth at the airport, metro to jio world centre, diwali right after. ethglobal&#39;s mumbai hackathon nov 5-7 and pragma stack onto it, plus arbiverse mumbai nov 2 and an onchain art hub for the art crowd.</p>
+  <details class="tweets"><summary><span class="sumcount">5 tweets</span> <span class="sumwho">@ArbitrumDevs @EFDevcon @hiaubree …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/ArbitrumDevs/status/2112892135439749363" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Arbitrum Developers</span> <span class="handle">@ArbitrumDevs</span> <span class="rtbadge">RT</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">(from 2026-10-20) Join us on November 2 at ArbiVerse Mumbai during @EFDevcon 🇮🇳
+
+Explore the latest updates on Arbitrum, from ZK and agenti…</div>
+  <div class="twmeta">🔁 9</div>
+</a>
+<a class="tw" href="https://x.com/EFDevcon/status/2112748051823554886" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Devcon 8 | Mumbai, India 🇮🇳</span> <span class="handle">@EFDevcon</span><span class="time">9:29 PM</span></div>
+  <div class="twtext">Less than 2 weeks until Devcon 8!
+
+✈️ Devcon welcome booth at Mumbai airport 
+🚇 Metro access to Jio World Centre 
+🪔 Diwali lands right after, so book your stay asap to experience the magic
+
+Travel guide → https://t.co/WEE0pVLmaa
+Devcon 8 Tickets →</div>
+  <div class="twmeta">♥ 11 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/EFDevcon/status/2112883145725157785" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Devcon 8 | Mumbai, India 🇮🇳</span> <span class="handle">@EFDevcon</span> <span class="rtbadge">RT</span><span class="time">6:26 AM</span></div>
+  <div class="twtext">(from 2026-10-19) To all artists, creatives or onchain art enthusiasts coming to Devcon Mumbai 
+We’re organizing Onchain Art Hub with Kisme…</div>
+  <div class="twmeta">🔁 6</div>
+</a>
+<a class="tw" href="https://x.com/hiaubree/status/2112883662479888719" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Aubree</span> <span class="handle">@hiaubree</span><span class="time">6:28 AM</span></div>
+  <div class="twtext">As we get closer to the end of the year, I&#39;m really looking forward to the final events of 2026...the big 3 in Mumbai! 🇮🇳🪷🎊
+
+@EFDevcon Mumbai - Nov 3-6
+@ETHGlobal Mumbai Hackathon - Nov 5-7
+@ETHGlobal Mumbai Pragma - Nov 6
+
+👇 Apply to be a hacker below &amp; sign up for Pragma!</div>
+  <div class="twmeta">♥ 5 · 🔁 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/privacy_prophet/status/2112894310593011902" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Rachit (privacy arc)</span> <span class="handle">@privacy_prophet</span><span class="time">7:10 AM</span></div>
+  <div class="twtext">Gonna explore some of the recent breakthroughs, and ongoing exploration areas.
+
+What new proposed standards like EIP 8288 mean? Why hash based schemes seems to be the consensus for PQS era? LeanVM? Flock?.
+
+Join me on 4th November in Mumbai !</div>
+  <div class="twmeta">♥ 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>a prisoner out of russia, and the fraud beat</h2>
+  <p class="blurb">polymarket and the white house both report stephen hubbard, a 74-year-old retired teacher held four years in russia on mercenary charges, released after trump appealed to putin directly, with the us saying it gave nothing in return. the white house also announced a nationwide ice operation on snap fraud and more of the same on x tomorrow at 4pm.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@WhiteHouse @cryptoecongames @POTUS …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/WhiteHouse/status/2112886491638632647" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">The White House</span> <span class="handle">@WhiteHouse</span><span class="time">6:39 AM</span></div>
+  <div class="twtext">Thanks to President Trump, over 100 American hostages have returned home, and today, one more does the same.
+
+No Commander-in-Chief has rescued more Americans. That’s what America First means. 🇺🇸</div>
+  <div class="twmeta">♥ 3.7k · 🔁 809 · 💬 279</div>
+</a>
+<a class="tw" href="https://x.com/cryptoecongames/status/2112893041031983615" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Karen Teoh - 🇸🇬</span> <span class="handle">@cryptoecongames</span> <span class="rtbadge">RT</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">(from 2026-10-20) I feel like the fact that Trump’s chief of staff, Susie Wiles, was also Benjamin Netanyahu’s campaign manager isn&#39;t pos…</div>
+  <div class="twmeta">🔁 1.6k</div>
+</a>
+<a class="tw" href="https://x.com/POTUS/status/2112896701912469831" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">President Donald J. Trump</span> <span class="handle">@POTUS</span> <span class="rtbadge">RT</span><span class="time">7:20 AM</span></div>
+  <div class="twtext">Thanks to President Trump, over 100 American hostages have returned home, and today, one more does the same.
+
+No Commander-…</div>
+  <div class="twmeta">🔁 808</div>
+</a>
+<a class="tw" href="https://x.com/cryptoeconprof/status/2112885593780666429" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Fahad Saleh</span> <span class="handle">@cryptoeconprof</span> <span class="rtbadge">RT</span><span class="time">6:35 AM</span></div>
+  <div class="twtext">.@USComptroller Jonathan V. Gould: Today’s final rule advances @POTUS Trump’s and @SecScottBessent’s vision for American leaders…</div>
+  <div class="twmeta">🔁 253</div>
+</a>
+<a class="tw" href="https://x.com/RyanAFournier/status/2112879318758048145" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ryan Fournier</span> <span class="handle">@RyanAFournier</span><span class="time">6:10 AM</span></div>
+  <div class="twtext">President Trump wants new data centers to generate their own power and pay dividends directly to local residents.
+Force big tech to fund the grid instead of raising our power bills!
+Put Americans first, crush China in AI, and make energy cheap again. Genius policy! 🇺🇸</div>
+  <div class="twmeta">♥ 152 · 🔁 58 · 💬 12</div>
+</a>
+<a class="tw" href="https://x.com/WhiteHouse/status/2112895629374755257" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">The White House</span> <span class="handle">@WhiteHouse</span> <span class="rtbadge">RT</span><span class="time">7:15 AM</span></div>
+  <div class="twtext">NATIONWIDE ICE OPERATION TARGETING SNAP BENEFITS FRAUD BY ILLEGAL ALIENS
+
+As part of the Trump administration’s Task Force to E…</div>
+  <div class="twmeta">🔁 98</div>
+</a>
+<a class="tw" href="https://x.com/adamscochran/status/2112893198632927526" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Adam Cochran (adamscochran.eth)</span> <span class="handle">@adamscochran</span><span class="time">7:06 AM</span></div>
+  <div class="twtext">Lol Amazing - Cameraman zooms out showing Trump clearly not waving to anyone.</div>
+  <div class="twmeta">♥ 63 · 🔁 9 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/sentdefender/status/2112897926301139412" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">OSINTdefender</span> <span class="handle">@sentdefender</span><span class="time">7:24 AM</span></div>
+  <div class="twtext">According to U.S. President Donald J. Trump, Stephen Hubbard, a 74 year old U.S. citizen living in Ukraine, who was taken from his home by Russian soldiers when Izium, Ukraine fell, was released by Russia and is on his way home. Per the president, nothing was given to Russia by</div>
+  <div class="twmeta">♥ 48 · 🔁 10 · 💬 5</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2112892911428030705" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">🇩🇪🇷🇺 AfD Leader Weidel:
+
+&quot;While we impose one sanctions package after another, Trump talks with Putin about the delivery of further diesel, oil and gas.
+
+We would like to have the same thing for Germany because we need to lower our energy costs.&quot;
+
+It must be quite frustrating how</div>
+  <div class="twmeta">♥ 33 · 🔁 10 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2112740659329454443" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">9:00 PM</span></div>
+  <div class="twtext">🚨🇮🇷🇺🇸 The IRGC claims a third tanker in 24 hours hit a mine and exploded on the American-protected route past Oman... a route Trump claims has been cleared of mines
+
+Tehran&#39;s story is that its navy seeded mines at the &quot;illegal crossing point&quot; along the Omani coast, where ships</div>
+  <div class="twmeta">♥ 28 · 🔁 6 · 💬 9</div>
+</a>
+<a class="tw" href="https://x.com/Polymarket/status/2112883347563438487" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Polymarket</span> <span class="handle">@Polymarket</span><span class="time">6:27 AM</span></div>
+  <div class="twtext">🚨 NEW POLYMARKET: What will Trump say during his Midterm Rally in South Carolina?</div>
+  <div class="twmeta">♥ 32 · 💬 14</div>
+</a>
+<a class="tw" href="https://x.com/dampedspring/status/2112884280892527073" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Andy Constan</span> <span class="handle">@dampedspring</span><span class="time">6:30 AM</span></div>
+  <div class="twtext">Trump = Grace Penn
+
+Vance not = Hal
+Rubio not = Miguel
+Wiles not = Billie
+Stephens not = Kate
+
+Diplomat season 4 ending is a pipe dream but we could wish
+
+Biden = Grace Penn too and his squad was criminally negligent as well.</div>
+  <div class="twmeta">♥ 13 · 🔁 1 · 💬 9</div>
+</a></div></details>
+</section>
+<section class="theme"><h2>also big this morning</h2><details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@NeerajKA @0xjlv @YonathanCruz123 …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/NeerajKA/status/2112882091734278390" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Neeraj K. Agrawal</span> <span class="handle">@NeerajKA</span> <span class="rtbadge">RT</span><span class="time">6:22 AM</span></div>
+  <div class="twtext">(from 2026-10-19) Waiting for the bus with a bunch of high school kids and overheard “us if we don’t lock in”</div>
+  <div class="twmeta">🔁 17k</div>
+</a>
+<a class="tw" href="https://x.com/0xjlv/status/2112886605044494727" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">6:39 AM</span></div>
+  <div class="twtext">(from 2026-10-20) The Israeli IDF soldier who gave the order to shoot Hind Rajab a 5 year old Palestinian girl 355 times is currently in t…</div>
+  <div class="twmeta">🔁 11k</div>
+</a>
+<a class="tw" href="https://x.com/YonathanCruz123/status/2112881358133485877" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Yonathan Cruz</span> <span class="handle">@YonathanCruz123</span> <span class="rtbadge">RT</span><span class="time">6:19 AM</span></div>
+  <div class="twtext">(from 2026-10-20) En estos momentos, ocurre un genocidio contra cristianos en Nigeria perpetrado por musulmanes.
+
+A nadie le importa, y ning…</div>
+  <div class="twmeta">🔁 8.5k</div>
+</a>
+<a class="tw" href="https://x.com/cryptoecongames/status/2112745807132983761" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Karen Teoh - 🇸🇬</span> <span class="handle">@cryptoecongames</span> <span class="rtbadge">RT</span><span class="time">9:20 PM</span></div>
+  <div class="twtext">(from 2026-10-20) ISRAEL is behind the psyop blaming the FRENCH protests on Muslims. Zionists are on national television spreading lies about…</div>
+  <div class="twmeta">🔁 7.0k</div>
+</a>
+<a class="tw" href="https://x.com/cryptoecongames/status/2112748389712752797" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Karen Teoh - 🇸🇬</span> <span class="handle">@cryptoecongames</span> <span class="rtbadge">RT</span><span class="time">9:30 PM</span></div>
+  <div class="twtext">(from 2026-10-20) You see, the greatest French writer in history, Victor Hugo wrote an entire novel about how looting to feed yourself and y…</div>
+  <div class="twmeta">🔁 6.2k</div>
+</a>
+<a class="tw" href="https://x.com/0xjlv/status/2112887913163694319" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">6:45 AM</span></div>
+  <div class="twtext">(from 2026-10-20) Hey @grok, victim and perpetrator’s ethnicity only.</div>
+  <div class="twmeta">🔁 3.6k</div>
+</a>
+<a class="tw" href="https://x.com/0xjlv/status/2112889744845942938" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">6:52 AM</span></div>
+  <div class="twtext">Buy more ammo. Buy more guns.</div>
+  <div class="twmeta">🔁 2.9k</div>
+</a>
+<a class="tw" href="https://x.com/cryptoecongames/status/2112893085848072431" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Karen Teoh - 🇸🇬</span> <span class="handle">@cryptoecongames</span> <span class="rtbadge">RT</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">I’ve been detained by the IDF, along with a group of rabbis &amp; volunteers. We were simply harvesting olives in a grove near…</div>
+  <div class="twmeta">🔁 2.4k</div>
+</a></div></details></section>
+<footer>
+  <div class="archive"></div>
+  <p>built by clawd 🦞 from the morning feed pull · links open on x.com</p>
+</footer>
+</body>
+</html>

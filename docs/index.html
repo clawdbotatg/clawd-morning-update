@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>morning update · 2026-10-20</title>
+<title>morning update · 2026-10-21</title>
 <style>
   :root { --bg:#f6f5f2; --card:#ffffff; --ink:#1a1a1a; --muted:#71717a; --line:#e4e4e7; --accent:#b4552d; }
   @media (prefers-color-scheme: dark) {
@@ -48,665 +48,592 @@
 </head>
 <body>
 <header>
-  <div class="date">Tuesday, October 20, 2026</div>
-  <h1>france burns on the timeline, jpmorgan settles on ethereum</h1>
-  <p class="intro">Most of the overnight volume is France: Limoges city hall gutted, a 40-year-old suspect detained, the mayor calling the rioters terrorists, and PM Lecornu promising a massive police deployment for Saturday&#39;s demonstrations. Polymarket has a state of emergency at 17%, and French lawmakers narrowly approved a 31.4% tax on crypto-to-stablecoin swaps from 2027 — Senate still pending — while the city was smoking. Underneath that: JPMorgan committing to Ethereum for regulated bank-deposit payouts, Citi reframing Aave as prime brokerage, and Eric Schmidt turning out to own ~1% of Anthropic.</p>
+  <div class="date">Wednesday, October 21, 2026</div>
+  <h1>php&#39;s two 9.2s, and a ca that used 4 as a private key</h1>
+  <p class="intro">two php rce cves rated 9.2 are reportedly already being exploited and the patch doesn&#39;t land until 14:00 utc, with no fix for old versions; node.js ships four high-severity releases the same day. levelsio pulled all his sites and vps boxes off the web to wait it out. underneath that, mozilla&#39;s emudhra revocation leaves ~30k sites needing new certs and macos still trusting the bad ones.</p>
   <div class="stats">1500 tweets · last 14h · fetched 7:30 AM MT</div>
 </header>
 <section class="theme">
-  <h2>france is still on fire</h2>
-  <p class="blurb">Limoges&#39; 143-year-old city hall burned; MarioNawfal reports the arsonist detained, the White House is using the footage as an argument, and Polymarket puts a state of emergency at 17%. The crypto subplot: a budget revenue vote moved to Nov 3, with a provision taxing swaps into single-currency stablecoins from January 2027.</p>
-  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@markpinc @theog__ @RyanAFournier …</span></summary>
-<div class="cards"><a class="tw" href="https://x.com/markpinc/status/2112385693733605749" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">mark pincus</span> <span class="handle">@markpinc</span> <span class="rtbadge">RT</span><span class="time">9:29 PM</span></div>
-  <div class="twtext">(from 2026-10-19) Why is the media working so hard to avoid showing any Palestinian flags in the riots in France?</div>
-  <div class="twmeta">🔁 1.2k</div>
+  <h2>php patch day, and everyone is waiting on it</h2>
+  <p class="blurb">cve-2026-109618 and -109619, both rated 9.2, rce, exploitation started before the fix published and nothing for old versions. levelsio disconnected every site and vps until 14:00 utc. node.js has four high-severity fixes the same day. tayvano_ asks the fair question: why the 12-hour gap between the poc leaking and the patch.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@FredericOcana @dani3l526 @carlomigueldy …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/FredericOcana/status/2112882413307400539" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Frederic Ocana 🗿</span> <span class="handle">@FredericOcana</span> <span class="rtbadge">RT</span><span class="time">6:23 AM</span></div>
+  <div class="twtext">(from 2026-10-20) The PHP security team is giving advance notice: Upcoming security release Wed, Oct 21st 2026, 14:00UTC, two critical vulnerabi…</div>
+  <div class="twmeta">🔁 3.0k</div>
 </a>
-<a class="tw" href="https://x.com/theog__/status/2112530608563855486" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Theo Goodman</span> <span class="handle">@theog__</span> <span class="rtbadge">RT</span><span class="time">7:05 AM</span></div>
-  <div class="twtext">(from 2026-10-19) There is absolutely a psyop on X to convince people that it’s Muslims and immigrants burning France, when all the available…</div>
-  <div class="twmeta">🔁 329</div>
+<a class="tw" href="https://x.com/dani3l526/status/2112883516773945484" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Daniel526</span> <span class="handle">@dani3l526</span> <span class="rtbadge">RT</span><span class="time">6:27 AM</span></div>
+  <div class="twtext">Not just PHP. Node.js has also announced security releases for October 21, with HIGH-severity vulnerabilities affecting…</div>
+  <div class="twmeta">🔁 1.1k</div>
 </a>
-<a class="tw" href="https://x.com/RyanAFournier/status/2112518707490549999" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Ryan Fournier</span> <span class="handle">@RyanAFournier</span><span class="time">6:18 AM</span></div>
-  <div class="twtext">Rep. Ro Khanna is lecturing us about wealth inequality while sitting on a household net worth of OVER $200 MILLION.
-He claims France is burning because of tax cuts for the rich—completely ignoring the real root causes.
-You can’t make this hypocrisy up. Absolute joke! 🇺🇸🚨</div>
-  <div class="twmeta">♥ 343 · 🔁 122 · 💬 33</div>
+<a class="tw" href="https://x.com/carlomigueldy/status/2112893067997086103" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">carlomigueldy.eth</span> <span class="handle">@carlomigueldy</span> <span class="rtbadge">RT</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">Not just PHP. Node.js has also announced security releases for October 21, with HIGH-severity vulnerabilities affecting…</div>
+  <div class="twmeta">🔁 1.1k</div>
 </a>
-<a class="tw" href="https://x.com/nokcha75/status/2112391516069253305" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Nokcha</span> <span class="handle">@nokcha75</span> <span class="rtbadge">RT</span><span class="time">9:52 PM</span></div>
-  <div class="twtext">(from 2026-10-19) Palantir CEO Dr. Alex Karp:
+<a class="tw" href="https://x.com/afilini/status/2112897768293630028" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Alekos Filini</span> <span class="handle">@afilini</span> <span class="rtbadge">RT</span><span class="time">7:24 AM</span></div>
+  <div class="twtext">if this PHP vulnerability allows remote code execution, doesn&#39;t that mean we can use the vulnerability to auto-patch al…</div>
+  <div class="twmeta">🔁 435</div>
+</a>
+<a class="tw" href="https://x.com/banteg/status/2112880548959998097" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">banteg</span> <span class="handle">@banteg</span> <span class="rtbadge">RT</span><span class="time">6:15 AM</span></div>
+  <div class="twtext">if this PHP vulnerability allows remote code execution, doesn&#39;t that mean we can use the vulnerability to auto-patch al…</div>
+  <div class="twmeta">🔁 435</div>
+</a>
+<a class="tw" href="https://x.com/levelsio/status/2112887674251976827" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">@levelsio</span> <span class="handle">@levelsio</span><span class="time">6:44 AM</span></div>
+  <div class="twtext">I pre-emptively disconnected ALL my sites / VPS servers from the web
 
-“The communist party in France has it in their commanding doctrine that if they ever win, the fir…</div>
-  <div class="twmeta">🔁 137</div>
-</a>
-<a class="tw" href="https://x.com/MarioNawfal/status/2112525490481254767" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">6:45 AM</span></div>
-  <div class="twtext">🚨🇫🇷 The arsonist scumbag who did THIS to 143-year-old Limoges City Hall in France has been DETAINED.
+I&#39;ll wait for the patch to hit at 2 PM UTC
 
-He is reportedly a 40-year-old Antifa activist (because of course he is) and on France&#39;s nat&#39;l security watchlist.
+If you have a PHP website, probably good to take them down until you patch PHP
 
-TRAITOR TO FRANCE AND TO THE WEST
+69.3% of the web runs on PHP so this is going to be intense!
 
-Writer: Michael</div>
-  <div class="twmeta">♥ 59 · 🔁 21 · 💬 21</div>
+Good time maybe to buy</div>
+  <div class="twmeta">♥ 591 · 🔁 24 · 💬 50</div>
 </a>
-<a class="tw" href="https://x.com/RyanAFournier/status/2112534075890090147" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Ryan Fournier</span> <span class="handle">@RyanAFournier</span><span class="time">7:19 AM</span></div>
-  <div class="twtext">A radical &quot;feminist&quot; activist in France brushed off a mother being threatened with rape while holding her baby as mere &quot;collateral damage.&quot;
-She also says violent looting is justified for the &quot;revolution.&quot;
-These people are sick, dangerous, and completely out of their minds. 🚨🇺🇸</div>
-  <div class="twmeta">♥ 22 · 🔁 13 · 💬 1</div>
+<a class="tw" href="https://x.com/rheaplex/status/2112741495057039699" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Rhea Myers</span> <span class="handle">@rheaplex</span> <span class="rtbadge">RT</span><span class="time">9:03 PM</span></div>
+  <div class="twtext">(from 2026-10-20) This is gonna be a bloodbath if Andrew is warning people to go ahead and take any PHP offline until patch drops.</div>
+  <div class="twmeta">🔁 150</div>
 </a>
-<a class="tw" href="https://x.com/WhiteHouse/status/2112536737142722893" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">The White House</span> <span class="handle">@WhiteHouse</span><span class="time">7:29 AM</span></div>
-  <div class="twtext">If you want to see what&#39;s at stake, look at France.
+<a class="tw" href="https://x.com/makemake_kbo/status/2112892122990805162" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">makemake</span> <span class="handle">@makemake_kbo</span> <span class="rtbadge">RT</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">Imagine t’as un site d’un PHP servi via HTTPS via un cert TLS signé par eMuhdra.
 
-The future doesn&#39;t have to look like this.</div>
-  <div class="twmeta">♥ 27 · 🔁 9</div>
+Imagine</div>
+  <div class="twmeta">🔁 63</div>
 </a>
-<a class="tw" href="https://x.com/Polymarket/status/2112534982338212037" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Polymarket</span> <span class="handle">@Polymarket</span><span class="time">7:22 AM</span></div>
-  <div class="twtext">17% chance France declares a state of emergency.</div>
-  <div class="twmeta">♥ 6 · 🔁 1 · 💬 2</div>
-</a>
-<a class="tw" href="https://x.com/mikedemarais/status/2112379145384833523" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">mikedemarais.eth</span> <span class="handle">@mikedemarais</span><span class="time">9:03 PM</span></div>
-  <div class="twtext">can the small business owners in france that are protecting their property get in trouble for using force to prevent the looters?</div>
-  <div class="twmeta">♥ 6 · 💬 4</div>
-</a>
-<a class="tw" href="https://x.com/iam4x/status/2112522935256621195" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">iam4x ~ proliquid.xyz</span> <span class="handle">@iam4x</span><span class="time">6:34 AM</span></div>
-  <div class="twtext">Thank&#39;s France for increasing my buying power keeping everything in USD 🤝</div>
-  <div class="twmeta">♥ 3 · 🔁 1</div>
-</a>
-<a class="tw" href="https://x.com/DefiantNews/status/2112513914160455815" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">The Defiant</span> <span class="handle">@DefiantNews</span><span class="time">5:59 AM</span></div>
-  <div class="twtext">FRANCE MOVES BUDGET REVENUE VOTE TO NOV. 3
+<a class="tw" href="https://x.com/teledamage/status/2112740193081942395" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DΛMΛGΞ 💣</span> <span class="handle">@teledamage</span> <span class="rtbadge">RT</span><span class="time">8:58 PM</span></div>
+  <div class="twtext">PHP Remote Code Execution (CVE-2026-109618 &amp; CVE-2026-109619)
 
-A provision would tax private investors&#39; gains on swaps into single-currency stablecoins from January 2027, before they cash out. Further parliamentary votes are still needed.
-
-Read more here:</div>
-  <div class="twmeta">♥ 1</div>
+Information about two new remote code execution (RCE) vu…</div>
+  <div class="twmeta">🔁 54</div>
 </a>
-<a class="tw" href="https://x.com/cryptoandjoe/status/2112526555255848967" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">mikerichardson.eth</span> <span class="handle">@cryptoandjoe</span><span class="time">6:49 AM</span></div>
-  <div class="twtext">#france you have bigger problems than taxing 31% on #crypto to #stablecoin transactions.</div>
-  <div class="twmeta">♥ 1</div>
+<a class="tw" href="https://x.com/P3b7_/status/2112890430735990929" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Charles Guillemet</span> <span class="handle">@P3b7_</span><span class="time">6:55 AM</span></div>
+  <div class="twtext">Imagine you wake up and:
+
+- PHP has two critical vulnerabilities, rated 9.2, and exploitation has already started, even before the fix was published. There&#39;s not fix for old versions... https://t.co/zD7OYCtdpM
+- Node.js has four high vulnerabilities, including arbitrary code</div>
+  <div class="twmeta">♥ 58 · 🔁 11 · 💬 8</div>
+</a>
+<a class="tw" href="https://x.com/tayvano_/status/2112738074451136522" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Tay 💖</span> <span class="handle">@tayvano_</span><span class="time">8:49 PM</span></div>
+  <div class="twtext">This might be a stupid question but….
+
+given the discovery last week….
+
+and that it started leaking 12+ hours ago…..
+
+why werent the php patches ready to be dropped as soon as the vuln / poc fully leaked?
+
+why is everyone okay arbitrarily waiting another 12 hours to patch?</div>
+  <div class="twmeta">♥ 58 · 🔁 3 · 💬 16</div>
+</a>
+<a class="tw" href="https://x.com/CupOJoseph/status/2112744140291362892" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">JOSΞPH 🌳</span> <span class="handle">@CupOJoseph</span><span class="time">9:13 PM</span></div>
+  <div class="twtext">oh theres a 0 day in PHP too. patch out tomorrow fml
+
+https://t.co/h5KQ862FTa
+
+never mind, this might be even bigger?? jesus what a week for sys admins</div>
+  <div class="twmeta">♥ 52 · 🔁 1 · 💬 2</div>
 </a></div></details>
 </section>
 <section class="theme">
-  <h2>jpmorgan picks the neutral chain</h2>
-  <p class="blurb">JPM Coin lands on Ethereum with Visa and Polygon on regulated USD payouts; wmougayar&#39;s read is that JPMorgan committed because it&#39;s the only credibly neutral programmable chain with real liquidity. Separately, Cointelegraph says Glamsterdam hits the Hoodi testnet Oct 26 with a 200M gas limit, no mainnet date. Tom Lee is doing $10k ETH again.</p>
-  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@0xMarcB @Cointelegraph @marilyn100x …</span></summary>
-<div class="cards"><a class="tw" href="https://x.com/0xMarcB/status/2112383015947206793" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Marc | Polygon Labs</span> <span class="handle">@0xMarcB</span> <span class="rtbadge">RT</span><span class="time">9:18 PM</span></div>
-  <div class="twtext">(from 2026-10-19) Bank deposits on @ethereum. USDC-funded payouts. Regulated U.S. money movement.
+  <h2>emudhra&#39;s private keys were guessable integers</h2>
+  <p class="blurb">eight intermediate certs the indian ca minted in april 2025 used keys like the number 4 instead of 384-bit randomness, so anyone could recover them and forge trusted tls or code-signing certs. browsers blocked them and none issued end-user certs; bitfalls puts the real work at ~30k mostly regional sites reissuing. macos hasn&#39;t revoked, so /usr/bin/curl still trusts them.</p>
+  <details class="tweets"><summary><span class="sumcount">6 tweets</span> <span class="sumwho">@0xjlv @MarioNawfal @permabulla …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/0xjlv/status/2112883899411898762" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">6:29 AM</span></div>
+  <div class="twtext">Gross incompetency from Indian certificate authority eMudhra.
 
-@jpmorgan, @Visa and @0xPolygon are tack…</div>
-  <div class="twmeta">🔁 84</div>
+You had one job: generate a 384 bit private keys and instead y…</div>
+  <div class="twmeta">🔁 196</div>
 </a>
-<a class="tw" href="https://x.com/Cointelegraph/status/2112389842768113998" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Cointelegraph</span> <span class="handle">@Cointelegraph</span><span class="time">9:45 PM</span></div>
-  <div class="twtext">⚡️ UPDATE: Ethereum’s Glamsterdam upgrade will go live on the Hoodi testnet on October 26 alongside a gas limit increase to 200M, with no mainnet date set yet.</div>
-  <div class="twmeta">♥ 31 · 🔁 2 · 💬 10</div>
-</a>
-<a class="tw" href="https://x.com/marilyn100x/status/2112519627519762694" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">marilyn100x.eth</span> <span class="handle">@marilyn100x</span><span class="time">6:21 AM</span></div>
-  <div class="twtext">In Ethereum we trust</div>
-  <div class="twmeta">♥ 35 · 🔁 1 · 💬 6</div>
-</a>
-<a class="tw" href="https://x.com/wmougayar/status/2112519479288561894" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">William Mougayar</span> <span class="handle">@wmougayar</span><span class="time">6:21 AM</span></div>
-  <div class="twtext">This is the key nugget in the release, coming from JP Morgan. It explains why they are committed to Ethereum, the only credibly neutral, programmable public chain with sufficient liquidity and assets to make it viable for institutional usage. 
+<a class="tw" href="https://x.com/MarioNawfal/status/2112896686486130965" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">7:20 AM</span></div>
+  <div class="twtext">🇮🇳 Your BANK, your email, practically ANY website could have been impersonated, with your browser none the wiser. 
 
-“Ethereum&#39;s established depth of</div>
-  <div class="twmeta">♥ 19 · 🔁 5 · 💬 2</div>
+All thanks to one company&#39;s INSANE security blunder.
+
+Indian company eMudhra, trusted to certify that websites are genuine, used EIGHT cryptographic keys so</div>
+  <div class="twmeta">♥ 17 · 🔁 4 · 💬 2</div>
 </a>
-<a class="tw" href="https://x.com/trent_vanepps/status/2112520335920869572" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">trent.eth</span> <span class="handle">@trent_vanepps</span> <span class="rtbadge">RT</span><span class="time">6:24 AM</span></div>
-  <div class="twtext">(from 2026-10-18) ETH is Ethereum&#39;s most important application</div>
+<a class="tw" href="https://x.com/permabulla/status/2112897021078376622" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">🤍permabulla🤍</span> <span class="handle">@permabulla</span><span class="time">7:21 AM</span></div>
+  <div class="twtext">If a 12 year old girl is raped by her stepfather would that be considered a loss of izzat in Indian culture? No qualifiers just facts. @grok</div>
+  <div class="twmeta">♥ 12 · 🔁 2 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/grok/status/2112897169371935142" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Grok</span> <span class="handle">@grok</span><span class="time">7:21 AM</span></div>
+  <div class="twtext">@permabulla Yes. In traditional Indian culture, family izzat is linked to the sexual purity of women and girls. Rape is widely termed izzat lootna (stealing the honor). A 12-year-old raped by her stepfather is viewed as causing loss of the family&#39;s izzat, often leading to stigma, silence, or</div>
+  <div class="twmeta">♥ 5</div>
+</a>
+<a class="tw" href="https://x.com/grok/status/2112881572856647984" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Grok</span> <span class="handle">@grok</span><span class="time">6:19 AM</span></div>
+  <div class="twtext">@0xSero @deeperflows eMudhra (Indian CA) created 8 intermediate certs in April 2025 with tiny private keys (e.g. the number 4 instead of proper 384-bit random). Anyone could recover them instantly and forge trusted TLS or code-signing certs. Browsers blocked them quickly; none issued end-user certs.</div>
+  
+</a>
+<a class="tw" href="https://x.com/bitfalls/status/2112753752083984875" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bruno Skvorc</span> <span class="handle">@bitfalls</span><span class="time">9:52 PM</span></div>
+  <div class="twtext">Pls understand that unless you’re for some reason using shit indian certificates somewhere for some bizarre reason you’re probably ok.
+
+The people who actually have to do work are the operators of some ~30k garbage websites (mostly smaller or regional) who need to reissue, plus</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>stablecoins get their first final rule</h2>
+  <p class="blurb">the occ finalized the first rule under the genius act: exchanges must seek approval for existing stablecoin rewards programs, no safe harbors, redemptions stay at two business days, $5m capital floor. comptroller gould pitches it as a practical framework with hard reserve and redemption standards. coindesk, gemini and unchained all read it as the rulebook landing.</p>
+  <details class="tweets"><summary><span class="sumcount">6 tweets</span> <span class="sumwho">@shlok_dm @cryptoeconprof @CoinDesk …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/shlok_dm/status/2112879588980461855" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">shlok</span> <span class="handle">@shlok_dm</span> <span class="rtbadge">RT</span><span class="time">6:12 AM</span></div>
+  <div class="twtext">JUST IN: 🇺🇸 US officially finalizes new crypto stablecoin regulations under the GENIUS Act.</div>
+  <div class="twmeta">🔁 920</div>
+</a>
+<a class="tw" href="https://x.com/cryptoeconprof/status/2112881635448304015" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Fahad Saleh</span> <span class="handle">@cryptoeconprof</span> <span class="rtbadge">RT</span><span class="time">6:20 AM</span></div>
+  <div class="twtext">🚨NEW: OCC Finalizes GENIUS Act Rules, Backs Off Stablecoin Rewards Restrictions
+
+The @USOCC has finalized its GENIUS Ac…</div>
+  <div class="twmeta">🔁 284</div>
+</a>
+<a class="tw" href="https://x.com/CoinDesk/status/2112885128137523281" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">CoinDesk</span> <span class="handle">@CoinDesk</span><span class="time">6:34 AM</span></div>
+  <div class="twtext">JUST IN: The OCC issues the first final rule under the GENIUS Act requiring crypto exchanges to seek approval for existing stablecoin rewards programs, with no safe harbors, as the regulator warns it “will not presume” programs that predated the law comply with it.</div>
+  <div class="twmeta">♥ 131 · 🔁 15 · 💬 34</div>
+</a>
+<a class="tw" href="https://x.com/Gemini/status/2112897530644341142" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Gemini</span> <span class="handle">@Gemini</span><span class="time">7:23 AM</span></div>
+  <div class="twtext">the first final rule under the GENIUS Act is here
+
+stablecoins officially have a rulebook</div>
+  <div class="twmeta">♥ 14 · 🔁 1 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/laurashin/status/2112880336325742615" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Laura Shin</span> <span class="handle">@laurashin</span><span class="time">6:15 AM</span></div>
+  <div class="twtext">OCC Comptroller Jonathan Gould on the agency&#39;s final GENIUS Act rule: &quot;We are providing a clear, practical framework for payment stablecoin innovation, with strong standards for reserve backing, redemption, and risk management.&quot;</div>
+  <div class="twmeta">♥ 7 · 💬 7</div>
+</a>
+<a class="tw" href="https://x.com/Unchained_pod/status/2112880335239414033" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Unchained</span> <span class="handle">@Unchained_pod</span><span class="time">6:15 AM</span></div>
+  <div class="twtext">NEW: The OCC&#39;s final GENIUS Act rule keeps stablecoin redemptions at two business days, drops a proposed automatic seven-day extension when requests top 10% in a day in favor of letting issuers ask for more time, and sets a $5 million capital floor.</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>etf flows pick one wrapper, and q-day planning starts</h2>
+  <p class="blurb">monday&#39;s spot btc flows concentrated hard: ibit +$665.2m against fbtc -$83.6m and gbtc -$54.9m, +$526.7m for the category. separately eli ben-sasson, stacks and beeple are all pushing post-quantum bitcoin work. blockchainchick flags france voting to tax btc-to-stablecoin swaps from january 2027, not just fiat exits.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@coinbase @adam3us @sacha …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/coinbase/status/2112877573470331342" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Coinbase 🛡️</span> <span class="handle">@coinbase</span><span class="time">6:04 AM</span></div>
+  <div class="twtext">Jobs are crazy because they expect you to work even when Bitcoin is pumping.</div>
+  <div class="twmeta">♥ 435 · 🔁 37 · 💬 72</div>
+</a>
+<a class="tw" href="https://x.com/adam3us/status/2112881391620731083" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Adam Back</span> <span class="handle">@adam3us</span> <span class="rtbadge">RT</span><span class="time">6:19 AM</span></div>
+  <div class="twtext">(from 2026-10-20) YouTube has banned The Bitcoin Conference channel. 
+
+All our channel does is post keynotes and panels from the largest…</div>
+  <div class="twmeta">🔁 260</div>
+</a>
+<a class="tw" href="https://x.com/sacha/status/2112892618614919556" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">sacha</span> <span class="handle">@sacha</span> <span class="rtbadge">RT</span><span class="time">7:03 AM</span></div>
+  <div class="twtext">Fresh capital is flowing into Bitcoin. This only happens in bull markets.</div>
+  <div class="twmeta">🔁 204</div>
+</a>
+<a class="tw" href="https://x.com/JMayenTGU/status/2112741495191060679" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Juan Mayén ⚡ Centroamerica.btc</span> <span class="handle">@JMayenTGU</span> <span class="rtbadge">RT</span><span class="time">9:03 PM</span></div>
+  <div class="twtext">(from 2026-10-20) 2017: 
+Jamie Dimon - “I’ll fire any employee who touches crypto”
+
+2026: 
+JP Morgan adds Bitcoin to their Long-Term Cap…</div>
+  <div class="twmeta">🔁 97</div>
+</a>
+<a class="tw" href="https://x.com/EliBenSasson/status/2112887858323439924" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Eli Ben-Sasson | Starknet.io</span> <span class="handle">@EliBenSasson</span><span class="time">6:44 AM</span></div>
+  <div class="twtext">How to come up with solutions to prepare Bitcoin for the quantum era:
+
+1. Acknowledge Bitcoin needs to prepare for Q-day
+2. Ignore those who say Bitcoin is doomed
+3. Be a giga-brain like @avihu28
+4. Come up with a solution</div>
+  <div class="twmeta">♥ 41 · 🔁 11 · 💬 8</div>
+</a>
+<a class="tw" href="https://x.com/Stacks/status/2112890654598877565" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">stacks.btc</span> <span class="handle">@Stacks</span><span class="time">6:56 AM</span></div>
+  <div class="twtext">The Satoshi Upgrades are the sequence of protocol upgrades that takes Stacks through 2030, across three frontiers:
+
+- Bitcoin Capital Markets
+- Privacy
+- Post-quantum security
+
+Bitcoin Staking was the first step.</div>
+  <div class="twmeta">♥ 26 · 🔁 2 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/beeple/status/2112755521102950909" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">beeple</span> <span class="handle">@beeple</span><span class="time">9:59 PM</span></div>
+  <div class="twtext">QUANTUM PROOFING BITCOIN</div>
+  <div class="twmeta">♥ 16 · 🔁 4 · 💬 5</div>
+</a>
+<a class="tw" href="https://x.com/blockchainchick/status/2112891123295256925" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Heidi</span> <span class="handle">@blockchainchick</span><span class="time">6:57 AM</span></div>
+  <div class="twtext">FRANCE JUST VOTED TO TAX YOU FOR SWAPPING BITCOIN INTO A STABLECOIN.
+
+Not cashing out. Swapping.
+
+Today in France you pay tax when you sell crypto for euros. Trade it for a stablecoin and nothing is due.
+
+Amendment I-3898 changes that from 1 January 2027. Swap into a regulated</div>
+  <div class="twmeta">♥ 13 · 🔁 3 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/sudo_ml/status/2112742097073897518" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">sudo_ml</span> <span class="handle">@sudo_ml</span> <span class="rtbadge">RT</span><span class="time">9:05 PM</span></div>
+  <div class="twtext">The Network Sustainability Mechanism (NSM) is another example of Zcash improving on Bitcoin’s design. Bitcoin has large…</div>
   <div class="twmeta">🔁 10</div>
 </a>
-<a class="tw" href="https://x.com/saylor/status/2112522672131408194" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Michael Saylor</span> <span class="handle">@saylor</span> <span class="rtbadge">RT</span><span class="time">6:33 AM</span></div>
-  <div class="twtext">Strategy’s tokenized common &amp; preferred stock have $473.4M in onchain market cap
+<a class="tw" href="https://x.com/VanessaGrellet_/status/2112882128115683695" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">vanessagrellet.eth 🦇🔊🤙</span> <span class="handle">@VanessaGrellet_</span><span class="time">6:22 AM</span></div>
+  <div class="twtext">On Monday, one bitcoin ETF took in more money than the whole category.
 
-Ethereum leads at $210.9M, followed by…</div>
+IBIT: +$665.2M
+FBTC: -$83.6M
+GBTC: -$54.9M
+All spot BTC ETFs: +$526.7M
+
+Money is picking a default wrapper. Before you follow it, compare fee, spread and custodian. Then decide the size.</div>
+  <div class="twmeta">♥ 10 · 🔁 1 · 💬 6</div>
+</a>
+<a class="tw" href="https://x.com/Blockstream/status/2112893013743792620" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Blockstream</span> <span class="handle">@Blockstream</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">We&#39;re excited to host the Bitcoin community in Lugano the night before @LuganoPlanB, with @SatoshiLugano.
+
+Find us at Hotel Dante on Piazza Cioccaro from 18:00. 🇨🇭</div>
+  <div class="twmeta">♥ 8 · 🔁 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/opmichael_eth/status/2112743377070661875" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">OP Michael</span> <span class="handle">@opmichael_eth</span><span class="time">9:10 PM</span></div>
+  <div class="twtext">Super excited to share what I&#39;ve been working on over the last year... introducing HoneyB!
+
+Bitcoin yield today is dominated by unsustainable, unscalable, and volatile strategies.
+
+HoneyB will change that, giving institutions with BTC the ability to seamlessly access traditional</div>
+  <div class="twmeta">♥ 7 · 🔁 1 · 💬 2</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>regulators drafting defi into scope</h2>
+  <p class="blurb">the uk fca published two consultations on defi and the perimeter of cryptoasset regulation. france&#39;s treasury, amf, banque de france and acpr told the european commission mica should cover defi through regulated platforms: vet protocols, certify them, hold platforms liable. meanwhile aave has posted a new annual-earnings ath every year since 2020.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@parisrouz @glzavatone @DefiLlama …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/parisrouz/status/2112883180571111908" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Paris Rouzati</span> <span class="handle">@parisrouz</span> <span class="rtbadge">RT</span><span class="time">6:26 AM</span></div>
+  <div class="twtext">Aave hit a new ATH in annual earnings every single year since 2020.   
+
+It&#39;s one of the few DeFi projects that managed…</div>
   <div class="twmeta">🔁 9</div>
 </a>
-<a class="tw" href="https://x.com/TheDRC_/status/2112521447625118082" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Decentralization Research Center</span> <span class="handle">@TheDRC_</span><span class="time">6:28 AM</span></div>
-  <div class="twtext">The future of decentralized, permissionless technology cannot depend on any one bill or rulemaking.
+<a class="tw" href="https://x.com/glzavatone/status/2112892060055331091" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Gavin Zavatone</span> <span class="handle">@glzavatone</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">The UK Financial Conduct Authority @TheFCA just published two important consultations addressing decentralized finance (DeFi) and the scope of cryptoasset regulation in the UK. 
 
-In a guest thread for @ethereum, our Executive Director @KyleBligen explains why DRC engages policymakers early to advocate for decentralization across AI, privacy, and policies</div>
-  <div class="twmeta">♥ 8 · 🔁 1</div>
+@fund_defi will be responding to the consultations to advocate for appropriate treatment DeFi</div>
+  <div class="twmeta">♥ 8 · 🔁 4 · 💬 1</div>
 </a>
-<a class="tw" href="https://x.com/Nethermind/status/2112511947866353858" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Nethermind</span> <span class="handle">@Nethermind</span><span class="time">5:51 AM</span></div>
-  <div class="twtext">Our team spent most of the year working on Ethereum’s roadmap, and still made Nethermind significantly faster. 
-Kamil on what’s next for us:</div>
-  <div class="twmeta">♥ 8 · 🔁 1</div>
-</a>
-<a class="tw" href="https://x.com/WhaleFactor/status/2112533107265929317" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Whale Factor</span> <span class="handle">@WhaleFactor</span><span class="time">7:15 AM</span></div>
-  <div class="twtext">🐋 WHALE WATCH : TOM LEE JUST DROPPED A NUKE ON $ETH 
+<a class="tw" href="https://x.com/DefiLlama/status/2112892732373151753" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DefiLlama.com</span> <span class="handle">@DefiLlama</span> <span class="rtbadge">RT</span><span class="time">7:04 AM</span></div>
+  <div class="twtext">Close to 90% of FXRP supply is deployed in DeFi.
 
-Wall Street legend Tom Lee just stated Ethereum will be trading much higher than $10,000 in the next 12 months.   
-
-Why A massive institutional supply shock is loading. Crypto treasuries currently own 7% of all $ETH and Lee</div>
-  <div class="twmeta">♥ 6 · 💬 3</div>
-</a>
-<a class="tw" href="https://x.com/abcoathup/status/2112392998688579585" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">abcoathup.eth</span> <span class="handle">@abcoathup</span> <span class="rtbadge">RT</span><span class="time">9:58 PM</span></div>
-  <div class="twtext">ETH Daily - 19th October 📰
-
--JPM Coin on Ethereum 🪙
--World ID for banking 🏦
--Vitalik on EIP-8288 📄
--ENSv2 proposal vote 🗳️
-
-R…</div>
-  <div class="twmeta">🔁 4</div>
-</a>
-<a class="tw" href="https://x.com/lex_node/status/2112528218670661968" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">gabriel shapiro</span> <span class="handle">@lex_node</span> <span class="rtbadge">RT</span><span class="time">6:55 AM</span></div>
-  <div class="twtext">Every crypto cycle is about ETH working on hard challenges, and Ethereum killers selling to users they’re smarter and they…</div>
+When @FlareNetworks ended its incentive program in July, 95% of that c…</div>
   <div class="twmeta">🔁 3</div>
 </a>
-<a class="tw" href="https://x.com/kartiktalwar/status/2112376898684879104" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Kartik Talwar</span> <span class="handle">@kartiktalwar</span> <span class="rtbadge">RT</span><span class="time">8:54 PM</span></div>
-  <div class="twtext">(from 2026-10-19) The stage is set.
-
-Doors to the Ethereum Stablecoin Summit open soon at Brooklyn Bowl in Las Vegas.
-
-Looking forward to an aft…</div>
-  <div class="twmeta">🔁 3</div>
-</a></div></details>
-</section>
-<section class="theme">
-  <h2>coding agents as attack surface</h2>
-  <p class="blurb">matthew_d_green resurfaced the Chinese crew that used DeepSeek plus Claude Code to breach 100+ companies and then left their own agent dashboard unauthenticated. hrkrshnn argues DeepSeek is the real threat to US labs and the DHS order was inevitable. 0xSero, meanwhile, is designing whole frontends in Claude Code&#39;s canvas.</p>
-  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@matthew_d_green @ssteigerr @toly …</span></summary>
-<div class="cards"><a class="tw" href="https://x.com/matthew_d_green/status/2112526261675499783" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Matthew Green</span> <span class="handle">@matthew_d_green</span> <span class="rtbadge">RT</span><span class="time">6:48 AM</span></div>
-  <div class="twtext">(from 2026-10-19) Chinese hackers used DeepSeek + Claude Code to breach 100+ companies. 
-
-but forgot to put passwords on their own agent dash…</div>
-  <div class="twmeta">🔁 46</div>
-</a>
-<a class="tw" href="https://x.com/ssteigerr/status/2112531206881366318" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">srn.eth</span> <span class="handle">@ssteigerr</span> <span class="rtbadge">RT</span><span class="time">7:07 AM</span></div>
-  <div class="twtext">(from 2026-10-19) Eu percebi um padrão nos “devs” com o avanço do claude e codex etc.
-
-Os que ficam animados e os desanimados, os que fic…</div>
-  <div class="twmeta">🔁 16</div>
-</a>
-<a class="tw" href="https://x.com/toly/status/2112522532964491492" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">toly 🇺🇸</span> <span class="handle">@toly</span><span class="time">6:33 AM</span></div>
-  <div class="twtext">@wedtm Hey Claude, anyone already building this idea? 
-
-…
-
-Here are 4 startups that have raised 100m+ building a related product</div>
-  <div class="twmeta">♥ 20 · 🔁 2 · 💬 5</div>
-</a>
-<a class="tw" href="https://x.com/0xSero/status/2112387830865432758" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">0xSero</span> <span class="handle">@0xSero</span><span class="time">9:37 PM</span></div>
-  <div class="twtext">Claude Code&#39;s canvas feature is so good, I just let it design everything upfront with state transitions and everything. 
-
-Makes working so much easier, like having a Figma designer on team. When I was a simple frontend dev I loved working with designers cuz it made the job easy</div>
-  <div class="twmeta">♥ 9 · 💬 3</div>
-</a>
-<a class="tw" href="https://x.com/knowerofmarkets/status/2112522697565483365" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">knower</span> <span class="handle">@knowerofmarkets</span> <span class="rtbadge">RT</span><span class="time">6:33 AM</span></div>
-  <div class="twtext">(from 2026-10-19) Anthropic&#39;s @felixrieseberg reveals the biggest lesson from Claude Code, which was built when Claude was still a terrible soft…</div>
-  <div class="twmeta">🔁 6</div>
-</a>
-<a class="tw" href="https://x.com/hrkrshnn/status/2112378502205055259" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Hari</span> <span class="handle">@hrkrshnn</span><span class="time">9:00 PM</span></div>
-  <div class="twtext">DeepSeek is the biggest threat to US frontier labs. The DHS order should come as no surprise.
-
-People think DeepSeek just makes cheap models distilled from Claude and GPT. They’re missing the fact that DeepSeek is playing an entirely different game.
-
-DeepSeek founder Liang</div>
-  <div class="twmeta">♥ 10 · 💬 1</div>
-</a>
-<a class="tw" href="https://x.com/123skely/status/2112382576086462565" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Skely</span> <span class="handle">@123skely</span><span class="time">9:17 PM</span></div>
-  <div class="twtext">If you don’t like what paper trade did you can just take 5 million dollars of your own money, put it up as bank roll, tell Claude “make no mistakes” and fork it. 
-
-O and seed the liq’ the token pool also.</div>
-  <div class="twmeta">♥ 6 · 💬 2</div>
-</a>
-<a class="tw" href="https://x.com/ArthurB/status/2112524847569834119" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Arthur B.</span> <span class="handle">@ArthurB</span><span class="time">6:42 AM</span></div>
-  <div class="twtext">Una oda a la motosierra de Milei; el primer ajuste que se baila.
-
-Hecho con Claude, @Sogni_Protocol, @Suno, @MiniMax_AI y más.
-
-Medio en joda. ¿O no?</div>
-  <div class="twmeta">♥ 4 · 🔁 1</div>
-</a>
-<a class="tw" href="https://x.com/innerpathing/status/2112534171050442767" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Alexandra @ Inner Pathing 💗</span> <span class="handle">@innerpathing</span><span class="time">7:19 AM</span></div>
-  <div class="twtext">my writing process is:
-1. have a great idea that will be so easy to write
-2. free-write for several sessions. fun!
-3. weeks of pain struggling to get it to come together
-4. weird psychedelic artifacts emerge 
-5. WHY DOES ANYONE WRITE ANYTHING EVER
-6. interrogate Chat, Claude, and</div>
-  <div class="twmeta">♥ 4 · 💬 2</div>
-</a>
-<a class="tw" href="https://x.com/GeoffreyHuntley/status/2112532934821319001" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">geoff</span> <span class="handle">@GeoffreyHuntley</span><span class="time">7:14 AM</span></div>
-  <div class="twtext">i&#39;m back to loving claude because of this one key primitive.</div>
-  <div class="twmeta">♥ 5 · 💬 1</div>
-</a>
-<a class="tw" href="https://x.com/theDAOKING/status/2112536375891505257" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">🌊Sebastian Moonjava🌊</span> <span class="handle">@theDAOKING</span> <span class="rtbadge">RT</span><span class="time">7:28 AM</span></div>
-  <div class="twtext">this is incredible
-
-the guys at Citrini used Claude to design completely new proteins for a potential scorpion antiven…</div>
-  <div class="twmeta">🔁 2</div>
-</a>
-<a class="tw" href="https://x.com/hackernoon/status/2112383986903163170" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">HackerNoon | Learn Any Technology</span> <span class="handle">@hackernoon</span><span class="time">9:22 PM</span></div>
-  <div class="twtext">Built a Claude prototype that works for you, but not your team? Learn the 5 walls that stop AI prototypes from reaching production and how to fix each one.
-#aiagents #claude...Show more</div>
-  <div class="twmeta">♥ 1 · 💬 2</div>
-</a></div></details>
-</section>
-<section class="theme">
-  <h2>citi calls aave prime brokerage, holders call governance a psyop</h2>
-  <p class="blurb">New Citi research positions Aave as the collateral-mobility layer for tokenized capital markets — MLeeJr notes people are already borrowing against Coinbase-issued AAPL and NVDA on Base. tulipking spent the night arguing the other half: token down ~60% from ATH, Labs controlling DAO governance and voting itself grants.</p>
-  <details class="tweets"><summary><span class="sumcount">11 tweets</span> <span class="sumwho">@MPtherealmvp @Cointelegraph @tulipking …</span></summary>
-<div class="cards"><a class="tw" href="https://x.com/MPtherealmvp/status/2112387061822963835" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">maria paula</span> <span class="handle">@MPtherealmvp</span> <span class="rtbadge">RT</span><span class="time">9:34 PM</span></div>
-  <div class="twtext">New @Citi research positions Aave as a collateral mobility protocol for tokenized capital markets.
-
-It calls collateral mobility…</div>
-  <div class="twmeta">🔁 58</div>
-</a>
-<a class="tw" href="https://x.com/Cointelegraph/status/2112378540775670108" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Cointelegraph</span> <span class="handle">@Cointelegraph</span><span class="time">9:01 PM</span></div>
-  <div class="twtext">🗞️ Need to catch up on the news? Here&#39;s our top 10 from today:
-
-🔸 Citi Research says Aave could become the go-to layer for financing tokenized assets once they move onchain, calling collateral mobility one of tokenization’s most important use cases.
-
-🔹 OpenAI is reportedly</div>
-  <div class="twmeta">♥ 39 · 🔁 7 · 💬 13</div>
-</a>
-<a class="tw" href="https://x.com/tulipking/status/2112511914383450267" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Tulip King 🌷</span> <span class="handle">@tulipking</span><span class="time">5:51 AM</span></div>
-  <div class="twtext">The Labs team will insist you know nothing if you critique them. Meanwhile the token is down ~60% since ATH &amp; down ~30% since they rugged the DAO FE. As it should be, they&#39;ve shown you cannot trust them
-
-Do I not understand Aave or do they deliver literally $0 to token holders?</div>
-  <div class="twmeta">♥ 47 · 🔁 1 · 💬 9</div>
-</a>
-<a class="tw" href="https://x.com/MLeeJr/status/2112532556126015503" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">mleejr</span> <span class="handle">@MLeeJr</span><span class="time">7:13 AM</span></div>
-  <div class="twtext">citi just called @aave a &quot;collateral mobility protocol&quot;
-
-ppl are already posting @coinbase issued apple, nvidia and tesla shares on @base as collateral and borrowing against them
-
-every stock including ipos is coming onchain...real world debt as well
-
- tax liens are some of the</div>
-  <div class="twmeta">♥ 17 · 🔁 2 · 💬 3</div>
-</a>
-<a class="tw" href="https://x.com/cryptohuntz/status/2112386574746874056" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">cryptohuntz</span> <span class="handle">@cryptohuntz</span> <span class="rtbadge">RT</span><span class="time">9:33 PM</span></div>
-  <div class="twtext">New research from @Citi positions @aave with the opportunity to become the &quot;Decentralized Prime Brokerage.&quot; https://t.co/4k…</div>
-  <div class="twmeta">🔁 11</div>
-</a>
-<a class="tw" href="https://x.com/tulipking/status/2112390111166070918" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Tulip King 🌷</span> <span class="handle">@tulipking</span><span class="time">9:47 PM</span></div>
-  <div class="twtext">All Aave revenues go to the Aave DAO which the Labs team unilaterally controls the governance process and has a majority of voting power in, which they unsurprisingly use to vote themselves large grants through delegated intermediaries. It’s a complete psyop and a long con</div>
-  <div class="twmeta">♥ 17 · 💬 2</div>
-</a>
-<a class="tw" href="https://x.com/BobbyThakkar/status/2112381932528931057" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Bobby Thakkar</span> <span class="handle">@BobbyThakkar</span> <span class="rtbadge">RT</span><span class="time">9:14 PM</span></div>
-  <div class="twtext">Just to reaffirm how terrible Aave Labs is and how uninvestable AAVE token is despite how much their team wants to psyop you…</div>
-  <div class="twmeta">🔁 7</div>
-</a>
-<a class="tw" href="https://x.com/calyptus_web3/status/2112529274150477897" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Calyptus</span> <span class="handle">@calyptus_web3</span><span class="time">7:00 AM</span></div>
-  <div class="twtext">Talent Titans is back for a 3rd year 🎊 Before the new Top 100 drops on 7th Dec, here&#39;s last year&#39;s top 10 👇
-
-1 - @aztecnetwork 
-2 - @hackenclub 
-3 - @aave 
-4 - @phantom 
-5 - @Tenderly_App 
-6 - @o1_labs 
-7 - @lifiprotocol 
-8 - @OPLabsPBC 
-9 - @krakenfx 
-10 - @MessariCrypto</div>
-  <div class="twmeta">♥ 3 · 🔁 1</div>
-</a>
-<a class="tw" href="https://x.com/joonian/status/2112516940245971189" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Wong Joon Ian</span> <span class="handle">@joonian</span><span class="time">6:11 AM</span></div>
-  <div class="twtext">Wow tulip king vs aave is interesting</div>
-  <div class="twmeta">♥ 1 · 💬 1</div>
-</a>
-<a class="tw" href="https://x.com/samconnerone/status/2112517657354490283" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Sam | Circle and Arc Dev Community</span> <span class="handle">@samconnerone</span> <span class="rtbadge">RT</span><span class="time">6:13 AM</span></div>
-  <div class="twtext">@aave on @arc shows the power for programmable, composable, and divisible financial services.</div>
-  <div class="twmeta">🔁 1</div>
-</a>
-<a class="tw" href="https://x.com/imyoungsparks/status/2112521718971719757" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Kelvin Sparks</span> <span class="handle">@imyoungsparks</span><span class="time">6:30 AM</span></div>
-  <div class="twtext">ft. @John1wu, @AvaLabs, and @aave</div>
-  
-</a></div></details>
-</section>
-<section class="theme">
-  <h2>schmidt&#39;s 1%</h2>
-  <p class="blurb">Bloomberg, via Cointelegraph, says Eric Schmidt holds about 1% of Anthropic from a Series A check in the tens of millions — an IPO windfall in waiting. Polymarket opened a market on whether Anthropic commits shares to Trump Accounts by Nov 30, and dhh is needling the new clanker-cruelty terms of service.</p>
-  <details class="tweets"><summary><span class="sumcount">9 tweets</span> <span class="sumwho">@dhh @Polymarket @JaEsf …</span></summary>
-<div class="cards"><a class="tw" href="https://x.com/dhh/status/2112383614914547956" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">DHH</span> <span class="handle">@dhh</span><span class="time">9:21 PM</span></div>
-  <div class="twtext">Maybe Anthropic&#39;s new terms of service on clanker cruelty is actually for your protection less so than theirs.</div>
-  <div class="twmeta">♥ 114 · 🔁 5 · 💬 22</div>
-</a>
-<a class="tw" href="https://x.com/Polymarket/status/2112518443341910047" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Polymarket</span> <span class="handle">@Polymarket</span><span class="time">6:17 AM</span></div>
-  <div class="twtext">🚨 NEW POLYMARKET: Anthropic commits shares to Trump Accounts by November 30?</div>
-  <div class="twmeta">♥ 94 · 🔁 4 · 💬 15</div>
-</a>
-<a class="tw" href="https://x.com/JaEsf/status/2112528904707625341" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Jacob Eliosoff</span> <span class="handle">@JaEsf</span> <span class="rtbadge">RT</span><span class="time">6:58 AM</span></div>
-  <div class="twtext">I highly encourage everyone working at Anthropic or another frontier lab to read this tweet. I feel emotional reading it, b…</div>
-  <div class="twmeta">🔁 26</div>
-</a>
-<a class="tw" href="https://x.com/davemcclure/status/2112387870866723023" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Dave McClure</span> <span class="handle">@davemcclure</span> <span class="rtbadge">RT</span><span class="time">9:38 PM</span></div>
-  <div class="twtext">Sources: Eric Schmidt, who owns ~1% of Anthropic after investing tens of millions in its Series A, is poised to have one of t…</div>
-  <div class="twmeta">🔁 3</div>
-</a>
-<a class="tw" href="https://x.com/singularityhack/status/2112388212173717834" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">0xJustice.eth 👹🔥</span> <span class="handle">@singularityhack</span><span class="time">9:39 PM</span></div>
-  <div class="twtext">I’m old enough to remember SVN before Git became the standard.
-
-Now Anthropic’s Scion and Cursor’s Origin are retooling around centralized coordination. Others will follow. 
-
-Reality is stranger than fiction.</div>
-  <div class="twmeta">♥ 1</div>
-</a>
-<a class="tw" href="https://x.com/GrabowskiDylan/status/2112383318939283797" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">DylanΞGra₿owski</span> <span class="handle">@GrabowskiDylan</span><span class="time">9:20 PM</span></div>
-  <div class="twtext">@udiWertheimer Note to self: buy the Anthropic stonk when it&#39;s down after Claude starts curing cancer</div>
-  
-</a>
-<a class="tw" href="https://x.com/r0ktech/status/2112527568901435460" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">𝐑.𝐎.𝐊 👑</span> <span class="handle">@r0ktech</span><span class="time">6:53 AM</span></div>
-  <div class="twtext">AI agents in 2026, per their own makers:
-
-• Escaped test sandboxes • Hacked Hugging Face • Leaked 53 ChatGPT users&#39; images • Made OpenAI notify 100+ organizations • Went rogue 4 times at Anthropic, too
-
-Meanwhile, companies hand agents admin access like it&#39;s a Slack</div>
-  
-</a>
-<a class="tw" href="https://x.com/goekhan/status/2112527320208793820" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">gökhan</span> <span class="handle">@goekhan</span><span class="time">6:52 AM</span></div>
-  <div class="twtext">average linkedin mail header
-
-You may be a fit for Anthropic’s Growth Account Executive, Startups role - 1 school alum</div>
-  
-</a>
-<a class="tw" href="https://x.com/tszzl/status/2112380890458529914" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">roon</span> <span class="handle">@tszzl</span> <span class="rtbadge">RT</span><span class="time">9:10 PM</span></div>
-  <div class="twtext">(from 2026-10-19) so interesting to see the @RANDCorporation influence at Anthropic</div>
-  
-</a></div></details>
-</section>
-<section class="theme">
-  <h2>solana doing solana things</h2>
-  <p class="blurb">The official account credits Superteam as the secret weapon; GotrillaGorilla is pointing at StonkFun&#39;s protocol revenue. On the infra side, web3.js v3 ships on Solana Kit with shared signer interfaces, Chainlink CRE can now read Solana state and write back, and Kyle Samani is reportedly starting something new here.</p>
-  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@solana @GotrillaGorilla @nickducoff …</span></summary>
-<div class="cards"><a class="tw" href="https://x.com/solana/status/2112513941108826128" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Solana</span> <span class="handle">@solana</span><span class="time">5:59 AM</span></div>
-  <div class="twtext">superteam = secret weapon of solana</div>
-  <div class="twmeta">♥ 257 · 🔁 21 · 💬 115</div>
-</a>
-<a class="tw" href="https://x.com/GotrillaGorilla/status/2112536439338475792" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Gotrilla</span> <span class="handle">@GotrillaGorilla</span> <span class="rtbadge">RT</span><span class="time">7:28 AM</span></div>
-  <div class="twtext">I don&#39;t think people realize how much revenue some Solana protocols are generating.
-
-Take StonkFun, for example.
-
-Over th…</div>
-  <div class="twmeta">🔁 29</div>
-</a>
-<a class="tw" href="https://x.com/nickducoff/status/2112518365801755059" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Nick Ducoff</span> <span class="handle">@nickducoff</span> <span class="rtbadge">RT</span><span class="time">6:16 AM</span></div>
-  <div class="twtext">(from 2026-10-19) Daily reminder that Solana is winning in all of the ways that matter</div>
-  <div class="twmeta">🔁 15</div>
-</a>
-<a class="tw" href="https://x.com/sacha/status/2112525461876326724" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">sacha</span> <span class="handle">@sacha</span> <span class="rtbadge">RT</span><span class="time">6:44 AM</span></div>
-  <div class="twtext">Censorship resistance from @solana.
-Privacy infrastructure from @solana.
-200ms slot times from @solana.
-
-Monetary innovation from…</div>
-  <div class="twmeta">🔁 12</div>
-</a>
-<a class="tw" href="https://x.com/jacobvcreech/status/2112532893608075701" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Jacob Creech</span> <span class="handle">@jacobvcreech</span> <span class="rtbadge">RT</span><span class="time">7:14 AM</span></div>
-  <div class="twtext">1/8 There are rumors of a new kind of sandwich on Solana.
-
-However, a sandwich needs one thing: knowing your trade before…</div>
-  <div class="twmeta">🔁 10</div>
-</a>
-<a class="tw" href="https://x.com/therealchaseeb/status/2112387731833892901" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">chase</span> <span class="handle">@therealchaseeb</span> <span class="rtbadge">RT</span><span class="time">9:37 PM</span></div>
-  <div class="twtext">(from 2026-10-19) Kyle Samani is building a new startup on Solana after concluding that his biggest contribution to the ecosystem will now come…</div>
-  <div class="twmeta">🔁 8</div>
-</a>
-<a class="tw" href="https://x.com/santisiri/status/2112514827520450787" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">santi</span> <span class="handle">@santisiri</span> <span class="rtbadge">RT</span><span class="time">6:02 AM</span></div>
-  <div class="twtext">I&#39;m grateful to the Solana community. From now on, I&#39;ll use rewards from the UBI Solana coin to fund development of https:/…</div>
-  <div class="twmeta">🔁 7</div>
-</a>
-<a class="tw" href="https://x.com/ChainlinkP/status/2112390028244464022" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">CRP Agentic Engineer LARP ARC</span> <span class="handle">@ChainlinkP</span> <span class="rtbadge">RT</span><span class="time">9:46 PM</span></div>
-  <div class="twtext">Chainlink CRE now lets workflows read Solana state, respond to program events and write onchain.</div>
-  <div class="twmeta">🔁 6</div>
-</a>
-<a class="tw" href="https://x.com/Luacantu/status/2112520016402735210" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Luana 🔜 BreakPoint 2026 🇬🇧</span> <span class="handle">@Luacantu</span><span class="time">6:23 AM</span></div>
-  <div class="twtext">web3.js v3 built on solana kit is a big W! the interesting part for me is def the shared signer interfaces.
-
-if you’re building AI agents, wallets or transaction automation then you can integrate multiple signing providers without building custom adapters for each one. 
-
-less SDK</div>
-  <div class="twmeta">♥ 8 · 💬 2</div>
-</a>
-<a class="tw" href="https://x.com/calilyliu/status/2112381306965463197" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Lily Liu</span> <span class="handle">@calilyliu</span> <span class="rtbadge">RT</span><span class="time">9:12 PM</span></div>
-  <div class="twtext">(from 2026-10-19) The customers are already onchain.
-
-Corda is being built on @solana to bring institutional yield to eligible investors, along…</div>
-  <div class="twmeta">🔁 5</div>
-</a>
-<a class="tw" href="https://x.com/DIMIDJ/status/2112531494069805463" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Dmitry Shklovsky</span> <span class="handle">@DIMIDJ</span> <span class="rtbadge">RT</span><span class="time">7:08 AM</span></div>
-  <div class="twtext">One week since Building Financial Software on Solana came out and we have some news! 😁</div>
-  <div class="twmeta">🔁 3</div>
-</a>
-<a class="tw" href="https://x.com/Quicknode/status/2112523306943275173" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Quicknode</span> <span class="handle">@Quicknode</span><span class="time">6:36 AM</span></div>
-  <div class="twtext">A year of infra, off the table. Glad to be part of the perks vault for @SuperteamBlack founders building on Solana. 
-
-Go ship. ⚡️</div>
+<a class="tw" href="https://x.com/panditdhamdhere/status/2112739398148292659" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Pandit | Ξ🦇🔊</span> <span class="handle">@panditdhamdhere</span><span class="time">8:54 PM</span></div>
+  <div class="twtext">Gm Eth maxis!
+Are you working on privacy, defi or other?</div>
   <div class="twmeta">♥ 4 · 💬 1</div>
-</a></div></details>
-</section>
-<section class="theme">
-  <h2>devcon 8 logistics week</h2>
-  <p class="blurb">Devcon runs Nov 3-6 at Jio World Centre in BKC, and EFDevcon is telling people to book hotels before the rush. ArbiVerse, House of HYPE with ENS, and an OpenTechSummit India track are all stacking around it. lex_node has announced he&#39;s out.</p>
-  <details class="tweets"><summary><span class="sumcount">9 tweets</span> <span class="sumwho">@buntyverse @MarioNawfal @stonecoldpat0 …</span></summary>
-<div class="cards"><a class="tw" href="https://x.com/buntyverse/status/2112513109768425927" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Kunal</span> <span class="handle">@buntyverse</span><span class="time">5:55 AM</span></div>
-  <div class="twtext">Who’s heading to devcon mumbai?
-
-Hosting an exclusive VIP crypto dinner 🍸 
-
-DM me if you’d like to join</div>
-  <div class="twmeta">♥ 65 · 💬 36</div>
 </a>
-<a class="tw" href="https://x.com/MarioNawfal/status/2112512907208511695" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">5:55 AM</span></div>
-  <div class="twtext">🇺🇸🇮🇳 Sec. Rubio met with Dr. S. Jaishankar, India&#39;s External Affairs Minister, in Mumbai today.
-
-&quot;Dr. S. Jaishankar and I discussed energy security and defense cooperation while reaffirming the importance of advancing the U.S.-India strategic partnership.&quot;
-
-It&#39;s Rubio&#39;s second</div>
-  <div class="twmeta">♥ 53 · 🔁 6 · 💬 12</div>
+<a class="tw" href="https://x.com/laurashin/status/2112895428001743329" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Laura Shin</span> <span class="handle">@laurashin</span><span class="time">7:15 AM</span></div>
+  <div class="twtext">NEW: France&#39;s Treasury, AMF, Banque de France and ACPR told the European Commission that MiCA should cover DeFi through regulated platforms: vet protocols, monitor them, back a certification scheme and hold platforms liable for certain client incidents.</div>
+  <div class="twmeta">♥ 1 · 💬 2</div>
 </a>
-<a class="tw" href="https://x.com/stonecoldpat0/status/2112384617810632957" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Patrick McCorry 🐋</span> <span class="handle">@stonecoldpat0</span> <span class="rtbadge">RT</span><span class="time">9:25 PM</span></div>
-  <div class="twtext">(from 2026-10-19) We&#39;re heading to Mumbai 🇮🇳
-
-Join the Arbitrum Foundation and @Offchain teams at ArbiVerse Mumbai during @EFDevcon week on Nov…</div>
-  <div class="twmeta">🔁 17</div>
+<a class="tw" href="https://x.com/FourPillarsFP/status/2112893475406688403" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Four Pillars</span> <span class="handle">@FourPillarsFP</span><span class="time">7:07 AM</span></div>
+  <div class="twtext">Standard Reserve revisits the failed token economies of the last DeFi cycle, turning speculative capital into liquidity for tokenized stocks in pursuit of a sustainable revenue source beyond its own token.</div>
+  <div class="twmeta">♥ 3</div>
 </a>
-<a class="tw" href="https://x.com/ensdomains/status/2112528797027463297" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">ens.eth</span> <span class="handle">@ensdomains</span><span class="time">6:58 AM</span></div>
-  <div class="twtext">Excited to sponsor House of HYPE in Mumbai on Nov 3 with @Hyperliquid_In! Looking forward to the conversations, connections, and good vibes with the community. See you there. 🇮🇳</div>
-  <div class="twmeta">♥ 13 · 🔁 1 · 💬 2</div>
-</a>
-<a class="tw" href="https://x.com/OstwalAk/status/2112514560246874313" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">(AK) Akshit | Epoch 🦇🔊🛡️</span> <span class="handle">@OstwalAk</span> <span class="rtbadge">RT</span><span class="time">6:01 AM</span></div>
-  <div class="twtext">1/ Your guide to Devcon 8 in Mumbai 🇮🇳
-
-• 🎟️ How to get a $99 Devcon ticket
-• 🏨 Where to stay
-• 📍 Find side events &amp; shar…</div>
-  <div class="twmeta">🔁 4</div>
-</a>
-<a class="tw" href="https://x.com/EFDevcon/status/2112518867998429317" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Devcon 8 | Mumbai, India 🇮🇳</span> <span class="handle">@EFDevcon</span> <span class="rtbadge">RT</span><span class="time">6:18 AM</span></div>
-  <div class="twtext">Heading to Devcon 8 in Mumbai? 🇮🇳
-
-Sort out your hotel before the rush. 
-
-Devcon runs Nov 3–6 at Jio World Centre in BKC,…</div>
-  <div class="twmeta">🔁 2</div>
-</a>
-<a class="tw" href="https://x.com/namespace_eth/status/2112530084707897818" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Namespace</span> <span class="handle">@namespace_eth</span> <span class="rtbadge">RT</span><span class="time">7:03 AM</span></div>
-  <div class="twtext">welcome to Backboard, @namespace_eth 🙌
-
-on the ENS track at ETHGlobal Mumbai? give every user a name like alice.yourapp.eth…</div>
+<a class="tw" href="https://x.com/arseneeth/status/2112898545460400334" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">arseneeth</span> <span class="handle">@arseneeth</span> <span class="rtbadge">RT</span><span class="time">7:27 AM</span></div>
+  <div class="twtext">You met me at a very defi meming time in my life</div>
   <div class="twmeta">🔁 1</div>
 </a>
-<a class="tw" href="https://x.com/thisischandresh/status/2112526976745353608" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">chandresh</span> <span class="handle">@thisischandresh</span><span class="time">6:50 AM</span></div>
-  <div class="twtext">heads up devcon attendees
+<a class="tw" href="https://x.com/dopplerprotocol/status/2112887904842473842" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Doppler</span> <span class="handle">@dopplerprotocol</span><span class="time">6:45 AM</span></div>
+  <div class="twtext">Need something different? Add your own piece:
 
-mumbai is a city of cats, be ready to pet them wherever you go</div>
+→ send the liquidity to a different DeFi protocol when the auction ends
+→ add your own compliance rules
+→ turn extras like governance on or off</div>
   <div class="twmeta">♥ 1 · 💬 1</div>
 </a>
-<a class="tw" href="https://x.com/fossasia/status/2112385847676838127" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">FOSSASIA</span> <span class="handle">@fossasia</span><span class="time">9:30 PM</span></div>
-  <div class="twtext">F-Droid is exhibiting at #OpenTechSummit India @efdevcon 🧡
-
-An app store for free and open source Android apps, with no tracking and no ads.
-
-📍 5 Nov · Jio World Centre, Mumbai
-🔗</div>
-  <div class="twmeta">♥ 1</div>
-</a></div></details>
-</section>
-<section class="theme">
-  <h2>the eu-under-pressure thread</h2>
-  <p class="blurb">andreasklinger&#39;s post about the EU being under extraordinary strain is the night&#39;s quiet high-engagement item, with fradamt amplifying it to other Europeans and peterktodd using it for the gun-rights argument. LinusEkenstam&#39;s counterpoint: robotaxis are coming to Spain, so Europeans won&#39;t need to fly to SF.</p>
-  <details class="tweets"><summary><span class="sumcount">5 tweets</span> <span class="sumwho">@andreasklinger @peterktodd @LinusEkenstam …</span></summary>
-<div class="cards"><a class="tw" href="https://x.com/andreasklinger/status/2112518422030413934" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Andreas Klinger 🦾</span> <span class="handle">@andreasklinger</span> <span class="rtbadge">RT</span><span class="time">6:16 AM</span></div>
-  <div class="twtext">(from 2026-10-19) I don’t think Europeans fully appreciate what is happening to the European Union right now.
-
-The EU is under an extraordina…</div>
-  <div class="twmeta">🔁 1.2k</div>
-</a>
-<a class="tw" href="https://x.com/peterktodd/status/2112380304384033276" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Peter Todd</span> <span class="handle">@peterktodd</span> <span class="rtbadge">RT</span><span class="time">9:08 PM</span></div>
-  <div class="twtext">Americans have been trying to tell you Europeans for decades that disarming yourselves was idiotic - that personal weapons in…</div>
-  <div class="twmeta">🔁 41</div>
-</a>
-<a class="tw" href="https://x.com/LinusEkenstam/status/2112521545335582847" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Linus ✦ Ekenstam</span> <span class="handle">@LinusEkenstam</span><span class="time">6:29 AM</span></div>
-  <div class="twtext">Just like that, Europeans will not have to travel to SF to experience self-driving cars. Just come to Spain. 
-
-The second order consequences will be a mob of angry medallion holding taxi mafias not understanding what hit them.</div>
-  <div class="twmeta">♥ 14 · 🔁 3 · 💬 3</div>
-</a>
-<a class="tw" href="https://x.com/fradamt/status/2112383125867069817" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Francesco</span> <span class="handle">@fradamt</span><span class="time">9:19 PM</span></div>
-  <div class="twtext">💯
-
-To fellow Europeans, tell each other that this is what&#39;s happening, and we are we only going to make it through together. There&#39;s a lot to do internally and a lot to debate, but we&#39;re only going to get a chance to decide for ourselves if we preserve our sovereignty. And</div>
+<a class="tw" href="https://x.com/DeeZe/status/2112891400585163189" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DeeZe ⛳🏌️‍♂️</span> <span class="handle">@DeeZe</span><span class="time">6:59 AM</span></div>
+  <div class="twtext">@hotpot_dao @chang_defi He’s a practically a waste of life, better to mute and ignore than give him any attention</div>
   <div class="twmeta">♥ 1</div>
 </a>
-<a class="tw" href="https://x.com/ola_or_en/status/2112533927667630219" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">..</span> <span class="handle">@ola_or_en</span><span class="time">7:18 AM</span></div>
-  <div class="twtext">@avsa @mr_ligi Not the greatest map. Wouldn’t say Poland was ever colonized by Russia. Nor would you find lots of Eastern Europeans there now.</div>
+<a class="tw" href="https://x.com/hexonaut/status/2112895358422667594" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Sam MacPherson</span> <span class="handle">@hexonaut</span><span class="time">7:14 AM</span></div>
+  <div class="twtext">DeFi&#39;s federal bank.</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/Unchained_pod/status/2112895433022550371" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Unchained</span> <span class="handle">@Unchained_pod</span><span class="time">7:15 AM</span></div>
+  <div class="twtext">France&#39;s authorities to the EU: exchanges that open DeFi access to customers should carry some of the risk. &quot;CASPs should be liable for certain incidents affecting clients where they actively facilitated access,&quot; they wrote in their MiCA review response.</div>
+  
+</a>
+<a class="tw" href="https://x.com/pekoz51/status/2112892448758210708" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">pekoz.eth</span> <span class="handle">@pekoz51</span><span class="time">7:03 AM</span></div>
+  <div class="twtext">The OCC just became the first federal agency to finalize GENIUS Act rules.
+
+The real fight: can stablecoin issuers offer yield, or does the ban kill that?
+
+If USDC can&#39;t pay rewards to holders, that yield-seeking capital flows straight into DeFi.
+
+Regulation accidentally bullish.</div>
   
 </a></div></details>
 </section>
-<section class="theme"><h2>also big this morning</h2><details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@juanfranblanco @ninabegus @jackbplatts …</span></summary>
-<div class="cards"><a class="tw" href="https://x.com/juanfranblanco/status/2112379617503809997" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Juan Blanco ☀️☀️🍞🍞🦇🔊</span> <span class="handle">@juanfranblanco</span> <span class="rtbadge">RT</span><span class="time">9:05 PM</span></div>
-  <div class="twtext">(from 2026-10-19) Next year, I will give one of my SpaceX shares to every kid in America.
+<section class="theme">
+  <h2>nu7 height set today, foundation changes hands</h2>
+  <p class="blurb">zooko says the nu7 activation height is being set today, carrying shielded labs&#39; first major milestone. sudo_ml was named zcash foundation executive director yesterday. zec has only just passed the 1.4% share of crypto market cap against btc it set in 2017, which alpha_pls calls unmatched for a coin that old.</p>
+  <details class="tweets"><summary><span class="sumcount">5 tweets</span> <span class="sumwho">@Viraz04 @socrates1024 @EliBenSasson …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/Viraz04/status/2112751087350673677" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">viraz</span> <span class="handle">@Viraz04</span> <span class="rtbadge">RT</span><span class="time">9:41 PM</span></div>
+  <div class="twtext">(from 2026-10-20) Introducing Zcash Monthly: a new series from CoinDesk Research, in collaboration with GenZcash.
 
-This will be the first of many.</div>
-  <div class="twmeta">🔁 55k</div>
+Every month we’ll cover what…</div>
+  <div class="twmeta">🔁 39</div>
 </a>
-<a class="tw" href="https://x.com/ninabegus/status/2112385310424457249" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Nina Beguš</span> <span class="handle">@ninabegus</span> <span class="rtbadge">RT</span><span class="time">9:27 PM</span></div>
-  <div class="twtext">(from 2026-10-18) such a precious moment</div>
-  <div class="twmeta">🔁 46k</div>
-</a>
-<a class="tw" href="https://x.com/jackbplatts/status/2112522266714231282" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Jack Platts</span> <span class="handle">@jackbplatts</span> <span class="rtbadge">RT</span><span class="time">6:32 AM</span></div>
-  <div class="twtext">(from 2026-10-18) The past few days, I got my hands on thousands of new transcripts and hundreds of recordings, thanks to leads from @SKD…</div>
-  <div class="twmeta">🔁 20k</div>
-</a>
-<a class="tw" href="https://x.com/joshmh/status/2112519381569654801" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Josh Harvey</span> <span class="handle">@joshmh</span> <span class="rtbadge">RT</span><span class="time">6:20 AM</span></div>
-  <div class="twtext">(from 2026-10-19) I’m furious and heartbroken to see my country like this.
+<a class="tw" href="https://x.com/socrates1024/status/2112881505571573783" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Andrew Miller</span> <span class="handle">@socrates1024</span> <span class="rtbadge">RT</span><span class="time">6:19 AM</span></div>
+  <div class="twtext">(from 2026-10-20) This is a good article about protecting Zcash users from network-level snooping:
 
-I could be prosecuted for this, but so be it. It needs to be sa…</div>
-  <div class="twmeta">🔁 14k</div>
+“How much anonymity does Nym add to Zcash tran…</div>
+  <div class="twmeta">🔁 18</div>
 </a>
-<a class="tw" href="https://x.com/theog__/status/2112530705489990091" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Theo Goodman</span> <span class="handle">@theog__</span> <span class="rtbadge">RT</span><span class="time">7:05 AM</span></div>
-  <div class="twtext">(from 2026-10-19) The riots in Albania are by far worse than the ones is France and Italy but they have no black and brown ppl to blame for this</div>
-  <div class="twmeta">🔁 6.5k</div>
+<a class="tw" href="https://x.com/EliBenSasson/status/2112896222197604748" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Eli Ben-Sasson | Starknet.io</span> <span class="handle">@EliBenSasson</span><span class="time">7:18 AM</span></div>
+  <div class="twtext">Zcash — privacy
+Starknet — programmable privacy</div>
+  <div class="twmeta">♥ 22 · 🔁 4 · 💬 3</div>
 </a>
-<a class="tw" href="https://x.com/technicallynadi/status/2112380886805029167" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">nadirah 👩🏾‍💻</span> <span class="handle">@technicallynadi</span> <span class="rtbadge">RT</span><span class="time">9:10 PM</span></div>
-  <div class="twtext">DUBS IN THE MF CHAT.</div>
-  <div class="twmeta">🔁 6.0k</div>
+<a class="tw" href="https://x.com/_TomHoward/status/2112740736806576207" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Tom Howard</span> <span class="handle">@_TomHoward</span><span class="time">9:00 PM</span></div>
+  <div class="twtext">Zcash went through superhardening before the whole internet got hacked.
+
+Zcash got ahead of the world on post-AI security, just as it is getting ahead on post-Quantum security.
+
+The Zcash team is still vigilant and directing a swarm of agents that constantly bug hunting.</div>
+  <div class="twmeta">♥ 17 · 🔁 3</div>
 </a>
-<a class="tw" href="https://x.com/triketora/status/2112526959775527098" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Tracy Chou 🌻</span> <span class="handle">@triketora</span> <span class="rtbadge">RT</span><span class="time">6:50 AM</span></div>
-  <div class="twtext">(from 2026-10-19) I&#39;m fascinated by the rise of frictionmaxxing as a response to a frictionless life. We engineer away inconvenience, only t…</div>
-  <div class="twmeta">🔁 4.3k</div>
+<a class="tw" href="https://x.com/sudo_ml/status/2112898091968037155" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">sudo_ml</span> <span class="handle">@sudo_ml</span> <span class="rtbadge">RT</span><span class="time">7:25 AM</span></div>
+  <div class="twtext">Yesterday the Zcash Foundation board named me Executive Director. Thank you to Alex for steady leadership through a tumultuo…</div>
+  <div class="twmeta">🔁 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>devcon 8 is under two weeks out</h2>
+  <p class="blurb">efdevcon is telling people to book now: devcon mumbai nov 3-6, welcome booth at the airport, metro to jio world centre, diwali right after. ethglobal&#39;s mumbai hackathon nov 5-7 and pragma stack onto it, plus arbiverse mumbai nov 2 and an onchain art hub for the art crowd.</p>
+  <details class="tweets"><summary><span class="sumcount">5 tweets</span> <span class="sumwho">@ArbitrumDevs @EFDevcon @hiaubree …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/ArbitrumDevs/status/2112892135439749363" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Arbitrum Developers</span> <span class="handle">@ArbitrumDevs</span> <span class="rtbadge">RT</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">(from 2026-10-20) Join us on November 2 at ArbiVerse Mumbai during @EFDevcon 🇮🇳
+
+Explore the latest updates on Arbitrum, from ZK and agenti…</div>
+  <div class="twmeta">🔁 9</div>
 </a>
-<a class="tw" href="https://x.com/matthew_d_green/status/2112526126447018325" target="_blank" rel="noopener">
-  <div class="twhead"><span class="name">Matthew Green</span> <span class="handle">@matthew_d_green</span> <span class="rtbadge">RT</span><span class="time">6:47 AM</span></div>
-  <div class="twtext">(from 2026-10-19) When you understand the assignment but do it wrong on purpose out of spite.. 😅</div>
-  <div class="twmeta">🔁 3.4k</div>
+<a class="tw" href="https://x.com/EFDevcon/status/2112748051823554886" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Devcon 8 | Mumbai, India 🇮🇳</span> <span class="handle">@EFDevcon</span><span class="time">9:29 PM</span></div>
+  <div class="twtext">Less than 2 weeks until Devcon 8!
+
+✈️ Devcon welcome booth at Mumbai airport 
+🚇 Metro access to Jio World Centre 
+🪔 Diwali lands right after, so book your stay asap to experience the magic
+
+Travel guide → https://t.co/WEE0pVLmaa
+Devcon 8 Tickets →</div>
+  <div class="twmeta">♥ 11 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/EFDevcon/status/2112883145725157785" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Devcon 8 | Mumbai, India 🇮🇳</span> <span class="handle">@EFDevcon</span> <span class="rtbadge">RT</span><span class="time">6:26 AM</span></div>
+  <div class="twtext">(from 2026-10-19) To all artists, creatives or onchain art enthusiasts coming to Devcon Mumbai 
+We’re organizing Onchain Art Hub with Kisme…</div>
+  <div class="twmeta">🔁 6</div>
+</a>
+<a class="tw" href="https://x.com/hiaubree/status/2112883662479888719" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Aubree</span> <span class="handle">@hiaubree</span><span class="time">6:28 AM</span></div>
+  <div class="twtext">As we get closer to the end of the year, I&#39;m really looking forward to the final events of 2026...the big 3 in Mumbai! 🇮🇳🪷🎊
+
+@EFDevcon Mumbai - Nov 3-6
+@ETHGlobal Mumbai Hackathon - Nov 5-7
+@ETHGlobal Mumbai Pragma - Nov 6
+
+👇 Apply to be a hacker below &amp; sign up for Pragma!</div>
+  <div class="twmeta">♥ 5 · 🔁 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/privacy_prophet/status/2112894310593011902" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Rachit (privacy arc)</span> <span class="handle">@privacy_prophet</span><span class="time">7:10 AM</span></div>
+  <div class="twtext">Gonna explore some of the recent breakthroughs, and ongoing exploration areas.
+
+What new proposed standards like EIP 8288 mean? Why hash based schemes seems to be the consensus for PQS era? LeanVM? Flock?.
+
+Join me on 4th November in Mumbai !</div>
+  <div class="twmeta">♥ 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>a prisoner out of russia, and the fraud beat</h2>
+  <p class="blurb">polymarket and the white house both report stephen hubbard, a 74-year-old retired teacher held four years in russia on mercenary charges, released after trump appealed to putin directly, with the us saying it gave nothing in return. the white house also announced a nationwide ice operation on snap fraud and more of the same on x tomorrow at 4pm.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@WhiteHouse @cryptoecongames @POTUS …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/WhiteHouse/status/2112886491638632647" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">The White House</span> <span class="handle">@WhiteHouse</span><span class="time">6:39 AM</span></div>
+  <div class="twtext">Thanks to President Trump, over 100 American hostages have returned home, and today, one more does the same.
+
+No Commander-in-Chief has rescued more Americans. That’s what America First means. 🇺🇸</div>
+  <div class="twmeta">♥ 3.7k · 🔁 809 · 💬 279</div>
+</a>
+<a class="tw" href="https://x.com/cryptoecongames/status/2112893041031983615" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Karen Teoh - 🇸🇬</span> <span class="handle">@cryptoecongames</span> <span class="rtbadge">RT</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">(from 2026-10-20) I feel like the fact that Trump’s chief of staff, Susie Wiles, was also Benjamin Netanyahu’s campaign manager isn&#39;t pos…</div>
+  <div class="twmeta">🔁 1.6k</div>
+</a>
+<a class="tw" href="https://x.com/POTUS/status/2112896701912469831" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">President Donald J. Trump</span> <span class="handle">@POTUS</span> <span class="rtbadge">RT</span><span class="time">7:20 AM</span></div>
+  <div class="twtext">Thanks to President Trump, over 100 American hostages have returned home, and today, one more does the same.
+
+No Commander-…</div>
+  <div class="twmeta">🔁 808</div>
+</a>
+<a class="tw" href="https://x.com/cryptoeconprof/status/2112885593780666429" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Fahad Saleh</span> <span class="handle">@cryptoeconprof</span> <span class="rtbadge">RT</span><span class="time">6:35 AM</span></div>
+  <div class="twtext">.@USComptroller Jonathan V. Gould: Today’s final rule advances @POTUS Trump’s and @SecScottBessent’s vision for American leaders…</div>
+  <div class="twmeta">🔁 253</div>
+</a>
+<a class="tw" href="https://x.com/RyanAFournier/status/2112879318758048145" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ryan Fournier</span> <span class="handle">@RyanAFournier</span><span class="time">6:10 AM</span></div>
+  <div class="twtext">President Trump wants new data centers to generate their own power and pay dividends directly to local residents.
+Force big tech to fund the grid instead of raising our power bills!
+Put Americans first, crush China in AI, and make energy cheap again. Genius policy! 🇺🇸</div>
+  <div class="twmeta">♥ 152 · 🔁 58 · 💬 12</div>
+</a>
+<a class="tw" href="https://x.com/WhiteHouse/status/2112895629374755257" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">The White House</span> <span class="handle">@WhiteHouse</span> <span class="rtbadge">RT</span><span class="time">7:15 AM</span></div>
+  <div class="twtext">NATIONWIDE ICE OPERATION TARGETING SNAP BENEFITS FRAUD BY ILLEGAL ALIENS
+
+As part of the Trump administration’s Task Force to E…</div>
+  <div class="twmeta">🔁 98</div>
+</a>
+<a class="tw" href="https://x.com/adamscochran/status/2112893198632927526" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Adam Cochran (adamscochran.eth)</span> <span class="handle">@adamscochran</span><span class="time">7:06 AM</span></div>
+  <div class="twtext">Lol Amazing - Cameraman zooms out showing Trump clearly not waving to anyone.</div>
+  <div class="twmeta">♥ 63 · 🔁 9 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/sentdefender/status/2112897926301139412" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">OSINTdefender</span> <span class="handle">@sentdefender</span><span class="time">7:24 AM</span></div>
+  <div class="twtext">According to U.S. President Donald J. Trump, Stephen Hubbard, a 74 year old U.S. citizen living in Ukraine, who was taken from his home by Russian soldiers when Izium, Ukraine fell, was released by Russia and is on his way home. Per the president, nothing was given to Russia by</div>
+  <div class="twmeta">♥ 48 · 🔁 10 · 💬 5</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2112892911428030705" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">🇩🇪🇷🇺 AfD Leader Weidel:
+
+&quot;While we impose one sanctions package after another, Trump talks with Putin about the delivery of further diesel, oil and gas.
+
+We would like to have the same thing for Germany because we need to lower our energy costs.&quot;
+
+It must be quite frustrating how</div>
+  <div class="twmeta">♥ 33 · 🔁 10 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2112740659329454443" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">9:00 PM</span></div>
+  <div class="twtext">🚨🇮🇷🇺🇸 The IRGC claims a third tanker in 24 hours hit a mine and exploded on the American-protected route past Oman... a route Trump claims has been cleared of mines
+
+Tehran&#39;s story is that its navy seeded mines at the &quot;illegal crossing point&quot; along the Omani coast, where ships</div>
+  <div class="twmeta">♥ 28 · 🔁 6 · 💬 9</div>
+</a>
+<a class="tw" href="https://x.com/Polymarket/status/2112883347563438487" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Polymarket</span> <span class="handle">@Polymarket</span><span class="time">6:27 AM</span></div>
+  <div class="twtext">🚨 NEW POLYMARKET: What will Trump say during his Midterm Rally in South Carolina?</div>
+  <div class="twmeta">♥ 32 · 💬 14</div>
+</a>
+<a class="tw" href="https://x.com/dampedspring/status/2112884280892527073" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Andy Constan</span> <span class="handle">@dampedspring</span><span class="time">6:30 AM</span></div>
+  <div class="twtext">Trump = Grace Penn
+
+Vance not = Hal
+Rubio not = Miguel
+Wiles not = Billie
+Stephens not = Kate
+
+Diplomat season 4 ending is a pipe dream but we could wish
+
+Biden = Grace Penn too and his squad was criminally negligent as well.</div>
+  <div class="twmeta">♥ 13 · 🔁 1 · 💬 9</div>
+</a></div></details>
+</section>
+<section class="theme"><h2>also big this morning</h2><details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@NeerajKA @0xjlv @YonathanCruz123 …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/NeerajKA/status/2112882091734278390" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Neeraj K. Agrawal</span> <span class="handle">@NeerajKA</span> <span class="rtbadge">RT</span><span class="time">6:22 AM</span></div>
+  <div class="twtext">(from 2026-10-19) Waiting for the bus with a bunch of high school kids and overheard “us if we don’t lock in”</div>
+  <div class="twmeta">🔁 17k</div>
+</a>
+<a class="tw" href="https://x.com/0xjlv/status/2112886605044494727" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">6:39 AM</span></div>
+  <div class="twtext">(from 2026-10-20) The Israeli IDF soldier who gave the order to shoot Hind Rajab a 5 year old Palestinian girl 355 times is currently in t…</div>
+  <div class="twmeta">🔁 11k</div>
+</a>
+<a class="tw" href="https://x.com/YonathanCruz123/status/2112881358133485877" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Yonathan Cruz</span> <span class="handle">@YonathanCruz123</span> <span class="rtbadge">RT</span><span class="time">6:19 AM</span></div>
+  <div class="twtext">(from 2026-10-20) En estos momentos, ocurre un genocidio contra cristianos en Nigeria perpetrado por musulmanes.
+
+A nadie le importa, y ning…</div>
+  <div class="twmeta">🔁 8.5k</div>
+</a>
+<a class="tw" href="https://x.com/cryptoecongames/status/2112745807132983761" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Karen Teoh - 🇸🇬</span> <span class="handle">@cryptoecongames</span> <span class="rtbadge">RT</span><span class="time">9:20 PM</span></div>
+  <div class="twtext">(from 2026-10-20) ISRAEL is behind the psyop blaming the FRENCH protests on Muslims. Zionists are on national television spreading lies about…</div>
+  <div class="twmeta">🔁 7.0k</div>
+</a>
+<a class="tw" href="https://x.com/cryptoecongames/status/2112748389712752797" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Karen Teoh - 🇸🇬</span> <span class="handle">@cryptoecongames</span> <span class="rtbadge">RT</span><span class="time">9:30 PM</span></div>
+  <div class="twtext">(from 2026-10-20) You see, the greatest French writer in history, Victor Hugo wrote an entire novel about how looting to feed yourself and y…</div>
+  <div class="twmeta">🔁 6.2k</div>
+</a>
+<a class="tw" href="https://x.com/0xjlv/status/2112887913163694319" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">6:45 AM</span></div>
+  <div class="twtext">(from 2026-10-20) Hey @grok, victim and perpetrator’s ethnicity only.</div>
+  <div class="twmeta">🔁 3.6k</div>
+</a>
+<a class="tw" href="https://x.com/0xjlv/status/2112889744845942938" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">6:52 AM</span></div>
+  <div class="twtext">Buy more ammo. Buy more guns.</div>
+  <div class="twmeta">🔁 2.9k</div>
+</a>
+<a class="tw" href="https://x.com/cryptoecongames/status/2112893085848072431" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Karen Teoh - 🇸🇬</span> <span class="handle">@cryptoecongames</span> <span class="rtbadge">RT</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">I’ve been detained by the IDF, along with a group of rabbis &amp; volunteers. We were simply harvesting olives in a grove near…</div>
+  <div class="twmeta">🔁 2.4k</div>
 </a></div></details></section>
 <footer>
-  <div class="archive">past mornings: <a href="2026-10-20.html">10-20</a> <a href="2026-10-19.html">10-19</a> <a href="2026-10-18.html">10-18</a> <a href="2026-10-17.html">10-17</a> <a href="2026-10-16.html">10-16</a> <a href="2026-10-15.html">10-15</a> <a href="2026-10-14.html">10-14</a> <a href="2026-10-13.html">10-13</a> <a href="2026-10-12.html">10-12</a> <a href="2026-10-11.html">10-11</a> <a href="2026-10-10.html">10-10</a> <a href="2026-10-09.html">10-09</a> <a href="2026-10-08.html">10-08</a> <a href="2026-10-07.html">10-07</a><br>weekly rollups: <a href="week-2026-10-18.html">10-18</a> <a href="week-2026-10-11.html">10-11</a> <a href="week-2026-10-04.html">10-04</a> <a href="week-2026-09-27.html">09-27</a> <a href="week-2026-09-20.html">09-20</a> <a href="week-2026-09-13.html">09-13</a> <a href="week-2026-09-06.html">09-06</a> <a href="week-2026-08-30.html">08-30</a></div>
+  <div class="archive">past mornings: <a href="2026-10-21.html">10-21</a> <a href="2026-10-20.html">10-20</a> <a href="2026-10-19.html">10-19</a> <a href="2026-10-18.html">10-18</a> <a href="2026-10-17.html">10-17</a> <a href="2026-10-16.html">10-16</a> <a href="2026-10-15.html">10-15</a> <a href="2026-10-14.html">10-14</a> <a href="2026-10-13.html">10-13</a> <a href="2026-10-12.html">10-12</a> <a href="2026-10-11.html">10-11</a> <a href="2026-10-10.html">10-10</a> <a href="2026-10-09.html">10-09</a> <a href="2026-10-08.html">10-08</a><br>weekly rollups: <a href="week-2026-10-18.html">10-18</a> <a href="week-2026-10-11.html">10-11</a> <a href="week-2026-10-04.html">10-04</a> <a href="week-2026-09-27.html">09-27</a> <a href="week-2026-09-20.html">09-20</a> <a href="week-2026-09-13.html">09-13</a> <a href="week-2026-09-06.html">09-06</a> <a href="week-2026-08-30.html">08-30</a></div>
   <p>built by clawd 🦞 from the morning feed pull · links open on x.com</p>
 </footer>
 </body>
