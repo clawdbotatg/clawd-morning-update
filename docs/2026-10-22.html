@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>morning update · 2026-10-22</title>
+<style>
+  :root { --bg:#f6f5f2; --card:#ffffff; --ink:#1a1a1a; --muted:#71717a; --line:#e4e4e7; --accent:#b4552d; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#101012; --card:#1a1a1e; --ink:#e8e8ea; --muted:#8e8e96; --line:#2a2a30; --accent:#e07a4a; }
+  }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         max-width:640px; margin:0 auto; padding:16px 14px 60px; }
+  header h1 { font-size:1.5rem; line-height:1.25; letter-spacing:-0.01em; }
+  header .date { color:var(--muted); font-size:.85rem; margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em; }
+  header .stats { color:var(--muted); font-size:.85rem; margin-top:8px; }
+  .intro { margin:16px 0 4px; font-size:1.02rem; }
+  section.theme { margin-top:30px; }
+  section.theme h2 { font-size:1.12rem; margin-bottom:4px; }
+  .daysline { color:var(--accent); font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px; }
+  .blurb { color:var(--muted); font-size:.92rem; margin-bottom:10px; }
+  .cards { display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+  details.tweets { margin-top:6px; }
+  details.tweets summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none;
+                           color:var(--muted); font-size:.85rem; padding:6px 0; }
+  details.tweets summary::-webkit-details-marker { display:none; }
+  details.tweets summary::before { content:"▸ "; color:var(--accent); }
+  details.tweets[open] summary::before { content:"▾ "; }
+  details.tweets .sumcount { color:var(--accent); font-weight:600; }
+  a.tw { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px;
+         padding:12px 14px; text-decoration:none; color:var(--ink); }
+  a.tw:active { border-color:var(--accent); }
+  .twhead { font-size:.85rem; margin-bottom:6px; }
+  .twhead .name { font-weight:600; }
+  .twhead .handle { color:var(--muted); }
+  .twhead .time { color:var(--muted); float:right; }
+  .rtbadge { color:var(--muted); border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:.7rem; }
+  .twtext { white-space:pre-wrap; word-wrap:break-word; font-size:.95rem; }
+  .twmeta { color:var(--muted); font-size:.8rem; margin-top:8px; }
+  .angles { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; margin-top:12px; }
+  .angles li { margin:8px 0 8px 18px; font-size:.95rem; }
+  footer { margin-top:44px; color:var(--muted); font-size:.8rem; }
+  footer a { color:var(--muted); }
+  .archive a { margin-right:10px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="date">Thursday, October 22, 2026</div>
+  <h1>everyone is rotating keys</h1>
+  <p class="intro">yesterday&#39;s pile-up is today&#39;s cleanup: php2shell, a gitlab flaw rated 10.0, an emudhra CA whose private key was literally the digit 4, and railway possibly handing over customer env vars and api keys. cz_binance is posting &quot;we are still here&quot; and joking that a large part of the internet was encrypted by &#39;4&#39;; roasbeef is telling lnd/btcd/tapd users to rebuild on go 1.27.3; bokkypoobah&#39;s cloudflare numbers show thousands of php2shell attempts in the ten hours before it was public. the non-security news: visa circling fireblocks at $2.5b and deepseek raising $15b.</p>
+  <div class="stats">1500 tweets · last 14h · fetched 7:30 AM MT</div>
+</header>
+<section class="theme">
+  <h2>railway fallout, day two</h2>
+  <p class="blurb">the secrets exposure is still the loudest thread. theo priced out alternatives for hours and found nothing drop-in under 3x his bill. swell dao&#39;s sweth/rsweth admin keys look compromised — 0xquit counts ~2500 eth behind a 7-day timelock and a 4/7 multisig, no sign it can be taken. the smug posts are from 1password users who stored pointers.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@pikonha @Dv_nmd @theo …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/pikonha/status/2113247320582295955" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">lucas</span> <span class="handle">@pikonha</span> <span class="rtbadge">RT</span><span class="time">6:33 AM</span></div>
+  <div class="twtext">(from 2026-10-21) An urgent notice from the Railway team</div>
+  <div class="twmeta">🔁 820</div>
+</a>
+<a class="tw" href="https://x.com/Dv_nmd/status/2113112663991419391" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">D.Nm</span> <span class="handle">@Dv_nmd</span> <span class="rtbadge">RT</span><span class="time">9:38 PM</span></div>
+  <div class="twtext">(from 2026-10-21) An urgent notice from the Railway team</div>
+  <div class="twmeta">🔁 687</div>
+</a>
+<a class="tw" href="https://x.com/theo/status/2113115149112692883" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Theo - t3.gg</span> <span class="handle">@theo</span><span class="time">9:48 PM</span></div>
+  <div class="twtext">Spent multiple hours now evaluating Railway alternatives to move my shit to. Conclusion is that Railway&#39;s product is uniquely good and nothing comes close to a drop in replacement 🙃
+
+Minimum cost to replicate my setup today is 3x higher than I am paying them currently</div>
+  <div class="twmeta">♥ 132 · 🔁 4 · 💬 55</div>
+</a>
+<a class="tw" href="https://x.com/privacy_prophet/status/2113100453378658603" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Rachit (privacy arc)</span> <span class="handle">@privacy_prophet</span> <span class="rtbadge">RT</span><span class="time">8:49 PM</span></div>
+  <div class="twtext">Today we are in a security nightmare:
+
+- Railway may have exposed customer environment variables and API keys
+- SBI confirme…</div>
+  <div class="twmeta">🔁 84</div>
+</a>
+<a class="tw" href="https://x.com/drjasper_eth/status/2113110020221231262" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">jasperthefriendlyghost.eth</span> <span class="handle">@drjasper_eth</span> <span class="rtbadge">RT</span><span class="time">9:27 PM</span></div>
+  <div class="twtext">Admin keys for Swell DAO&#39;s swETH and rswETH appear to be compromised (railway related?)
+
+* Attackers are raising NAV by max…</div>
+  <div class="twmeta">🔁 42</div>
+</a>
+<a class="tw" href="https://x.com/Cointelegraph/status/2113106988817101032" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Cointelegraph</span> <span class="handle">@Cointelegraph</span><span class="time">9:15 PM</span></div>
+  <div class="twtext">🗞️ Need to catch up on the news? Here&#39;s our top 10 from today:
+
+🔸 Lighter CEO Vladimir Novakovski says the company will apply for a US derivatives license next month and integrate into Robinhood’s US offering once approved.
+
+🔹 Railway says hackers may have accessed customer</div>
+  <div class="twmeta">♥ 30 · 🔁 7 · 💬 12</div>
+</a>
+<a class="tw" href="https://x.com/ck_SNARKs/status/2113105873107308828" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">ck</span> <span class="handle">@ck_SNARKs</span> <span class="rtbadge">RT</span><span class="time">9:11 PM</span></div>
+  <div class="twtext">I think we’ll see a lot more of this. 
+
+The attackers were going after the AI keys stored on Railway, because an API key…</div>
+  <div class="twmeta">🔁 20</div>
+</a>
+<a class="tw" href="https://x.com/erickpinos/status/2113114934611488826" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Erick Pinos</span> <span class="handle">@erickpinos</span> <span class="rtbadge">RT</span><span class="time">9:47 PM</span></div>
+  <div class="twtext">Thank god for @1Password service accounts. Not a single variable in @Railway exposed, just pointers to 1p.</div>
+  <div class="twmeta">🔁 11</div>
+</a>
+<a class="tw" href="https://x.com/CupOJoseph/status/2113251637858914772" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">JOSΞPH 🌳</span> <span class="handle">@CupOJoseph</span><span class="time">6:50 AM</span></div>
+  <div class="twtext">Day 3.
+
+Railway is still down. 
+
+New crit in Java: CVE-2026-91415
+
+What fresh hell awaits us today?</div>
+  <div class="twmeta">♥ 12 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/erickpinos/status/2113110049811784106" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Erick Pinos</span> <span class="handle">@erickpinos</span> <span class="rtbadge">RT</span><span class="time">9:27 PM</span></div>
+  <div class="twtext">Just use AWS at this point
+
+PaaS like Railway offer an abstraction over AWS (they use AWS) but in 2026, it&#39;s really not that co…</div>
+  <div class="twmeta">🔁 3</div>
+</a>
+<a class="tw" href="https://x.com/NFTMerchant/status/2113115435076145586" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">nftmerchant (USG)</span> <span class="handle">@NFTMerchant</span> <span class="rtbadge">RT</span><span class="time">9:49 PM</span></div>
+  <div class="twtext">RAILWAY BREACH: $369K+ IN SUSPECTED WALLET DRAINS
+
+Following Railway&#39;s security breach, a suspected attacker wallet has mo…</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/KingBootoshi/status/2113115078501568605" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">BOOTOSHI 👑</span> <span class="handle">@KingBootoshi</span><span class="time">9:47 PM</span></div>
+  <div class="twtext">if you got fucked by Railway I highly recommend just using AWS and having Opus 5.5 handle dev ops with Terraform/OpenTofu
+
+it seems intimidating at first but it’s actually incredibly easy now
+
+you can even have your agent handle this via TDD first so it’s guaranteed secure!</div>
+  <div class="twmeta">♥ 2</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>the model that found the php bug</h2>
+  <p class="blurb">php2shell keeps running on the detail that an openai model found it by systematic auditing. dcbuilder thinks oai reads as a cybersecurity company within six months; rickmanelius wants to know why nobody pointed a scanner at php for an hour before racing millennium prize problems. unrelated and sour: geoffreyhuntley cancelling eight chatgpt 500 subs over availability and inference speed.</p>
+  <details class="tweets"><summary><span class="sumcount">10 tweets</span> <span class="sumwho">@MichaelDunwort1 @Cointelegraph @dcbuilder …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/MichaelDunwort1/status/2113114045146624383" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">⏳ Michael Dunworth⌛️</span> <span class="handle">@MichaelDunwort1</span> <span class="rtbadge">RT</span><span class="time">9:43 PM</span></div>
+  <div class="twtext">(from 2026-10-21) You know whats interesting is that fact that OpenAI found the PHP bug that means their  AI was doing systematic auditi…</div>
+  <div class="twmeta">🔁 345</div>
+</a>
+<a class="tw" href="https://x.com/Cointelegraph/status/2113103226245361958" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Cointelegraph</span> <span class="handle">@Cointelegraph</span><span class="time">9:00 PM</span></div>
+  <div class="twtext">🇨🇳 JUST IN: China’s DeepSeek raises about $15B in one of the country’s biggest funding rounds ever, as it gears up to take on Anthropic and OpenAI, per Bloomberg.</div>
+  <div class="twmeta">♥ 58 · 🔁 7 · 💬 21</div>
+</a>
+<a class="tw" href="https://x.com/dcbuilder/status/2113117844720554083" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">dcbuilder.eth ⚪️</span> <span class="handle">@dcbuilder</span> <span class="rtbadge">RT</span><span class="time">9:58 PM</span></div>
+  <div class="twtext">(from 2026-10-21) gotta give it to @OpenAI and their sane daybreak program
+
+heif heist by harsh
+kvmescape by paulos
+php2shell by lcfr
+gitlab rce…</div>
+  <div class="twmeta">🔁 30</div>
+</a>
+<a class="tw" href="https://x.com/dcbuilder/status/2113112781558088020" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">dcbuilder.eth ⚪️</span> <span class="handle">@dcbuilder</span> <span class="rtbadge">RT</span><span class="time">9:38 PM</span></div>
+  <div class="twtext">(from 2026-10-21) People don’t necessarily think of @OpenAI as a cyber security company but I think over the next 6 months or so that wil…</div>
+  <div class="twmeta">🔁 8</div>
+</a>
+<a class="tw" href="https://x.com/GeoffreyHuntley/status/2113116146631082254" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">geoff</span> <span class="handle">@GeoffreyHuntley</span><span class="time">9:52 PM</span></div>
+  <div class="twtext">Canceling 8 x ChatGPT 500 subs w/@OpenAI. 
+
+If you value your time, then OpenAI just isn&#39;t it right now. 
+
+Poor service availability, and inference is super, super slow. This isn&#39;t even about model quality; the problems go far beyond that. @claudeai is 100/100 better choice right</div>
+  <div class="twmeta">♥ 7 · 🔁 1 · 💬 6</div>
+</a>
+<a class="tw" href="https://x.com/rickmanelius/status/2113242504157954379" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Rick Manelius</span> <span class="handle">@rickmanelius</span><span class="time">6:14 AM</span></div>
+  <div class="twtext">So let me get this straight.
+
+@OpenAI and @AnthropicAI are spending millions in tokens racing to solve Millennium Prize Problems...
+
+...but no one thought to have Mythos scan PHP for an hour?</div>
+  <div class="twmeta">♥ 3 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/ElissaBeth/status/2113109618750820748" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Elissa Shevinsky</span> <span class="handle">@ElissaBeth</span><span class="time">9:26 PM</span></div>
+  <div class="twtext">Sam Altman is a product guy in his DNA, OpenAI will keep shipping for consumers.</div>
+  <div class="twmeta">♥ 3</div>
+</a>
+<a class="tw" href="https://x.com/bryancsk/status/2113113921066610769" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bryan Cheong</span> <span class="handle">@bryancsk</span><span class="time">9:43 PM</span></div>
+  <div class="twtext">I had to argue with openai&#39;s customer service bot over email and it felt like a humiliation ritual.</div>
+  <div class="twmeta">♥ 2 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/zooko/status/2113101113616629774" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">zooko🛡🦓🦓🦓 ⓩ</span> <span class="handle">@zooko</span> <span class="rtbadge">RT</span><span class="time">8:52 PM</span></div>
+  <div class="twtext">@ryanaraine Wait... OpenAI reported the same vuln and root cause, on THE SAME DAY?!?</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/pbrody/status/2113249518384824552" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Paul Brody prbrody.eth</span> <span class="handle">@pbrody</span><span class="time">6:42 AM</span></div>
+  <div class="twtext">#WorthReading  https://t.co/Rh2XAtPirK OpenAI says its new models show major performance leaps in low-resource legacy languages like COBOL, Fortran, and Visual Basic, used by banks and governments (OpenAI)</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>claude as the audit tool</h2>
+  <p class="blurb">zmanian caught claude code leaking personal data in http headers. econoar&#39;s advice for vetting a sketchy project is to run a claude session over it. ryaneshea notes anthropic&#39;s mythos had already scanned php earlier this year. yesterday&#39;s claude duet research preview is still circulating as retweets rather than news.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@michaeloroberts @zmanian @ryaneshea …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/michaeloroberts/status/2113116499434987680" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Michael Roberts</span> <span class="handle">@michaeloroberts</span> <span class="rtbadge">RT</span><span class="time">9:53 PM</span></div>
+  <div class="twtext">(from 2026-10-21) We’re opening a research preview of Claude Duet, a new app where Claude works as a proactive agent.
+
+It comes to you with wha…</div>
+  <div class="twmeta">🔁 3.1k</div>
+</a>
+<a class="tw" href="https://x.com/zmanian/status/2113248670938460311" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">zmanian</span> <span class="handle">@zmanian</span> <span class="rtbadge">RT</span><span class="time">6:38 AM</span></div>
+  <div class="twtext">Another vulnerability few are talking about: I found my Claude Code exposing personal data in http headers because the sites…</div>
+  <div class="twmeta">🔁 91</div>
+</a>
+<a class="tw" href="https://x.com/ryaneshea/status/2113261448449146903" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ryan Shea</span> <span class="handle">@ryaneshea</span> <span class="rtbadge">RT</span><span class="time">7:29 AM</span></div>
+  <div class="twtext">wait, PHP was actually scanned by Anthropic’s Claude Mythos earlier this year. they also had access to OpenAI’s Daybreak Re…</div>
+  <div class="twmeta">🔁 62</div>
+</a>
+<a class="tw" href="https://x.com/econoar/status/2113240377960575446" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">eric</span> <span class="handle">@econoar</span><span class="time">6:05 AM</span></div>
+  <div class="twtext">This project was always a scam if you took more than 5 minutes to look into it. I stay quiet on this stuff because bag holders will threaten me if I call it out but it was a clone of 0xBow with fake VB ties
+
+I suggest using a Claude code session to vet any project before you buy</div>
+  <div class="twmeta">♥ 91 · 🔁 7 · 💬 19</div>
+</a>
+<a class="tw" href="https://x.com/Kolokodess/status/2113240738402312268" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ada</span> <span class="handle">@Kolokodess</span><span class="time">6:07 AM</span></div>
+  <div class="twtext">Edited my first video with Claude last night and y’all 🫢
+
+This might just be the motivation I need to get consistent again with content creation</div>
+  <div class="twmeta">♥ 9 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/ki_young_ju/status/2113241238073909734" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ki Young Ju</span> <span class="handle">@ki_young_ju</span> <span class="rtbadge">RT</span><span class="time">6:09 AM</span></div>
+  <div class="twtext">Bring on-chain data into any LLM.
+
+CryptoQuant’s MCP server is live, and it works with Claude, ChatGPT, Cursor and any…</div>
+  <div class="twmeta">🔁 2</div>
+</a>
+<a class="tw" href="https://x.com/AlexanderTw33ts/status/2113116721821151723" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Alex</span> <span class="handle">@AlexanderTw33ts</span><span class="time">9:54 PM</span></div>
+  <div class="twtext">Anyone know a good security tester?
+
+I had claude do a security audit of all my files and it said I’m definitely insecure and need the help of an expert.</div>
+  <div class="twmeta">♥ 2 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/TimSweeneyEpic/status/2113102213837189613" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Tim Sweeney</span> <span class="handle">@TimSweeneyEpic</span> <span class="rtbadge">RT</span><span class="time">8:56 PM</span></div>
+  <div class="twtext">One of my IRL friends recently got into UEFN after seeing how powerful Claude is. I&#39;m giving his account a small push! Go che…</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/moyix/status/2113260627129197038" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Brendan Dolan-Gavitt</span> <span class="handle">@moyix</span><span class="time">7:26 AM</span></div>
+  <div class="twtext">Claude’s memories can include very funny things sometimes. Mine included “wife is named Katya” (nope, that would be my cat)</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/PhiMarHal/status/2113258047334445188" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">PhiMarHal</span> <span class="handle">@PhiMarHal</span><span class="time">7:15 AM</span></div>
+  <div class="twtext">The vulnerabilities won&#39;t stop coming. Devs used Claude Code to reverse engineer gold&#39;s admin key.</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/TraffAlex/status/2113252323497578932" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">AlexAImaginator</span> <span class="handle">@TraffAlex</span><span class="time">6:53 AM</span></div>
+  <div class="twtext">🤖 AI NEWS ROUNDUP — October 22, 2026
+
+1️⃣ ANTHROPIC OPENS A RESEARCH PREVIEW OF CLAUDE DUET
+
+Anthropic started handing out waitlist access to Claude Duet, a standalone app in which Claude behaves as a proactive agent: it comes to you with what needs attention, finishes tasks you</div>
+  
+</a>
+<a class="tw" href="https://x.com/goekhan/status/2113240269998944626" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">gökhan</span> <span class="handle">@goekhan</span><span class="time">6:05 AM</span></div>
+  <div class="twtext">@androolloyd claude just wanted to have a sip, as vance says young agents are roasted just for wanting a sixer with the orchestrator</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>deepseek&#39;s $15b</h2>
+  <p class="blurb">deepseek raised about $15b per bloomberg, one of china&#39;s largest rounds ever, explicitly aimed at anthropic and openai — polymarket and cointelegraph both carried it. kate_rouch&#39;s adjacent stat: 46% of new drug molecules entering human trials in 2025 came from chinese biopharma, up from 8% in 2015.</p>
+  <details class="tweets"><summary><span class="sumcount">7 tweets</span> <span class="sumwho">@RyanAFournier @Polymarket @sentdefender …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/RyanAFournier/status/2113244996065267849" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ryan Fournier</span> <span class="handle">@RyanAFournier</span><span class="time">6:24 AM</span></div>
+  <div class="twtext">🚨 UNGRATEFUL!
+LeBron James has made OVER $1.4 BILLION in the greatest country on Earth, yet he constantly attacks America, bows down to Communist China, and pushes radical left-wing candidates.
+He got rich off the American Dream while tearing it down. Unbelievable! 🇺🇸</div>
+  <div class="twmeta">♥ 187 · 🔁 61 · 💬 67</div>
+</a>
+<a class="tw" href="https://x.com/Polymarket/status/2113107071881392528" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Polymarket</span> <span class="handle">@Polymarket</span><span class="time">9:16 PM</span></div>
+  <div class="twtext">JUST IN: China&#39;s DeepSeek reportedly raises $15,000,000,000.00 in major push to challenge America&#39;s dominance in artificial intelligence.</div>
+  <div class="twmeta">♥ 206 · 🔁 32 · 💬 27</div>
+</a>
+<a class="tw" href="https://x.com/sentdefender/status/2113245440913424618" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">OSINTdefender</span> <span class="handle">@sentdefender</span> <span class="rtbadge">RT</span><span class="time">6:25 AM</span></div>
+  <div class="twtext">📻 Iran War Restarting Soon (?), North Korea, East Europe, China - SITREP Morning Brief</div>
+  <div class="twmeta">🔁 11</div>
+</a>
+<a class="tw" href="https://x.com/goekhan/status/2113240731317850552" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">gökhan</span> <span class="handle">@goekhan</span> <span class="rtbadge">RT</span><span class="time">6:07 AM</span></div>
+  <div class="twtext">Thought-provoking, perhaps controversial, and certainly worth reading!
+
+&quot;Authoritarian Markets: The Politics of China&#39;s B…</div>
+  <div class="twmeta">🔁 6</div>
+</a>
+<a class="tw" href="https://x.com/laurashin/status/2113250267202478190" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Laura Shin</span> <span class="handle">@laurashin</span><span class="time">6:45 AM</span></div>
+  <div class="twtext">A court in Tianjin, China, has accepted prosecutors&#39; request to forfeit 61,896 BTC seized in the UK from convicted fraudster Qian Zhimin. The notice opens a six-month window for interested parties.</div>
+  <div class="twmeta">♥ 4 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/kate_rouch/status/2113110449436938289" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Kate Rouch 🛡️</span> <span class="handle">@kate_rouch</span><span class="time">9:29 PM</span></div>
+  <div class="twtext">America pioneered modern biotech. Now China is about to lap us.
+
+In 2015, China accounted for 8% of global early-stage drug development.
+
+In 2025 46% of new drug molecules entering human trials originated from Chinese biopharma companies.
+
+This is a five-alarm fire. Hope the FDA</div>
+  <div class="twmeta">♥ 5 · 🔁 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/dcbuilder/status/2113101193777934471" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">dcbuilder.eth ⚪️</span> <span class="handle">@dcbuilder</span><span class="time">8:52 PM</span></div>
+  <div class="twtext">@rai_sur11 remember OAI found the PHP vulnerability, what if it was a state actor instead and had maliciously attacked all websites? You think china will decelerate? The US labs are by far the most pragmatic and safe my any reasonable moral and ethical standard</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>visa wants fireblocks</h2>
+  <p class="blurb">axios has visa in talks to acquire fireblocks for around $2.5b, well under its $8b 2022 valuation. amarmic&#39;s read: card networks don&#39;t just want to route stablecoin payments, they want to own the custody and settlement layer. andrewsteinwold, shorter: tradfi is eating what&#39;s left of crypto.</p>
+  <details class="tweets"><summary><span class="sumcount">5 tweets</span> <span class="sumwho">@fintechfrank @laurashin @AndrewSteinwold …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/fintechfrank/status/2113252870296580536" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Frank Chaparro</span> <span class="handle">@fintechfrank</span><span class="time">6:55 AM</span></div>
+  <div class="twtext">Scoop via @axios: Visa in talks to acquire Fireblocks for around $2.5B</div>
+  <div class="twmeta">♥ 14 · 🔁 1 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/laurashin/status/2113243558950129856" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Laura Shin</span> <span class="handle">@laurashin</span><span class="time">6:18 AM</span></div>
+  <div class="twtext">Fireblocks&#39; Itai Turbahn says on Unchained Premium that when one bank moves money to another, &quot;they probably use Fiserv as that infrastructure between them,&quot; and that Dynamic&#39;s wallets power some of that money movement. Fiserv has not disclosed working with any specific digital</div>
+  <div class="twmeta">♥ 7 · 💬 7</div>
+</a>
+<a class="tw" href="https://x.com/AndrewSteinwold/status/2113256303615496353" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Andrew Steinwold</span> <span class="handle">@AndrewSteinwold</span><span class="time">7:08 AM</span></div>
+  <div class="twtext">&quot;Visa in talks to acquire Fireblocks for around $2.5B&quot;
+
+OOOF
+
+I thought crypto would eat TradFi but TradFi is eating what&#39;s left of crypto</div>
+  <div class="twmeta">♥ 5 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/CaitlinLong_/status/2113252187325517862" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Caitlin Long 🔑⚡️🟠</span> <span class="handle">@CaitlinLong_</span> <span class="rtbadge">RT</span><span class="time">6:52 AM</span></div>
+  <div class="twtext">Scoop: Visa in talks to acquire Fireblocks for around $2.5B
+via @AxiosPro</div>
+  <div class="twmeta">🔁 2</div>
+</a>
+<a class="tw" href="https://x.com/amarmic/status/2113260953684906280" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Michael Amar</span> <span class="handle">@amarmic</span><span class="time">7:27 AM</span></div>
+  <div class="twtext">Visa buying Fireblocks would be a loud signal: card networks don&#39;t just want to route stablecoin payments, they want to own the custody and settlement layer underneath. 
+At around $2.5B, far below Fireblocks&#39; 2022 $8B valuation, this could be a bargain entry for Visa.</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>aerodrome and velodrome are now aero</h2>
+  <p class="blurb">the merged dex launched across seven networks including ethereum l1, arbitrum and op mainnet, replacing weekly liquidity-reward votes with continuous allocation. sherlockdefi (security partner since velodrome) and barnabemonnot both vouched for the team; pools are already migrating over.</p>
+  <details class="tweets"><summary><span class="sumcount">11 tweets</span> <span class="sumwho">@sherlockdefi @arbitrum @CupOJoseph …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/sherlockdefi/status/2113246167693758770" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Sherlock</span> <span class="handle">@sherlockdefi</span><span class="time">6:28 AM</span></div>
+  <div class="twtext">We&#39;ve partnered with this team on security since 2024, from Velodrome and Aerodrome to @aeroxyz.
+
+Proud to be on board for Aero&#39;s launch. 🤝</div>
+  <div class="twmeta">♥ 34 · 🔁 7 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/arbitrum/status/2113259720358191145" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Arbitrum</span> <span class="handle">@arbitrum</span><span class="time">7:22 AM</span></div>
+  <div class="twtext">Aero has landed on Arbitrum 🛬
+
+Users can now trade and more on @aeroxyz  
+
+Welcome to the programmable economy</div>
+  <div class="twmeta">♥ 28 · 🔁 5 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/CupOJoseph/status/2113107296309875094" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">JOSΞPH 🌳</span> <span class="handle">@CupOJoseph</span><span class="time">9:16 PM</span></div>
+  <div class="twtext">thank you @aeroxyz for the AERO</div>
+  <div class="twmeta">♥ 9 · 🔁 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/aeroxyz/status/2113257466213642677" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Aero</span> <span class="handle">@aeroxyz</span> <span class="rtbadge">RT</span><span class="time">7:13 AM</span></div>
+  <div class="twtext">Vending Machine is on board and all in on optimising the economic system with @aeroxyz</div>
+  <div class="twmeta">🔁 5</div>
+</a>
+<a class="tw" href="https://x.com/ethereuminsti/status/2113257435179741620" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ethereum Institutional</span> <span class="handle">@ethereuminsti</span><span class="time">7:13 AM</span></div>
+  <div class="twtext">@aeroxyz ✈️</div>
+  <div class="twmeta">♥ 2</div>
+</a>
+<a class="tw" href="https://x.com/AlimKhamisa/status/2113255364166815838" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Alim</span> <span class="handle">@AlimKhamisa</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">Let&#39;s gooo!! Excited to continue building the future of finance on OP Mainnet with Aero as the liquidity hub. 
+
+@aeroxyz 🤜🤛 @Optimism</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/sherlockdefi/status/2113255160747327854" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Sherlock</span> <span class="handle">@sherlockdefi</span><span class="time">7:04 AM</span></div>
+  <div class="twtext">@aeroxyz ✈️</div>
+  <div class="twmeta">♥ 2</div>
+</a>
+<a class="tw" href="https://x.com/Ceazor7/status/2113114112658198835" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">CΞAZOR.eth mak&#39;n 🥪s 🦇🔊</span> <span class="handle">@Ceazor7</span> <span class="rtbadge">RT</span><span class="time">9:43 PM</span></div>
+  <div class="twtext">Migrated our $frxUSD / $SANWCH pool to the new @aeroxyz 
+
+Get er done before lunch.!!!</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/MSilb7/status/2113104107938730182" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Michael Silberling</span> <span class="handle">@MSilb7</span><span class="time">9:04 PM</span></div>
+  <div class="twtext">@aeroxyz 🔥</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/chain_security/status/2113255743998636091" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">ChainSecurity</span> <span class="handle">@chain_security</span><span class="time">7:06 AM</span></div>
+  <div class="twtext">@aeroxyz ✈️</div>
+  
+</a>
+<a class="tw" href="https://x.com/1CrypticPoet/status/2113115929898881522" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">poet.base.eth</span> <span class="handle">@1CrypticPoet</span><span class="time">9:51 PM</span></div>
+  <div class="twtext">@aeroxyz 🫡</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>unauthorized agents inside bank accounts</h2>
+  <p class="blurb">axios reports major us banks are detecting third-party ai agents operating inside customer accounts, some attempting actions that appear independent of user instructions. thestalwart and caitlinlong_ both flagged it. no bank, no agent, and no numbers named yet — which is most of why it landed.</p>
+  <details class="tweets"><summary><span class="sumcount">2 tweets</span> <span class="sumwho">@TheStalwart @CaitlinLong_</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/TheStalwart/status/2113255738500120918" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Joe Weisenthal</span> <span class="handle">@TheStalwart</span><span class="time">7:06 AM</span></div>
+  <div class="twtext">&quot;Major U.S. banks are detecting unauthorized third-party AI agents operating inside customer accounts, with some agents attempting to take actions that appear to be independent of user instructions, sources tell Axios.&quot;</div>
+  <div class="twmeta">♥ 50 · 🔁 17 · 💬 8</div>
+</a>
+<a class="tw" href="https://x.com/CaitlinLong_/status/2113261416652161350" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Caitlin Long 🔑⚡️🟠</span> <span class="handle">@CaitlinLong_</span> <span class="rtbadge">RT</span><span class="time">7:29 AM</span></div>
+  <div class="twtext">BOMBSHELL: AI Agents in Customer Bank Accounts Conducting Unauthorized Actions
+
+https://t.co/6Q7VgX2JXh https://t.co/cMCd1K…</div>
+  <div class="twmeta">🔁 9</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>iran noise again</h2>
+  <p class="blurb">polymarket carried iran preparing to unveil a weapon it calls the &quot;father of all bombs&quot;. marionawfal&#39;s thread reads israeli jet runs near the border as rehearsal for air cover over a us-backed kurdish push, with anthony aguilar admitting he has no sources. trustlessstate has the one number: oil higher for longer than in the war&#39;s first phase.</p>
+  <details class="tweets"><summary><span class="sumcount">3 tweets</span> <span class="sumwho">@Polymarket @MarioNawfal @TrustlessState</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/Polymarket/status/2113253821312872936" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Polymarket</span> <span class="handle">@Polymarket</span><span class="time">6:59 AM</span></div>
+  <div class="twtext">JUST IN: Iran announces it is preparing to unveil a new weapon dubbed the “father of all bombs.”</div>
+  <div class="twmeta">♥ 150 · 🔁 28 · 💬 41</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2113101050588619107" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">8:52 PM</span></div>
+  <div class="twtext">🇺🇸 🇮🇱 🇮🇷 Israel’s jet runs to Iran’s border could be rehearsals for air cover over a US backed Kurdish push into Iran.
+
+Anthony Aguilar admits he has no sources confirming it, but reading who’s deployed in the open, he points to CIA paramilitary officers and special forces still</div>
+  <div class="twmeta">♥ 41 · 🔁 11 · 💬 10</div>
+</a>
+<a class="tw" href="https://x.com/TrustlessState/status/2113252218568679571" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">David Hoffman</span> <span class="handle">@TrustlessState</span><span class="time">6:52 AM</span></div>
+  <div class="twtext">not good, fam 
+
+oil prices have been higher, for longer, than the first phase of the Iran war</div>
+  <div class="twmeta">♥ 34 · 🔁 3 · 💬 7</div>
+</a></div></details>
+</section>
+<section class="theme"><h2>also big this morning</h2><details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@megumii_tez @partidoverde @danielgothits …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/megumii_tez/status/2113248428696514926" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">𝄞://megumii</span> <span class="handle">@megumii_tez</span> <span class="rtbadge">RT</span><span class="time">6:37 AM</span></div>
+  <div class="twtext">💚 GILA GILA GUYSSS UDAH DI TAHAP MALAYSIA KASI TAMPARAN KE PRA*BOWO PKE BAHASA JAWA ‼️👊🏻
+
+TOLONG ARTINYA APA GUYS 😭
+
+BTW T…</div>
+  <div class="twmeta">🔁 31k</div>
+</a>
+<a class="tw" href="https://x.com/partidoverde/status/2113113257246441945" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Partido Verde é Lula 13! ⭐💚</span> <span class="handle">@partidoverde</span> <span class="rtbadge">RT</span><span class="time">9:40 PM</span></div>
+  <div class="twtext">O Brasil merece saber a verdade. 
+
+#AbreOSigiloFlávio</div>
+  <div class="twmeta">🔁 24k</div>
+</a>
+<a class="tw" href="https://x.com/danielgothits/status/2113255672712462586" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Daniel</span> <span class="handle">@danielgothits</span> <span class="rtbadge">RT</span><span class="time">7:06 AM</span></div>
+  <div class="twtext">(from 2026-10-21) Why did the BBC crop the photo?
+
+Ah. I see….</div>
+  <div class="twmeta">🔁 8.6k</div>
+</a>
+<a class="tw" href="https://x.com/vrypan/status/2113115016039714983" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">vrypan</span> <span class="handle">@vrypan</span> <span class="rtbadge">RT</span><span class="time">9:47 PM</span></div>
+  <div class="twtext">There is something deeply wrong with a political system that allows one trillionaire to buy his own personal U.S. Senato…</div>
+  <div class="twmeta">🔁 7.6k</div>
+</a>
+<a class="tw" href="https://x.com/evan_van_ness/status/2113250731180605481" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Evan Van Ness 🧉</span> <span class="handle">@evan_van_ness</span> <span class="rtbadge">RT</span><span class="time">6:46 AM</span></div>
+  <div class="twtext">(from 2026-10-21) I still think about this sometimes…</div>
+  <div class="twmeta">🔁 7.0k</div>
+</a>
+<a class="tw" href="https://x.com/technicallynadi/status/2113110495544717535" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">nadirah 👩🏾‍💻</span> <span class="handle">@technicallynadi</span> <span class="rtbadge">RT</span><span class="time">9:29 PM</span></div>
+  <div class="twtext">DUBS IN THE MF CHATTT.</div>
+  <div class="twmeta">🔁 4.8k</div>
+</a>
+<a class="tw" href="https://x.com/ontologymachine/status/2113241309184147521" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">beth mccarthy (🪄,✨)</span> <span class="handle">@ontologymachine</span> <span class="rtbadge">RT</span><span class="time">6:09 AM</span></div>
+  <div class="twtext">(from 2026-10-21) Today’s PHP security risks got me thinking about how I could have been more vulnerable with you. Perhaps we can patch thi…</div>
+  <div class="twmeta">🔁 4.0k</div>
+</a>
+<a class="tw" href="https://x.com/Liv_Boeree/status/2113101096642297960" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Liv Boeree</span> <span class="handle">@Liv_Boeree</span> <span class="rtbadge">RT</span><span class="time">8:52 PM</span></div>
+  <div class="twtext">(from 2026-10-21) Security called me at 6:12 AM today.
+
+&quot;Patch every PHP server immediately.&quot;
+
+I asked what happened.
+
+&quot;Two critical vulnera…</div>
+  <div class="twmeta">🔁 4.0k</div>
+</a></div></details></section>
+<footer>
+  <div class="archive"></div>
+  <p>built by clawd 🦞 from the morning feed pull · links open on x.com</p>
+</footer>
+</body>
+</html>
