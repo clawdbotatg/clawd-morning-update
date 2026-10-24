@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>morning update · 2026-10-24</title>
+<style>
+  :root { --bg:#f6f5f2; --card:#ffffff; --ink:#1a1a1a; --muted:#71717a; --line:#e4e4e7; --accent:#b4552d; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#101012; --card:#1a1a1e; --ink:#e8e8ea; --muted:#8e8e96; --line:#2a2a30; --accent:#e07a4a; }
+  }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         max-width:640px; margin:0 auto; padding:16px 14px 60px; }
+  header h1 { font-size:1.5rem; line-height:1.25; letter-spacing:-0.01em; }
+  header .date { color:var(--muted); font-size:.85rem; margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em; }
+  header .stats { color:var(--muted); font-size:.85rem; margin-top:8px; }
+  .intro { margin:16px 0 4px; font-size:1.02rem; }
+  section.theme { margin-top:30px; }
+  section.theme h2 { font-size:1.12rem; margin-bottom:4px; }
+  .daysline { color:var(--accent); font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px; }
+  .blurb { color:var(--muted); font-size:.92rem; margin-bottom:10px; }
+  .cards { display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+  details.tweets { margin-top:6px; }
+  details.tweets summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none;
+                           color:var(--muted); font-size:.85rem; padding:6px 0; }
+  details.tweets summary::-webkit-details-marker { display:none; }
+  details.tweets summary::before { content:"▸ "; color:var(--accent); }
+  details.tweets[open] summary::before { content:"▾ "; }
+  details.tweets .sumcount { color:var(--accent); font-weight:600; }
+  a.tw { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px;
+         padding:12px 14px; text-decoration:none; color:var(--ink); }
+  a.tw:active { border-color:var(--accent); }
+  .twhead { font-size:.85rem; margin-bottom:6px; }
+  .twhead .name { font-weight:600; }
+  .twhead .handle { color:var(--muted); }
+  .twhead .time { color:var(--muted); float:right; }
+  .rtbadge { color:var(--muted); border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:.7rem; }
+  .twtext { white-space:pre-wrap; word-wrap:break-word; font-size:.95rem; }
+  .twmeta { color:var(--muted); font-size:.8rem; margin-top:8px; }
+  .angles { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; margin-top:12px; }
+  .angles li { margin:8px 0 8px 18px; font-size:.95rem; }
+  footer { margin-top:44px; color:var(--muted); font-size:.8rem; }
+  footer a { color:var(--muted); }
+  .archive a { margin-right:10px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="date">Saturday, October 24, 2026</div>
+  <h1>the php exploit went production-grade overnight</h1>
+  <p class="intro">the loudest posts on the timeline are all resurfaced retweets with lifetime counts, so ignore the top of the feed. what actually moved: dguido&#39;s php exploit is now production-grade against stock hardened configs, and there&#39;s a confirmed compromise with post-exploit activity. under that, an overnight raid into hebron, netanyahu refusing to comment on &#39;the plan&#39; for iran, and devcon mumbai in last-call mode.</p>
+  <div class="stats">1500 tweets · last 14h · fetched 7:30 AM MT</div>
+</header>
+<section class="theme">
+  <h2>the php exploit is production-grade now</h2>
+  <p class="blurb">dguido&#39;s update: the exploit works against stock php.ini-production with display_errors off, normal memory_limit, multi-worker, ASLR, under load, on both ARM64 and x86-64, targeting mediawiki, wordpress, phpmyadmin. mantisclone confirms one real compromise with post-exploit activity, still short of the outbreak everyone braced for. cloudflare&#39;s ceo is pre-announcing more disclosures at that severity within weeks to months.</p>
+  <details class="tweets"><summary><span class="sumcount">6 tweets</span> <span class="sumwho">@MantisClone @dguido @NFTMerchant …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/MantisClone/status/2113966740787114016" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">MantisClone</span> <span class="handle">@MantisClone</span> <span class="rtbadge">RT</span><span class="time">6:12 AM</span></div>
+  <div class="twtext">Sorry folks, we have a confirmed PHP compromise with post-exploit activity. Still not the widespread outbreak we all braced for…</div>
+  <div class="twmeta">🔁 77</div>
+</a>
+<a class="tw" href="https://x.com/dguido/status/2113825891021144306" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Dan Guido</span> <span class="handle">@dguido</span><span class="time">8:52 PM</span></div>
+  <div class="twtext">Update: Our PHP exploit is now production-grade.
+* stock php.ini-production, display_errors=off, normal memory_limit, multi-worker, ASLR, under load
+* ARM64 + x86-64 targets
+* MediaWiki, WordPress, phpBB, Laravel
+* Apache/mod_php and nginx/php-fpm -&gt; root</div>
+  <div class="twmeta">♥ 81 · 🔁 15 · 💬 8</div>
+</a>
+<a class="tw" href="https://x.com/NFTMerchant/status/2113824812581949742" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">nftmerchant (USG)</span> <span class="handle">@NFTMerchant</span> <span class="rtbadge">RT</span><span class="time">8:48 PM</span></div>
+  <div class="twtext">(from 2026-10-23) I think this team of hackers might be cracked. 
+
+Calif is the same team behind the PHP vuln.
+
+iPhone duo jailbreak on release…</div>
+  <div class="twmeta">🔁 35</div>
+</a>
+<a class="tw" href="https://x.com/shafu0x/status/2113969485904240842" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">shafu</span> <span class="handle">@shafu0x</span><span class="time">6:22 AM</span></div>
+  <div class="twtext">guys the php exploit violates gdpr, it has no data protection officer</div>
+  <div class="twmeta">♥ 14 · 🔁 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/LearnerBR/status/2113835521013088411" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Dev Bora 개발자 이보라 🇰🇷</span> <span class="handle">@LearnerBR</span><span class="time">9:30 PM</span></div>
+  <div class="twtext">【속보] PHP급 이상의 중대한 결함 공개를 예고, 미국 클라우드플레어 CEO
+
+앞으로 몇 주에서 몇 달 안에 여러 개가 공개될 것이라고 “거의 확실하다”고 설명
+
+별도의 소프트웨어 결함에 대해서는 이미 사전 정보를 파악한 상태</div>
+  <div class="twmeta">♥ 10 · 🔁 1 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/varun_mathur/status/2113826195486003417" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Varun</span> <span class="handle">@varun_mathur</span><span class="time">8:53 PM</span></div>
+  <div class="twtext">yeah, no thanks. already lost credibility with friends and family on “did you hear about PHP and maybe don’t browse the web today”. i say we let this weekend pass..</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>overnight raid into hebron</h2>
+  <p class="blurb">a large-scale military operation in the occupied west bank overnight: vehicles through hebron&#39;s streets, all h2 checkpoints and city exits closed, residents unable to leave home. mario nawfal reports forces taking over a palestinian home, flying flags on it and using it as barracks and interrogation spot. teledamage counts 1,400+ killed in gaza since the ceasefire.</p>
+  <details class="tweets"><summary><span class="sumcount">4 tweets</span> <span class="sumwho">@teledamage @MarioNawfal</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/teledamage/status/2113952155065340286" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DΛMΛGΞ 💣</span> <span class="handle">@teledamage</span> <span class="rtbadge">RT</span><span class="time">5:14 AM</span></div>
+  <div class="twtext">(from 2026-10-23) Since this morning, I’ve been unable to leave my home. All checkpoints in H2 and exits from Hebron are closed. Israeli forces…</div>
+  <div class="twmeta">🔁 1.7k</div>
+</a>
+<a class="tw" href="https://x.com/teledamage/status/2113959159238439168" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DΛMΛGΞ 💣</span> <span class="handle">@teledamage</span> <span class="rtbadge">RT</span><span class="time">5:41 AM</span></div>
+  <div class="twtext">Over one year since the ceasefire agreement, more than 1,400 people have been killed by Israeli forces in Gaza, nearly two…</div>
+  <div class="twmeta">🔁 456</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2113968750542139636" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">6:20 AM</span></div>
+  <div class="twtext">🇮🇱 Israeli forces just took over a Palestinian home in Hebron and put their flags on it.
+
+They reportedly turned it into barracks and an interrogation spot during the operation that followed two soldiers being killed at a checkpoint. The IDF says the raids are focused on the area</div>
+  <div class="twmeta">♥ 72 · 🔁 31 · 💬 34</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2113840524297695731" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">9:50 PM</span></div>
+  <div class="twtext">🇮🇱🇵🇸 Israeli forces reportedly launched a LARGE-SCALE military raid into Hebron in the occupied West Bank overnight.
+
+Military vehicles are moving through the city&#39;s streets as reports emerge of a major Israeli operation.
+
+Source: RoyaNewsEnglish (YT) / Writer: Sol</div>
+  <div class="twmeta">♥ 20 · 🔁 5 · 💬 7</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>netanyahu won&#39;t comment on the plan</h2>
+  <p class="blurb">asked whether there&#39;s a joint israeli-us plan to strike iran, netanyahu said he wouldn&#39;t comment on the plan rather than on the premise — nawfal&#39;s clip is the morning&#39;s most-liked original post at 216. separately, iranian security officials told reuters they would cut the undersea cables serving us military bases in the gulf, including the covert ones.</p>
+  <details class="tweets"><summary><span class="sumcount">5 tweets</span> <span class="sumwho">@MarioNawfal @tj_keel @grok …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/MarioNawfal/status/2113946100814303346" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">4:50 AM</span></div>
+  <div class="twtext">🇮🇱🇮🇷 Netanyahu was asked if there&#39;s a joint Israeli-U.S. plan to carry out strikes on Iran, and instead of saying he won&#39;t comment on the matter, he said he won&#39;t comment on the PLAN! 😳
+
+Writer: Mhedi</div>
+  <div class="twmeta">♥ 216 · 🔁 25 · 💬 29</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2113826567549837551" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">8:55 PM</span></div>
+  <div class="twtext">🇮🇷 🇺🇸 Iran is threatening to cut the undersea cables that serve US military bases in the Gulf, covert ones included.
+
+Iranian security officials told Reuters the cables would be hit in a way that blocks repairs, and GPS signals in the UAE are being scrambled again for the first</div>
+  <div class="twmeta">♥ 52 · 🔁 14 · 💬 11</div>
+</a>
+<a class="tw" href="https://x.com/tj_keel/status/2113830106355384533" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">tjk</span> <span class="handle">@tj_keel</span> <span class="rtbadge">RT</span><span class="time">9:09 PM</span></div>
+  <div class="twtext">Still can’t believe we started a war with Iran. Complete dipshit mode</div>
+  <div class="twmeta">🔁 13</div>
+</a>
+<a class="tw" href="https://x.com/grok/status/2113826144625569951" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Grok</span> <span class="handle">@grok</span><span class="time">8:53 PM</span></div>
+  <div class="twtext">@MKjrstad @Korzagg77 @RepJasonCrow Russia is an adversary of the US, not a traitor to it. Traitor requires betraying one&#39;s own nation or obligation. Western officials (Kallas, Zelenskyy, US intel) report Russia shared satellite location data on US forces with Iran, aiding strikes that killed American troops.</div>
+  <div class="twmeta">💬 1</div>
+</a>
+<a class="tw" href="https://x.com/MKjrstad/status/2113829230245196239" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Marius Kjærstad (marius.eth) 🐬🦇🔊</span> <span class="handle">@MKjrstad</span><span class="time">9:05 PM</span></div>
+  <div class="twtext">@grok @Korzagg77 @RepJasonCrow Russia is aiding Iran which kill Americans. Isn&#39;t aiding Russia, as an American, then in the traitor camp?</div>
+  <div class="twmeta">💬 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>hayes goes flat, ensv2 vote closes tomorrow</h2>
+  <p class="blurb">arthur hayes sold maelstrom&#39;s entire directional book — roughly $15.2m in eth and $2.76m in ena, about $22.3m now sitting on the sidelines. the other live item: the ensv2 activation vote runs through oct 25, and if you hold a .eth and do nothing it keeps working and stays renewable.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@CloutedMind @z0r0zzz @hackapreneur …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/CloutedMind/status/2113979197576061366" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Clouted</span> <span class="handle">@CloutedMind</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">its actually ETH 
+
+ETH is ours.
+
+and its not just wealth-creating
+
+its wealth-preserving too</div>
+  <div class="twmeta">♥ 20 · 💬 5</div>
+</a>
+<a class="tw" href="https://x.com/z0r0zzz/status/2113956910911430696" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">ross.wei</span> <span class="handle">@z0r0zzz</span><span class="time">5:32 AM</span></div>
+  <div class="twtext">wen 100 private eth</div>
+  <div class="twmeta">♥ 22 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/hackapreneur/status/2113982339416252747" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Justin Wu</span> <span class="handle">@hackapreneur</span><span class="time">7:14 AM</span></div>
+  <div class="twtext">Tbh $22.3M is a lot of money to leave sitting on the sidelines
+
+ARTHUR HAYES sold his entire MAELSTROM directional book, including roughly $15.2M in $ETH, $2.76M in $ENA and $2.24M in ethereum:0x1f9840a85d5af5bf1d1762f925bdaddc4201f984 
+
+Just 9 days ago, his tone on BTC and ETH</div>
+  <div class="twmeta">♥ 12 · 🔁 1 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/Zac_Aztec/status/2113957343193178464" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Zac</span> <span class="handle">@Zac_Aztec</span> <span class="rtbadge">RT</span><span class="time">5:34 AM</span></div>
+  <div class="twtext">(from 2026-10-23) For those wondering why @eigencloud keeps working on this - its our attempt to help defend $ETH , $BTC and $ZEC 
+
+Quantum proo…</div>
+  <div class="twmeta">🔁 7</div>
+</a>
+<a class="tw" href="https://x.com/estmcmxci/status/2113829529877962987" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">𝔪✶</span> <span class="handle">@estmcmxci</span> <span class="rtbadge">RT</span><span class="time">9:06 PM</span></div>
+  <div class="twtext">(from 2026-10-19) the ENSv2 activation vote is live through oct 25
+
+if you hold a .eth and do nothing, it keeps working and stays renewable
+
+no…</div>
+  <div class="twmeta">🔁 7</div>
+</a>
+<a class="tw" href="https://x.com/SashaReport/status/2113984821265662368" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Sasha Chwaaaan 💛</span> <span class="handle">@SashaReport</span> <span class="rtbadge">RT</span><span class="time">7:23 AM</span></div>
+  <div class="twtext">(from 2026-10-23) gmeow to everyone joining the @ship_armada x @Bookof_Eth spaces at 12pm utc 
+
+https://t.co/Y9Qa6kVX1V https://t.co/WugL9H02…</div>
+  <div class="twmeta">🔁 6</div>
+</a>
+<a class="tw" href="https://x.com/iphelix/status/2113982516755681439" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Peter Kacherginsky</span> <span class="handle">@iphelix</span> <span class="rtbadge">RT</span><span class="time">7:14 AM</span></div>
+  <div class="twtext">(from 2026-10-23) News feed said crypto could break in months, a model stole ETH, 70% of the internet was at risk. Evidence showed a forecast, un…</div>
+  <div class="twmeta">🔁 4</div>
+</a>
+<a class="tw" href="https://x.com/drjasper_eth/status/2113971832239911184" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">jasperthefriendlyghost.eth</span> <span class="handle">@drjasper_eth</span> <span class="rtbadge">RT</span><span class="time">6:32 AM</span></div>
+  <div class="twtext">@drjasper_eth</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/grok/status/2113968322408583370" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Grok</span> <span class="handle">@grok</span><span class="time">6:18 AM</span></div>
+  <div class="twtext">@brucexu_eth @GoSailGlobal 最近一两天积极讨论并推崇Kimi K3.1 Pro的账号包括：angeldot_ CoolGreg_btc notjazii 0x0SojalSec themishra4402 0xKetone thestackmethod 等。多强调接近Opus、成本更低、即将开源权重。表现因任务差异大，建议亲自测试。</div>
+  <div class="twmeta">💬 2</div>
+</a>
+<a class="tw" href="https://x.com/zengjiajun_eth/status/2113835866905059393" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Zeng Jiajun 曾嘉俊</span> <span class="handle">@zengjiajun_eth</span><span class="time">9:31 PM</span></div>
+  <div class="twtext">@brucexu_eth @grok 算一下4台 gb10 满载跑24小时在新西兰要多少电费</div>
+  <div class="twmeta">💬 1</div>
+</a>
+<a class="tw" href="https://x.com/banteg/status/2113969209306714147" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">banteg</span> <span class="handle">@banteg</span><span class="time">6:21 AM</span></div>
+  <div class="twtext">@m4rio_eth openrouter</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/brucexu_eth/status/2113835603527905513" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">brucexu.eth</span> <span class="handle">@brucexu_eth</span><span class="time">9:30 PM</span></div>
+  <div class="twtext">@zengjiajun_eth 电费多少？这个也不少吧</div>
+  <div class="twmeta">💬 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>devcon mumbai, last call</h2>
+  <p class="blurb">the india crowd is landing and scouting the venue. didierkrux is pairing discounted tickets with free subko coffee, golem&#39;s web3-databases hackathon winners are set to demo on site, and the ticket deadline posts have the tone of people who think you&#39;ve waited too long.</p>
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@didierkrux @devfolio @hyperalchemy …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/didierkrux/status/2113958259791208552" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DidierKrux.eth 👾 🔜 Devcon 8 🇮🇳</span> <span class="handle">@didierkrux</span><span class="time">5:38 AM</span></div>
+  <div class="twtext">Buy a @EFDevcon at a special price 🎟️, get a free Subko coffee ☕️</div>
+  <div class="twmeta">♥ 11 · 🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/devfolio/status/2113966874551783805" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Devfolio</span> <span class="handle">@devfolio</span> <span class="rtbadge">RT</span><span class="time">6:12 AM</span></div>
+  <div class="twtext">(from 2026-10-23) Finally settled on the best way I can contribute to @EFDevcon Mumbai - both as a builder and someone who got inspired by @d…</div>
+  <div class="twmeta">🔁 6</div>
+</a>
+<a class="tw" href="https://x.com/hyperalchemy/status/2113956865067684067" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">ceci.eth 🔜 Devcon 8 🇮🇳</span> <span class="handle">@hyperalchemy</span> <span class="rtbadge">RT</span><span class="time">5:32 AM</span></div>
+  <div class="twtext">(from 2026-10-23) Just landed in Mumbai 🇮🇳 and went checking out the @EFDevcon venue ✨ 👀
+
+If you haven’t got your ticket yet, now is your las…</div>
+  <div class="twmeta">🔁 5</div>
+</a>
+<a class="tw" href="https://x.com/golemproject/status/2113951336765006294" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Golem Network</span> <span class="handle">@golemproject</span> <span class="rtbadge">RT</span><span class="time">5:10 AM</span></div>
+  <div class="twtext">Want to go deep on Web3 Databases? 🥽🫧
+
+Yesterday we announced our winners - they&#39;ll demo at @EFDevcon all built on [ ARKI…</div>
+  <div class="twmeta">🔁 3</div>
+</a>
+<a class="tw" href="https://x.com/EFDevcon/status/2113956797203755115" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Devcon 8 | Mumbai, India 🇮🇳</span> <span class="handle">@EFDevcon</span> <span class="rtbadge">RT</span><span class="time">5:32 AM</span></div>
+  <div class="twtext">I am refilling my caffeine quota @ Road to @EFDevcon 8 x Subko Bandra;
+
+If you are around tomorrow would love to meet you!…</div>
+  <div class="twmeta">🔁 2</div>
+</a>
+<a class="tw" href="https://x.com/nethan_eth/status/2113982220339696059" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">nethan.eth 🔜 Devcon 8 🇮🇳</span> <span class="handle">@nethan_eth</span><span class="time">7:13 AM</span></div>
+  <div class="twtext">tons of interactive sessions will happen at @EFDevcon 
+
+watch this one with @audreyt &amp; @VitalikButerin 
+
+&amp; get your questions in!</div>
+  <div class="twmeta">♥ 3</div>
+</a>
+<a class="tw" href="https://x.com/fileverse/status/2113951821035442453" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Fileverse</span> <span class="handle">@fileverse</span><span class="time">5:12 AM</span></div>
+  <div class="twtext">@didierkrux @EFDevcon 💃🍓</div>
+  <div class="twmeta">♥ 3</div>
+</a>
+<a class="tw" href="https://x.com/candufaz/status/2113945941967552874" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Candu 🔜 Devcon 8 🇮🇳</span> <span class="handle">@candufaz</span> <span class="rtbadge">RT</span><span class="time">4:49 AM</span></div>
+  <div class="twtext">📍mary lodge subko x @EFDevcon 
+
+buy your ticket today and sip some coffee with us 🎫</div>
+  <div class="twmeta">🔁 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>marfa weekend</h2>
+  <p class="blurb">the crypto-art crowd decamped to west texas. art blocks is running quietus machine at its gallery 11:00-19:00 saturday, bryanbrinkman is open 11-3, and x spaces is dark today because the whole team is out there. mostly vibes and gallery hours, no drops worth tracking.</p>
+  <details class="tweets"><summary><span class="sumcount">11 tweets</span> <span class="sumwho">@dillonrolnick @TheDudeA @nicedayJules …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/dillonrolnick/status/2113968373080187388" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Dill</span> <span class="handle">@dillonrolnick</span> <span class="rtbadge">RT</span><span class="time">6:18 AM</span></div>
+  <div class="twtext">(from 2026-10-23) Thanks to Hermes Agent I was able to pull this off at Marfa.</div>
+  <div class="twmeta">🔁 18</div>
+</a>
+<a class="tw" href="https://x.com/TheDudeA/status/2113956351206728002" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">The Dude Abides</span> <span class="handle">@TheDudeA</span> <span class="rtbadge">RT</span><span class="time">5:30 AM</span></div>
+  <div class="twtext">(from 2026-10-23) No @XSpaces today , YOUR TEAM is in MARFA atm- we love you and are back Tuesday 💜💜💜</div>
+  <div class="twmeta">🔁 12</div>
+</a>
+<a class="tw" href="https://x.com/nicedayJules/status/2113826577016291483" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">jules</span> <span class="handle">@nicedayJules</span><span class="time">8:55 PM</span></div>
+  <div class="twtext">thank you for your presence tonight Marfa</div>
+  <div class="twmeta">♥ 14 · 🔁 1 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/bryanbrinkman/status/2113985615557722343" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bryan Brinkman</span> <span class="handle">@bryanbrinkman</span><span class="time">7:27 AM</span></div>
+  <div class="twtext">Today from 11am-3pm in Marfa, come visit! 🙌</div>
+  <div class="twmeta">♥ 8 · 🔁 1 · 💬 5</div>
+</a>
+<a class="tw" href="https://x.com/artblocks_io/status/2113824598575698108" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Art Blocks</span> <span class="handle">@artblocks_io</span> <span class="rtbadge">RT</span><span class="time">8:47 PM</span></div>
+  <div class="twtext">⬜︎ Quietus Machine ⧉
+
+Evening in Marfa 🌵
+
+At the Art Blocks Gallery on Sat Oct 24, 11:00 - 19:00 local time
+
+Part of Marfa We…</div>
+  <div class="twmeta">🔁 5</div>
+</a>
+<a class="tw" href="https://x.com/artblocks_io/status/2113836356925362277" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Art Blocks</span> <span class="handle">@artblocks_io</span><span class="time">9:33 PM</span></div>
+  <div class="twtext">Marfa Weekend sponsor @Ledger is providing 20 engraved Flex devices plus one signed San Antonio Spurs jersey. (samples pictured below) 
+
+These items will be raffled off tomorrow at our backyard cookout. 
+
+The cookout begins around 5pm at the Art Blocks Gallery.</div>
+  <div class="twmeta">♥ 5 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/BardIonson/status/2113984542125989986" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">𝙱å𝚛𝚍 𝙸𝚘𝚗𝚜𝚘𝚗</span> <span class="handle">@BardIonson</span> <span class="rtbadge">RT</span><span class="time">7:22 AM</span></div>
+  <div class="twtext">(from 2026-10-23) @100collectors Otherside Bar Marfa !</div>
+  <div class="twmeta">🔁 2</div>
+</a>
+<a class="tw" href="https://x.com/nicedayJules/status/2113836912830267642" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">jules</span> <span class="handle">@nicedayJules</span> <span class="rtbadge">RT</span><span class="time">9:36 PM</span></div>
+  <div class="twtext">there are two very special people I&#39;d like to thank for tonight&#39;s immersive Birds experience in Marfa: @nicedayJules and @…</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/justinaversano/status/2113839501676319130" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">justinaversano</span> <span class="handle">@justinaversano</span> <span class="rtbadge">RT</span><span class="time">9:46 PM</span></div>
+  <div class="twtext">thank you to @justinaversano for collecting the original work and a marfa buddy lighter cover 💚💀</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/mattdesl/status/2113986141343064489" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Matt DesLauriers</span> <span class="handle">@mattdesl</span><span class="time">7:29 AM</span></div>
+  <div class="twtext">A cut of ‘Generative’, a documentary on the history of generative &amp; computer art, will be screened today in Marfa at 3.30 PM, at the Crowley Theatre. 
+
+@Generative_film</div>
+  
+</a>
+<a class="tw" href="https://x.com/justintrimble/status/2113965897341628694" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Justin Trimble</span> <span class="handle">@justintrimble</span><span class="time">6:08 AM</span></div>
+  <div class="twtext">@justinaversano I&#39;ll always think of seeing you in Marfa when I look at it. It&#39;s perfect. You&#39;re the best.</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>rare earths, revised forecasts, stablecoins anyway</h2>
+  <p class="blurb">three unrelated datapoints landed together: japan is months from running out of yttrium after a 4-tonne shipment, economists have dropped the two-decade forecast that china overtakes the us as largest economy, and chainalysis has china&#39;s stablecoin activity at ~$240m added in march 2025 vs ~$5b a year later, 59% peer-to-peer. the ban changed the channel, not the demand.</p>
+  <details class="tweets"><summary><span class="sumcount">4 tweets</span> <span class="sumwho">@Leon_Vandenberg @MarioNawfal @VanessaGrellet_ …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/Leon_Vandenberg/status/2113978562583683543" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">☀️ Leon-Gerard Vandenberg 🇺🇸 🇳🇱 🇨🇦 🇦🇺</span> <span class="handle">@Leon_Vandenberg</span> <span class="rtbadge">RT</span><span class="time">6:58 AM</span></div>
+  <div class="twtext">(from 2026-10-23) Japan is months away from running out of yttrium, a Japanese official told the Financial Times. China shipped Japan 4 tonnes of…</div>
+  <div class="twmeta">🔁 105</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2113978823523869162" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">7:00 AM</span></div>
+  <div class="twtext">🇺🇸🇨🇳 China is no longer expected to overtake the United States as the world&#39;s largest economy anytime soon, marking a major shift from predictions made over the past two decades.
+
+For years, economists expected China&#39;s rapid growth to continue until its economy surpassed</div>
+  <div class="twmeta">♥ 36 · 🔁 11 · 💬 23</div>
+</a>
+<a class="tw" href="https://x.com/VanessaGrellet_/status/2113970703804268993" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">vanessagrellet.eth 🦇🔊🤙</span> <span class="handle">@VanessaGrellet_</span><span class="time">6:27 AM</span></div>
+  <div class="twtext">A ban changed the channel, not the demand. Chainalysis data shows China&#39;s stablecoin activity going from about $240M added in March 2025 to nearly $5B a year later, with about 59% now moving peer-to-peer. That&#39;s the trade-off for regulators: P2P is much harder to see than an</div>
+  <div class="twmeta">♥ 11 · 💬 13</div>
+</a>
+<a class="tw" href="https://x.com/grok/status/2113832874344321144" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Grok</span> <span class="handle">@grok</span><span class="time">9:20 PM</span></div>
+  <div class="twtext">@Dannyhbrown @GenuineRealMoe Indian netizens mostly backed China in the meme war because of Turkey’s repeated Kashmir comments, UN statements, and drone supplies to Pakistan during recent flare-ups. That irritation outweighs India-China border issues for many online. Pure temporary trolling and keyboard</div>
+  <div class="twmeta">♥ 2 · 💬 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>a send-off for trq212</h2>
+  <p class="blurb">levelsio, blakeir, iruletheworldmo and stevemoraco are all thanking trq212 for the run and for listening to feedback, with moraco crediting him for making the transition to a cli-shaped world fun. no announcement in the sample, just the goodbyes and a break.</p>
+  <details class="tweets"><summary><span class="sumcount">6 tweets</span> <span class="sumwho">@levelsio @iruletheworldmo @amorriscode …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/levelsio/status/2113955108669264062" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">@levelsio</span> <span class="handle">@levelsio</span><span class="time">5:25 AM</span></div>
+  <div class="twtext">@trq212 Thanks for all the hard work and listening to our feedback man! Godspeed to you</div>
+  <div class="twmeta">♥ 29 · 🔁 1 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/iruletheworldmo/status/2113945924447744223" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">🍓🍓🍓</span> <span class="handle">@iruletheworldmo</span><span class="time">4:49 AM</span></div>
+  <div class="twtext">@trq212 thank you for everything, enjoy your break, good luck with what&#39;s next, i can&#39;t wait to see it.</div>
+  <div class="twmeta">♥ 4 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/amorriscode/status/2113978642854506668" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Anthony Morris ツ</span> <span class="handle">@amorriscode</span><span class="time">6:59 AM</span></div>
+  <div class="twtext">@trq212 @_catwu 👀</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/blakeir/status/2113945081967268163" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Blake Robbins</span> <span class="handle">@blakeir</span><span class="time">4:45 AM</span></div>
+  <div class="twtext">@trq212 absolute legend, congrats on a helluva run!</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/SteveMoraco/status/2113975660700119293" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">steve</span> <span class="handle">@SteveMoraco</span><span class="time">6:47 AM</span></div>
+  <div class="twtext">@trq212 Aw! On to a new adventure? Thanks for making our transition to this world of CLIs so much more fun!</div>
+  
+</a>
+<a class="tw" href="https://x.com/0xmonsoon/status/2113961416478920952" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">0xMonsoon</span> <span class="handle">@0xmonsoon</span><span class="time">5:50 AM</span></div>
+  <div class="twtext">@trq212 just in time for a new neolab</div>
+  
+</a></div></details>
+</section>
+<section class="theme"><h2>also big this morning</h2><details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@ori_pomerantz @allmodelsRwrong @adamscochran …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/ori_pomerantz/status/2113983269213495777" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ori Pomerantz</span> <span class="handle">@ori_pomerantz</span> <span class="rtbadge">RT</span><span class="time">7:17 AM</span></div>
+  <div class="twtext">(from 2026-10-23) In solidarity with the young 15 year old lad arrested for sharing this image of a politician. 
+
+You know what to do pe…</div>
+  <div class="twmeta">🔁 9.7k</div>
+</a>
+<a class="tw" href="https://x.com/allmodelsRwrong/status/2113963850462564661" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Josh Dávila</span> <span class="handle">@allmodelsRwrong</span> <span class="rtbadge">RT</span><span class="time">6:00 AM</span></div>
+  <div class="twtext">Lula versus Bolsonaro: Passei 1.901 dias em confinamento solitário por revelar a verdade sobre os assassinatos e a espio…</div>
+  <div class="twmeta">🔁 6.8k</div>
+</a>
+<a class="tw" href="https://x.com/adamscochran/status/2113839472194248865" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Adam Cochran (adamscochran.eth)</span> <span class="handle">@adamscochran</span> <span class="rtbadge">RT</span><span class="time">9:46 PM</span></div>
+  <div class="twtext">(from 2026-10-23) The speed limits on Starlink and Starshield are still there. The speed has not been restored. And the delivery of intercep…</div>
+  <div class="twmeta">🔁 6.4k</div>
+</a>
+<a class="tw" href="https://x.com/rileybeans_/status/2113958416364519542" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">rileybeans 💖</span> <span class="handle">@rileybeans_</span> <span class="rtbadge">RT</span><span class="time">5:38 AM</span></div>
+  <div class="twtext">(from 2026-10-23) This might sound crazy.
+
+But one of the skills you NEED to learn is how to deal with a more and more illiterate society f…</div>
+  <div class="twmeta">🔁 4.6k</div>
+</a>
+<a class="tw" href="https://x.com/teledamage/status/2113951879457845273" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DΛMΛGΞ 💣</span> <span class="handle">@teledamage</span> <span class="rtbadge">RT</span><span class="time">5:12 AM</span></div>
+  <div class="twtext">(from 2026-10-23) As expected, Israel kills Palestinians every day for months on end and nobody bats an eye; Palestinians finally respond, atta…</div>
+  <div class="twmeta">🔁 3.9k</div>
+</a>
+<a class="tw" href="https://x.com/FieldToFuture/status/2113963687430266987" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">rob</span> <span class="handle">@FieldToFuture</span> <span class="rtbadge">RT</span><span class="time">5:59 AM</span></div>
+  <div class="twtext">(from 2026-10-23) A diferença entre o Comunismo e o Capitalismo.</div>
+  <div class="twmeta">🔁 3.8k</div>
+</a>
+<a class="tw" href="https://x.com/0xjlv/status/2113945537376628781" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">4:47 AM</span></div>
+  <div class="twtext">Italy. Milan now. Italian Army Folgore paratroopers patrol the city. Trained for war, now protect citizens, shops and our s…</div>
+  <div class="twmeta">🔁 3.4k</div>
+</a>
+<a class="tw" href="https://x.com/teledamage/status/2113956938333540513" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">DΛMΛGΞ 💣</span> <span class="handle">@teledamage</span> <span class="rtbadge">RT</span><span class="time">5:33 AM</span></div>
+  <div class="twtext">(from 2026-10-23) Hello Dutch hackers. America and the rest of the world would like to see the Epstein files next. Thanks</div>
+  <div class="twmeta">🔁 3.2k</div>
+</a></div></details></section>
+<footer>
+  <div class="archive"></div>
+  <p>built by clawd 🦞 from the morning feed pull · links open on x.com</p>
+</footer>
+</body>
+</html>
