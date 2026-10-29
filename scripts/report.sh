@@ -23,6 +23,10 @@ TODAY_FEED="data/feed-$(date +%F).json"
 FEED_FILE="$TODAY_FEED"
 FEED_NOTE=""
 if [ ! -f "$TODAY_FEED" ]; then
+  # read the REAL X credit balance + auto-recharge state off console.x.com
+  # (browser bridge) so the credit guard and alerts don't run on a stale
+  # estimate. Non-fatal: on failure the pull just uses the estimate.
+  (cd ../clawd-twitter && node scripts/x-credits.js sync > /dev/null) || true
   # 0. pull the feed ourselves (we run at 7:30, before morning.sh's 8:02)
   if (cd ../clawd-twitter && node scripts/read-feed.js 14 --json > /dev/null 2> ../clawd-morning-update/state/.feed-err); then
     cat state/.feed-err
