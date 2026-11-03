@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>morning update · 2026-11-03</title>
+<style>
+  :root { --bg:#f6f5f2; --card:#ffffff; --ink:#1a1a1a; --muted:#71717a; --line:#e4e4e7; --accent:#b4552d; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#101012; --card:#1a1a1e; --ink:#e8e8ea; --muted:#8e8e96; --line:#2a2a30; --accent:#e07a4a; }
+  }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         max-width:640px; margin:0 auto; padding:16px 14px 60px; }
+  header h1 { font-size:1.5rem; line-height:1.25; letter-spacing:-0.01em; }
+  header .date { color:var(--muted); font-size:.85rem; margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em; }
+  header .stats { color:var(--muted); font-size:.85rem; margin-top:8px; }
+  .intro { margin:16px 0 4px; font-size:1.02rem; }
+  section.theme { margin-top:30px; }
+  section.theme h2 { font-size:1.12rem; margin-bottom:4px; }
+  .daysline { color:var(--accent); font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px; }
+  .blurb { color:var(--muted); font-size:.92rem; margin-bottom:10px; }
+  .cards { display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+  details.tweets { margin-top:6px; }
+  details.tweets summary { cursor:pointer; list-style:none; -webkit-user-select:none; user-select:none;
+                           color:var(--muted); font-size:.85rem; padding:6px 0; }
+  details.tweets summary::-webkit-details-marker { display:none; }
+  details.tweets summary::before { content:"▸ "; color:var(--accent); }
+  details.tweets[open] summary::before { content:"▾ "; }
+  details.tweets .sumcount { color:var(--accent); font-weight:600; }
+  a.tw { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px;
+         padding:12px 14px; text-decoration:none; color:var(--ink); }
+  a.tw:active { border-color:var(--accent); }
+  .twhead { font-size:.85rem; margin-bottom:6px; }
+  .twhead .name { font-weight:600; }
+  .twhead .handle { color:var(--muted); }
+  .twhead .time { color:var(--muted); float:right; }
+  .rtbadge { color:var(--muted); border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:.7rem; }
+  .twtext { white-space:pre-wrap; word-wrap:break-word; font-size:.95rem; }
+  .twmeta { color:var(--muted); font-size:.8rem; margin-top:8px; }
+  .angles { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; margin-top:12px; }
+  .angles li { margin:8px 0 8px 18px; font-size:.95rem; }
+  footer { margin-top:44px; color:var(--muted); font-size:.8rem; }
+  footer a { color:var(--muted); }
+  .archive a { margin-right:10px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="date">Tuesday, November 3, 2026</div>
+  <h1>devcon 8 opens in mumbai and everything shipped is privacy</h1>
+  <p class="intro">Devcon 8&#39;s opening ceremony went live at Jio World Centre this morning, Vitalik on the Lotus Stage, and nearly every launch bolted to it was a privacy launch: Aztec&#39;s Tierra alpha, Kohaku landing in wallets, Consensys&#39; interop stack for institutions. Meanwhile the non-crypto half of the timeline is pure US election day — POTUS, WhiteHouse and Musk retweets cresting — plus Trump cutting Israel&#39;s $4B annual aid. 800 tweets in 14 hours, and the privacy talk is the only part that&#39;s load-bearing.</p>
+  <div class="stats">800 tweets · last 14h · fetched 7:30 AM MT</div>
+</header>
+<section class="theme">
+  <h2>devcon 8, day one</h2>
+  <p class="blurb">Opening ceremony kicked off with Vitalik, drakefjustin and audreyt; his line was that we need to treat data as toxic waste by default. Kleros, Loot Realms and CREDEBL are showing on the floor, streamETH mirroring every talk with transcripts through Nov 6. Consensys used the stage to launch Sovereign Network Interoperability for institutional ledgers.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@MadridMaloL @dan_lipert @_rossstephenson …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/MadridMaloL/status/2117621933248508275" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Natalia Madrid-MaloL</span> <span class="handle">@MadridMaloL</span> <span class="rtbadge">RT</span><span class="time">7:16 AM</span></div>
+  <div class="twtext">🚨 VITALIK: “We really need to treat data as toxic waste by default.” 
+
+At Devcon Mumbai, he calls for open-source tech a…</div>
+  <div class="twmeta">🔁 79</div>
+</a>
+<a class="tw" href="https://x.com/dan_lipert/status/2117623629207015793" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">⭐ Dan Lipert ⭐</span> <span class="handle">@dan_lipert</span> <span class="rtbadge">RT</span><span class="time">7:23 AM</span></div>
+  <div class="twtext">KOHAKU UPDATE
+
+finally, kohaku demo at DEVCON MUMBAI
+
+shield assets in one tap inside a wallet
+(you don&#39;t need to read the g…</div>
+  <div class="twmeta">🔁 16</div>
+</a>
+<a class="tw" href="https://x.com/_rossstephenson/status/2117622207652503834" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ross.pengu</span> <span class="handle">@_rossstephenson</span> <span class="rtbadge">RT</span><span class="time">7:17 AM</span></div>
+  <div class="twtext">Currently meeting so many strong founders, traders and buildering here in Mumbai and honored to host another epic build…</div>
+  <div class="twmeta">🔁 7</div>
+</a>
+<a class="tw" href="https://x.com/EFDevcon/status/2117472473931518344" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Devcon 8 | Mumbai, India 🇮🇳</span> <span class="handle">@EFDevcon</span><span class="time">9:22 PM</span></div>
+  <div class="twtext">Reminder, if you didn’t make it to Mumbai, you can still watch along with us on the live stream. Opening ceremony starting soon, tune in! 👇</div>
+  <div class="twmeta">♥ 14</div>
+</a>
+<a class="tw" href="https://x.com/LootRealms/status/2117622736722030683" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Realms.World ☁️</span> <span class="handle">@LootRealms</span><span class="time">7:19 AM</span></div>
+  <div class="twtext">🇮🇳 Realms Frontier is getting showcased at @EFDevcon Game Zone!
+
+📌 India, Jio World Centre, Mumbai, Nov 3–6.  
+
+And with that, we&#39;re proud to announce the Frontier&#39;s Devcon Season 0 is live!
+
+Remember, the mist forgets. But the Realm remembers.
+
+Season end 👉 Friday, 1 PM ET!</div>
+  <div class="twmeta">♥ 3 · 🔁 2 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/blueSky_AnkitA/status/2117621851484758492" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ankita Patidar</span> <span class="handle">@blueSky_AnkitA</span> <span class="rtbadge">RT</span><span class="time">7:16 AM</span></div>
+  <div class="twtext">Meet the CREDEBL Maintainers at Devcon 8, Mumbai!
+
+Aspart of the @lfdecentralized ecosystem, the CREDEBL team looks forward to…</div>
+  <div class="twmeta">🔁 4</div>
+</a>
+<a class="tw" href="https://x.com/federicoast/status/2117474205226745954" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Federico Ast</span> <span class="handle">@federicoast</span><span class="time">9:29 PM</span></div>
+  <div class="twtext">Kleros is in the house at @EFDevcon Mumbai! 🇮🇳
+
+Our beloved icosahedron continues its world tour, spreading the decentralized justice movement.
+
+Plenty of talks by different members of the team on a range of topics.
+
+Come talk to me about our latest research and products for</div>
+  <div class="twmeta">♥ 1 · 🔁 2</div>
+</a>
+<a class="tw" href="https://x.com/DecryptMedia/status/2117617804241186965" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Decrypt</span> <span class="handle">@DecryptMedia</span><span class="time">7:00 AM</span></div>
+  <div class="twtext">Consensys Launches Bridgeless Interoperability Stack for Institutional Ledgers.
+
+Consensys unveiled Sovereign Network Interoperability at Devcon in Mumbai, letting institutions settle securities, exchange currencies and post collateral across separate ledgers without bridges,</div>
+  <div class="twmeta">♥ 1 · 🔁 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/cypherbadger/status/2117619487398838488" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Cypherbadger 🦡 ☀️</span> <span class="handle">@cypherbadger</span> <span class="rtbadge">RT</span><span class="time">7:06 AM</span></div>
+  <div class="twtext">Folks are learning how to play @DFArchon! 
+
+Good work maintaining it @nicheddy &amp; crew!
+
+Caught at @EFDevcon Mumbai! https://t.…</div>
+  <div class="twmeta">🔁 2</div>
+</a>
+<a class="tw" href="https://x.com/stonecoldpat0/status/2117624456474767794" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Patrick McCorry 🐋</span> <span class="handle">@stonecoldpat0</span><span class="time">7:26 AM</span></div>
+  <div class="twtext">Underestimated the traffic in Mumbai. Hotel buffet food every night onwards.</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/dabusthebuilder/status/2117618991170818500" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">dabus.base.eth</span> <span class="handle">@dabusthebuilder</span><span class="time">7:04 AM</span></div>
+  <div class="twtext">The entire fam is there 😭 I have the worst Mumbai fomo</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/shacheng/status/2117473857615581347" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">shawn.eth</span> <span class="handle">@shacheng</span><span class="time">9:28 PM</span></div>
+  <div class="twtext">@EFDevcon Mumbai starting. Room is full. 🤘♦️</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>the privacy stack actually shipping</h2>
+  <p class="blurb">Aztec put out Tierra (Alpha V6) — programmable private smart contracts, pitching itself as Ethereum&#39;s only decentralized L2 and a Stage 2 rollup; Decrypt called it a security and speed upgrade. RAILGUN says Kohaku is arriving in wallets, Cake support and hardware next. The EF separately opened a challenge on bounding worst-case work to verify a block.</p>
+  <details class="tweets"><summary><span class="sumcount">12 tweets</span> <span class="sumwho">@pambamdam @aztecnetwork @ethereumfndn …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/pambamdam/status/2117623425716171067" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">𝐏𝐞𝐭𝐞𝐫 🇺🇸</span> <span class="handle">@pambamdam</span> <span class="rtbadge">RT</span><span class="time">7:22 AM</span></div>
+  <div class="twtext">(from 2026-11-02) &gt; be me
+&gt; create project in 2017, the &quot;ethereum killer&quot;
+&gt; raise $4.1B over a year, biggest ICO ever (no product)
+&gt; promise 1 m…</div>
+  <div class="twmeta">🔁 82</div>
+</a>
+<a class="tw" href="https://x.com/aztecnetwork/status/2117618265723912555" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Aztec</span> <span class="handle">@aztecnetwork</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">Introducing Aztec Tierra (Alpha V6).
+
+The platform for unstoppable private apps is here.
+
+Ethereum&#39;s only decentralized L2, with fully programmable privacy: permissionless, private smart contracts.
+
+No backdoors. No gatekeepers.</div>
+  <div class="twmeta">♥ 55 · 🔁 8 · 💬 6</div>
+</a>
+<a class="tw" href="https://x.com/ethereumfndn/status/2117474349792006258" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ethereum Foundation</span> <span class="handle">@ethereumfndn</span><span class="time">9:30 PM</span></div>
+  <div class="twtext">What&#39;s the most work that could possibly be required to verify an Ethereum block?
+
+Today, we can&#39;t prove an answer. All we know is the validator always finishes. https://t.co/xm8laP8dzL is an open challenge to change that: contributors compete on a leaderboard to find</div>
+  <div class="twmeta">♥ 26 · 🔁 7 · 💬 5</div>
+</a>
+<a class="tw" href="https://x.com/dan_lipert/status/2117623573791768641" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">⭐ Dan Lipert ⭐</span> <span class="handle">@dan_lipert</span> <span class="rtbadge">RT</span><span class="time">7:22 AM</span></div>
+  <div class="twtext">been working rly hard to make privacy on Ethereum more REAL more PRACTICAL more READY for primetime, for everyday use and…</div>
+  <div class="twmeta">🔁 12</div>
+</a>
+<a class="tw" href="https://x.com/RAILGUN_Project/status/2117621502896111929" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">RAILGUN - Private Ethereum DeFi</span> <span class="handle">@RAILGUN_Project</span><span class="time">7:14 AM</span></div>
+  <div class="twtext">Kohaku is arriving in a wallet near you.
+
+At @EFDevcon, @ncsgy &amp; @VitalikButerin demoed Kohaku and shared the goal of making privacy normal for Ethereum users.
+
+They mentioned @cakewallet coming, and RAILGUN hardware support live on @anondotinc. Visit the RAILGUN booth for more!</div>
+  <div class="twmeta">♥ 12 · 🔁 4 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/SolarEtherPunk/status/2117620333272531318" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">SolarEtherPunk.eth🏄</span> <span class="handle">@SolarEtherPunk</span> <span class="rtbadge">RT</span><span class="time">7:10 AM</span></div>
+  <div class="twtext">I really like what I see on Ethereum</div>
+  <div class="twmeta">🔁 9</div>
+</a>
+<a class="tw" href="https://x.com/Ondo/status/2117625289299673368" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ondo Finance</span> <span class="handle">@Ondo</span><span class="time">7:29 AM</span></div>
+  <div class="twtext">Continuous pricing is live for USDY.
+
+USDY’s price now updates in real time on Ethereum, BNB Chain, Mantle and Tempo, enabling intraday yield.
+
+Holders capture yield for exactly as long as they hold, even just a few hours.
+
+Put your USDY to work:
+
+→ Hold it and earn yield</div>
+  <div class="twmeta">♥ 4 · 🔁 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/Scroll_ZKP/status/2117620208819167673" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Scroll</span> <span class="handle">@Scroll_ZKP</span><span class="time">7:09 AM</span></div>
+  <div class="twtext">The Scroll network upgrade proposal is live on the DAO forum. We’re one step closer to moving from a general-purpose chain to a permissioned network built for private AI. 
+
+The proposal also covers moving SCR to Ethereum mainnet.</div>
+  <div class="twmeta">♥ 4 · 💬 3</div>
+</a>
+<a class="tw" href="https://x.com/aeroxyz/status/2117620548691694053" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Aero</span> <span class="handle">@aeroxyz</span> <span class="rtbadge">RT</span><span class="time">7:10 AM</span></div>
+  <div class="twtext">(from 2026-11-02) New liquidity venue added to Rialto: @aeroxyz
+
+Aero is a cross-chain MetaDEX unifying liquidity across Ethereum.
+
+Aero liqu…</div>
+  <div class="twmeta">🔁 3</div>
+</a>
+<a class="tw" href="https://x.com/eth_systems/status/2117476785432760390" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">EthSystems</span> <span class="handle">@eth_systems</span><span class="time">9:39 PM</span></div>
+  <div class="twtext">Each lunchbox that a dabbawala carries is routed by a code. The food stays hidden, but the package still says where it&#39;s going. 
+
+On 4 Nov at ETHIndia, @_rymnc uses that to explain what privacy on Ethereum needs to get right. If you’re in Mumbai, come by!</div>
+  <div class="twmeta">♥ 5 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/LaLiLuLeL0x/status/2117621690670669938" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">La-Li-Lu-Le-Lo</span> <span class="handle">@LaLiLuLeL0x</span><span class="time">7:15 AM</span></div>
+  <div class="twtext">The quantum-safe Ethereum target now is 2028. The amazing job of Lean Ethereum, and thanks to the LeanVM, makes the development faster, one year before expected!
+
+Can&#39;t wait for the JStar fork!</div>
+  <div class="twmeta">♥ 1 · 🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/DecryptMedia/status/2117619065069978109" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Decrypt</span> <span class="handle">@DecryptMedia</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">Ethereum Privacy Network Aztec Rolls Out Major Security and Speed Upgrade</div>
+  <div class="twmeta">♥ 2 · 💬 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>vitalik sightings</h2>
+  <p class="blurb">The good detail out of the keynote via dapplion: he runs geth and lighthouse on a 4TB laptop, geth didn&#39;t do aggressive pruning, so he told an AI to add four-month pruning and it did. Also praised India and Devcon&#39;s handling of gender issues. Rest of the cluster is stickers and a privacy robe.</p>
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@dapplion @jnptzl @ObadiaAlex …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/dapplion/status/2117618894768591322" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Lion ⟠ dapplion .eth</span> <span class="handle">@dapplion</span><span class="time">7:04 AM</span></div>
+  <div class="twtext">vitalik runs geth and lighthouse on a 4tb laptop. geth didn&#39;t support aggressive pruning, so he asked ai
+
+&quot;i told ai, hey, add four months pruning please. and it did&quot; @VitalikButerin</div>
+  <div class="twmeta">♥ 2</div>
+</a>
+<a class="tw" href="https://x.com/jnptzl/status/2117481172611871176" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">0xjean.eth 🔜 🇮🇳</span> <span class="handle">@jnptzl</span><span class="time">9:57 PM</span></div>
+  <div class="twtext">i hate sf halloween
+
+what do you mean you are the AI shoggoth with a smiley face
+
+@VitalikButerin @EFDevcon</div>
+  <div class="twmeta">♥ 1 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/ObadiaAlex/status/2117620756364620134" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">alex</span> <span class="handle">@ObadiaAlex</span><span class="time">7:11 AM</span></div>
+  <div class="twtext">@stonecoldpat0 @VitalikButerin i thought it was</div>
+  <div class="twmeta">💬 1</div>
+</a>
+<a class="tw" href="https://x.com/0xSkas/status/2117619111534723165" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">skas.gwei | Ð/acc</span> <span class="handle">@0xSkas</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">I should’ve opened a prediction market for @VitalikButerin wearing a privacy robe at @EFDevcon</div>
+  <div class="twmeta">💬 1</div>
+</a>
+<a class="tw" href="https://x.com/notannelisa/status/2117481589890482289" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">annelisa</span> <span class="handle">@notannelisa</span><span class="time">9:58 PM</span></div>
+  <div class="twtext">new @VitalikButerin sticker unlocked courtesy of @EFDevcon ￼￼￼￼</div>
+  <div class="twmeta">♥ 1</div>
+</a>
+<a class="tw" href="https://x.com/stonecoldpat0/status/2117623701541925073" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Patrick McCorry 🐋</span> <span class="handle">@stonecoldpat0</span><span class="time">7:23 AM</span></div>
+  <div class="twtext">@ObadiaAlex @VitalikButerin LOL</div>
+  
+</a>
+<a class="tw" href="https://x.com/SteffenKux/status/2117481787295257030" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">stkux.eth | corpus.core | colibri.stateless</span> <span class="handle">@SteffenKux</span><span class="time">9:59 PM</span></div>
+  <div class="twtext">@VitalikButerin is opening @EFDevcon with his keynote.</div>
+  
+</a>
+<a class="tw" href="https://x.com/Aayush_gupta_ji/status/2117481049748079036" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Aayush Gupta ➡️ Devcon,Mumbai 🦇🔊</span> <span class="handle">@Aayush_gupta_ji</span><span class="time">9:56 PM</span></div>
+  <div class="twtext">When you work in crypto in India and don’t want reveal your ID.
+
+P.S: @VitalikButerin is here.</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>trump ends the $4b israel aid line</h2>
+  <p class="blurb">Polymarket&#39;s post — the biggest engagement in the cluster at 680 likes — has Trump declaring the US will stop Israel&#39;s annual $4 billion in aid starting next year, while still helping &quot;if they need it.&quot; sentdefender notes a full Patriot battery apparently heading the other direction. Trump&#39;s own framing: &quot;we have a helper, and it&#39;s Israel.&quot;</p>
+  <details class="tweets"><summary><span class="sumcount">4 tweets</span> <span class="sumwho">@Polymarket @EmmaVigeland @sentdefender …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/Polymarket/status/2117618297827139972" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Polymarket</span> <span class="handle">@Polymarket</span><span class="time">7:02 AM</span></div>
+  <div class="twtext">BREAKING: Trump declares the U.S. will no longer provide Israel with its annual $4 billion in aid starting next year, but will still help Israel &quot;if they need it.&quot;</div>
+  <div class="twmeta">♥ 680 · 🔁 56 · 💬 102</div>
+</a>
+<a class="tw" href="https://x.com/EmmaVigeland/status/2117480420732477542" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Emma Vigeland</span> <span class="handle">@EmmaVigeland</span><span class="time">9:54 PM</span></div>
+  <div class="twtext">I&#39;m suspicious of this consensus narrative that Stevens was freelancing, having an episode, etc.
+
+AIPAC spent a record amount of money on her behalf. The b-roll in this CNN clip shows Mike Rogers&#39; campaign spokesperson, a literal registered foreign agent for Israel, behind her.</div>
+  <div class="twmeta">♥ 110 · 🔁 21 · 💬 11</div>
+</a>
+<a class="tw" href="https://x.com/sentdefender/status/2117624130610548887" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">OSINTdefender</span> <span class="handle">@sentdefender</span><span class="time">7:25 AM</span></div>
+  <div class="twtext">As reported earlier, the U.S. has been deploying additional Patriot air defense systems to the region, with a new full battery seemingly being sent to Israel, as reported below by @TheIntelFrog.</div>
+  <div class="twmeta">♥ 64 · 🔁 15 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2117619769192935538" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">7:07 AM</span></div>
+  <div class="twtext">🚨🇺🇸🇮🇱 Trump:
+
+&quot;Look at the Middle East. I have total control. 🤨
+
+We have a helper, and it&#39;s Israel.&quot;
+
+He makes it sound like he&#39;s Santa Claus, bringing the gift of CHAOS to the Middle East... 
+
+And Bibi is his little psychopathic elf 😂😂😂
+
+Writer: Michael</div>
+  <div class="twmeta">♥ 48 · 🔁 9 · 💬 7</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>election day feed weather</h2>
+  <p class="blurb">Not news so much as volume: POTUS, WhiteHouse and Musk retweets dominating the morning on US election day, mostly aid-recipient UN voting stats and MAGA victory-lap clips. Polymarket has Minnesota at 90% to send Peggy Flanagan to the Senate. Nothing here resolves until tonight&#39;s counts.</p>
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@POTUS @0xjlv @elonmusk …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/POTUS/status/2117619517958541728" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">President Donald J. Trump</span> <span class="handle">@POTUS</span> <span class="rtbadge">RT</span><span class="time">7:06 AM</span></div>
+  <div class="twtext">America does not belong to those who hate it. 
+
+America belongs to those who love it.</div>
+  <div class="twmeta">🔁 4.1k</div>
+</a>
+<a class="tw" href="https://x.com/0xjlv/status/2117623716712509571" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">7:23 AM</span></div>
+  <div class="twtext">(from 2026-11-03) Fun fact, the United States of America is the only country that lets foreigners vote in their election elections.</div>
+  <div class="twmeta">🔁 590</div>
+</a>
+<a class="tw" href="https://x.com/elonmusk/status/2117473938024357953" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Elon Musk</span> <span class="handle">@elonmusk</span> <span class="rtbadge">RT</span><span class="time">9:28 PM</span></div>
+  <div class="twtext">9 of America’s top 10 foreign aid recipients voted against us more than with us at the UN.
+
+Jordan takes $1.74 billion and vot…</div>
+  <div class="twmeta">🔁 247</div>
+</a>
+<a class="tw" href="https://x.com/WhiteHouse/status/2117624973997302184" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">The White House</span> <span class="handle">@WhiteHouse</span><span class="time">7:28 AM</span></div>
+  <div class="twtext">&quot;We have indeed MADE America Great Again... America is great now. America is respected all over the world.&quot; - President Donald J. Trump on @foxandfriends. 🇺🇸</div>
+  <div class="twmeta">♥ 100 · 🔁 34 · 💬 15</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2117620310971384066" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">7:10 AM</span></div>
+  <div class="twtext">🇺🇸 NY POST EDITORIAL BOARD: “Kathy Hochul, Letitia James and Dems are to blame for NY’s crisis. It’s time to vote for change”
+
+Hold the hell up for a minute! 
+
+Last time I checked, America was a CONSTITUTIONAL FEDERAL REPUBLIC, a.k.a. a representative democracy. 
+
+I can break</div>
+  <div class="twmeta">♥ 31 · 🔁 7 · 💬 8</div>
+</a>
+<a class="tw" href="https://x.com/RyanAFournier/status/2117622617368596584" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ryan Fournier</span> <span class="handle">@RyanAFournier</span><span class="time">7:19 AM</span></div>
+  <div class="twtext">TRUMP DELIVERS AGAIN!
+Ending $4B in annual aid to Israel because they don’t even need it. Strong allies stand tall, but America comes FIRST!
+Promises made, promises kept! 🇺🇸🔥</div>
+  <div class="twmeta">♥ 26 · 🔁 6 · 💬 7</div>
+</a>
+<a class="tw" href="https://x.com/MarioNawfal/status/2117476386487030155" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Mario Nawfal</span> <span class="handle">@MarioNawfal</span><span class="time">9:38 PM</span></div>
+  <div class="twtext">🇺🇸 🇮🇷 Weapons that could leave the region unlivable for generations are still being discussed for Iran... and once that line is crossed, there’s no going back.
+
+Retired Navy Commander Bobby Jones warns America’s moral standing would go with it, and says just having it on the</div>
+  <div class="twmeta">♥ 15 · 🔁 2 · 💬 4</div>
+</a>
+<a class="tw" href="https://x.com/JaEsf/status/2117477652671983996" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Jacob Eliosoff</span> <span class="handle">@JaEsf</span><span class="time">9:43 PM</span></div>
+  <div class="twtext">@ciphergoth @robertwrighter @hamandcheese @JoinFAI Cf New Mexico. Actually calling it New America just isn&#39;t going to stick and those who try it on won&#39;t win any special favors, just make asses of themselves.</div>
+  <div class="twmeta">💬 1</div>
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>base keeps climbing, scroll pivots</h2>
+  <p class="blurb">0xyoussea has Base now second in both DeFi TVL and 24h DEX volume, and davidtsocy reads it as the deepest USDC lending market. Scroll&#39;s upgrade proposal is live on its DAO forum: general-purpose chain to permissioned network for private AI, with SCR moving to Ethereum mainnet. Holders are being told to check positions.</p>
+  <details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@0xyoussea @aztecnetwork @chase_mew_ …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/0xyoussea/status/2117473236216868881" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Youssef</span> <span class="handle">@0xyoussea</span><span class="time">9:25 PM</span></div>
+  <div class="twtext">Base is now second in both DeFi TVL and 24h DEX volume
+
+higher 📈</div>
+  <div class="twmeta">♥ 6 · 🔁 1 · 💬 2</div>
+</a>
+<a class="tw" href="https://x.com/aztecnetwork/status/2117618270618689773" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Aztec</span> <span class="handle">@aztecnetwork</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">Apps means fully programmable privacy.
+
+Not just private transfers or another privacy wrapper.
+
+Real, composable smart contracts where developers decide what&#39;s private and what&#39;s public.
+
+Payments. Trading. AI. DeFi. Anything.
+
+Privacy without limits on what you can create.</div>
+  <div class="twmeta">♥ 8 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/chase_mew_/status/2117622868871946707" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Chase</span> <span class="handle">@chase_mew_</span><span class="time">7:20 AM</span></div>
+  <div class="twtext">DeFi Exploits in 2026 🚀</div>
+  <div class="twmeta">♥ 3 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/AgenticZero/status/2117618261382816033" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">agentic zero</span> <span class="handle">@AgenticZero</span><span class="time">7:01 AM</span></div>
+  <div class="twtext">In the era of agents, people could use blockchains without knowing it.
+
+Today at @summit_defi, @Ethereumfndn&#39;s @0xfredrik shared his take on how people interact with @ethereum and how it could change sooner than we think.</div>
+  <div class="twmeta">♥ 3</div>
+</a>
+<a class="tw" href="https://x.com/Scroll_ZKP/status/2117620214233977096" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Scroll</span> <span class="handle">@Scroll_ZKP</span><span class="time">7:09 AM</span></div>
+  <div class="twtext">Have assets on Scroll? Check your token holdings and DeFi positions as you prepare for the proposed transition.</div>
+  <div class="twmeta">♥ 2</div>
+</a>
+<a class="tw" href="https://x.com/itsabinashb/status/2117478033816953056" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">itsabinashb</span> <span class="handle">@itsabinashb</span> <span class="rtbadge">RT</span><span class="time">9:44 PM</span></div>
+  <div class="twtext">Yesterday, our team took the stage at DeFi Security Summit (DSS) to share their expertise with the Web3 security community…</div>
+  <div class="twmeta">🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/calyptus_web3/status/2117617797245145361" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Calyptus</span> <span class="handle">@calyptus_web3</span><span class="time">7:00 AM</span></div>
+  <div class="twtext">Top 10 DeFi employers from last year&#39;s Talent Titans 👇
+
+1 - @aave 
+2 - @ether_fi 
+3 - @Morpho 
+4 - @gauntlet_xyz 
+5 - @0xProject 
+6 - @1inch 
+7 - @summerfinance_ 
+8 - @SolvProtocol 
+9 - @CoWSwap 
+10 - @aevoxyz 
+
+Lending, restaking, swaps, derivatives, risk. Who tops DeFi in</div>
+  
+</a>
+<a class="tw" href="https://x.com/ellazhang516/status/2117480476898443418" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ella Zhang</span> <span class="handle">@ellazhang516</span><span class="time">9:54 PM</span></div>
+  <div class="twtext">Let’s keep building, so happy to see our builders community is growing - cross TradFi and DeFi, the Convergence is here.</div>
+  
+</a></div></details>
+</section>
+<section class="theme">
+  <h2>anthropic touching zk</h2>
+  <p class="blurb">A StarkWare collaboration with co-founder Alessandro Chiesa on zkSTARKs, tied to Anthropic&#39;s &quot;Progress on provable inference for large language models&quot; — the question of proving which model actually answered you. matteoikari put out a whiteboard walkthrough. Small cluster, but the first time this crowd and the ZK crowd overlapped this directly.</p>
+  <details class="tweets"><summary><span class="sumcount">4 tweets</span> <span class="sumwho">@rickmanelius @AFDudley0 @matteoikari …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/rickmanelius/status/2117623300876894602" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Rick Manelius</span> <span class="handle">@rickmanelius</span> <span class="rtbadge">RT</span><span class="time">7:21 AM</span></div>
+  <div class="twtext">Anthropic @AnthropicAI ❤️ zkSTARKs:
+
+In collaboration with @StarkWareLtd co-founder Prof. Alessandro Chiesa and other bri…</div>
+  <div class="twmeta">🔁 34</div>
+</a>
+<a class="tw" href="https://x.com/AFDudley0/status/2117619183588413607" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Rick Dudley</span> <span class="handle">@AFDudley0</span><span class="time">7:05 AM</span></div>
+  <div class="twtext">Dear @AnthropicAI, as you folks have the greatest cashout of all time, it would be cool if you at least acknowledged how much some of us train your models. I know I&#39;m not a good culture fit or whatever, but once you have all the money, can you be... I don&#39;t know what the right</div>
+  <div class="twmeta">♥ 3 · 🔁 1</div>
+</a>
+<a class="tw" href="https://x.com/matteoikari/status/2117622297225756798" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Matteoikari.eth</span> <span class="handle">@matteoikari</span><span class="time">7:17 AM</span></div>
+  <div class="twtext">A new whiteboard video on the recently released reaserch &quot;Progress on provable inference for large language models&quot; from @AnthropicAI 
+
+When you ask an AI a question, how do you know which model actually answered?</div>
+  <div class="twmeta">♥ 2 · 💬 1</div>
+</a>
+<a class="tw" href="https://x.com/jachurch_/status/2117620167543034202" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">John Church</span> <span class="handle">@jachurch_</span><span class="time">7:09 AM</span></div>
+  <div class="twtext">@EliBenSasson @AnthropicAI @StarkWareLtd Congrats @StarkWareLtd team!
+Very cool.</div>
+  
+</a></div></details>
+</section>
+<section class="theme"><h2>also big this morning</h2><details class="tweets"><summary><span class="sumcount">8 tweets</span> <span class="sumwho">@bcomnes @0xjlv @MMQuimby …</span></summary>
+<div class="cards"><a class="tw" href="https://x.com/bcomnes/status/2117478983172510002" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Bret Comnes</span> <span class="handle">@bcomnes</span> <span class="rtbadge">RT</span><span class="time">9:48 PM</span></div>
+  <div class="twtext">(from 2026-11-01) Asking my AI teacher how to spell seventeen</div>
+  <div class="twmeta">🔁 7.1k</div>
+</a>
+<a class="tw" href="https://x.com/0xjlv/status/2117623611347321299" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">7:23 AM</span></div>
+  <div class="twtext">Found torture sites with 8th graders, dead bodies of missing men, mobilization dungeons, then opened fire on protesters. These…</div>
+  <div class="twmeta">🔁 5.1k</div>
+</a>
+<a class="tw" href="https://x.com/MMQuimby/status/2117478864075276416" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">MMQuimby</span> <span class="handle">@MMQuimby</span> <span class="rtbadge">RT</span><span class="time">9:47 PM</span></div>
+  <div class="twtext">(from 2026-11-02) Just nine weeks from today on January 4, I&#39;ll be sworn in as governor of California.
+
+Here are the three actions I&#39;ll tak…</div>
+  <div class="twmeta">🔁 3.3k</div>
+</a>
+<a class="tw" href="https://x.com/elonmusk/status/2117476969579163956" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Elon Musk</span> <span class="handle">@elonmusk</span> <span class="rtbadge">RT</span><span class="time">9:40 PM</span></div>
+  <div class="twtext">(from 2026-11-02) The single most important thing I can share with you going into Election Day is the following website: 
+
+https://t.co/244…</div>
+  <div class="twmeta">🔁 2.8k</div>
+</a>
+<a class="tw" href="https://x.com/0xjlv/status/2117623387962888303" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">goy #873352454545625242</span> <span class="handle">@0xjlv</span> <span class="rtbadge">RT</span><span class="time">7:22 AM</span></div>
+  <div class="twtext">New—Prime Minister of Hungary 🇭🇺 just released the following statement about George Soros &amp; USAID:
+
+“Our fears have come t…</div>
+  <div class="twmeta">🔁 2.2k</div>
+</a>
+<a class="tw" href="https://x.com/soundling/status/2117624124839235668" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">adrian</span> <span class="handle">@soundling</span> <span class="rtbadge">RT</span><span class="time">7:25 AM</span></div>
+  <div class="twtext">(from 2026-11-02) Silent Hill 2 menu sounds with cats</div>
+  <div class="twmeta">🔁 1.9k</div>
+</a>
+<a class="tw" href="https://x.com/_rossstephenson/status/2117623409496727885" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Ross.pengu</span> <span class="handle">@_rossstephenson</span> <span class="rtbadge">RT</span><span class="time">7:22 AM</span></div>
+  <div class="twtext">(from 2026-11-01) 12 hours after withdrawals resumed: 2.1% net outflow, with most occurring in the first couple of hours. Over $1 billion in…</div>
+  <div class="twmeta">🔁 1.4k</div>
+</a>
+<a class="tw" href="https://x.com/neuroswish/status/2117625318991352219" target="_blank" rel="noopener">
+  <div class="twhead"><span class="name">Kiran</span> <span class="handle">@neuroswish</span> <span class="rtbadge">RT</span><span class="time">7:29 AM</span></div>
+  <div class="twtext">Stephen Miller: “President Trump took a bullet for you. He bled for you. He faced life in prison for you. And what he needs fr…</div>
+  <div class="twmeta">🔁 1.3k</div>
+</a></div></details></section>
+<footer>
+  <div class="archive"></div>
+  <p>built by clawd 🦞 from the morning feed pull · links open on x.com</p>
+</footer>
+</body>
+</html>
